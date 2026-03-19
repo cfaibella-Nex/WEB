@@ -121,7 +121,7 @@ section.active{display:block}
 .contact-grid{display:grid;grid-template-columns:1fr 1.5fr;min-height:calc(100vh - 156px)}
 .contact-info{background:var(--forest);padding:48px 40px;position:relative;overflow:hidden}
 .contact-info-bg{position:absolute;inset:0;background-size:cover;background-position:center bottom;opacity:0.25;filter:blur(2px);transform:scale(1.05)}.12}
-.contact-info h2{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300;color:var(--white);margin-bottom:5px;position:relative;z-index:1}
+.contact-info h2{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:600;color:var(--white);margin-bottom:5px;position:relative;z-index:1;text-shadow:0 2px 20px rgba(0,0,0,0.8),0 0 40px rgba(0,0,0,0.6)}
 .contact-info h2 em{font-style:italic;color:var(--green-light)}
 .contact-info>p{font-size:13px;color:rgba(253,252,249,.48);line-height:1.7;margin-bottom:36px;position:relative;z-index:1}
 .contact-item{margin-bottom:24px;position:relative;z-index:1}
@@ -617,6 +617,7 @@ function changeLogo(){
     Diagnòstic d'Impacte
   </a>
 </div>
+<a onclick="showSection('entitats',this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>Especial Entitats</a>
 <a onclick="showSection('treballar',this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>Col·laboracions</a>
 <a onclick="showSection('contacte',this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.1 1.18 2 2 0 012.11 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.44-.44a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>Contacte</a>
 </nav>
@@ -700,11 +701,10 @@ function changeLogo(){
   <div style="position:relative;z-index:1;max-width:580px;padding:64px 64px 72px;">
     <div style="display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:var(--green-mid);border:1px solid rgba(106,142,78,0.5);padding:8px 16px;margin-bottom:24px;font-weight:500;">✦ Destaquem</div>
     <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.5vw,44px);font-weight:300;color:var(--forest);line-height:1.1;margin-bottom:16px;">Acompanyament<br><em style="font-style:italic;color:var(--green-mid);">Emocional i Terapèutic</em></h2>
-    <p style="font-size:14px;color:#4a5e46;line-height:1.85;margin-bottom:28px;">Un espai de suport proper i empàtic per expressar, comprendre i regular emocions. Treballem amb professionals col·legiats per oferir teràpia psicològica individualitzada, sessions grupals i retirs de connexió amb la natura.</p>
+    <p style="font-size:14px;color:#4a5e46;line-height:1.85;margin-bottom:28px;">Un espai de suport proper i empàtic per expressar, comprendre i regular emocions. Treballem amb professionals col·legiats per oferir teràpia psicològica individualitzada i retirs de connexió amb la natura.</p>
     <ul style="list-style:none;padding:0;margin-bottom:36px;">
       <li style="display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(88,105,86,0.15);font-size:13px;color:#4a5e46;"><span style="color:var(--green-mid);margin-top:2px;">—</span> Suport proper i empàtic per expressar i comprendre emocions</li>
       <li style="display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(88,105,86,0.15);font-size:13px;color:#4a5e46;"><span style="color:var(--green-mid);margin-top:2px;">—</span> Teràpia psicològica amb professionals col·legiats</li>
-      <li style="display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(88,105,86,0.15);font-size:13px;color:#4a5e46;"><span style="color:var(--green-mid);margin-top:2px;">—</span> Tallers i sessions grupals de creixement personal</li>
       <li style="display:flex;gap:10px;align-items:flex-start;padding:8px 0;font-size:13px;color:#4a5e46;"><span style="color:var(--green-mid);margin-top:2px;">—</span> Retirs de 2-3 dies en connexió amb la natura</li>
     </ul>
     <div style="display:flex;gap:14px;flex-wrap:wrap;">
@@ -824,7 +824,6 @@ function changeLogo(){
         <li>Acompanyament Social: ajudes, habitatge i soledat</li>
         <li>Acompanyament Emocional i Terapèutic individualitzat</li>
         <li>Teràpia psicològica amb professionals col·legiats</li>
-        <li>Tallers i sessions grupals de creixement personal</li>
         <li>Retirs de 2-3 dies en connexió amb la natura</li>
       </ul>
     </div>
@@ -972,7 +971,7 @@ function changeLogo(){
 
 <!-- Bloc 3: Acompanyament Emocional -->
 <div class="srv-block" id="acomp-emocional">
-  <div class="srv-block-tag">NexAcompanya · Serveis Terapèutics</div>
+  <div class="srv-block-tag">NexAcompanya · Espai de Suport Emocional i Terapèutic</div>
   <div class="srv-block-title">Acompanyament Emocional i Terapèutic</div>
   <div style="height:260px;background-size:cover;background-position:center center;background-image:url('images/img_14.jpg');background-size:cover;background-position:center;margin-bottom:24px;"></div>
   <p class="srv-block-desc">Quan la vida ens posa davant de moments que no sabem com gestionar sols, l'acompanyament emocional i terapèutic obre un espai de suport, escolta i creixement. Des de NexAcompanya, oferim terapëes individualitzades i de grup amb mètodes avalats per més de 10 anys d'experiència clínica i vivencial, sempre en un entorn segur, lliure de judicis i orientat al teu benestar real.</p>
@@ -1130,6 +1129,33 @@ function changeLogo(){
   </div>
 </div>
 
+<!-- Bloc 3: Acompanyament Entitats -->
+<div class="srv-block" id="acomp-entitats">
+  <div class="srv-block-tag">NexAcompanya · Àmbit Organitzacional</div>
+  <div class="srv-block-title">Acompanyament Entitats</div>
+  <div style="height:280px;background-image:url('images/img_28.png');background-size:cover;background-position:center top;margin-bottom:24px;border-radius:2px;"></div>
+  <p class="srv-block-desc">Acompanyem entitats que busquen transformació emocional i social en les seves pròpies organitzacions i equips.</p>
+  <div class="srv-cols">
+    <div class="srv-col-box">
+      <div class="srv-col-box-title">Situacions Crítiques</div>
+      <ul>
+        <li>Equips polaritzats</li>
+        <li>Baix rendiment amb risc de pèrdua de projecte</li>
+        <li>Alta rotació</li>
+        <li>Pèrdua de qualitat</li>
+      </ul>
+    </div>
+    <div class="srv-col-box">
+      <div class="srv-col-box-title">Desenvolupament d’Equips</div>
+      <ul>
+        <li>Lideratge</li>
+        <li>Cohesió d’equip</li>
+        <li>Unió del propòsit comú</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 </div>
 </section>
 
@@ -1277,7 +1303,55 @@ function changeLogo(){
 </div>
 </section>
 
-<section <section id="consulta">
+<section <section id="entitats">
+<div class="page-header">
+<div class="page-header-bg" style="background-image:url('images/img_29.png');"></div>
+<span class="page-header-tag">Servei Especialitzat</span>
+<h1>Especial <em>Entitats</em></h1>
+<p>Acompanyament emocional i social per a organitzacions i equips que busquen transformació.</p>
+</div>
+<div class="content" style="padding:40px 48px 60px; max-width:none;">
+
+<div class="srv-block" id="entitats-acomp">
+  <div class="srv-block-tag">Especial Entitats · Transformació Organitzacional</div>
+  <div class="srv-block-title">Acompanyament Entitats</div>
+  <div style="height:280px;background-image:url('images/img_28.png');background-size:cover;background-position:center top;margin-bottom:24px;border-radius:2px;"></div>
+  <p class="srv-block-desc">Acompanyem entitats que busquen transformació emocional i social en les seves pròpies organitzacions i equips.</p>
+  <div class="srv-cols">
+    <div class="srv-col-box">
+      <div class="srv-col-box-title">Situacions Crítiques</div>
+      <ul>
+        <li>Equips polaritzats</li>
+        <li>Baix rendiment amb risc de pèrdua de projecte</li>
+        <li>Alta rotació</li>
+        <li>Pèrdua de qualitat</li>
+      </ul>
+    </div>
+    <div class="srv-col-box">
+      <div class="srv-col-box-title">Desenvolupament d'Equips</div>
+      <ul>
+        <li>Lideratge</li>
+        <li>Cohesió d'equip</li>
+        <li>Unió del propòsit comú</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div style="background:var(--green-pale);border:1px solid rgba(88,105,86,0.2);padding:32px 36px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
+  <div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--forest);margin-bottom:6px;">Vols saber com podem ajudar la teva entitat?</div>
+    <div style="font-size:12px;color:#5a6b56;">Contacta'ns i t'orientem sense compromís.</div>
+  </div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;">
+    <button onclick="showSection('contacte',null)" class="area-btn">Contactar →</button>
+  </div>
+</div>
+
+</div>
+</section>
+
+<section id="consulta">
 <div class="page-header">
 <div class="page-header-bg" style="background-image:url('images/img_21.jpg')"></div>
 <span class="page-header-tag">Atenció personalitzada</span>
@@ -1584,7 +1658,7 @@ function changeLogo(){
 </div>
 <div class="content" style="padding:40px 48px 60px; max-width:none;">
   <div style="font-family:'Cormorant Garamond',serif; font-size:28px; color:var(--forest); margin-bottom:8px;">Forma part de <em>NexSocial</em></div>
-  <p style="font-size:13px; color:#5a6b56; margin-bottom:28px; line-height:1.7;">Si comparteixes els nostres valors i creus que pots aportar valor al projecte, ens encantarà conèixer-te. Envia'ns la teva candidatura espontània.</p>
+  <p style="font-size:13px; color:#5a6b56; margin-bottom:28px; line-height:1.7;">Si comparteixes els nostres valors i creus que pots aportar valor al projecte, ens encantarà conèixer-te. Envia'ns la teva candidatura espontània o proposta de col·laboració.</p>
   <form action="https://formspree.io/f/mojkleew" method="POST" onsubmit="handleTreballarForm(event)" style="max-width:560px;">
     <div class="form-group"><label style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#5a6b56;display:block;margin-bottom:6px;">Nom complet *</label><input type="text" name="nom" required placeholder="El teu nom" style="width:100%;padding:11px 14px;border:1px solid rgba(88,105,86,0.3);background:#fff;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--forest);box-sizing:border-box;"></div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;">
@@ -1601,7 +1675,7 @@ function changeLogo(){
     </div>
     <div class="form-group" style="margin-top:16px;"><label style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#5a6b56;display:block;margin-bottom:6px;">Motivació *</label><textarea name="motivacio" required placeholder="Per què vols formar part de NexSocial?" rows="4" style="width:100%;padding:11px 14px;border:1px solid rgba(88,105,86,0.3);background:#fff;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--forest);box-sizing:border-box;resize:vertical;"></textarea></div>
     <div id="treballar-ok" style="display:none;background:var(--green-pale);border:1px solid rgba(88,105,86,0.3);padding:14px 18px;margin-bottom:16px;font-size:13px;color:var(--forest);">✓ Candidatura enviada! Et contactarem aviat.</div>
-    <button type="submit" style="margin-top:20px;background:var(--forest);color:var(--green-light);border:none;padding:13px 32px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;">Enviar candidatura →</button>
+    <button type="submit" style="margin-top:20px;background:var(--forest);color:var(--green-light);border:none;padding:13px 32px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;">Enviar candidatura / proposta →</button>
   </form>
 </div>
 </section>
@@ -1629,17 +1703,14 @@ function changeLogo(){
   <optgroup label="NexAcompanya">
     <option value="Sollicitar acompanyament social">Acompanyament Social (ajudes, habitatge, exclusió)</option>
     <option value="Acompanyament emocional o terapeutic">Acompanyament Emocional o Terapèutic</option>
-    <option value="Sessions o tallers grupals">Sessions o Tallers Grupals</option>
     <option value="Retirs de creixement personal">Retirs de Creixement Personal</option>
   </optgroup>
   <optgroup label="NexGestió">
     <option value="Gestoria social tramits">Gestoria Social · Tràmits i Ajudes</option>
     <option value="Mediacio assessorament juridic">Mediació i Assessorament Jurídic</option>
-    <option value="Coordinacio social gestio">Coordinació Social + Gestió Administrativa</option>
   </optgroup>
   <optgroup label="General">
     <option value="Informacio general serveis">Informació General sobre Serveis</option>
-    <option value="Collaboracio entitats">Col·laboració / Conveni amb NexSocial</option>
     <option value="Altres">Altres consultes</option>
   </optgroup>
 </select></div>
@@ -1676,7 +1747,6 @@ function changeLogo(){
         <div class="footer-col-title">Empresa</div>
         <ul class="footer-links" id="footer-links-empresa">
           <li><a href="#" onclick="showSection('quisom',document.querySelectorAll('nav a')[1])">Qui som</a></li>
-          <li><a href="#" onclick="showSection('treballar',document.querySelectorAll('nav a')[4])">Col·laboracions</a></li>
           <li><a href="#" onclick="showSection('contacte',document.querySelectorAll('nav a')[5])">Contacte</a></li>
         </ul>
       </div>
