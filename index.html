@@ -1316,7 +1316,7 @@ function changeLogo(){
     <div id="intel-error" style="color:#c0392b;font-size:12px;display:none;padding:8px;background:#fef2f2;border-radius:4px;">Credencials incorrectes. Torna-ho a intentar.</div>
     <button onclick="doIntelLogin()" class="btn-primary" style="width:100%;justify-content:center;">Entrar →</button>
   </div>
-  <p style="font-size:11px;color:#5a6b56;">Problemes d'accés? Escriu a <a href="mailto:infonex@nexsocial.org" style="color:var(--forest);">infonex@nexsocial.org</a></p>
+  <p style="font-size:11px;color:#5a6b56;">Problemes d'accés? Escriu a <a href="/cdn-cgi/l/email-protection#a4cdcac2cbcac1dce4cac1dcd7cbc7cdc5c88acbd6c3" style="color:var(--forest);"><span class="__cf_email__" data-cfemail="3e57505851505b467e505b464d515d575f5210514c59">[email&#160;protected]</span></a></p>
 </div>
 
 <div id="intel-app" style="display:none;"></div>
@@ -2160,7 +2160,7 @@ function changeLogo(){
   </div>
 
 </div>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 
 <script>
 // ── NexlicitIA — Login ──────────────────────────────────────
@@ -2193,23 +2193,11 @@ function showIntelApp() {
   var email = sessionStorage.getItem('nexsocial_intel_auth');
   var token = btoa(email + ':' + Date.now());
   sessionStorage.setItem('nexsocial_intel_token', token);
-  window.location.href = 'https://intel.nexsocial.org?auth=' + encodeURIComponent(token);
+  window.location.href = 'https://nexlicitia.nexsocial.org?auth=' + encodeURIComponent(token);
 }
 
 function checkIntelLogin() {
   setTimeout(function() {
     // Amaga el banner i subnav quan s'entra a NexlicitIA
     var hdr = document.getElementById('proj-page-header');
-    var nav = document.getElementById('proj-subnav-bar');
-    if (hdr) hdr.style.display = 'none';
-    if (nav) nav.style.display = 'none';
-    if (sessionStorage.getItem('nexsocial_intel_auth')) {
-      showIntelApp();
-    }
-  }, 50);
-}
-
-</script>
-</body>
-</html<li
-</html>
+    var nav = document.getEl
