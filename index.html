@@ -1502,53 +1502,69 @@ function changeLogo(){
 <button onclick="showSection('entitats',null)" style="background:transparent;border:none;color:#5a6b56;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;margin:24px 0 0 64px;padding:0;display:block;">← Tornar a Serveis Entitats</button>
 
 
-<div class="content" style="padding:40px 48px 60px; max-width:720px;">
-<div id="diag-intro" class="content" style="padding:40px 48px 60px;max-width:720px;">
-  <div style="background:var(--forest);padding:40px 48px;margin-bottom:40px;text-align:center;">
-    <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:#fff;line-height:1.2;margin-bottom:16px;">Avalueu i Enfortiu els<br>Vostres Projectes Socials</div>
-    <p style="font-size:14px;color:rgba(255,255,255,0.8);max-width:480px;margin:0 auto 28px;line-height:1.7;">Una eina d'avaluació gratuïta dissenyada per a ONG, cooperatives i institucions públiques per mesurar i millorar el seu impacte social.</p>
-    <button onclick="startDiag()" style="background:#fff;color:var(--forest);border:none;padding:14px 32px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;">Comença l'Avaluació Gratuïta →</button>
-    <div style="margin-bottom:40px;">
-    <div style="font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--forest);text-align:center;margin-bottom:8px;">Com Funciona</div>
-    <p style="font-size:13px;color:#5a6b56;text-align:center;margin-bottom:28px;line-height:1.7;">Responeu 10 preguntes curosament elaborades sobre el vostre projecte. En només 5 minuts, rebreu la vostra puntuació d'impacte social i un pla d'acció personalitzat.</p>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-      <div style="border:1px solid rgba(88,105,86,0.2);padding:24px;background:#fff;">
-        <div style="margin-bottom:12px;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--forest)" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M16.9 16.9l2.1 2.1M4.9 19.1l2.1-2.1M16.9 7.1l2.1-2.1"/></svg></div>
-        <div style="font-size:14px;font-weight:500;color:var(--forest);margin-bottom:6px;">Puntuació d'Impacte Social</div>
-        <div style="font-size:12px;color:#5a6b56;line-height:1.6;">Obteniu una puntuació clara i basada en dades que reflecteix la preparació del vostre projecte en impacte social.</div>
-      </div>
-      <div style="border:1px solid rgba(88,105,86,0.2);padding:24px;background:#fff;">
-        <div style="margin-bottom:12px;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--forest)" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
-        <div style="font-size:14px;font-weight:500;color:var(--forest);margin-bottom:6px;">Anàlisi d'Agents</div>
-        <div style="font-size:12px;color:#5a6b56;line-height:1.6;">Enteneu com de bé el vostre projecte implica comunitats, col·laboradors i beneficiaris.</div>
-      </div>
-      <div style="border:1px solid rgba(88,105,86,0.2);padding:24px;background:#fff;">
-        <div style="margin-bottom:12px;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--forest)" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-        <div style="font-size:14px;font-weight:500;color:var(--forest);margin-bottom:6px;">Recomanacions Accionables</div>
-        <div style="font-size:12px;color:#5a6b56;line-height:1.6;">Rebeu suggeriments personalitzats per enfortir el disseny i l'execució del vostre projecte.</div>
-      </div>
-      <div style="border:1px solid rgba(88,105,86,0.2);padding:24px;background:#fff;">
-        <div style="margin-bottom:12px;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--forest)" stroke-width="1.5"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg></div>
-        <div style="font-size:14px;font-weight:500;color:var(--forest);margin-bottom:6px;">Alineació amb Bones Pràctiques</div>
-        <div style="font-size:12px;color:#5a6b56;line-height:1.6;">Comproveu com s'alinea el vostre projecte amb marcs internacionals i polítiques socials.</div>
-      </div>
+<div class="content" style="padding:40px 48px 60px; max-width:none;">
+<div id="diag-intro">
+
+  <!-- Hero horitzontal -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;margin-bottom:40px;background:var(--forest);overflow:hidden;">
+    <div style="padding:48px 44px;display:flex;flex-direction:column;justify-content:center;">
+      <div style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--green-light);opacity:.7;margin-bottom:16px;">Eina gratuïta · Serveis Entitats</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:#fff;line-height:1.2;margin-bottom:16px;">Avalueu i Enfortiu els Vostres Projectes Socials</div>
+      <p style="font-size:13.5px;color:rgba(255,255,255,0.75);line-height:1.8;margin-bottom:28px;">Una eina d'avaluació gratuïta per a ONG, cooperatives i institucions públiques per mesurar i millorar el seu impacte social.</p>
+      <button onclick="startDiag()" style="background:var(--green-light);color:var(--forest);border:none;padding:14px 32px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;align-self:flex-start;">Comença l'Avaluació Gratuïta →</button>
+    </div>
+    <div style="background-image:url('images/img_23.png');background-size:cover;background-position:center;min-height:320px;position:relative;">
+      <div style="position:absolute;inset:0;background:rgba(18,32,41,0.3);"></div>
     </div>
   </div>
 
-  <div style="background:var(--green-pale);border:1px solid rgba(88,105,86,0.2);padding:32px 36px;text-align:center;">
-    <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--forest);margin-bottom:8px;">A Qui Va Dirigit?</div>
-    <p style="font-size:13px;color:#5a6b56;margin-bottom:20px;line-height:1.7;">Tant si sou una cooperativa de base com una administració pública, aquesta eina us ajuda a dissenyar programes socials més sòlids.</p>
-    <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
-      <span style="border:1px solid rgba(88,105,86,0.4);padding:6px 16px;font-size:12px;color:var(--forest);border-radius:20px;">ONG</span>
-      <span style="border:1px solid rgba(88,105,86,0.4);padding:6px 16px;font-size:12px;color:var(--forest);border-radius:20px;">Cooperatives Socials</span>
-      <span style="border:1px solid rgba(88,105,86,0.4);padding:6px 16px;font-size:12px;color:var(--forest);border-radius:20px;">Institucions Públiques</span>
-      <span style="border:1px solid rgba(88,105,86,0.4);padding:6px 16px;font-size:12px;color:var(--forest);border-radius:20px;">Organitzacions Comunitàries</span>
-      <span style="border:1px solid rgba(88,105,86,0.4);padding:6px 16px;font-size:12px;color:var(--forest);border-radius:20px;">Empreses Socials</span>
-    </div>
-  </div>
+  <!-- Com funciona + A qui va dirigit en 2 columnes -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:40px;">
 
-  <div style="text-align:center;margin-top:32px;">
-    <button onclick="startDiag()" style="background:var(--forest);color:var(--green-light);border:none;padding:14px 40px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;">Comença ara → </button>
+    <!-- Esquerra: Com funciona -->
+    <div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--forest);margin-bottom:8px;">Com Funciona</div>
+      <p style="font-size:13px;color:#5a6b56;margin-bottom:24px;line-height:1.7;">Responeu 10 preguntes sobre el vostre projecte. En 5 minuts rebreu la puntuació d'impacte i un pla d'acció personalitzat.</p>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div style="border:1px solid rgba(88,105,86,0.2);padding:20px;background:#fff;display:flex;gap:16px;align-items:flex-start;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--forest)" stroke-width="1.5" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
+          <div><div style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:4px;">Puntuació d'Impacte Social</div><div style="font-size:12px;color:#5a6b56;line-height:1.6;">Puntuació clara basada en dades sobre la preparació del vostre projecte.</div></div>
+        </div>
+        <div style="border:1px solid rgba(88,105,86,0.2);padding:20px;background:#fff;display:flex;gap:16px;align-items:flex-start;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--forest)" stroke-width="1.5" style="flex-shrink:0;margin-top:2px;"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <div><div style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:4px;">Recomanacions Accionables</div><div style="font-size:12px;color:#5a6b56;line-height:1.6;">Suggeriments personalitzats per enfortir el disseny i l'execució del projecte.</div></div>
+        </div>
+        <div style="border:1px solid rgba(88,105,86,0.2);padding:20px;background:#fff;display:flex;gap:16px;align-items:flex-start;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--forest)" stroke-width="1.5" style="flex-shrink:0;margin-top:2px;"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          <div><div style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:4px;">Anàlisi d'Agents</div><div style="font-size:12px;color:#5a6b56;line-height:1.6;">Com implica el projecte comunitats, col·laboradors i beneficiaris.</div></div>
+        </div>
+        <div style="border:1px solid rgba(88,105,86,0.2);padding:20px;background:#fff;display:flex;gap:16px;align-items:flex-start;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--forest)" stroke-width="1.5" style="flex-shrink:0;margin-top:2px;"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg>
+          <div><div style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:4px;">Alineació amb Bones Pràctiques</div><div style="font-size:12px;color:#5a6b56;line-height:1.6;">Comproveu l'alineació amb marcs internacionals i polítiques socials.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dreta: A qui va dirigit + CTA -->
+    <div style="display:flex;flex-direction:column;gap:24px;">
+      <div style="background:var(--green-pale);border:1px solid rgba(88,105,86,0.2);padding:32px 28px;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--forest);margin-bottom:8px;">A qui va dirigit</div>
+        <p style="font-size:13px;color:#5a6b56;margin-bottom:20px;line-height:1.7;">Tant si sou una cooperativa de base com una administració pública, aquesta eina us ajuda a dissenyar programes socials més sòlids.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <span style="border:1px solid rgba(88,105,86,0.4);padding:5px 14px;font-size:11.5px;color:var(--forest);border-radius:20px;">ONG</span>
+          <span style="border:1px solid rgba(88,105,86,0.4);padding:5px 14px;font-size:11.5px;color:var(--forest);border-radius:20px;">Cooperatives Socials</span>
+          <span style="border:1px solid rgba(88,105,86,0.4);padding:5px 14px;font-size:11.5px;color:var(--forest);border-radius:20px;">Institucions Públiques</span>
+          <span style="border:1px solid rgba(88,105,86,0.4);padding:5px 14px;font-size:11.5px;color:var(--forest);border-radius:20px;">Organitzacions Comunitàries</span>
+          <span style="border:1px solid rgba(88,105,86,0.4);padding:5px 14px;font-size:11.5px;color:var(--forest);border-radius:20px;">Empreses Socials</span>
+        </div>
+      </div>
+      <div style="background:var(--forest);padding:32px 28px;text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:#fff;margin-bottom:8px;">Llest per començar?</div>
+        <p style="font-size:12px;color:rgba(255,255,255,0.65);margin-bottom:20px;line-height:1.6;">Gratuït, sense registre i en menys de 5 minuts.</p>
+        <button onclick="startDiag()" style="background:var(--green-light);color:var(--forest);border:none;padding:14px 32px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;width:100%;">Comença ara →</button>
+      </div>
+    </div>
+
   </div>
 </div>
 
