@@ -8,7 +8,7 @@
 <style>
 :root{--forest:#122029;--green-deep:#586956;--green-mid:#6a8e4e;--green-light:#b1d082;--green-pale:#e8f0dc;--cream:#f4f1eb;--white:#fdfcf9;--text:#1a2e1f;--text-muted:#5a6b56;--sidebar-w:260px;--T:.35s cubic-bezier(.4,0,.2,1)}
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--forest);color:var(--text);display:flex;min-height:100vh;overflow-x:hidden}
+body{font-family:'DM Sans',sans-serif;background:var(--forest);color:var(--text);min-height:100vh;overflow-x:hidden}
 .sidebar{width:var(--sidebar-w);min-height:100vh;background:var(--forest);position:fixed;left:0;top:var(--topbar-h);display:flex;flex-direction:column;z-index:100;transition:transform var(--T)}
 .sidebar-logo{padding:26px 22px 20px;border-bottom:1px solid rgba(177,208,130,.15);display:flex;align-items:center;gap:12px}
 .sidebar-logo img{width:46px;height:46px;object-fit:contain}
@@ -22,8 +22,8 @@ nav a svg{width:15px;height:15px;opacity:.6;flex-shrink:0;transition:opacity .2s
 nav a:hover svg,nav a.active svg{opacity:1}
 .sidebar-footer{padding:14px 22px;border-top:1px solid rgba(177,208,130,.12);font-size:10.5px;color:rgba(177,208,130,.45);line-height:1.7}
 .sidebar-footer a{color:rgba(177,208,130,.65);text-decoration:none}
-.main{margin-left:var(--sidebar-w);flex:1;min-height:100vh;margin-top:var(--topbar-h);background:var(--cream);display:flex;flex-direction:column;overflow-x:hidden;overflow-y:auto;}
-section{display:none;flex:1;animation:fadeIn .4s ease;overflow:visible;}
+.main{margin-left:var(--sidebar-w);min-height:100vh;margin-top:var(--topbar-h);background:var(--cream);overflow-x:hidden;}
+section{display:none;animation:fadeIn .4s ease;}
 section.active{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 #inici{position:relative;background:var(--forest)}
@@ -2217,8 +2217,6 @@ document.addEventListener('keydown',function(e){ if(e.key==='Escape') document.q
 
 // ── Sticky Stack ──────────────────────────────────────────────
 function initStickyStack() {
-  var main = document.querySelector('.main');
-  if (!main) return;
   var topbarH = 42;
 
   function applySticky() {
@@ -2226,26 +2224,33 @@ function initStickyStack() {
     if (!wrap) return;
     var items = wrap.querySelectorAll('.stack-item');
     if (!items.length) return;
-
     items.forEach(function(item, i) {
       item.style.position = 'sticky';
       item.style.top = (topbarH + i * 4) + 'px';
-      item.style.zIndex = i + 1;
+      item.style.zIndex = (i + 1) * 10;
     });
   }
 
-  // Aplicar sempre que la secció inici sigui visible
+  function removeSticky() {
+    var items = document.querySelectorAll('#inici .stack-item');
+    items.forEach(function(item) {
+      item.style.position = '';
+      item.style.top = '';
+    });
+  }
+
   var observer = new MutationObserver(function() {
     var inici = document.getElementById('inici');
     if (inici && inici.classList.contains('active')) {
       setTimeout(applySticky, 50);
+    } else {
+      removeSticky();
     }
   });
-  observer.observe(document.querySelector('.main') || document.body, {
+  observer.observe(document.body, {
     childList: true, subtree: true, attributes: true, attributeFilter: ['class']
   });
 
-  // Aplicar en carregar
   setTimeout(applySticky, 100);
 }
 
