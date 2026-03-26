@@ -15,7 +15,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);
 .logo-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--white);letter-spacing:.04em;line-height:1}
 .logo-sub{font-size:9px;color:var(--green-light);letter-spacing:.1em;text-transform:uppercase;opacity:.75;margin-top:4px;line-height:1.4}
 nav{flex:1;padding:18px 0}
-nav a{display:flex;align-items:center;gap:11px;padding:12px 22px;color:rgba(253,252,249,.6);text-decoration:none;font-size:13px;font-weight:400;letter-spacing:.02em;transition:all var(--T);position:relative;cursor:pointer}
+nav a{display:flex;align-items:center;gap:11px;padding:12px 22px;color:rgba(253,252,249,.85);text-decoration:none;font-size:13px;font-weight:400;letter-spacing:.02em;transition:all var(--T);position:relative;cursor:pointer}
 nav a:hover,nav a.active{color:var(--white);background:rgba(177,208,130,.1)}
 nav a.active::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--green-light);border-radius:0 2px 2px 0}
 nav a svg{width:15px;height:15px;opacity:.6;flex-shrink:0;transition:opacity .2s}
@@ -28,7 +28,7 @@ section.active{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 #inici{position:relative;background:var(--forest)}
 .hero-img{position:absolute;inset:0;background-size:cover;background-position:center}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(18,32,41,.68) 0%,rgba(18,32,41,.35) 55%,rgba(88,105,86,.2) 100%)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,58,47,.85) 0%,rgba(30,58,47,.5) 55%,rgba(88,105,86,.2) 100%)}
 .hero-content{position:relative;z-index:2;padding:80px 64px 60px;max-width:740px}
 .hero-tag{display:inline-flex;align-items:center;gap:8px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--green-light);border:1px solid rgba(177,208,130,.3);padding:6px 14px;margin-bottom:28px}
 .hero-tag img{width:18px;height:18px;object-fit:contain}
@@ -41,11 +41,13 @@ section.active{display:block}
 .btn-primary:hover{background:var(--white);transform:translateY(-2px)}
 .btn-outline{background:transparent;color:rgba(253,252,249,.78);padding:13px 28px;border:1px solid rgba(253,252,249,.22);font-family:'DM Sans',sans-serif;font-size:12px;font-weight:400;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;text-decoration:none;display:inline-block;transition:all .25s}
 .btn-outline:hover{border-color:var(--green-light);color:var(--green-light)}
-.hero-stats{position:relative;z-index:1;display:flex;border-top:1px solid rgba(255,255,255,.1);background:rgba(18,32,41,.5);backdrop-filter:blur(8px);margin-bottom:8px;}
+.hero-stats{position:relative;z-index:1;display:flex;border-top:1px solid rgba(255,255,255,.1);background:rgba(30,58,47,.75);backdrop-filter:blur(8px);margin-bottom:8px;}
+.stat{padding:18px 22px;cursor:default;transition:color .2s;}
+.stat:hover .stat-num,.stat:hover .stat-label{color:var(--green-light);}
 .stat{flex:1;padding:26px 44px;border-right:1px solid rgba(255,255,255,.07)}
 .stat:last-child{border-right:none}
-.stat-num{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:300;color:var(--green-light);line-height:1;margin-bottom:4px}
-.stat-label{font-size:11px;color:rgba(253,252,249,.45);letter-spacing:.04em}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:300;color:#fdfcf9;line-height:1;margin-bottom:4px}
+.stat-label{font-size:11px;color:rgba(253,252,249,.85);letter-spacing:.04em}
 .page-header{background:var(--forest);padding:52px 64px 40px;position:relative;overflow:hidden}
 .page-header-bg{position:absolute;right:0;top:0;bottom:0;width:45%;background-size:cover;background-position:center;opacity:.55}
 .page-header::after{content:'';position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to right,var(--forest) 0%,transparent 40%)}
@@ -160,13 +162,16 @@ section.active{display:block}
 .topbar-logo-wrap{display:flex;align-items:center;gap:8px}
 .topbar-logo-wrap img{height:24px;width:auto;object-fit:contain}
 .topbar-brand{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:400;color:#f4f1eb;letter-spacing:0.04em}
-.topbar-tagline{font-size:10px;color:rgba(177,208,130,.55);letter-spacing:0.12em;text-transform:uppercase;display:block}
-.topbar-right{display:flex;align-items:center;gap:6px}
-.topbar-btn{display:flex;align-items:center;gap:5px;padding:5px 11px;border:1px solid rgba(177,208,130,.2);color:rgba(177,208,130,.8);font-size:11px;text-decoration:none;letter-spacing:0.05em;transition:all .2s;cursor:pointer;background:transparent;white-space:nowrap}
-.topbar-btn:hover,.topbar-btn:focus{background:rgba(177,208,130,.1);border-color:rgba(177,208,130,.5);color:#b1d082}
+.topbar-tagline{font-size:11px;color:rgba(253,252,249,.85);letter-spacing:0.05em;display:block}
+.topbar-right{display:flex;align-items:center;gap:8px}
+.topbar-btn{display:flex;align-items:center;gap:5px;padding:5px 11px;border:1px solid rgba(177,208,130,.2);color:rgba(253,252,249,.85);font-size:11px;text-decoration:none;letter-spacing:0.05em;transition:all .2s;cursor:pointer;background:transparent;white-space:nowrap}
+.topbar-btn:hover,.topbar-btn:focus{background:rgba(177,208,130,.1);border-color:rgba(177,208,130,.5);color:var(--green-light)}
 .topbar-btn.urgent{border-color:rgba(239,68,68,.4);color:rgba(239,68,68,.8)}
 .topbar-btn.urgent:hover{background:rgba(239,68,68,.1);border-color:rgba(239,68,68,.7);color:#ef4444}
 .topbar-btn svg{width:12px;height:12px;flex-shrink:0}
+.lang-select{appearance:none;background:transparent;border:1px solid rgba(177,208,130,.2);color:rgba(253,252,249,.85);font-size:11px;font-family:'DM Sans',sans-serif;letter-spacing:0.05em;padding:5px 24px 5px 10px;cursor:pointer;transition:all .2s;outline:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='rgba(177,208,130,0.6)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center;}
+.lang-select:hover{border-color:rgba(177,208,130,.5);color:var(--green-light)}
+.lang-select option{background:var(--forest);color:#fdfcf9;}
 @media(max-width:768px){.topbar{padding-left:58px}.topbar-tagline,.topbar-brand{display:block}.topbar-btn span{display:none}.topbar-btn{padding:5px 7px}}
 
 /* === FOOTER === */
@@ -572,6 +577,10 @@ function changeLogo(){
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       <span id="topbar-contacte-label">Contacte</span>
     </a>
+    <select class="lang-select" title="Idioma" onchange="alert('Traducció al castellà disponible próximament!')">
+      <option value="ca" selected>CA</option>
+      <option value="es">ES</option>
+    </select>
   </div>
 </div>
 <button class="mobile-toggle" onclick="toggleSidebar()"><span></span><span></span><span></span></button>
