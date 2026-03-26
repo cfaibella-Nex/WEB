@@ -155,7 +155,7 @@ section.active{display:block}
 
 /* === TOPBAR === */
 :root{--topbar-h:42px;--footer-h:auto}
-.topbar{position:fixed;top:0;left:0;right:0;height:var(--topbar-h);background:#122029;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 18px 0 calc(var(--sidebar-w) + 18px);border-bottom:1px solid rgba(177,208,130,.12)}
+.topbar{position:fixed;top:0;left:0;right:0;height:var(--topbar-h);background:var(--forest);z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 18px 0 calc(var(--sidebar-w) + 18px);border-bottom:1px solid rgba(177,208,130,.12)}
 .topbar-left{display:flex;align-items:center;gap:20px}
 .topbar-logo-wrap{display:flex;align-items:center;gap:8px}
 .topbar-logo-wrap img{height:24px;width:auto;object-fit:contain}
@@ -170,16 +170,16 @@ section.active{display:block}
 @media(max-width:768px){.topbar{padding-left:58px}.topbar-tagline,.topbar-brand{display:block}.topbar-btn span{display:none}.topbar-btn{padding:5px 7px}}
 
 /* === FOOTER === */
-.site-footer{background:#122029;color:rgba(177,208,130,.5);padding:36px 48px 28px;}
+.site-footer{background:var(--forest);color:rgba(177,208,130,.5);padding:36px 48px 28px;}
 .footer-inner{max-width:960px;margin:0 auto}
 .footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px;padding-bottom:28px;border-bottom:1px solid rgba(177,208,130,.08)}
-.footer-col-title{font-size:9.5px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(177,208,130,.4);margin-bottom:14px;font-weight:600}
+.footer-col-title{font-size:9.5px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(177,208,130,.9);margin-bottom:14px;font-weight:600}
 .footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px}
 .footer-brand img{height:32px;width:auto;object-fit:contain;opacity:.85}
-.footer-brand-name{font-family:'Cormorant Garamond',serif;font-size:18px;color:rgba(244,241,235,.75);letter-spacing:0.04em}
-.footer-desc{font-size:12px;line-height:1.8;color:rgba(177,208,130,.4);max-width:220px}
+.footer-brand-name{font-family:'Cormorant Garamond',serif;font-size:18px;color:#fdfcf9;letter-spacing:0.04em}
+.footer-desc{font-size:12px;line-height:1.8;color:rgba(253,252,249,.75);max-width:220px}
 .footer-links{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
-.footer-links a{font-size:12px;color:rgba(177,208,130,.5);text-decoration:none;transition:color .2s}
+.footer-links a{font-size:12px;color:rgba(253,252,249,.8);text-decoration:none;transition:color .2s}
 .footer-links a:hover{color:#b1d082}
 .footer-social{display:flex;flex-direction:column;gap:8px}
 .footer-social a{display:flex;align-items:center;gap:7px;font-size:12px;color:rgba(177,208,130,.5);text-decoration:none;transition:color .2s}
@@ -187,8 +187,8 @@ section.active{display:block}
 .footer-social svg{width:14px;height:14px;flex-shrink:0}
 .footer-denuncia{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid rgba(239,68,68,.3);color:rgba(239,68,68,.7);font-size:11px;text-decoration:none;letter-spacing:0.06em;transition:all .2s;margin-top:4px}
 .footer-denuncia:hover{background:rgba(239,68,68,.08);border-color:rgba(239,68,68,.6);color:#ef4444}
-.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:20px;font-size:11px;color:rgba(177,208,130,.25);flex-wrap:wrap;gap:8px}
-.footer-bottom a{color:rgba(177,208,130,.35);text-decoration:none}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:20px;font-size:11px;color:rgba(253,252,249,.5);flex-wrap:wrap;gap:8px}
+.footer-bottom a{color:rgba(253,252,249,.5);text-decoration:none}
 .footer-bottom a:hover{color:#b1d082}
 @media(max-width:768px){.site-footer{padding:28px 22px 20px}.footer-top{grid-template-columns:1fr 1fr}.footer-col--brand{grid-column:1/-1}}
 
@@ -2106,7 +2106,7 @@ function changeLogo(){
       <div class="footer-col">
         <div class="footer-col-title">Segueix-nos</div>
         <div class="footer-social" id="footer-social">
-          <a href="https://linkedin.com" id="footer-linkedin" target="_blank" rel="noopener">
+          <a href="https://www.linkedin.com/in/nexsocial-cooperativa-acompa%C3%B1amiento-sociovital-218a213b9/" id="footer-linkedin" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
             LinkedIn
           </a>
