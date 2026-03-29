@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NexSocial — Cooperativa d'Acompanyament Sociovital</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=League+Spartan:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--forest:#1e3a2f;--green-deep:#586956;--green-mid:#6a8e4e;--green-light:#b1d082;--green-pale:#e8f0dc;--cream:#f4f1eb;--white:#fdfcf9;--text:#1a2e1f;--text-muted:#5a6b56;--sidebar-w:260px;--T:.35s cubic-bezier(.4,0,.2,1)}
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:clip;}
@@ -32,15 +32,15 @@ section.active{display:block}
 .hero-content{position:relative;z-index:2;padding:80px 64px 60px;max-width:740px}
 .hero-tag{display:inline-flex;align-items:center;gap:8px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--green-light);border:1px solid rgba(177,208,130,.3);padding:6px 14px;margin-bottom:28px}
 .hero-tag img{width:18px;height:18px;object-fit:contain}
-.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,5.5vw,70px);font-weight:300;color:var(--white);line-height:1.05;margin-bottom:10px}
+.hero-title{font-family:'League Spartan',sans-serif;font-size:clamp(54px,7.5vw,98px);font-weight:700;color:var(--white);line-height:1;margin-bottom:10px;letter-spacing:-0.02em}
 .hero-title em{font-style:italic;color:var(--green-light)}
-.hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(16px,2vw,21px);font-weight:300;color:rgba(253,252,249,.65);margin-bottom:28px;letter-spacing:.04em}
+.hero-sub{font-family:'DM Sans',sans-serif;font-size:clamp(15px,1.6vw,19px);font-weight:300;color:rgba(253,252,249,.8);margin-bottom:28px;letter-spacing:.02em}
 .hero-desc{font-size:14.5px;line-height:1.8;color:rgba(253,252,249,.78);max-width:500px;margin-bottom:40px}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
-.btn-primary{background:var(--green-light);color:var(--forest);padding:13px 28px;border:none;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;text-decoration:none;display:inline-block;transition:all .25s}
-.btn-primary:hover{background:var(--white);transform:translateY(-2px)}
-.btn-outline{background:transparent;color:rgba(253,252,249,.78);padding:13px 28px;border:1px solid rgba(253,252,249,.22);font-family:'DM Sans',sans-serif;font-size:12px;font-weight:400;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;text-decoration:none;display:inline-block;transition:all .25s}
-.btn-outline:hover{border-color:var(--green-light);color:var(--green-light)}
+.btn-primary{background:var(--green-light);color:var(--forest);padding:14px 32px;border:none;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;text-decoration:none;display:inline-block;transition:all .3s;border-radius:40px;box-shadow:0 4px 20px rgba(177,208,130,0.3)}
+.btn-primary:hover{background:var(--white);transform:translateY(-3px);box-shadow:0 8px 28px rgba(177,208,130,0.4)}
+.btn-outline{background:rgba(255,255,255,0.1);backdrop-filter:blur(8px);color:rgba(253,252,249,.9);padding:14px 32px;border:1px solid rgba(253,252,249,.3);font-family:'DM Sans',sans-serif;font-size:12px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;text-decoration:none;display:inline-block;transition:all .3s;border-radius:40px}
+.btn-outline:hover{background:rgba(255,255,255,0.18);border-color:var(--green-light);color:var(--green-light);transform:translateY(-3px)}
 .hero-stats{position:relative;z-index:1;display:flex;border-top:1px solid rgba(255,255,255,.1);background:rgba(30,58,47,.75);backdrop-filter:blur(8px);margin-bottom:8px;}
 .stat{padding:18px 22px;cursor:default;transition:color .2s;}
 .stat:hover .stat-num,.stat:hover .stat-label{color:var(--green-light);}
@@ -643,7 +643,7 @@ function changeLogo(){
   <img src="images/img_02.jpg" alt="NexSocial hero" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;">
   <div class="hero-overlay"></div>
   <div class="hero-content" style="position:relative;z-index:2;padding:80px 64px 60px;max-width:740px;">
-    <div class="hero-tag"><img src="images/img_03.png" alt="">Cooperativa d'Acompanyament Sociovital</div>
+    <div class="hero-tag" style="display:none"><img src="images/img_03.png" alt="">Cooperativa d'Acompanyament Sociovital</div>
     <h1 class="hero-title">Al servei de<br><em>les persones</em></h1>
     <p class="hero-sub" id="hero-sub">Acompanyament · Gestió · Transformació</p>
     <p class="hero-desc" id="hero-desc"><span style="font-family:'Cormorant Garamond',serif;font-size:1.15em;">Nex<em style="color:var(--green-light);">Social</em></span> és una cooperativa que neix amb la voluntat de ser un nexe de suport i acompanyament global. Treballem per a la comunitat i per a les persones que necessiten suport en algun moment del seu cicle vital.</p>
@@ -736,26 +736,37 @@ function changeLogo(){
       <!-- Caixetes beneficis -->
       <div style="font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--green-mid);margin-bottom:14px;">Beneficis de l'acompanyament emocional</div>
       <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:32px;">
-        <div style="background:rgba(255,255,255,0.2);border:1px solid rgba(177,208,130,0.25);border-radius:8px;padding:16px 14px;backdrop-filter:blur(4px);">
-          <div style="font-size:9px;color:var(--green-mid);letter-spacing:0.12em;margin-bottom:8px;">01</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--forest);line-height:1.3;">Salut mental i emocional</div>
+
+        <div style="background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.3);border-radius:12px;padding:20px 16px 16px;backdrop-filter:blur(6px);position:relative;overflow:hidden;">
+          <div style="position:absolute;bottom:-10px;right:8px;font-family:'League Spartan',sans-serif;font-size:72px;font-weight:700;color:rgba(255,255,255,0.15);line-height:1;pointer-events:none;">01</div>
+          <div style="font-size:9px;color:rgba(255,255,255,0.6);letter-spacing:0.14em;margin-bottom:10px;text-transform:uppercase;">01</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--green-light);line-height:1.35;position:relative;z-index:1;">Salut mental i emocional</div>
         </div>
-        <div style="background:rgba(255,255,255,0.2);border:1px solid rgba(177,208,130,0.25);border-radius:8px;padding:16px 14px;backdrop-filter:blur(4px);">
-          <div style="font-size:9px;color:var(--green-mid);letter-spacing:0.12em;margin-bottom:8px;">02</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--forest);line-height:1.3;">Gestió del dolor i el trauma</div>
+
+        <div style="background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.3);border-radius:12px;padding:20px 16px 16px;backdrop-filter:blur(6px);position:relative;overflow:hidden;">
+          <div style="position:absolute;bottom:-10px;right:8px;font-family:'League Spartan',sans-serif;font-size:72px;font-weight:700;color:rgba(255,255,255,0.15);line-height:1;pointer-events:none;">02</div>
+          <div style="font-size:9px;color:rgba(255,255,255,0.6);letter-spacing:0.14em;margin-bottom:10px;text-transform:uppercase;">02</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--green-light);line-height:1.35;position:relative;z-index:1;">Gestió del dolor i el trauma</div>
         </div>
-        <div style="background:rgba(255,255,255,0.2);border:1px solid rgba(177,208,130,0.25);border-radius:8px;padding:16px 14px;backdrop-filter:blur(4px);">
-          <div style="font-size:9px;color:var(--green-mid);letter-spacing:0.12em;margin-bottom:8px;">03</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--forest);line-height:1.3;">Millora Autoestima</div>
+
+        <div style="background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.3);border-radius:12px;padding:20px 16px 16px;backdrop-filter:blur(6px);position:relative;overflow:hidden;">
+          <div style="position:absolute;bottom:-10px;right:8px;font-family:'League Spartan',sans-serif;font-size:72px;font-weight:700;color:rgba(255,255,255,0.15);line-height:1;pointer-events:none;">03</div>
+          <div style="font-size:9px;color:rgba(255,255,255,0.6);letter-spacing:0.14em;margin-bottom:10px;text-transform:uppercase;">03</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--green-light);line-height:1.35;position:relative;z-index:1;">Millora de l'Autoestima</div>
         </div>
-        <div style="background:rgba(255,255,255,0.2);border:1px solid rgba(177,208,130,0.25);border-radius:8px;padding:16px 14px;backdrop-filter:blur(4px);">
-          <div style="font-size:9px;color:var(--green-mid);letter-spacing:0.12em;margin-bottom:8px;">04</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--forest);line-height:1.3;">Desenvolupament personal</div>
+
+        <div style="background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.3);border-radius:12px;padding:20px 16px 16px;backdrop-filter:blur(6px);position:relative;overflow:hidden;">
+          <div style="position:absolute;bottom:-10px;right:8px;font-family:'League Spartan',sans-serif;font-size:72px;font-weight:700;color:rgba(255,255,255,0.15);line-height:1;pointer-events:none;">04</div>
+          <div style="font-size:9px;color:rgba(255,255,255,0.6);letter-spacing:0.14em;margin-bottom:10px;text-transform:uppercase;">04</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--green-light);line-height:1.35;position:relative;z-index:1;">Desenvolupament personal</div>
         </div>
-        <div style="background:rgba(255,255,255,0.2);border:1px solid rgba(177,208,130,0.25);border-radius:8px;padding:16px 14px;backdrop-filter:blur(4px);">
-          <div style="font-size:9px;color:var(--green-mid);letter-spacing:0.12em;margin-bottom:8px;">05</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--forest);line-height:1.3;">Millora relacions i Empatia</div>
+
+        <div style="background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.3);border-radius:12px;padding:20px 16px 16px;backdrop-filter:blur(6px);position:relative;overflow:hidden;">
+          <div style="position:absolute;bottom:-10px;right:8px;font-family:'League Spartan',sans-serif;font-size:72px;font-weight:700;color:rgba(255,255,255,0.15);line-height:1;pointer-events:none;">05</div>
+          <div style="font-size:9px;color:rgba(255,255,255,0.6);letter-spacing:0.14em;margin-bottom:10px;text-transform:uppercase;">05</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--green-light);line-height:1.35;position:relative;z-index:1;">Millora relacions i Empatia</div>
         </div>
+
       </div>
 
       <a onclick="showSection('nexacompanya',null)" style="display:inline-flex;align-items:center;gap:10px;padding:14px 28px;background:var(--green-light);color:var(--forest);font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;transition:all .25s;border-radius:40px;border:none;" onmouseover="this.style.background='var(--green-mid)';this.style.color='#fff'" onmouseout="this.style.background='var(--green-light)';this.style.color='var(--forest)'">Saber-ne més →</a>
@@ -911,17 +922,21 @@ function changeLogo(){
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:2px;">
 
       <div style="background:var(--forest);padding:32px 28px;text-align:center;">
-        <div style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:var(--green-light);line-height:1;margin-bottom:12px;">1 de cada 4</div>
+        <div style="font-family:'League Spartan',sans-serif;font-size:52px;font-weight:700;color:var(--green-light);line-height:1;margin-bottom:12px;">1 de cada 4</div>
         <div style="font-size:12px;color:rgba(255,255,255,0.7);line-height:1.65;">persones patirà un trastorn mental al llarg de la seva vida <span style="color:rgba(255,255,255,0.4);">(OMS)</span></div>
       </div>
 
-      <div style="background:var(--green-pale);padding:32px 28px;text-align:center;">
-        <div style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:var(--green-mid);line-height:1;margin-bottom:12px;">40%</div>
-        <div style="font-size:12px;color:var(--text-muted);line-height:1.65;">de les baixes laborals a Catalunya s'associen a causes emocionals o psicosocials</div>
+      <div style="background:var(--green-pale);padding:24px;">
+        <div style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--green-mid);margin-bottom:14px;border-bottom:1px solid rgba(88,105,86,0.2);padding-bottom:10px;">Empreses i organitzacions</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
+          <li style="font-size:12px;color:var(--text-muted);line-height:1.6;display:flex;gap:8px;"><span style="color:var(--green-mid);flex-shrink:0;">—</span>L'estrès laboral i el burnout costen a les empreses fins a 3.000€ per treballador/any</li>
+          <li style="font-size:12px;color:var(--text-muted);line-height:1.6;display:flex;gap:8px;"><span style="color:var(--green-mid);flex-shrink:0;">—</span>1 de 3 dels equips amb conflictes interns no rep cap suport professional</li>
+          <li style="font-size:12px;color:var(--text-muted);line-height:1.6;display:flex;gap:8px;"><span style="color:var(--green-mid);flex-shrink:0;">—</span>Creixent demanda de programes de benestar emocional al lloc de treball</li>
+        </ul>
       </div>
 
       <div style="background:var(--forest);padding:32px 28px;text-align:center;">
-        <div style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:var(--green-light);line-height:1;margin-bottom:12px;">70%</div>
+        <div style="font-family:'League Spartan',sans-serif;font-size:80px;font-weight:700;color:var(--green-light);line-height:1;margin-bottom:12px;">70%</div>
         <div style="font-size:12px;color:rgba(255,255,255,0.7);line-height:1.65;">de les persones amb necessitat de suport psicològic no arriben mai a un professional</div>
       </div>
 
@@ -938,13 +953,9 @@ function changeLogo(){
         </ul>
       </div>
 
-      <div style="background:var(--forest);padding:24px;">
-        <div style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--green-light);margin-bottom:14px;border-bottom:1px solid rgba(177,208,130,0.25);padding-bottom:10px;">Empreses i organitzacions</div>
-        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
-          <li style="font-size:12px;color:rgba(255,255,255,0.7);line-height:1.6;display:flex;gap:8px;"><span style="color:var(--green-light);flex-shrink:0;">—</span>L'estrès laboral i el burnout costen a les empreses fins a 3.000€ per treballador/any</li>
-          <li style="font-size:12px;color:rgba(255,255,255,0.7);line-height:1.6;display:flex;gap:8px;"><span style="color:var(--green-light);flex-shrink:0;">—</span>1 de 3 dels equips amb conflictes interns no rep cap suport professional</li>
-          <li style="font-size:12px;color:rgba(255,255,255,0.7);line-height:1.6;display:flex;gap:8px;"><span style="color:var(--green-light);flex-shrink:0;">—</span>Creixent demanda de programes de benestar emocional al lloc de treball</li>
-        </ul>
+      <div style="background:var(--forest);padding:32px 28px;text-align:center;">
+        <div style="font-family:'League Spartan',sans-serif;font-size:80px;font-weight:700;color:var(--green-light);line-height:1;margin-bottom:12px;">40%</div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.7);line-height:1.65;">de les baixes laborals a Catalunya s'associen a causes emocionals o psicosocials</div>
       </div>
 
       <div style="background:var(--green-pale);padding:24px;">
@@ -1001,10 +1012,10 @@ function changeLogo(){
 .area-card-list { list-style:none; padding:0; margin:0 0 28px; }
 .area-card-list li { font-size:12px; color:#5a6b56; padding:5px 0; border-bottom:1px solid rgba(88,105,86,0.1); display:flex; align-items:center; gap:8px; }
 .area-card-list li::before { content:""; width:5px; height:5px; border-radius:50%; background:var(--green-mid); flex-shrink:0; }
-.area-btn { display:inline-block; background:var(--forest); color:var(--green-light); border:none; padding:12px 28px; font-family:"DM Sans",sans-serif; font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer; transition:background .2s; text-align:center; }
-.area-btn:hover { background:var(--green-mid); }
-.area-btn-outline { background:transparent; color:var(--forest); border:1px solid rgba(18,32,41,0.3); }
-.area-btn-outline:hover { background:var(--forest); color:var(--green-light); }
+.area-btn { display:inline-flex; align-items:center; justify-content:center; background:var(--forest); color:var(--green-light); border:none; padding:13px 28px; font-family:"DM Sans",sans-serif; font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; cursor:pointer; transition:all .3s; text-align:center; border-radius:40px; box-shadow:0 4px 16px rgba(30,58,47,0.25); }
+.area-btn:hover { background:var(--green-mid); color:#fff; transform:translateY(-3px); box-shadow:0 8px 24px rgba(30,58,47,0.35); }
+.area-btn-outline { background:rgba(255,255,255,0.55); backdrop-filter:blur(8px); color:var(--forest); border:1px solid rgba(30,58,47,0.25); }
+.area-btn-outline:hover { background:var(--forest); color:var(--green-light); transform:translateY(-3px); box-shadow:0 8px 24px rgba(30,58,47,0.25); }
 @media(max-width:768px){ .area-card { grid-template-columns:1fr; } .area-card-img { min-height:200px; } }
 </style>
 
@@ -1910,9 +1921,9 @@ function changeLogo(){
       <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--forest);margin-bottom:6px;">Ets membre de NexSocial?</div>
       <div style="font-size:12px;color:#5a6b56;">Introdueix la contrasenya per accedir a l'eina completa.</div>
     </div>
-    <a href="https://nexlicitia.nexsocial.org" class="area-btn" style="white-space:nowrap;text-decoration:none;">
+    <button onclick="var pw=prompt('Contrasenya NexlicitIA:');if(pw==='Nexsocial2026!')window.location.href='https://nexlicitia.nexsocial.org?k=nex2026';else if(pw!==null)alert('Contrasenya incorrecta');" class="area-btn" style="white-space:nowrap;">
       🔒 Accedir a NexlicitIA →
-    </a>
+    </button>
   </div>
 
 </div>
@@ -2295,8 +2306,40 @@ function initStickyStack() {
 }
 
 document.addEventListener('DOMContentLoaded', initStickyStack);
+// Credencials dels socis (per producció, moure a Supabase/backend)
+var INTEL_USERS = {
+  'infonex@nexsocial.org': 'Nexsocial2026!'
+};
+// URL de l'eina (pujar intel_social.html a /tools/intel.html o similar)
+var INTEL_URL = 'intel.html';
+
+function nexDoLogin() {
+  var email = document.getElementById('intel-email').value.trim().toLowerCase();
+  var pass  = document.getElementById('intel-pass').value;
+  var err   = document.getElementById('intel-error');
+
+  if (INTEL_USERS[email] && INTEL_USERS[email] === pass) {
+    err.style.display = 'none';
+    sessionStorage.setItem('nexsocial_intel_auth', email);
+    nexShowApp();
+  } else {
+    err.style.display = 'block';
+    document.getElementById('intel-pass').value = '';
+  }
+}
+
+function nexShowApp() {
+  document.getElementById('intel-login-wall').style.display = 'none';
+  sessionStorage.setItem('nex_ok', 'true');
+  window.location.href = 'https://nexlicitia.nexsocial.org?k=nex2026';
+}
+
 function nexCheckLogin() {
-  window.location.href = 'https://nexlicitia.nexsocial.org';
+  setTimeout(function() {
+    if (sessionStorage.getItem('nexsocial_intel_auth')) {
+      nexShowApp();
+    }
+  }, 50);
 }
 </script>
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
