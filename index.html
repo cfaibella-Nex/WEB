@@ -227,9 +227,9 @@ div[style*="font-size:32px"]{font-size:22px !important;}
 #inici div[style*="grid-template-columns:1fr 400px"]{grid-template-columns:1fr !important;}
 #inici div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important;}
 #inici div[style*="min-height:420px"]{min-height:auto !important;}
-/* Gestalt: amagar foto lateral i ajustar padding al mòbil */
+/* Gestalt: amagar foto lateral al mòbil */
+.gestalt-foto{display:none !important;}
 #inici div[style*="padding:48px 48px 56px 64px"]{padding:28px 18px 32px !important;}
-#inici div[style*="position:relative;overflow:hidden;"]{display:none !important;}
 /* Cards de serveis: padding inferior prou gran perquè el botó es vegi */
 #inici div[style*="padding-bottom:120px"]{padding-bottom:48px !important;}
 #inici div[style*="padding:32px 32px 48px"]{padding:24px 20px 40px !important;}
@@ -961,7 +961,7 @@ function changeLogo(){
     </div>
 
     <!-- Foto torxa: cobreix tota l'alçada des de dalt -->
-    <div style="position:relative;overflow:hidden;">
+    <div class="gestalt-foto" style="position:relative;overflow:hidden;">
       <img src="images/img_33.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;">
       <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(18,32,41,0.88) 0%, rgba(18,32,41,0.05) 50%);"></div>
       <div style="position:absolute;bottom:0;left:0;right:0;padding:28px 24px;">
