@@ -42,12 +42,12 @@ section.active{display:block}
 .btn-outline{background:rgba(255,255,255,0.1);backdrop-filter:blur(8px);color:rgba(253,252,249,.9);padding:14px 32px;border:1px solid rgba(253,252,249,.3);font-family:'DM Sans',sans-serif;font-size:12px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;text-decoration:none;display:inline-block;transition:all .3s;border-radius:40px}
 .btn-outline:hover{background:rgba(255,255,255,0.18);border-color:var(--green-light);color:var(--green-light);transform:translateY(-3px)}
 .hero-stats{position:relative;z-index:1;display:flex;border-top:1px solid rgba(255,255,255,.1);background:rgba(30,58,47,.75);backdrop-filter:blur(8px);margin-bottom:8px;}
-.stat{padding:18px 22px;cursor:default;transition:color .2s;}
-.stat:hover .stat-num,.stat:hover .stat-label{color:var(--green-light);}
-.stat{flex:1;padding:26px 44px;border-right:1px solid rgba(255,255,255,.07)}
+.stat{flex:1;padding:26px 44px;border-right:1px solid rgba(255,255,255,.07);cursor:default;transition:all .25s;}
 .stat:last-child{border-right:none}
-.stat-num{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:300;color:#fdfcf9;line-height:1;margin-bottom:4px}
-.stat-label{font-size:11px;color:rgba(253,252,249,.85);letter-spacing:.04em}
+.stat:hover{background:rgba(177,208,130,.1);}
+.stat:hover .stat-num,.stat:hover .stat-label{color:var(--green-light);}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:300;color:rgba(220,225,215,.7);line-height:1;margin-bottom:4px;transition:color .25s;}
+.stat-label{font-size:12px;color:rgba(220,225,215,.55);letter-spacing:.04em;transition:color .25s;}
 .page-header{background:var(--forest);padding:52px 64px 40px;position:relative;overflow:hidden}
 .page-header-bg{position:absolute;right:0;top:0;bottom:0;width:45%;background-size:cover;background-position:center;opacity:.55}
 .page-header::after{content:'';position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to right,var(--forest) 0%,transparent 40%)}
@@ -227,9 +227,15 @@ div[style*="font-size:32px"]{font-size:22px !important;}
 #inici div[style*="grid-template-columns:1fr 400px"]{grid-template-columns:1fr !important;}
 #inici div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important;}
 #inici div[style*="min-height:420px"]{min-height:auto !important;}
+/* Gestalt: amagar foto lateral i ajustar padding al mòbil */
+#inici div[style*="padding:48px 48px 56px 64px"]{padding:28px 18px 32px !important;}
+#inici div[style*="position:relative;overflow:hidden;"]{display:none !important;}
 /* Cards de serveis: padding inferior prou gran perquè el botó es vegi */
 #inici div[style*="padding-bottom:120px"]{padding-bottom:48px !important;}
 #inici div[style*="padding:32px 32px 48px"]{padding:24px 20px 40px !important;}
+/* Stats: mida al mòbil */
+.stat-num{font-size:26px !important;}
+.stat-label{font-size:12px !important;}
 
 /* Subnav lateral */
 #subnav-serveis a{padding-left:28px !important;}
@@ -753,9 +759,10 @@ function changeLogo(){
   </div>
 </div>
 <div class="hero-stats">
-<div class="stat"><div class="stat-num">10+</div><div class="stat-label">Anys Experiència Equip</div></div>
-<div class="stat"><div class="stat-num">∞</div><div class="stat-label">Atenció personalitzada</div></div>
+<div class="stat"><div class="stat-num">+10</div><div class="stat-label">Anys d'Experiència</div></div>
 <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Valors Cooperatius</div></div>
+<div class="stat"><div class="stat-num">100%</div><div class="stat-label">Adaptabilitat Serveis</div></div>
+<div class="stat"><div class="stat-num">∞</div><div class="stat-label">Atenció personalitzada</div></div>
 </div>
 </div><!-- /stack-item 1 -->
 
@@ -1203,9 +1210,10 @@ function changeLogo(){
       <div class="area-card-title">Acompanyament <em style="color:var(--green-mid);">Sociovital</em></div>
       <p class="area-card-desc">Acompanyem persones i famílies en moments de dificultat: des del suport social i comunitàri fins a l'acompanyament emocional i terapèutic, coordinats amb <span style="font-family:'Cormorant Garamond',serif;font-size:1.15em;">Nex<em style="color:var(--green-mid);">Gestió</em></span> per una atenció completa.</p>
       <ul class="area-card-list">
-        <li>Acompanyament Social: ajudes, habitatge i soledat</li>
+        <li>Acompanyament a Grans Persones i soledat no volguda</li>
         <li>Acompanyament Emocional i Terapèutic individualitzat</li>
         <li>Coaching, Gestalt, psicologia i altres enfocaments</li>
+        <li>Tallers grupals i activitats comunitàries de barri</li>
         <li>Retirs de 2-3 dies en connexió amb la natura</li>
       </ul>
     </div>
@@ -1217,15 +1225,15 @@ function changeLogo(){
 <div class="area-card" style="flex-direction:row-reverse;">
   <div class="area-card-body" style="background:#fff; order:1;">
     <div>
-      <div class="area-card-tag">Gestió de Tràmits Socials</div>
-      <div class="area-card-title">Gestoria <em style="color:var(--green-mid);">Social</em></div>
-      <p class="area-card-desc">Especialistes en tràmits de caire social. Gestionem íntegrament en nom teu amb traçabilitat total i transparència en els costos.</p>
+      <div class="area-card-tag">Gestoria Social · Ajudes · Mediació</div>
+      <div class="area-card-title">Nex<em style="color:var(--green-mid);">Gestió</em></div>
+      <p class="area-card-desc">Gestoria social cooperativa: gestionem íntegrament en el teu nom, detectem ajudes vigents amb la nostra eina pròpia NexlicitIA, i mediem quan cal. Traçabilitat total i transparència en els costos.</p>
       <ul class="area-card-list">
-        <li>Arrelament, estrangeria i residència</li>
-        <li>Tràmits d'ajudes i prestacions socials</li>
-        <li>Tramitació de dependència i serveis socials</li>
-        <li>Gestió de documentació i representació davant AAPP</li>
-        <li>Orientació sobre cost i viabilitat de cada tràmit</li>
+        <li>Detecció, informació i gestió d'ajudes vigents</li>
+        <li>Dependència, IMV, RGC i prestacions socials</li>
+        <li>Estrangeria: arrelament, residència i reagrupament</li>
+        <li>Ajudes d'habitatge i lloguer vigents</li>
+        <li>Mediació i assessorament jurídic social</li>
       </ul>
     </div>
     <button class="area-btn area-btn-outline" onclick="showSection('nexgestio',null)">Veure tots els serveis →</button>
@@ -1233,7 +1241,7 @@ function changeLogo(){
   <div class="area-card-img" id="srv-gestio-img" style="background-image:url('images/img_10.jpg');background-size:cover;background-position:center; order:2;">
     <div class="area-card-img-overlay"></div>
     <div style="position:absolute;bottom:24px;left:24px;">
-      <div style="font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--green-light);opacity:.8;margin-bottom:6px;">Àrea de Gestió</div>
+      <div style="font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--green-light);opacity:.8;margin-bottom:6px;">Gestoria Social · Ajudes · Mediació</div>
       <div style="font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;color:#fff;line-height:1;">Nex<em style="color:var(--green-light);">Gestió</em></div>
     </div>
   </div>
