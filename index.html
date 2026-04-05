@@ -15,8 +15,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);
 .logo-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--white);letter-spacing:.04em;line-height:1}
 .logo-sub{font-size:9px;color:var(--green-light);letter-spacing:.1em;text-transform:uppercase;opacity:.75;margin-top:4px;line-height:1.4}
 nav{flex:1;padding:18px 0}
-nav a{display:flex;align-items:center;gap:11px;padding:12px 22px;color:rgba(177,208,130,.65);text-decoration:none;font-size:15px;font-weight:400;letter-spacing:.02em;transition:all var(--T);position:relative;cursor:pointer}
-nav a:hover,nav a.active{color:var(--white);background:rgba(177,208,130,.1)}
+nav a{display:flex;align-items:center;gap:11px;padding:12px 22px;color:rgba(220,225,215,.7);text-decoration:none;font-size:15px;font-weight:400;letter-spacing:.02em;transition:all var(--T);position:relative;cursor:pointer}
+nav a:hover,nav a.active{color:rgba(220,225,215,.95);background:rgba(177,208,130,.1)}
 nav a.active::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--green-light);border-radius:0 2px 2px 0}
 nav a svg{width:15px;height:15px;opacity:.6;flex-shrink:0;transition:opacity .2s}
 nav a:hover svg,nav a.active svg{opacity:1}
@@ -218,6 +218,16 @@ div[style*="font-size:32px"]{font-size:22px !important;}
 
 /* Subnav lateral */
 #subnav-serveis a{padding-left:28px !important;}
+
+/* srv-block i srv-cols */
+.srv-block{margin-bottom:32px !important;padding-bottom:32px !important;}
+.srv-cols{grid-template-columns:1fr !important;}
+.srv-col-box{padding:16px !important;}
+.srv-block-title{font-size:22px !important;}
+.srv-block-desc{max-width:100% !important;}
+
+/* NexAcompanya / NexGestio: content padding */
+#nexacompanya .content,#nexgestio .content{padding:24px 18px 40px !important;}
 
 /* Footer */
 .footer-top{grid-template-columns:1fr !important;}
