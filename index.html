@@ -218,26 +218,37 @@ div[style*="font-size:32px"]{font-size:22px !important;}
 
 /* ── INICI: desactivar sticky stack al mòbil ── */
 .stack-item{position:static !important;top:auto !important;z-index:auto !important;border-radius:0 !important;}
-#inici div[style*="padding:36px 64px 600px"]{padding:28px 18px 40px !important;}
-#inici div[style*="padding:64px 64px 100px"]{padding:28px 18px 36px !important;}
-#inici div[style*="min-height:600px"]{min-height:auto !important;grid-template-columns:1fr !important;}
-#inici div[style*="height:600px"]{height:260px !important;}
-#inici div[style*="height:260px"]{height:180px !important;}
-#inici div[style*="grid-template-columns:repeat(5,1fr)"]{grid-template-columns:1fr 1fr !important;}
-#inici div[style*="grid-template-columns:1fr 400px"]{grid-template-columns:1fr !important;}
-#inici div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important;}
-#inici div[style*="min-height:420px"]{min-height:auto !important;}
-/* Bloc emocional mòbil: padding i caixetes 2 col */
+
+/* Hero: alçada reduïda */
+#inici div[style*="height:600px"]{height:300px !important;}
+
+/* Bloc serveis: eliminar padding gegant */
+#inici div[style*="padding:36px 64px 600px"]{padding:28px 18px 48px !important;}
+#inici div[style*="padding-bottom:120px"]{padding-bottom:40px !important;}
+#inici div[style*="padding:32px 32px 48px"]{padding:22px 18px 36px !important;}
+
+/* Bloc emocional: padding i text */
 .bloc-emocional-text{padding:28px 18px 36px !important;}
+#inici div[style*="padding:64px 64px 100px"]{padding:28px 18px 36px !important;}
+#inici div[style*="min-height:420px"]{min-height:auto !important;}
+
+/* Caixetes beneficis emocional: 2 columnes */
 .bloc-emocional div[style*="grid-template-columns:repeat(5,1fr)"]{grid-template-columns:1fr 1fr !important;}
-/* Gestalt mòbil: foto dalt amb altura fixa, text a sota */
+
+/* Gestalt: foto dalt (240px), text i targetes a sota */
 .gestalt-grid{grid-template-columns:1fr !important;min-height:auto !important;}
-.gestalt-text{padding:28px 18px 36px !important;}
-.gestalt-foto{height:240px !important;display:block !important;position:relative !important;}
-.gestalt-foto img{position:absolute !important;}
-/* Cards de serveis: padding inferior prou gran perquè el botó es vegi */
-#inici div[style*="padding-bottom:120px"]{padding-bottom:48px !important;}
-#inici div[style*="padding:32px 32px 48px"]{padding:24px 20px 40px !important;}
+.gestalt-foto{height:240px !important;display:block !important;position:relative !important;overflow:hidden !important;}
+.gestalt-foto img{position:absolute !important;inset:0 !important;width:100% !important;height:100% !important;object-fit:cover !important;}
+.gestalt-text{padding:28px 18px 36px !important;min-height:auto !important;}
+.gestalt-text > div[style*="flex:1"]{flex:none !important;}
+
+/* Cards inici: grids 2 col → 1 col */
+#inici div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important;}
+#inici div[style*="grid-template-columns:1fr 400px"]{grid-template-columns:1fr !important;}
+#inici div[style*="grid-template-columns:repeat(5,1fr)"]{grid-template-columns:1fr 1fr !important;}
+#inici div[style*="min-height:600px"]{min-height:auto !important;}
+#inici div[style*="height:260px"]{height:200px !important;}
+
 /* Stats: mida al mòbil */
 .stat-num{font-size:26px !important;}
 .stat-label{font-size:12px !important;}
