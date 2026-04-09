@@ -6,7 +6,7 @@
 <title>NexSocial — Cooperativa d'Acompanyament Sociovital</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--forest:#2d6b48;--forest-hero:#d4e8d0;--green-deep:#2d6b48;--green-mid:#0d7040;--green-light:#6dbf85;--green-pale:#d4e8d0;--cream:#c8d4c0;--card:#f2f0ea;--white:#bac7b2;--text:#2a3d28;--text-muted:#4a6858;--sidebar-w:260px;--topbar-h:42px;--footer-h:auto;--T:.35s cubic-bezier(.4,0,.2,1)}
+:root{--forest:#2d6b48;--forest-hero:#d4e8d0;--green-deep:#2d6b48;--green-mid:#0d7040;--green-light:#6dbf85;--green-pale:#d4e8d0;--cream:#eef4ec;--card:#f2f0ea;--white:#bac7b2;--text:#2a3d28;--text-muted:#4a6858;--sidebar-w:260px;--topbar-h:42px;--footer-h:auto;--T:.35s cubic-bezier(.4,0,.2,1)}
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:clip;}
 body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);min-height:100vh;}
 .sidebar{width:var(--sidebar-w);min-height:100vh;background:var(--cream);position:fixed;left:0;top:var(--topbar-h);display:flex;flex-direction:column;z-index:100;transition:transform var(--T)}
@@ -20,9 +20,9 @@ nav a:hover,nav a.active{color:#2d6b48;background:rgba(45,107,72,.08)}
 nav a.active::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--green-mid);border-radius:0 2px 2px 0}
 nav a svg{width:15px;height:15px;opacity:.6;flex-shrink:0;transition:opacity .2s}
 nav a:hover svg,nav a.active svg{opacity:1}
-.sidebar-footer{padding:14px 22px;border-top:1px solid rgba(100,85,60,.1);font-size:10.5px;color:#4a6858;line-height:1.7}
+.sidebar-footer{padding:14px 22px;border-top:1px solid rgba(45,107,72,.12);font-size:10.5px;color:#4a6858;line-height:1.7}
 .sidebar-footer a{color:#2d6b48;text-decoration:none}
-.main{margin-left:var(--sidebar-w);min-height:100vh;margin-top:var(--topbar-h);background:#dce8d8;}
+.main{margin-left:var(--sidebar-w);min-height:100vh;margin-top:var(--topbar-h);background:#f0f6ee;}
 section{display:none;animation:fadeIn .4s ease;}
 section.active{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
@@ -56,7 +56,7 @@ section.active{display:block}
 .page-header h1 em{font-style:italic;color:var(--green-mid)}
 .page-header p{margin-top:12px;font-size:14px;color:var(--text-muted);max-width:460px;line-height:1.7;position:relative;z-index:1}
 .content{padding:52px 64px;background:#dce8d8}
-.content-alt{padding:52px 64px;background:#c8d4c0}
+.content-alt{padding:52px 64px;background:#e2ebe0}
 .section-title{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--forest);line-height:1.2;margin-bottom:6px}
 .section-title em{font-style:italic;color:var(--green-mid)}
 .section-lead{font-size:14px;color:var(--text-muted);line-height:1.7;max-width:480px}
@@ -80,7 +80,7 @@ section.active{display:block}
 .team-info h3{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;color:var(--forest);margin-bottom:3px}
 .team-role{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--green-mid);margin-bottom:10px}
 .team-bio{font-size:13px;line-height:1.7;color:var(--text-muted)}
-.servei-block{display:grid;grid-template-columns:220px 1fr;border:1px solid rgba(100,85,60,.1);margin-bottom:14px;background:var(--cream);transition:all .3s;overflow:hidden}
+.servei-block{display:grid;grid-template-columns:220px 1fr;border:1px solid rgba(45,107,72,.12);margin-bottom:14px;background:var(--cream);transition:all .3s;overflow:hidden}
 .servei-block:hover{border-color:var(--green-mid);box-shadow:0 4px 20px rgba(18,32,41,.06)}
 .servei-photo{background-size:cover;background-position:center;position:relative;min-height:190px}
 .servei-photo-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(18,32,41,.65),rgba(45,107,72,.45));display:flex;flex-direction:column;justify-content:flex-end;padding:22px 18px}
@@ -121,7 +121,7 @@ section.active{display:block}
 .oferta-meta{display:flex;gap:12px;font-size:11px;color:var(--text-muted)}
 .oferta-badge{font-size:10.5px;padding:5px 11px;background:var(--green-pale);color:var(--green-deep);border-radius:2px;white-space:nowrap}
 .contact-grid{display:grid;grid-template-columns:1fr 1.5fr;min-height:calc(100vh - 156px)}
-.contact-info{background:#c8d4c0;padding:48px 40px;position:relative;overflow:hidden}
+.contact-info{background:#eef4ec;padding:48px 40px;position:relative;overflow:hidden}
 .contact-info-bg{position:absolute;inset:0;background-size:cover;background-position:center bottom;opacity:0.25;filter:blur(2px);transform:scale(1.05)}.12}
 .contact-info h2{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:600;color:#1a3d22;margin-bottom:5px;position:relative;z-index:1;text-shadow:0 2px 20px rgba(0,0,0,0.8),0 0 40px rgba(0,0,0,0.6)}
 .contact-info h2 em{font-style:italic;color:#0d7040}
@@ -136,7 +136,7 @@ section.active{display:block}
 .contact-logo{display:flex;align-items:center;gap:10px;margin-bottom:28px;position:relative;z-index:1}
 .contact-logo img{width:34px;height:34px;object-fit:contain;opacity:.8}
 .contact-logo span{font-family:'Cormorant Garamond',serif;font-size:15px;color:#4a6858;letter-spacing:.04em}
-.mobile-toggle{display:none;position:fixed;top:12px;left:12px;z-index:200;background:var(--cream);border:1px solid rgba(100,85,60,.15);color:#2a3d28;width:40px;height:40px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.mobile-toggle{display:none;position:fixed;top:12px;left:12px;z-index:200;background:var(--cream);border:1px solid rgba(45,107,72,.15);color:#2a3d28;width:40px;height:40px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px}
 .mobile-toggle span{display:block;width:20px;height:2px;background:#2a3d28}
 .overlay{display:none;position:fixed;inset:0;background:rgba(14,30,22,.6);z-index:99}
 @media(max-width:768px){
@@ -303,7 +303,7 @@ div[style*="font-size:32px"]{font-size:22px !important;}
 @media(max-width:768px){.topbar{padding-left:58px}.topbar-tagline,.topbar-brand{display:block}.topbar-btn span{display:none}.topbar-btn{padding:5px 7px}}
 
 /* === FOOTER === */
-.site-footer{background:#c8d4c0;color:#4a6858;padding:36px 48px 28px;}
+.site-footer{background:#d4e8d0;color:#4a6858;padding:36px 48px 28px;}
 .footer-inner{max-width:960px;margin:0 auto}
 .footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px;padding-bottom:28px;border-bottom:1px solid rgba(109,191,133,.08)}
 .footer-col-title{font-size:9.5px;letter-spacing:0.15em;text-transform:uppercase;color:#2d6b48;margin-bottom:14px;font-weight:600}
@@ -823,7 +823,7 @@ function changeLogo(){
     </div>
 
     <!-- NexGestió -->
-    <div style="background:var(--cream);border:1px solid rgba(100,85,60,.1);border-radius:2px;cursor:pointer;transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 20px 48px rgba(18,32,41,0.12)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'" onclick="showSection('nexgestio',null)">
+    <div style="background:var(--cream);border:1px solid rgba(45,107,72,.12);border-radius:2px;cursor:pointer;transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 20px 48px rgba(18,32,41,0.12)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'" onclick="showSection('nexgestio',null)">
       <div style="height:260px;background-image:url('images/img_10.jpg');background-size:cover;background-position:center;position:relative;flex-shrink:0;border-radius:2px 2px 0 0;overflow:hidden;">
         <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(18,32,41,0.05),rgba(18,32,41,0.6));"></div>
         <div style="position:absolute;bottom:20px;left:24px;">
@@ -927,7 +927,7 @@ function changeLogo(){
       <!-- 5 targetes -->
       <div style="display:flex;flex-direction:column;gap:8px;flex:1;margin-bottom:28px;">
 
-        <div style="background:var(--cream);border:1px solid rgba(100,85,60,.1);border-radius:10px;padding:14px 18px;display:flex;gap:12px;align-items:flex-start;">
+        <div style="background:var(--cream);border:1px solid rgba(45,107,72,.12);border-radius:10px;padding:14px 18px;display:flex;gap:12px;align-items:flex-start;">
           <div style="width:32px;height:32px;flex-shrink:0;border-radius:50%;background:var(--green-pale);display:flex;align-items:center;justify-content:center;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green-mid)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
           </div>
@@ -937,7 +937,7 @@ function changeLogo(){
           </div>
         </div>
 
-        <div style="background:var(--cream);border:1px solid rgba(100,85,60,.1);border-radius:10px;padding:14px 18px;display:flex;gap:12px;align-items:flex-start;">
+        <div style="background:var(--cream);border:1px solid rgba(45,107,72,.12);border-radius:10px;padding:14px 18px;display:flex;gap:12px;align-items:flex-start;">
           <div style="width:32px;height:32px;flex-shrink:0;border-radius:50%;background:var(--green-pale);display:flex;align-items:center;justify-content:center;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green-mid)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
           </div>
@@ -947,7 +947,7 @@ function changeLogo(){
           </div>
         </div>
 
-        <div style="background:var(--cream);border:1px solid rgba(100,85,60,.1);border-radius:10px;padding:14px 18px;display:flex;gap:12px;align-items:flex-start;">
+        <div style="background:var(--cream);border:1px solid rgba(45,107,72,.12);border-radius:10px;padding:14px 18px;display:flex;gap:12px;align-items:flex-start;">
           <div style="width:32px;height:32px;flex-shrink:0;border-radius:50%;background:var(--green-pale);display:flex;align-items:center;justify-content:center;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green-mid)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c-4 0-7-3-7-7 0-2.5 1.5-5 4-6.5V5a3 3 0 016 0v3.5c2.5 1.5 4 4 4 6.5 0 4-3 7-7 7z"/></svg>
           </div>
@@ -957,7 +957,7 @@ function changeLogo(){
           </div>
         </div>
 
-        <div style="background:var(--cream);border:1px solid rgba(100,85,60,.1);border-radius:10px;padding:14px 18px;display:flex;gap:12px;align-items:flex-start;">
+        <div style="background:var(--cream);border:1px solid rgba(45,107,72,.12);border-radius:10px;padding:14px 18px;display:flex;gap:12px;align-items:flex-start;">
           <div style="width:32px;height:32px;flex-shrink:0;border-radius:50%;background:var(--green-pale);display:flex;align-items:center;justify-content:center;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green-mid)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
           </div>
@@ -967,7 +967,7 @@ function changeLogo(){
           </div>
         </div>
 
-        <div style="background:var(--cream);border:1px solid rgba(100,85,60,.1);border-radius:10px;padding:14px 18px;display:flex;gap:12px;align-items:flex-start;">
+        <div style="background:var(--cream);border:1px solid rgba(45,107,72,.12);border-radius:10px;padding:14px 18px;display:flex;gap:12px;align-items:flex-start;">
           <div style="width:32px;height:32px;flex-shrink:0;border-radius:50%;background:var(--green-pale);display:flex;align-items:center;justify-content:center;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green-mid)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           </div>
