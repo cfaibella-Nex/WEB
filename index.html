@@ -38,9 +38,9 @@ section.active{display:block}
 .hero-desc{font-size:14.5px;line-height:1.8;color:var(--text-muted);max-width:500px;margin-bottom:40px}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
 .btn-primary{background:#2d6b48;color:#fff;padding:14px 32px;border:none;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;text-decoration:none;display:inline-block;transition:all .3s;border-radius:40px;box-shadow:0 6px 24px rgba(13,112,64,0.25)}
-.btn-primary:hover{background:#1e5a38;transform:translateY(-2px);box-shadow:0 8px 28px rgba(13,112,64,0.35)}
+.btn-primary:hover{background:rgba(30,90,56,0.55);backdrop-filter:blur(6px);transform:translateY(-2px);box-shadow:0 6px 20px rgba(45,107,72,0.18)}
 .btn-outline{background:rgba(152,190,149,0.88);backdrop-filter:blur(8px);color:var(--forest);padding:14px 32px;border:1.5px solid rgba(45,107,72,0.4);font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;text-decoration:none;display:inline-block;transition:all .3s;border-radius:40px}
-.btn-outline:hover{background:rgba(45,107,72,0.22);border-color:var(--green-mid);color:var(--green-mid);transform:translateY(-3px)}
+.btn-outline:hover{background:rgba(45,107,72,0.08);backdrop-filter:blur(6px);border-color:rgba(45,107,72,0.35);color:#2d6b48;transform:translateY(-2px);box-shadow:0 6px 18px rgba(45,107,72,0.08)}
 .hero-stats{position:relative;z-index:1;display:flex;border-top:1px solid rgba(255,255,255,.1);background:rgba(194,221,191,.85);backdrop-filter:blur(8px);margin-bottom:8px;}
 .stat{flex:1;padding:26px 44px;border-right:1px solid rgba(255,255,255,.07);cursor:default;transition:all .25s;}
 .stat:last-child{border-right:none}
@@ -367,7 +367,7 @@ div[style*="font-size:32px"]{font-size:22px !important;}
 .topbar-tagline{font-size:11px;color:#4a6858;letter-spacing:0.05em;display:block}
 .topbar-right{display:flex;align-items:center;gap:8px}
 .topbar-btn{display:flex;align-items:center;gap:5px;padding:5px 11px;border:1px solid rgba(45,107,72,.25);color:#2d6b48;font-size:11px;text-decoration:none;letter-spacing:0.05em;transition:all .2s;cursor:pointer;background:transparent;white-space:nowrap}
-.topbar-btn:hover,.topbar-btn:focus{background:rgba(61,138,98,.1);border-color:rgba(61,138,98,.4);color:#2d6b48}
+.topbar-btn:hover,.topbar-btn:focus{background:rgba(45,107,72,0.08);backdrop-filter:blur(6px);border-color:rgba(45,107,72,0.3);color:#2d6b48;transform:translateY(-1px)}
 .topbar-btn.urgent{border-color:rgba(239,68,68,.4);color:rgba(239,68,68,.8)}
 .topbar-btn.urgent:hover{background:rgba(239,68,68,.1);border-color:rgba(239,68,68,.7);color:#ef4444}
 .topbar-btn svg{width:12px;height:12px;flex-shrink:0}
@@ -538,7 +538,7 @@ function toggleSubnav(id){
   var arrow = document.getElementById(id+'-arrow');
   if(!el) return;
   var open = el.style.maxHeight && el.style.maxHeight !== '0px';
-  el.style.maxHeight = open ? '0px' : '120px';
+  el.style.maxHeight = open ? '0px' : '200px';
   if(arrow) arrow.style.transform = open ? 'rotate(0deg)' : 'rotate(180deg)';
 }
 function scrollToServei(area){
@@ -875,7 +875,7 @@ function changeLogo(){
 <a class="active" onclick="showSection('inici',this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Inici</a>
 <a onclick="showSection('quisom',this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>Qui som</a>
 <a onclick="showSection('serveis',this)" id="nav-serveis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Serveis Persones</a>
-<div id="subnav-serveis" style="max-height:120px; overflow:hidden; background:rgba(255,255,255,0.18);">
+<div id="subnav-serveis" style="max-height:200px; overflow:hidden; background:rgba(255,255,255,0.18);">
   <a onclick="showSection('nexacompanya',null)" style="padding:9px 20px 9px 44px; font-size:13px; opacity:1; border-left:2px solid #3d8a62;">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:13px;height:13px;"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
     NexAcompanya
@@ -975,7 +975,7 @@ function changeLogo(){
           <li style="font-size:12.5px;color:#4a6858;padding:8px 0;display:flex;gap:10px;align-items:center;"><span style="color:var(--green-light);font-size:14px;">—</span> Tallers grupals i activitats comunitàries de barri</li>
         </ul>
         <div style="margin-top:28px;">
-          <a onclick="showSection('nexacompanya',null)" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:#2d6b48;color:#fff;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;border-radius:40px;transition:all .25s;box-shadow:0 4px 16px rgba(45,107,72,0.3);" onmouseover="this.style.background='#1e5a38';this.style.color='#fff'" onmouseout="this.style.background='#2d6b48';this.style.color='#fff'">Descobrir més →</a>
+          <a onclick="showSection('nexacompanya',null)" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:#2d6b48;color:#fff;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;border-radius:40px;transition:all .25s;box-shadow:0 4px 16px rgba(45,107,72,0.3);" onmouseover="this.style.background='#1e5a38';this.style.color='#fff'" onmouseout="this.style.background='#2d6b48';this.style.backdropFilter='none';this.style.transform='translateY(0)';this.style.boxShadow='none'">Descobrir més →</a>
         </div>
       </div>
     </div>
@@ -999,7 +999,7 @@ function changeLogo(){
           <li style="font-size:12.5px;color:#4a6858;padding:8px 0;display:flex;gap:10px;align-items:center;"><span style="color:var(--green-mid);font-size:14px;">—</span> Mediació i assessorament jurídic social</li>
         </ul>
         <div style="margin-top:28px;">
-          <a onclick="showSection('nexgestio',null)" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:#2d6b48;color:#fff;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;border-radius:40px;transition:all .25s;box-shadow:0 4px 16px rgba(45,107,72,0.3);" onmouseover="this.style.background='#1e5a38';this.style.color='#fff'" onmouseout="this.style.background='#2d6b48';this.style.color='#fff'">Descobrir més →</a>
+          <a onclick="showSection('nexgestio',null)" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:#2d6b48;color:#fff;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;border-radius:40px;transition:all .25s;box-shadow:0 4px 16px rgba(45,107,72,0.3);" onmouseover="this.style.background='#1e5a38';this.style.color='#fff'" onmouseout="this.style.background='#2d6b48';this.style.backdropFilter='none';this.style.transform='translateY(0)';this.style.boxShadow='none'">Descobrir més →</a>
         </div>
       </div>
     </div>
@@ -1061,7 +1061,7 @@ function changeLogo(){
 
       </div>
 
-      <a onclick="showSection('nexacompanya',null)" style="display:inline-flex;align-items:center;gap:10px;padding:14px 28px;background:#2d6b48;color:#fff;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;transition:all .25s;border-radius:40px;border:none;" onmouseover="this.style.background='#2d6b48';this.style.color='#fff'" onmouseout="this.style.background='#2d6b48';this.style.color='#fff'">Saber-ne més →</a>
+      <a onclick="showSection('nexacompanya',null)" style="display:inline-flex;align-items:center;gap:10px;padding:14px 28px;background:#2d6b48;color:#fff;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;transition:all .25s;border-radius:40px;border:none;" onmouseover="this.style.background='rgba(30,90,56,0.55)';this.style.backdropFilter='blur(4px)';this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 18px rgba(45,107,72,0.22)'" onmouseout="this.style.background='#2d6b48';this.style.backdropFilter='none';this.style.transform='translateY(0)';this.style.boxShadow='none'">Saber-ne més →</a>
     </div>
   </div>
 
@@ -1137,7 +1137,7 @@ function changeLogo(){
 
       </div>
 
-      <a onclick="showSection('nexacompanya',null)" style="display:inline-flex;align-items:center;gap:10px;padding:12px 24px;background:#2d6b48;color:#fff;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;transition:all .25s;border-radius:40px;border:none;align-self:flex-start;" onmouseover="this.style.background='#2d6b48';this.style.color='#fff'" onmouseout="this.style.background='#2d6b48';this.style.color='#fff'">Descobreix la teràpia Gestalt →</a>
+      <a onclick="showSection('nexacompanya',null)" style="display:inline-flex;align-items:center;gap:10px;padding:12px 24px;background:#2d6b48;color:#fff;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;transition:all .25s;border-radius:40px;border:none;align-self:flex-start;" onmouseover="this.style.background='rgba(30,90,56,0.55)';this.style.backdropFilter='blur(4px)';this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 18px rgba(45,107,72,0.22)'" onmouseout="this.style.background='#2d6b48';this.style.backdropFilter='none';this.style.transform='translateY(0)';this.style.boxShadow='none'">Descobreix la teràpia Gestalt →</a>
 
     </div>
 
@@ -1370,9 +1370,9 @@ function changeLogo(){
 .area-card-list li { font-size:12px; color:#4a6858; padding:5px 0; border-bottom:1px solid rgba(45,107,72,0.1); display:flex; align-items:center; gap:8px; }
 .area-card-list li::before { content:""; width:5px; height:5px; border-radius:50%; background:var(--green-mid); flex-shrink:0; }
 .area-btn { display:inline-flex; align-items:center; justify-content:center; background:#2d6b48; color:#fff; border:none; padding:13px 28px; font-family:"DM Sans",sans-serif; font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; cursor:pointer; transition:all .3s; text-align:center; border-radius:40px; box-shadow:0 4px 16px rgba(45,107,72,0.25); }
-.area-btn:hover { background:var(--green-mid); color:#fff; transform:translateY(-3px); box-shadow:0 8px 24px rgba(45,107,72,0.35); }
+.area-btn:hover { background:rgba(30,90,56,0.55); backdrop-filter:blur(6px); color:#fff; transform:translateY(-2px); box-shadow:0 6px 18px rgba(45,107,72,0.15); }
 .area-btn-outline { background:rgba(255,255,255,0.55); backdrop-filter:blur(8px); color:var(--forest); border:1px solid rgba(45,107,72,0.25); }
-.area-btn-outline:hover { background:var(--forest); color:var(--green-light); transform:translateY(-3px); box-shadow:0 8px 24px rgba(45,107,72,0.25); }
+.area-btn-outline:hover { background:rgba(45,107,72,0.08); backdrop-filter:blur(6px); color:#2d6b48; transform:translateY(-2px); box-shadow:0 6px 18px rgba(45,107,72,0.08); border-color:rgba(45,107,72,0.3); }
 @media(max-width:768px){ .area-card { grid-template-columns:1fr; } .area-card-img { min-height:200px; } }
 </style>
 
