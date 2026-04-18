@@ -35,7 +35,7 @@ section.active{display:block}
 .hero-title{font-family:'League Spartan',sans-serif;font-size:clamp(54px,7.5vw,98px);font-weight:500;color:var(--text);line-height:1;margin-bottom:10px;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased}
 .hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2vw,26px);font-weight:400;font-style:italic;color:var(--forest);margin-bottom:28px;letter-spacing:.04em}
 .hero-title em{font-style:italic;color:var(--green-mid)}
-.hero-desc{font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.85;color:#1a2e1a;max-width:520px;margin-bottom:40px;font-weight:600;font-style:italic}
+.hero-desc{font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.9;color:#2a3d28;max-width:520px;margin-bottom:40px;font-weight:400;font-style:italic}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
 .btn-primary{background:#2d6b48;color:#fff;padding:14px 32px;border:none;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;text-decoration:none;display:inline-block;transition:all .3s;border-radius:40px;box-shadow:0 6px 24px rgba(13,112,64,0.25)}
 .btn-primary:hover{background:rgba(30,90,56,0.55);backdrop-filter:blur(6px);transform:translateY(-2px);box-shadow:0 6px 20px rgba(45,107,72,0.18)}
@@ -183,7 +183,6 @@ section.active{display:block}
   .contact-grid{grid-template-columns:1fr !important}
   
   /* Gestalt grid → apilat */
-  .gestalt-grid{grid-template-columns:1fr !important}
     
   /* Area cards → apilades */
   .area-card{grid-template-columns:1fr !important}
@@ -211,9 +210,10 @@ section.active{display:block}
   
   /* srv-cols */
   .srv-cols{grid-template-columns:1fr 1fr !important}
+  .gestalt-grid{grid-template-columns:1fr !important}
+  .gestalt-foto{height:260px !important}
 }
 
-.gestalt-foto{min-height:580px;position:relative;overflow:hidden}
 @media(max-width:768px){
 .sidebar{transform:translateX(-100%)}.sidebar.open{transform:translateX(0)}
 .main{margin-left:0;margin-top:var(--topbar-h)}.mobile-toggle{display:flex}.overlay.show{display:block}
@@ -315,17 +315,11 @@ div[style*="font-size:32px"]{font-size:22px !important;}
 .bloc-emocional div[style*="grid-template-columns:repeat(5,1fr)"]{grid-template-columns:1fr 1fr !important;}
 
 /* Gestalt: tot visible i apilat */
-.gestalt-wrap{overflow:visible !important;}
-.gestalt-grid{display:block !important;min-height:auto !important;overflow:visible !important;}
-.gestalt-foto img{position:absolute !important;inset:0 !important;width:100% !important;height:100% !important;object-fit:cover !important;object-position:top center !important;}
-.gestalt-text{display:block !important;padding:28px 18px 40px !important;min-height:auto !important;}
-.gestalt-text > div{flex:none !important;display:block !important;}
 
 /* Cards inici: grids → 1 col */
 #inici div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important;}
 #inici div[style*="grid-template-columns:1fr 400px"]{grid-template-columns:1fr !important;}
 #inici div[style*="grid-template-columns:repeat(5,1fr)"]{grid-template-columns:1fr 1fr !important;}
-#inici div[style*="min-height:600px"]{min-height:auto !important;}
 #inici div[style*="height:260px"]{height:200px !important;}
 
 /* Stats */
@@ -345,15 +339,23 @@ div[style*="font-size:32px"]{font-size:22px !important;}
 /* NexAcompanya / NexGestio: content padding */
 #nexacompanya .content,#nexgestio .content{padding:24px 18px 40px !important;}
 
+/* Gestalt mobile */
+.gestalt-wrap{overflow:visible !important;}
+.gestalt-grid{display:block !important;min-height:auto !important;overflow:visible !important;}
+.gestalt-foto{display:block !important;height:220px !important;position:relative !important;overflow:hidden !important;}
+.gestalt-foto img{position:absolute !important;inset:0 !important;width:100% !important;height:100% !important;object-fit:cover !important;object-position:top center !important;}
+.gestalt-text{display:block !important;padding:28px 18px 40px !important;min-height:auto !important;}
+.gestalt-text > div{flex:none !important;display:block !important;}
+
 /* Footer */
 .footer-top{grid-template-columns:1fr !important;}
 
 
 
-.gestalt-foto{display:block !important;height:260px !important;position:relative !important;overflow:hidden !important;}
 
 .hero-sub{font-size:clamp(16px,4vw,20px) !important;}
 }
+
 
 .tsec-head{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#fff;background:#2d6b48;padding:7px 12px;margin:18px 0 12px;font-weight:600}
 .tfield{margin-bottom:12px}
@@ -498,7 +500,20 @@ img{max-width:100%;height:auto;}
   .stack-item { margin-bottom: 16px; }
 }
 
-</style>
+
+
+
+  
+  
+}
+
+
+
+  
+  
+  
+}
+@media(max-width:860px){}</style>
 <script>
 function handleContactForm(e){
   e.preventDefault();
@@ -1014,12 +1029,12 @@ function changeLogo(){
 
 <!-- BLOC 2: SERVEIS - NexAcompanya i NexGestió -->
 <div class="stack-item">
-<div style="background:#f5f0e8;padding:48px 64px 80px;">
+<div style="background:#f5f0e8;padding:48px 64px 140px;">
   <div style="font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--green-mid);margin-bottom:16px;">Els nostres serveis</div>
   <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(34px,4vw,52px);font-weight:300;color:#0f2d1e;margin-bottom:16px;">Dos àmbits d'actuació amb un mateix objectiu: <em style="font-style:italic;color:var(--green-mid);">el teu benestar</em></h2>
   <p style="font-size:16px;color:var(--text-muted);margin-bottom:48px;max-width:620px;line-height:1.9;">Acompanyament sociovital i gestoria social. Dos serveis que poden actuar per separat o de manera coordinada, adaptats a cada persona, família o entitat.</p>
 
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:stretch;margin-bottom:16px;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:stretch;margin-bottom:40px;">
 
     <!-- NexAcompanya -->
     <div style="background:#dff0db;border-radius:2px;cursor:pointer;color:#0f2d1e;transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 20px 48px rgba(18,32,41,0.22)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'" onclick="showSection('nexacompanya',null)">
@@ -1072,6 +1087,13 @@ function changeLogo(){
     </div>
 
   </div>
+
+  <!-- Banner CTA sota cards -->
+  <div style="margin-top:48px;background:linear-gradient(to right,rgba(45,107,72,0.08),rgba(45,107,72,0.04));border:1px solid rgba(45,107,72,0.15);border-radius:4px;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:#0f2d1e;font-style:italic;">Vols saber quin servei s'adapta millor a la teva situació?</div>
+    <a onclick="showSection('contacte',null)" style="display:inline-flex;align-items:center;gap:8px;padding:10px 22px;background:#2d6b48;color:#fff;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;border-radius:40px;white-space:nowrap;transition:all .25s;" onmouseover="this.style.background='#1e5a38'" onmouseout="this.style.background='#2d6b48'">Consulta gratuïta →</a>
+  </div>
+
 </div>
 </div><!-- /stack-item 2 -->
 
@@ -1209,7 +1231,7 @@ function changeLogo(){
 
     </div>
 
-    <!-- Foto torxa: cobreix tota l'alçada des de dalt -->
+    <!-- Foto torxa: background-image per garantir visibilitat -->
     <div class="gestalt-foto" style="position:relative;overflow:hidden;">
       <img src="images/img_33.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;">
       <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(18,32,41,0.88) 0%, rgba(18,32,41,0.05) 50%);"></div>
