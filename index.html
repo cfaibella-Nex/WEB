@@ -34,8 +34,8 @@ section.active{display:block}
 .hero-tag img{width:18px;height:18px;object-fit:contain}
 .hero-title{font-family:'League Spartan',sans-serif;font-size:clamp(54px,7.5vw,98px);font-weight:500;color:var(--text);line-height:1;margin-bottom:10px;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased}
 .hero-title em{font-style:italic;color:var(--green-mid)}
-.hero-sub{font-family:'DM Sans',sans-serif;font-size:clamp(15px,1.6vw,19px);font-weight:300;color:var(--text-muted);margin-bottom:28px;letter-spacing:.02em}
-.hero-desc{font-size:14.5px;line-height:1.8;color:var(--text-muted);max-width:500px;margin-bottom:40px}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,1.8vw,24px);font-weight:500;font-style:italic;color:var(--forest);margin-bottom:28px;letter-spacing:.03em}
+.hero-desc{font-size:15.5px;line-height:1.85;color:#2a3d28;max-width:520px;margin-bottom:40px;font-weight:400}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
 .btn-primary{background:#2d6b48;color:#fff;padding:14px 32px;border:none;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;text-decoration:none;display:inline-block;transition:all .3s;border-radius:40px;box-shadow:0 6px 24px rgba(13,112,64,0.25)}
 .btn-primary:hover{background:rgba(30,90,56,0.55);backdrop-filter:blur(6px);transform:translateY(-2px);box-shadow:0 6px 20px rgba(45,107,72,0.18)}
@@ -297,7 +297,7 @@ div[style*="font-size:32px"]{font-size:22px !important;}
 #inici div[style*="height:600px;overflow:hidden"]{height:auto !important;min-height:380px !important;overflow:hidden !important;}
 .hero-content{padding:32px 18px 28px !important;}
 .hero-title{font-size:48px !important;}
-.hero-sub{font-size:14px !important;}
+.hero-sub{font-size:clamp(15px,1.4vw,18px) !important;}
 .hero-desc{font-size:13px !important;margin-bottom:24px !important;}
 .hero-cta{flex-direction:column !important;gap:10px !important;}
 .btn-primary,.btn-outline{text-align:center !important;}
@@ -327,7 +327,7 @@ div[style*="font-size:32px"]{font-size:22px !important;}
 #inici div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important;}
 #inici div[style*="grid-template-columns:1fr 400px"]{grid-template-columns:1fr !important;}
 #inici div[style*="grid-template-columns:repeat(5,1fr)"]{grid-template-columns:1fr 1fr !important;}
-#inici div[style*="min-height:600px"]{min-height:auto !important;}
+#inici div[style*="min-height:600px"]:not(.gestalt-foto){min-height:auto !important;}
 #inici div[style*="height:260px"]{height:200px !important;}
 
 /* Stats */
@@ -1009,55 +1009,59 @@ function changeLogo(){
 
 <!-- BLOC 2: SERVEIS - NexAcompanya i NexGestió -->
 <div class="stack-item">
-<div style="background:#f5f0e8;padding:36px 64px 600px;">
+<div style="background:#f5f0e8;padding:48px 64px 80px;">
   <div style="font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--green-mid);margin-bottom:16px;">Els nostres serveis</div>
   <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(34px,4vw,52px);font-weight:300;color:#0f2d1e;margin-bottom:16px;">Dos àmbits d'actuació amb un mateix objectiu: <em style="font-style:italic;color:var(--green-mid);">el teu benestar</em></h2>
   <p style="font-size:16px;color:var(--text-muted);margin-bottom:48px;max-width:620px;line-height:1.9;">Acompanyament sociovital i gestoria social. Dos serveis que poden actuar per separat o de manera coordinada, adaptats a cada persona, família o entitat.</p>
 
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;padding-bottom:120px;align-items:stretch;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:stretch;">
 
     <!-- NexAcompanya -->
-    <div style="background:#dff0db;border-radius:2px;cursor:pointer;color:#0f2d1e;transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column;padding-bottom:8px;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 20px 48px rgba(18,32,41,0.22)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'" onclick="showSection('nexacompanya',null)">
-      <div style="height:260px;background-image:url('images/img_09.jpg');background-size:cover;background-position:center;position:relative;flex-shrink:0;border-radius:2px 2px 0 0;overflow:hidden;">
+    <div style="background:#dff0db;border-radius:2px;cursor:pointer;color:#0f2d1e;transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 20px 48px rgba(18,32,41,0.22)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'" onclick="showSection('nexacompanya',null)">
+      <div style="height:240px;background-image:url('images/img_09.jpg');background-size:cover;background-position:center;position:relative;flex-shrink:0;border-radius:2px 2px 0 0;overflow:hidden;">
         <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(18,32,41,0.05),rgba(18,32,41,0.65));"></div>
         <div style="position:absolute;bottom:20px;left:24px;">
-          <div style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--forest);border:1px solid rgba(45,107,72,0.3);padding:4px 10px;display:inline-block;margin-bottom:10px;">Àrea d'Acompanyament</div>
+          <div style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.75);border:1px solid rgba(255,255,255,0.25);padding:4px 10px;display:inline-block;margin-bottom:10px;">Àrea d'Acompanyament</div>
           <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:white;line-height:1;">Nex<em>Acompanya</em></div>
         </div>
       </div>
-      <div style="padding:32px 32px 48px;display:flex;flex-direction:column;flex:1;">
+      <div style="padding:28px 28px 0;display:flex;flex-direction:column;justify-content:space-between;flex:1;">
+        <div>
         <p style="font-size:13.5px;color:#4a6858;line-height:1.85;margin-bottom:24px;">Acompanyem persones i famílies en moments de dificultat. Suport social, emocional i terapèutic adaptat a cada situació i persona.</p>
         <ul style="list-style:none;padding:0;margin-bottom:0;flex:1;">
-          <li style="font-size:12.5px;color:#4a6858;padding:8px 0;border-bottom:1px solid rgba(109,191,133,0.1);display:flex;gap:10px;align-items:center;"><span style="color:var(--green-mid);font-size:14px;">—</span> Acompanyament Sociovital a Persones Grans</li>
-          <li style="font-size:12.5px;color:#4a6858;padding:8px 0;border-bottom:1px solid rgba(109,191,133,0.1);display:flex;gap:10px;align-items:center;"><span style="color:var(--green-mid);font-size:14px;">—</span> Acompanyament Emocional individualitzat</li>
-          <li style="font-size:12.5px;color:#4a6858;padding:8px 0;border-bottom:1px solid rgba(109,191,133,0.1);display:flex;gap:10px;align-items:center;"><span style="color:var(--green-mid);font-size:14px;">—</span> Coach, Gestalt, Psicologia i altres enfocaments</li>
-          <li style="font-size:12.5px;color:#4a6858;padding:8px 0;display:flex;gap:10px;align-items:center;"><span style="color:var(--green-mid);font-size:14px;">—</span> Retirs de 2-3 dies en connexió amb la natura</li>
+          <li style="font-size:12.5px;color:#4a6858;padding:8px 0;border-bottom:1px solid rgba(109,191,133,0.1);display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--green-mid);font-size:14px;flex-shrink:0;">—</span>Acompanyament Sociovital a Persones Grans</li>
+          <li style="font-size:12.5px;color:#4a6858;padding:8px 0;border-bottom:1px solid rgba(109,191,133,0.1);display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--green-mid);font-size:14px;flex-shrink:0;">—</span>Acompanyament Emocional individualitzat</li>
+          <li style="font-size:12.5px;color:#4a6858;padding:8px 0;border-bottom:1px solid rgba(109,191,133,0.1);display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--green-mid);font-size:14px;flex-shrink:0;">—</span>Coach, Gestalt, Psicologia i altres enfocaments</li>
+          <li style="font-size:12.5px;color:#4a6858;padding:8px 0;display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--green-mid);font-size:14px;flex-shrink:0;">—</span>Retirs de 2-3 dies en connexió amb la natura</li>
         </ul>
-        <div style="margin-top:28px;">
-          <a onclick="showSection('nexacompanya',null)" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:#2d6b48;color:#fff;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;border-radius:40px;transition:all .25s;box-shadow:0 4px 16px rgba(45,107,72,0.3);" onmouseover="this.style.background='#1e5a38';this.style.color='#fff'" onmouseout="this.style.background='#2d6b48';this.style.backdropFilter='none';this.style.transform='translateY(0)';this.style.boxShadow='none'">Descobrir més →</a>
+        </div>
+        <div style="padding:24px 0 28px;">
+          <a onclick="showSection('nexacompanya',null)" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:#2d6b48;color:#fff;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;border-radius:40px;transition:all .25s;box-shadow:0 4px 16px rgba(45,107,72,0.3);" onmouseover="this.style.background='#1e5a38'" onmouseout="this.style.background='#2d6b48'">Descobrir més →</a>
         </div>
       </div>
     </div>
 
     <!-- NexGestió -->
     <div style="background:#f5f0e8;border:1px solid rgba(45,107,72,.12);border-radius:2px;cursor:pointer;transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 20px 48px rgba(18,32,41,0.12)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'" onclick="showSection('nexgestio',null)">
-      <div style="height:260px;background-image:url('images/img_10.jpg');background-size:cover;background-position:center;position:relative;flex-shrink:0;border-radius:2px 2px 0 0;overflow:hidden;">
+      <div style="height:240px;background-image:url('images/img_10.jpg');background-size:cover;background-position:center;position:relative;flex-shrink:0;border-radius:2px 2px 0 0;overflow:hidden;">
         <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(18,32,41,0.05),rgba(18,32,41,0.6));"></div>
         <div style="position:absolute;bottom:20px;left:24px;">
-          <div style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--forest);border:1px solid rgba(45,107,72,0.3);padding:4px 10px;display:inline-block;margin-bottom:10px;">Gestoria Social · Ajudes · Mediació</div>
+          <div style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.75);border:1px solid rgba(255,255,255,0.25);padding:4px 10px;display:inline-block;margin-bottom:10px;">Gestoria Social · Ajudes · Mediació</div>
           <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:white;line-height:1;">Nex<em>Gestió</em></div>
         </div>
       </div>
-      <div style="padding:32px 32px 48px;display:flex;flex-direction:column;flex:1;">
+      <div style="padding:28px 28px 0;display:flex;flex-direction:column;justify-content:space-between;flex:1;">
+        <div>
         <p style="font-size:13.5px;color:var(--text-muted);line-height:1.85;margin-bottom:24px;">Gestoria social cooperativa: gestionem íntegrament en el teu nom, detectem ajudes vigents amb la nostra eina pròpia NexlicitIA, i mediem quan cal.</p>
         <ul style="list-style:none;padding:0;margin-bottom:0;flex:1;">
-          <li style="font-size:12.5px;color:#4a6858;padding:8px 0;border-bottom:1px solid rgba(45,107,72,0.1);display:flex;gap:10px;align-items:center;"><span style="color:var(--green-mid);font-size:14px;">—</span> Detecció i informació d'ajudes vigents</li>
-          <li style="font-size:12.5px;color:#4a6858;padding:8px 0;border-bottom:1px solid rgba(45,107,72,0.1);display:flex;gap:10px;align-items:center;"><span style="color:var(--green-mid);font-size:14px;">—</span> Gestió i tramitació d'ajudes i prestacions socials</li>
-          <li style="font-size:12.5px;color:#4a6858;padding:8px 0;border-bottom:1px solid rgba(45,107,72,0.1);display:flex;gap:10px;align-items:center;"><span style="color:var(--green-mid);font-size:14px;">—</span> Àmbits preferents: ajudes socials, habitatge i tràmits migratoris</li>
-          <li style="font-size:12.5px;color:#4a6858;padding:8px 0;display:flex;gap:10px;align-items:center;"><span style="color:var(--green-mid);font-size:14px;">—</span> Mediació i assessorament jurídic social</li>
+          <li style="font-size:12.5px;color:#4a6858;padding:8px 0;border-bottom:1px solid rgba(45,107,72,0.1);display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--green-mid);font-size:14px;flex-shrink:0;">—</span>Detecció i informació d'ajudes vigents</li>
+          <li style="font-size:12.5px;color:#4a6858;padding:8px 0;border-bottom:1px solid rgba(45,107,72,0.1);display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--green-mid);font-size:14px;flex-shrink:0;">—</span>Gestió i tramitació d'ajudes i prestacions socials</li>
+          <li style="font-size:12.5px;color:#4a6858;padding:8px 0;border-bottom:1px solid rgba(45,107,72,0.1);display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--green-mid);font-size:14px;flex-shrink:0;">—</span>Àmbits preferents: ajudes socials, habitatge i tràmits migratoris</li>
+          <li style="font-size:12.5px;color:#4a6858;padding:8px 0;display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--green-mid);font-size:14px;flex-shrink:0;">—</span>Mediació i assessorament jurídic social</li>
         </ul>
-        <div style="margin-top:28px;">
-          <a onclick="showSection('nexgestio',null)" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:#2d6b48;color:#fff;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;border-radius:40px;transition:all .25s;box-shadow:0 4px 16px rgba(45,107,72,0.3);" onmouseover="this.style.background='#1e5a38';this.style.color='#fff'" onmouseout="this.style.background='#2d6b48';this.style.backdropFilter='none';this.style.transform='translateY(0)';this.style.boxShadow='none'">Descobrir més →</a>
+        </div>
+        <div style="padding:24px 0 28px;">
+          <a onclick="showSection('nexgestio',null)" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:#2d6b48;color:#fff;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;border-radius:40px;transition:all .25s;box-shadow:0 4px 16px rgba(45,107,72,0.3);" onmouseover="this.style.background='#1e5a38'" onmouseout="this.style.background='#2d6b48'">Descobrir més →</a>
         </div>
       </div>
     </div>
@@ -1201,7 +1205,7 @@ function changeLogo(){
     </div>
 
     <!-- Foto torxa: cobreix tota l'alçada des de dalt -->
-    <div class="gestalt-foto" style="position:relative;overflow:hidden;">
+    <div class="gestalt-foto" style="position:relative;overflow:hidden;min-height:600px;">
       <img src="images/img_33.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;">
       <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(18,32,41,0.88) 0%, rgba(18,32,41,0.05) 50%);"></div>
       <div style="position:absolute;bottom:0;left:0;right:0;padding:28px 24px;">
@@ -2694,10 +2698,8 @@ document.addEventListener('DOMContentLoaded',gsInit);
 </div>
 <button onclick="showSection('entitats',null)" style="background:transparent;border:none;color:#4a6858;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;margin:24px 0 0 64px;padding:0;display:block;">← Tornar a Serveis Entitats</button>
 
-
-
 <!-- Previsualització NexlicitIA -->
-<div style="padding:0 48px 48px;">
+<div style="padding:32px 48px 48px;">
   <div style="font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--green-mid);margin-bottom:16px;">Eina exclusiva · Membres NexSocial</div>
   <p style="font-size:14.5px;color:#4a5e46;line-height:1.9;margin-bottom:32px;">Eina pròpia de NexSocial per a la detecció automàtica d'ajudes, subvencions i licitacions públiques del sector social. Cada dia llegeix tres fonts oficials (Generalitat, BDNS i CIDO/DIBA), processa i classifica les convocatòries automàticament i les emmagatzema a la nostra base de dades per consulta immediata. A mig termini, NexlicitIA té vocació de créixer com a SaaS per a la gestió d'ajudes en el tercer sector.</p>
 
