@@ -84,7 +84,7 @@ section.active{display:block}
 .servei-block:hover{border-color:var(--green-mid);box-shadow:0 4px 20px rgba(18,32,41,.06)}
 .servei-photo{background-size:cover;background-position:center;position:relative;min-height:190px}
 .servei-photo-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(18,32,41,.65),rgba(45,107,72,.45));display:flex;flex-direction:column;justify-content:flex-end;padding:22px 18px}
-.servei-cat-name{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;color:var(--green-light);line-height:1.1}
+.servei-cat-name{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;color:#fff;line-height:1.1}
 .servei-cat-tag{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-top:3px}
 .servei-items{padding:28px 32px}
 .servei-items h3{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;color:var(--forest);margin-bottom:14px}
@@ -475,6 +475,16 @@ img{max-width:100%;height:auto;}
 [style*="background:#98be95"] [style*="color:var(--green-light)"],
 .srv-col-box [style*="color:var(--green-light)"] {
   color: #2d6b48 !important;
+}
+
+/* ── REGLA OR BRANDING: --green-light NOMÉS sobre fons fosc ──────────────
+   Sobre qualsevol fons clar de la web, forcem --forest per garantir contrast.
+   Excepció: botons amb background:var(--forest) i overlays de foto (ok per disseny).
+   ──────────────────────────────────────────────────────────────────────── */
+.content [style*="color:var(--green-light)"],
+.page-header:not(.dark-overlay) [style*="color:var(--green-light)"],
+.site-footer [style*="color:var(--green-light)"] {
+  color: var(--forest) !important;
 }
 
 
@@ -2439,7 +2449,7 @@ document.addEventListener('DOMContentLoaded',gsInit);
       <div style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:#2d6b48;opacity:1;margin-bottom:10px;">Eina gratuïta</div>
       <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;font-weight:300;margin-bottom:8px;">Diagnòstic d'Impacte Social</div>
       <div style="font-size:12px;color:#4a6858;line-height:1.6;">Avalueu el vostre projecte en 10 preguntes i obteniu un pla d'acció personalitzat.</div>
-      <div style="margin-top:16px;font-size:11px;color:var(--green-light);letter-spacing:0.08em;text-transform:uppercase;">Accedir →</div>
+      <div style="margin-top:16px;font-size:11px;color:var(--forest);letter-spacing:0.08em;text-transform:uppercase;">Accedir →</div>
     </div>
     <div style="background:var(--green-mid);padding:28px;cursor:pointer;transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 32px rgba(18,32,41,0.2)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'" onclick="showSection('entitats-intel',null); nexCheckLogin()">
       <div style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--green-pale);opacity:.7;margin-bottom:10px;">Eina membres · 🔒</div>
@@ -2561,7 +2571,7 @@ document.addEventListener('DOMContentLoaded',gsInit);
   <!-- Hero horitzontal -->
   <div style="background:#98be95;padding:48px 64px;margin-bottom:40px;color:#2a3d28;display:flex;align-items:center;justify-content:space-between;gap:48px;flex-wrap:wrap;">
     <div style="flex:1;min-width:300px;">
-      <div style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--green-light);opacity:.7;margin-bottom:16px;">Eina gratuïta · Serveis Entitats</div>
+      <div style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--green-mid);margin-bottom:16px;">Eina gratuïta · Serveis Entitats</div>
       <div style="font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:300;color:#fff;line-height:1.15;margin-bottom:16px;">Avalueu i Enfortiu<br><em style="color:#0f2d1e;">els Vostres Projectes Socials</em></div>
       <p style="font-size:14px;color:#4a6858;line-height:1.8;max-width:520px;">Una eina d'avaluació gratuïta per a ONG, cooperatives i institucions públiques per mesurar i millorar el seu impacte social. 10 preguntes, 5 minuts, pla d'acció personalitzat.</p>
     </div>
@@ -2698,14 +2708,14 @@ document.addEventListener('DOMContentLoaded',gsInit);
       <div style="position:relative;overflow:hidden;background:#0a1a10;">
         <img src="images/img_36.png" alt="NexlicitIA accés" style="width:100%;height:auto;display:block;transition:opacity .3s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
         <div style="position:absolute;bottom:0;left:0;right:0;padding:14px 18px;background:linear-gradient(to top,rgba(5,20,10,0.85),transparent);">
-          <div style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--green-light);opacity:0.85;margin-bottom:3px;">01 · Accés</div>
+          <div style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--forest);margin-bottom:3px;">01 · Accés</div>
           <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:#fff;font-weight:300;">Àrea privada dels socis</div>
         </div>
       </div>
       <div style="position:relative;overflow:hidden;background:#eef5ec;">
         <img src="images/img_37.png" alt="NexlicitIA panell" style="width:100%;height:auto;display:block;transition:opacity .3s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
         <div style="position:absolute;bottom:0;left:0;right:0;padding:14px 18px;background:linear-gradient(to top,rgba(15,45,30,0.82),transparent);">
-          <div style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--green-light);opacity:0.85;margin-bottom:3px;">02 · Panell de gestió</div>
+          <div style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--forest);margin-bottom:3px;">02 · Panell de gestió</div>
           <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:#fff;font-weight:300;">Ajudes-IA i Licitacions-IA</div>
         </div>
       </div>
