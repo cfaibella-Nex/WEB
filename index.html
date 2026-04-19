@@ -506,10 +506,34 @@ img{max-width:100%;height:auto;}
 }
 @media(max-width:860px){}
 @media(max-width:600px){
+/* Gestalt intro block */
 .gestalt-grid{display:block !important;grid-template-columns:1fr !important;min-height:auto !important;}
-.gestalt-foto{display:block !important;height:240px !important;position:relative !important;overflow:hidden !important;}
+.gestalt-foto{display:block !important;height:220px !important;position:relative !important;overflow:hidden !important;}
 .gestalt-foto img{position:absolute !important;inset:0 !important;width:100% !important;height:100% !important;object-fit:cover !important;object-position:top center !important;}
-.gestalt-text{display:block !important;padding:24px 18px 32px !important;}
+.gestalt-text{display:block !important;padding:28px 18px 32px !important;}
+}
+
+@media(max-width:768px){
+/* Taula trimestral → amagar i mostrar cards */
+.gs-trimestral-table{ display:none !important; }
+.gs-mobile-plans{ display:flex !important; }
+
+/* Foto individual card sota: apilat */
+div[style*="grid-template-columns:1fr 1fr"][style*="padding:20px 28px"],
+div[style*="grid-template-columns:1fr 1fr"][style*="gap:24px"]{
+  grid-template-columns:1fr !important;
+}
+
+/* Formulari primera trucada: apilat */
+div[style*="grid-template-columns:1fr 1.4fr"]{
+  grid-template-columns:1fr !important;
+}
+
+/* Títol trimestral */
+div[style*="padding:18px 24px 14px"]{
+  flex-direction:column !important;
+  gap:4px !important;
+}
 }</style>
 <script>
 function handleContactForm(e){
@@ -1292,16 +1316,16 @@ function changeLogo(){
             <div style="font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--green-mid);margin-bottom:10px;">Sessió puntual</div>
             <ul style="list-style:none;padding:0;margin:0;">
               <li style="font-size:12.5px;color:#4a5e46;padding:5px 0;border-bottom:1px solid rgba(45,107,72,0.1);display:flex;gap:8px;"><span style="color:var(--green-mid);flex-shrink:0;">—</span>Sessions al teu ritme</li>
-              <li style="font-size:12.5px;color:#4a5e46;padding:5px 0;border-bottom:1px solid rgba(45,107,72,0.1);display:flex;gap:8px;"><span style="color:var(--green-mid);flex-shrink:0;">—</span>Freqüència a convenir</li>
+              <li style="font-size:12.5px;color:#4a5e46;padding:5px 0;border-bottom:1px solid rgba(45,107,72,0.1);display:flex;gap:8px;"><span style="color:var(--green-mid);flex-shrink:0;">—</span>Freqüència a convenir — tu decideixes</li>
               <li style="font-size:12.5px;color:#4a5e46;padding:5px 0;display:flex;gap:8px;"><span style="color:var(--green-mid);flex-shrink:0;">—</span>Seguiment WhatsApp</li>
             </ul>
           </div>
           <div>
             <div style="font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:#2d6b48;margin-bottom:10px;">Trimestral · des de 45€</div>
             <ul style="list-style:none;padding:0;margin:0;">
-              <li style="font-size:12.5px;color:#2a3d28;padding:5px 0;border-bottom:1px solid rgba(45,107,72,0.1);display:flex;gap:8px;"><span style="color:#2d6b48;font-weight:600;flex-shrink:0;">✓</span>WhatsApp + prioritat</li>
+              <li style="font-size:12.5px;color:#2a3d28;padding:5px 0;border-bottom:1px solid rgba(45,107,72,0.1);display:flex;gap:8px;"><span style="color:#2d6b48;font-weight:600;flex-shrink:0;">✓</span>WhatsApp + prioritat agenda sessió</li>
               <li style="font-size:12.5px;color:#2a3d28;padding:5px 0;border-bottom:1px solid rgba(45,107,72,0.1);display:flex;gap:8px;"><span style="color:#2d6b48;font-weight:600;flex-shrink:0;">✓</span>Seguiment entre sessions</li>
-              <li style="font-size:12.5px;color:#2a3d28;padding:5px 0;display:flex;gap:8px;"><span style="color:#2d6b48;font-weight:600;flex-shrink:0;">✓</span>Freqüència adaptable</li>
+              <li style="font-size:12.5px;color:#2a3d28;padding:5px 0;display:flex;gap:8px;"><span style="color:#2d6b48;font-weight:600;flex-shrink:0;">✓</span>Freqüència adaptable segons el teu ritme de vida</li>
             </ul>
           </div>
         </div>
@@ -1317,7 +1341,7 @@ function changeLogo(){
   </div>
 
   <!-- QUADRE TRIMESTRAL -->
-  <div style="background:#fff;border:1px solid rgba(45,107,72,0.12);border-top:none;overflow:hidden;margin-bottom:3px;box-shadow:0 3px 14px rgba(45,107,72,0.07);">
+  <div class="gs-trimestral-table" style="background:#fff;border:1px solid rgba(45,107,72,0.12);border-top:none;overflow:hidden;margin-bottom:3px;box-shadow:0 3px 14px rgba(45,107,72,0.07);">
 
     <!-- Títol nou -->
     <div style="padding:18px 24px 14px;border-bottom:1px solid rgba(45,107,72,0.08);background:#f8fdf6;display:flex;align-items:baseline;gap:12px;">
@@ -1336,7 +1360,7 @@ function changeLogo(){
     </div>
 
     <!-- Essencial -->
-    <div style="display:grid;grid-template-columns:1.8fr 0.7fr 0.9fr 0.9fr 1fr 0.8fr;gap:0;padding:18px 24px;border-top:1px solid rgba(45,107,72,0.08);align-items:center;background:#f8fdf6;">
+    <div style="display:grid;grid-template-columns:1.8fr 0.7fr 0.9fr 0.9fr 1fr 0.8fr;gap:0;padding:10px 24px;border-top:1px solid rgba(45,107,72,0.08);align-items:center;background:#f8fdf6;">
       <div>
         <div style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:#0f2d1e;display:flex;align-items:center;gap:8px;">Essencial <span style="font-size:9px;background:var(--green-mid);color:#fff;padding:2px 8px;border-radius:10px;font-family:'DM Sans',sans-serif;font-weight:400;">2/mes</span></div>
         <div style="font-size:11px;color:#4a6858;margin-top:3px;">6 sessions · 3 mesos</div>
@@ -1349,7 +1373,7 @@ function changeLogo(){
     </div>
 
     <!-- Plus -->
-    <div style="display:grid;grid-template-columns:1.8fr 0.7fr 0.9fr 0.9fr 1fr 0.8fr;gap:0;padding:18px 24px;border-top:1px solid rgba(45,107,72,0.08);align-items:center;background:#edf7e8;">
+    <div style="display:grid;grid-template-columns:1.8fr 0.7fr 0.9fr 0.9fr 1fr 0.8fr;gap:0;padding:10px 24px;border-top:1px solid rgba(45,107,72,0.08);align-items:center;background:#edf7e8;">
       <div>
         <div style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:#0f2d1e;display:flex;align-items:center;gap:8px;">Plus <span style="font-size:9px;background:#2d6b48;color:#fff;padding:2px 8px;border-radius:10px;font-family:'DM Sans',sans-serif;font-weight:400;">⭐ 4/mes</span></div>
         <div style="font-size:11px;color:#4a6858;margin-top:3px;">12 sessions · 3 mesos</div>
@@ -1361,6 +1385,48 @@ function changeLogo(){
       <div style="font-size:17px;color:#2d6b48;font-weight:700;text-align:right;">−120€</div>
     </div>
 
+  </div>
+
+  <!-- CARDS MOBILE TRIMESTRAL (visible només <768px) -->
+  <div class="gs-mobile-plans" style="display:none;flex-direction:column;gap:10px;margin-bottom:3px;">
+    <!-- Essencial -->
+    <div style="background:#f8fdf6;border:1px solid rgba(45,107,72,0.14);border-left:4px solid var(--green-mid);padding:18px 20px;box-shadow:0 2px 10px rgba(45,107,72,0.08);">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
+        <div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:#0f2d1e;display:flex;align-items:center;gap:8px;">Essencial <span style="font-size:9px;background:var(--green-mid);color:#fff;padding:2px 8px;border-radius:10px;font-family:'DM Sans',sans-serif;font-weight:400;">2/mes</span></div>
+          <div style="font-size:11px;color:#4a6858;margin-top:2px;">6 sessions · 3 mesos</div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:#0f2d1e;line-height:1;">50€</div>
+          <div style="font-size:10px;color:#4a6858;">/sessió</div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:12px;color:#4a6858;border-top:1px solid rgba(45,107,72,0.1);padding-top:10px;margin-bottom:14px;">
+        <span>Preu solta: <s>110€/mes</s></span>
+        <span>Total: <strong style="color:#0f2d1e;">300€</strong></span>
+        <span style="color:var(--green-mid);font-weight:700;">Estalvi −30€</span>
+      </div>
+      <a onclick="gsScrollForm('trimestral-essencial')" style="display:block;text-align:center;padding:11px;background:#2d6b48;color:#fff;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border-radius:20px;">Subscriure'm al pla Essencial →</a>
+    </div>
+    <!-- Plus -->
+    <div style="background:#edf7e8;border:1px solid rgba(45,107,72,0.18);border-left:4px solid #2d6b48;padding:18px 20px;box-shadow:0 2px 10px rgba(45,107,72,0.1);">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
+        <div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:#0f2d1e;display:flex;align-items:center;gap:8px;">Plus <span style="font-size:9px;background:#2d6b48;color:#fff;padding:2px 8px;border-radius:10px;font-family:'DM Sans',sans-serif;font-weight:400;">⭐ 4/mes</span></div>
+          <div style="font-size:11px;color:#4a6858;margin-top:2px;">12 sessions · 3 mesos</div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:#0f2d1e;line-height:1;">45€</div>
+          <div style="font-size:10px;color:#4a6858;">/sessió</div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:12px;color:#4a6858;border-top:1px solid rgba(45,107,72,0.12);padding-top:10px;margin-bottom:14px;">
+        <span>Preu solta: <s>220€/mes</s></span>
+        <span>Total: <strong style="color:#0f2d1e;">540€</strong></span>
+        <span style="color:#2d6b48;font-weight:700;">Estalvi −120€</span>
+      </div>
+      <a onclick="gsScrollForm('trimestral-plus')" style="display:block;text-align:center;padding:11px;background:#2d6b48;color:#fff;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border-radius:20px;">Subscriure'm al pla Plus →</a>
+    </div>
   </div>
 
   <!-- TARIFES · GRUPALS -->
