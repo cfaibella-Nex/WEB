@@ -3113,13 +3113,11 @@ function gsFormSubmit(e){
       </div>
 
       <div class="footer-col">
-        <div class="footer-col-title">Teràpia · Sessions i Preus</div>
+        <div class="footer-col-title">Teràpia Gestalt</div>
         <ul class="footer-links">
-          <li><a href="#" onclick="showSection('gestalt-sessions',null)" style="color:var(--forest);font-weight:500;">Primera trucada gratuïta · 15 min</a></li>
-          <li><a href="#" onclick="showSection('gestalt-sessions',null)">Individual — 55€/sessió</a></li>
-          <li><a href="#" onclick="gsScrollForm('trimestral-essencial');showSection('gestalt-sessions',null)">Trimestral Essencial — 50€/sessió</a></li>
-          <li><a href="#" onclick="gsScrollForm('trimestral-plus');showSection('gestalt-sessions',null)">Trimestral Plus — 45€/sessió</a></li>
-          <li><a href="#" onclick="showSection('gestalt-sessions',null)">Grup terapèutic — 33€</a></li>
+          <li><a href="#" onclick="showSection('gestalt-sessions',null)">Teràpia Gestalt</a></li>
+          <li><a href="#" onclick="showSection('gestalt-sessions',null);setTimeout(function(){document.getElementById('gs-cal').scrollIntoView({behavior:'smooth'})},300)">Demana cita</a></li>
+          <li><a href="#" onclick="showSection('gestalt-sessions',null)">Consulta preus</a></li>
         </ul>
       </div>
 
