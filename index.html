@@ -10,8 +10,8 @@
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:clip;}
 body{font-family:'DM Sans',sans-serif;background:#f5f0e8;color:var(--text);min-height:100vh;}
 .sidebar{width:var(--sidebar-w);min-height:100vh;background:var(--cream);position:fixed;left:0;top:var(--topbar-h);display:flex;flex-direction:column;z-index:100;transition:transform var(--T);overflow:hidden}
-.sidebar-logo{padding:26px 22px 20px;border-bottom:1px solid rgba(109,191,133,.15);display:flex;align-items:center;gap:12px}
-.sidebar-logo img{width:46px;height:46px;object-fit:contain}
+.sidebar-logo{padding:32px 22px 22px;border-bottom:1px solid rgba(109,191,133,.15);display:flex;align-items:center;gap:12px}
+.sidebar-logo img{width:54px;height:54px;object-fit:contain}
 .logo-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#0f2d1e;letter-spacing:.04em;line-height:1}
 .logo-sub{font-size:9px;color:#2a3d28;letter-spacing:.1em;text-transform:uppercase;opacity:1;margin-top:4px;line-height:1.4;font-weight:500}
 nav{flex:1;padding:18px 0}
@@ -984,7 +984,6 @@ function changeLogo(){
 <a onclick="showSection('treballar',this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>Col·laboracions</a>
 <a onclick="showSection('contacte',this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.1 1.18 2 2 0 012.11 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.44-.44a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>Contacte</a>
 </nav>
-<div class="sidebar-footer"><a href="/cdn-cgi/l/email-protection#abc2c5cdc4c5ced3ebc5ced3d8c4c8c2cac785c4d9cc"><span class="__cf_email__" data-cfemail="1a73747c75747f625a747f62697579737b763475687d">[email&#160;protected]</span></a><br><a href="https://nexsocial.org">www.nexsocial.org</a></div>
 </aside>
 <main class="main">
 <section id="inici" class="active">
@@ -1295,8 +1294,8 @@ function changeLogo(){
     <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--green-mid);margin-bottom:8px;">Tarifes · Sessions individuals</div>
 
     <!-- Foto panoràmica -->
-    <div style="position:relative;height:220px;overflow:hidden;border-radius:2px 2px 0 0;">
-      <img src="images/img_39.jpg" alt="Teràpia individual — oficina i natura" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;">
+    <div style="position:relative;height:260px;overflow:hidden;border-radius:2px 2px 0 0;">
+      <img src="images/img_39.jpg" alt="Teràpia individual — oficina i natura" style="width:100%;height:100%;object-fit:cover;object-position:center center;display:block;">
       <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(15,45,30,0.08) 0%,rgba(15,45,30,0.6) 100%);"></div>
       <!-- Títol sobreposat -->
       <div style="position:absolute;bottom:0;left:0;right:0;padding:20px 28px;display:flex;align-items:flex-end;justify-content:space-between;">
@@ -1381,15 +1380,6 @@ function changeLogo(){
       <div style="font-size:13px;color:#2d6b48;font-weight:700;text-align:right;">−120€</div>
     </div>
 
-    <!-- Botons subscripció -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;border-top:1px solid rgba(45,107,72,0.1);">
-      <div style="padding:13px 22px;background:#f0f9ed;">
-        <a onclick="gsScrollForm('trimestral-essencial')" style="display:inline-flex;align-items:center;gap:8px;padding:9px 18px;background:#2d6b48;color:#fff;font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border-radius:20px;transition:all .22s;" onmouseover="this.style.background='#1e5a38'" onmouseout="this.style.background='#2d6b48'">Subscriure'm al pla Essencial →</a>
-      </div>
-      <div style="padding:13px 22px;background:#e4f2de;">
-        <a onclick="gsScrollForm('trimestral-plus')" style="display:inline-flex;align-items:center;gap:8px;padding:9px 18px;background:#2d6b48;color:#fff;font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border-radius:20px;transition:all .22s;" onmouseover="this.style.background='#1e5a38'" onmouseout="this.style.background='#2d6b48'">Subscriure'm al pla Plus →</a>
-      </div>
-    </div>
   </div>
 
   <!-- TARIFES · GRUPALS -->
