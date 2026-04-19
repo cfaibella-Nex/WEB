@@ -376,9 +376,9 @@ div[style*="font-size:32px"]{font-size:22px !important;}
 @media(max-width:768px){.topbar{padding-left:58px}.topbar-tagline,.topbar-brand{display:block}.topbar-btn span{display:none}.topbar-btn{padding:5px 7px}}
 
 /* === FOOTER === */
-.site-footer{background:#d4e8d0;color:#4a6858;padding:36px 48px 28px;}
-.footer-inner{max-width:960px;margin:0 auto}
-.footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px;padding-bottom:28px;border-bottom:1px solid rgba(109,191,133,.08)}
+.site-footer{background:#d4e8d0;color:#4a6858;padding:28px 24px 20px;}
+.footer-inner{max-width:820px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:1.3fr 1fr 1fr 0.8fr 0.9fr;gap:20px;padding-bottom:20px;border-bottom:1px solid rgba(109,191,133,.08)}
 .footer-col-title{font-size:9.5px;letter-spacing:0.15em;text-transform:uppercase;color:#2d6b48;margin-bottom:14px;font-weight:600}
 .footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px}
 .footer-brand img{height:32px;width:auto;object-fit:contain;opacity:.85}
@@ -396,7 +396,7 @@ div[style*="font-size:32px"]{font-size:22px !important;}
 .footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:20px;font-size:11px;color:#2a3d28;flex-wrap:wrap;gap:8px}
 .footer-bottom a{color:#2a3d28;text-decoration:none}
 .footer-bottom a:hover{color:var(--forest)}
-@media(max-width:768px){.site-footer{padding:28px 22px 20px}.footer-top{grid-template-columns:1fr 1fr}.footer-col--brand{grid-column:1/-1}}
+@media(max-width:768px){.site-footer{padding:24px 18px 16px}.footer-top{grid-template-columns:1fr 1fr}.footer-col--brand{grid-column:1/-1}}
 
 .site-footer{display:block !important;}
 
@@ -3133,15 +3133,17 @@ function gsFormSubmit(e){
 <footer class="site-footer" id="site-footer">
   <div class="footer-inner">
     <div class="footer-top">
+
+      <!-- Brand -->
       <div class="footer-col footer-col--brand">
         <div class="footer-brand">
-          <img src="images/img_27.png" id="footer-logo-img" alt="NexSocial">
+          <img src="images/img_01.png" id="footer-logo-img" alt="NexSocial" style="width:38px;height:38px;object-fit:contain;">
           <span class="footer-brand-name" id="footer-brand-name">NexSocial</span>
         </div>
         <p class="footer-desc" id="footer-desc">Cooperativa d'Acompanyament Sociovital a persones i entitats.</p>
-        
       </div>
 
+      <!-- Serveis -->
       <div class="footer-col">
         <div class="footer-col-title">Serveis</div>
         <ul class="footer-links" id="footer-links-serveis">
@@ -3152,6 +3154,7 @@ function gsFormSubmit(e){
         </ul>
       </div>
 
+      <!-- Teràpia Gestalt -->
       <div class="footer-col">
         <div class="footer-col-title">Teràpia Gestalt</div>
         <ul class="footer-links">
@@ -3161,6 +3164,7 @@ function gsFormSubmit(e){
         </ul>
       </div>
 
+      <!-- Empresa -->
       <div class="footer-col">
         <div class="footer-col-title">Empresa</div>
         <ul class="footer-links" id="footer-links-empresa">
@@ -3169,6 +3173,7 @@ function gsFormSubmit(e){
         </ul>
       </div>
 
+      <!-- Segueix-nos -->
       <div class="footer-col">
         <div class="footer-col-title">Segueix-nos</div>
         <div class="footer-social" id="footer-social">
@@ -3186,6 +3191,7 @@ function gsFormSubmit(e){
           </a>
         </div>
       </div>
+
     </div>
 
     <div class="footer-bottom">
