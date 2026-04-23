@@ -1,3 +1,4 @@
+
 :root{--forest:#2d6b48;--forest-hero:#dff0db;--green-mid:#3d8a62;--green-light:#6dbf85;--green-dark1:#a8cca5;--green-dark2:#8eba8b;--green-pale:#98be95;--cream:#d4e8d0;--card:#ffffff;--white:#f5f0e8;--text:#2a3d28;--text-muted:#4a6858;--sidebar-w:260px;--topbar-h:42px;--footer-h:auto;--T:.35s cubic-bezier(.4,0,.2,1)}
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:clip;}
 body{font-family:'DM Sans',sans-serif;background:#f5f0e8;color:var(--text);min-height:100vh;}
@@ -351,3 +352,180 @@ div[style*="font-size:32px"]{font-size:22px !important;}
 /* === TOPBAR === */
 .topbar{position:fixed;top:0;left:0;right:0;height:var(--topbar-h);background:var(--cream);z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 18px 0 calc(var(--sidebar-w) + 18px);border-bottom:1px solid rgba(45,107,72,.15)}
 .topbar-left{display:flex;align-items:center;gap:20px}
+.topbar-logo-wrap{display:flex;align-items:center;gap:8px}
+.topbar-logo-wrap img{height:24px;width:auto;object-fit:contain}
+.topbar-brand{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:400;color:#2a3d28;letter-spacing:0.04em}
+.topbar-tagline{font-size:11px;color:#4a6858;letter-spacing:0.05em;display:block}
+.topbar-right{display:flex;align-items:center;gap:8px}
+.topbar-btn{display:flex;align-items:center;gap:5px;padding:5px 11px;border:1px solid rgba(45,107,72,.25);color:#2d6b48;font-size:11px;text-decoration:none;letter-spacing:0.05em;transition:all .2s;cursor:pointer;background:transparent;white-space:nowrap}
+.topbar-btn:hover,.topbar-btn:focus{background:rgba(45,107,72,0.08);backdrop-filter:blur(6px);border-color:rgba(45,107,72,0.3);color:#2d6b48;transform:translateY(-1px)}
+.topbar-btn.urgent{border-color:rgba(239,68,68,.4);color:rgba(239,68,68,.8)}
+.topbar-btn.urgent:hover{background:rgba(239,68,68,.1);border-color:rgba(239,68,68,.7);color:#ef4444}
+.topbar-btn svg{width:12px;height:12px;flex-shrink:0}
+.lang-select{appearance:none;background:transparent;border:1px solid rgba(45,107,72,.25);color:#2d6b48;font-size:11px;font-family:'DM Sans',sans-serif;letter-spacing:0.05em;padding:5px 24px 5px 10px;cursor:pointer;transition:all .2s;outline:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='rgba(45,107,72,0.6)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center;}
+.lang-select:hover{border-color:rgba(45,107,72,.5);color:var(--green-mid)}
+.lang-select option{background:#f5f0e8;color:#2a3d28;}
+
+@media(max-width:1100px){.topbar-tagline{display:none}.topbar{padding-left:calc(var(--sidebar-w) + 14px)}}
+@media(max-width:768px){.topbar{padding-left:58px}.topbar-tagline,.topbar-brand{display:block}.topbar-btn span{display:none}.topbar-btn{padding:5px 7px}}
+
+/* === FOOTER === */
+.site-footer{background:#d4e8d0;color:#4a6858;padding:28px 24px 20px;}
+.footer-inner{max-width:820px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:1.3fr 1fr 1fr 0.8fr 0.9fr;gap:20px;padding-bottom:20px;border-bottom:1px solid rgba(109,191,133,.08)}
+.footer-col-title{font-size:9.5px;letter-spacing:0.15em;text-transform:uppercase;color:#2d6b48;margin-bottom:14px;font-weight:600}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.footer-brand img{height:32px;width:auto;object-fit:contain;opacity:.85}
+.footer-brand-name{font-family:'Cormorant Garamond',serif;font-size:18px;color:#2a3d28;letter-spacing:0.04em}
+.footer-desc{font-size:12px;line-height:1.8;color:#4a6858;max-width:220px}
+.footer-links{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.footer-links a{font-size:12px;color:#2a3d28;text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--forest);font-weight:500}
+.footer-social{display:flex;flex-direction:column;gap:8px}
+.footer-social a{display:flex;align-items:center;gap:7px;font-size:12px;color:#4a6858;text-decoration:none;transition:color .2s}
+.footer-social a:hover{color:var(--forest);font-weight:500}
+.footer-social svg{width:14px;height:14px;flex-shrink:0}
+.footer-denuncia{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid rgba(239,68,68,.3);color:rgba(239,68,68,.7);font-size:11px;text-decoration:none;letter-spacing:0.06em;transition:all .2s;margin-top:4px}
+.footer-denuncia:hover{background:rgba(239,68,68,.08);border-color:rgba(239,68,68,.6);color:#ef4444}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:20px;font-size:11px;color:#2a3d28;flex-wrap:wrap;gap:8px}
+.footer-bottom a{color:#2a3d28;text-decoration:none}
+.footer-bottom a:hover{color:var(--forest)}
+@media(max-width:768px){.site-footer{padding:24px 18px 16px}.footer-top{grid-template-columns:1fr 1fr}.footer-col--brand{grid-column:1/-1}}
+
+.site-footer{display:block !important;}
+
+.servei-block:nth-child(even){background:#e8f5e4 !important;}
+
+.footer-links a, .footer-social a, .footer-bottom a {
+  transition: color .2s, font-weight .1s;
+}
+.team-card, .servei-block, .mv-block {
+  transition: transform .25s, box-shadow .25s;
+}
+.team-card:hover, .servei-block:hover {
+  transform: translateY(-3px);
+}
+nav a {
+  transition: all .2s;
+}
+
+
+/* === ALTERNANÇA GLOBAL CARDS === */
+/* srv-col-box */
+.srv-col-box:nth-child(odd) { background: #f0f9ed !important; }
+.srv-col-box:nth-child(even) { background: #e8f5e4 !important; }
+
+/* area-card alternada */
+.area-card:nth-child(odd) .area-card-body { background: #f0f9ed !important; }
+.area-card:nth-child(even) .area-card-body { background: #e8f5e4 !important; }
+
+/* oferta alternada */
+.oferta:nth-child(odd) { background: #f0f9ed !important; }
+.oferta:nth-child(even) { background: #e8f5e4 !important; }
+
+/* team-card alternada */
+.team-card:nth-child(odd) { background: #f0f9ed !important; }
+.team-card:nth-child(even) { background: #e8f5e4 !important; }
+
+/* mv-block alternada */
+.mv-block:nth-child(odd) { background: #f0f9ed !important; }
+.mv-block:nth-child(even) { background: #e8f5e4 !important; }
+
+/* dopt (diagnòstic) alternada */
+.dopt:nth-child(odd) { background: #f0f9ed !important; }
+.dopt:nth-child(even) { background: #e8f5e4 !important; }
+.dopt:hover, .dopt.selected { background: #98be95 !important; }
+
+/* srv-detail-nav-item alternada */
+.srv-detail-nav-item:nth-child(odd) { background: transparent; }
+.srv-detail-nav-item:nth-child(even) { background: rgba(13,112,64,.04); }
+
+
+#subnav-entitats a, #subnav-serveis a { color:#1e3028 !important; font-size:14px; opacity:1 !important; border-left-color:#3d8a62 !important; }
+
+.mv-card:nth-child(odd) { background: #f0f9ed !important; }
+.mv-card:nth-child(even) { background: #e8f5e4 !important; }
+.cas-card:nth-child(odd) { background: #f0f9ed !important; }
+.cas-card:nth-child(even) { background: #e8f5e4 !important; }
+
+
+img{max-width:100%;height:auto;}
+
+/* Em cursiva sobre fons verd → color fosc per contrast */
+[style*="background:#98be95"] em,
+[style*="background:var(--forest-hero)"] em,
+[style*="background:#dff0db"] em,
+[style*="background:#d4e8d0"] em {
+  color: #2d6b48 !important;
+}
+.page-header em { color: #2d6b48 !important; }
+.hero-title em { color: #2d6b48 !important; }
+
+
+/* Green-light sobre fons clar → fosc */
+[style*="background:#98be95"] [style*="color:var(--green-light)"],
+.srv-col-box [style*="color:var(--green-light)"] {
+  color: #2d6b48 !important;
+}
+
+/* ── REGLA OR BRANDING: --green-light NOMÉS sobre fons fosc ──────────────
+   Sobre qualsevol fons clar de la web, forcem --forest per garantir contrast.
+   Excepció: botons amb background:var(--forest) i overlays de foto (ok per disseny).
+   ──────────────────────────────────────────────────────────────────────── */
+.content [style*="color:var(--green-light)"],
+.page-header:not(.dark-overlay) [style*="color:var(--green-light)"],
+.site-footer [style*="color:var(--green-light)"] {
+  color: var(--forest) !important;
+}
+
+
+/* Espai extra bottom NexAcompanya/NexGestió cards inici */
+.stack-item { margin-bottom: 24px; }
+@media(max-width:768px){
+  .stack-item { margin-bottom: 16px; }
+}
+
+
+
+
+  
+  
+}
+
+
+
+  
+  
+  
+}
+@media(max-width:860px){}
+@media(max-width:600px){
+/* Gestalt intro block */
+.gestalt-grid{display:block !important;grid-template-columns:1fr !important;min-height:auto !important;}
+.gestalt-foto{display:block !important;height:220px !important;position:relative !important;overflow:hidden !important;}
+.gestalt-foto img{position:absolute !important;inset:0 !important;width:100% !important;height:100% !important;object-fit:cover !important;object-position:top center !important;}
+.gestalt-text{display:block !important;padding:28px 18px 32px !important;}
+}
+
+@media(max-width:768px){
+/* Taula trimestral → amagar i mostrar cards */
+.gs-trimestral-table{ display:none !important; }
+.gs-mobile-plans{ display:flex !important; }
+
+/* Foto individual card sota: apilat */
+div[style*="grid-template-columns:1fr 1fr"][style*="padding:20px 28px"],
+div[style*="grid-template-columns:1fr 1fr"][style*="gap:24px"]{
+  grid-template-columns:1fr !important;
+}
+
+/* Formulari primera trucada: apilat */
+div[style*="grid-template-columns:1fr 1.4fr"]{
+  grid-template-columns:1fr !important;
+}
+
+/* Títol trimestral */
+div[style*="padding:18px 24px 14px"]{
+  flex-direction:column !important;
+  gap:4px !important;
+}
+}
