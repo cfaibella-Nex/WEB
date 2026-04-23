@@ -1,1 +1,220 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servei a Persones — NexSocial</title>
+<meta name="description" content="Acompanyament sociovital i gestoria social per a persones i famílies. NexAcompanya i NexGestió · NexSocial.">
+<link rel="canonical" href="https://nexsocial.org/persones/">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/nexsocial.css">
+</head>
+<body>
+<div class="topbar" id="topbar">
+  <div class="topbar-left">
+    <img src="../images/img_01.png" id="topbar-logo-img" alt="NexSocial" style="height:24px;width:24px;object-fit:contain;border-radius:50%;">
+    <span class="topbar-tagline">Nexe de Suport i Acompanyament Sociovital</span>
+  </div>
+  <div class="topbar-right">
+    <a href="/contacte/" class="topbar-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <span>Contacte</span>
+    </a>
+  </div>
+</div>
+<button class="mobile-toggle" onclick="toggleSidebar()"><span></span><span></span><span></span></button>
+<div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <img src="../images/img_01.png" alt="NexSocial">
+    <div><div class="logo-name">NexSocial</div><div class="logo-sub">Cooperativa d'Acompanyament<br>Sociovital</div></div>
+  </div>
+  <nav>
+    <a href="/">Inici</a>
+    <a href="/qui-som/">Qui som</a>
+    <a href="/persones/" class="active">Servei a Persones</a>
+    <div style="max-height:260px; overflow:hidden; background:rgba(255,255,255,0.18);">
+      <a href="/nexacompanya/" style="padding:9px 20px 9px 36px; font-size:13px; border-left:2px solid #3d8a62;">NexAcompanya</a>
+      <a href="/nexacompanya/sessions-gestalt/" style="padding:9px 20px 9px 48px; font-size:12px; border-left:2px solid rgba(61,138,98,0.5); color:#4a6858;">Sessions Gestalt</a>
+      <a href="/nexgestio/" style="padding:9px 20px 9px 36px; font-size:13px; color:#1e3028; border-left:2px solid #3d8a62;">NexGestió</a>
+      <a href="/nexgestio/nexlicitia/" style="padding:9px 20px 9px 48px; font-size:12px; border-left:2px solid rgba(61,138,98,0.5); color:#4a6858;">NexlicitIA</a>
+      <a href="/consulta-cas-a-cas/" style="padding:9px 20px 9px 36px; font-size:13px; color:#1e3028; border-left:2px solid #3d8a62;">Consulta Cas a Cas</a>
+    </div>
+    <a href="/entitats/">Servei a Entitats</a>
+    <a href="/collaboracions/">Col·laboracions</a>
+    <a href="/contacte/">Contacte</a>
+  </nav>
+  <div class="sidebar-footer">
+    <a href="mailto:infonex@nexsocial.org">infonex@nexsocial.org</a><br>
+    <a href="https://nexsocial.org">www.nexsocial.org</a>
+  </div>
+</aside>
+<main class="main">
 
+<div class="page-header">
+<div class="page-header-bg" style="background-image:url('../images/img_08.jpg');"></div>
+<span class="page-header-tag">El que fem</span>
+<h1>Els nostres <em>serveis</em></h1>
+<p>Dos serveis que poden ser complementaris per oferir un acompanyament sociovital a les persones, famílies i entitats.</p>
+</div>
+<div class="content" style="padding:40px 48px 60px; max-width:none;">
+
+<style>
+.area-card { display:grid; grid-template-columns:1fr 1fr; gap:0; margin-bottom:32px; border:1px solid rgba(45,107,72,0.2); overflow:hidden; transition:box-shadow .3s; }
+.area-card:hover { box-shadow:0 8px 32px rgba(18,32,41,0.1); }
+.area-card-img { min-height:320px; background-size:cover; background-position:center; position:relative; }
+.area-card-img-overlay { position:absolute; inset:0; background:rgba(18,32,41,0.35); }
+.area-card-body { padding:40px 36px; display:flex; flex-direction:column; justify-content:space-between; }
+.area-card-tag { font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:var(--green-mid); margin-bottom:10px; }
+.area-card-title { font-family:"Cormorant Garamond",serif; font-size:30px; font-weight:500; color:#0f2d1e; margin-bottom:14px; line-height:1.2; }
+.area-card-desc { font-size:13px; color:#4a5e46; line-height:1.8; margin-bottom:24px; }
+.area-card-list { list-style:none; padding:0; margin:0 0 28px; }
+.area-card-list li { font-size:12px; color:#4a6858; padding:5px 0; border-bottom:1px solid rgba(45,107,72,0.1); display:flex; align-items:center; gap:8px; }
+.area-card-list li::before { content:""; width:5px; height:5px; border-radius:50%; background:var(--green-mid); flex-shrink:0; }
+.area-btn { display:inline-flex; align-items:center; justify-content:center; background:#2d6b48; color:#fff; border:none; padding:13px 28px; font-family:"DM Sans",sans-serif; font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; cursor:pointer; transition:all .3s; text-align:center; border-radius:40px; box-shadow:0 4px 16px rgba(45,107,72,0.25); }
+.area-btn:hover { background:rgba(30,90,56,0.55); backdrop-filter:blur(6px); color:#fff; transform:translateY(-2px); box-shadow:0 6px 18px rgba(45,107,72,0.15); }
+.area-btn-outline { background:rgba(255,255,255,0.55); backdrop-filter:blur(8px); color:var(--forest); border:1px solid rgba(45,107,72,0.25); }
+.area-btn-outline:hover { background:rgba(45,107,72,0.08); backdrop-filter:blur(6px); color:#2d6b48; transform:translateY(-2px); box-shadow:0 6px 18px rgba(45,107,72,0.08); border-color:rgba(45,107,72,0.3); }
+@media(max-width:768px){ .area-card { grid-template-columns:1fr; } .area-card-img { min-height:200px; } }
+</style>
+
+<!-- NexAcompanya -->
+<div class="area-card">
+  <div class="area-card-img" id="srv-acomp-img" style="background-image:url('../images/img_09.jpg');background-size:cover;background-position:center;">
+    <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(45,107,72,0.1),rgba(15,45,30,0.72));"></div>
+    <div style="position:absolute;bottom:0;left:0;right:0;padding:20px 24px;border-top:2px solid rgba(109,191,133,0.4);">
+      <div style="font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-bottom:8px;">Àrea d'Acompanyament</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;color:#fff;line-height:1;">Nex<em style="color:#98be95;">Acompanya</em></div>
+    </div>
+  </div>
+  <div class="area-card-body" style="background:#e8f5e4;">
+    <div>
+      <div class="area-card-tag">Àrea d'Acompanyament</div>
+      <div class="area-card-title">Acompanyament <em style="color:var(--green-mid);">Sociovital</em></div>
+      <p class="area-card-desc">Acompanyem persones i famílies en moments de dificultat. Suport social, emocional i terapèutic adaptat a cada situació i persona.</p>
+      <ul class="area-card-list">
+        <li>Acompanyament Sociovital</li>
+        <li>Acompanyament Emocional i Terapèutic</li>
+        <li>Coach, Gestalt, Psicologia i altres enfocaments</li>
+        <li>Retirs de desconnexió: 2-3 dies</li>
+      </ul>
+    </div>
+    <button class="area-btn" href='/nexacompanya/'>Veure tots els serveis →</button>
+  </div>
+</div>
+
+<!-- NexGestio -->
+<div class="area-card" style="flex-direction:row-reverse;">
+  <div class="area-card-body" style="background:#e8f5e4; order:1;">
+    <div>
+      <div class="area-card-tag">Gestoria Social · Ajudes · Mediació</div>
+      <div class="area-card-title">Nex<em style="color:var(--green-mid);">Gestió</em></div>
+      <p class="area-card-desc">Gestoria social cooperativa: gestionem íntegrament en el teu nom, detectem ajudes vigents amb la nostra eina pròpia NexlicitIA, i mediem quan cal.</p>
+      <ul class="area-card-list">
+        <li>Detecció i informació d'ajudes vigents</li>
+        <li>Gestió i tramitació d'ajudes i prestacions socials</li>
+        <li>Àmbits: ajudes socials i tràmits migratoris</li>
+        <li>Mediació i assessorament social</li>
+      </ul>
+    </div>
+    <button class="area-btn" href='/nexgestio/'>Veure tots els serveis →</button>
+  </div>
+  <div class="area-card-img" id="srv-gestio-img" style="background-image:url('../images/img_10.jpg');background-size:cover;background-position:center; order:2;">
+    <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(45,107,72,0.1),rgba(15,45,30,0.72));"></div>
+    <div style="position:absolute;bottom:0;left:0;right:0;padding:20px 24px;border-top:2px solid rgba(109,191,133,0.4);">
+      <div style="font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-bottom:8px;">Gestoria Social · Ajudes · Mediació</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;color:#fff;line-height:1;">Nex<em style="color:#98be95;">Gestió</em></div>
+    </div>
+  </div>
+</div>
+
+<!-- Consulta Cas a Cas -->
+<div class="area-card">
+  <div class="area-card-img" style="background-image:url('../images/img_21.png');background-size:cover;background-position:center top;">
+    <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(45,107,72,0.1),rgba(15,45,30,0.72));"></div>
+    <div style="position:absolute;bottom:0;left:0;right:0;padding:20px 24px;border-top:2px solid rgba(109,191,133,0.4);">
+      <div style="font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-bottom:8px;">Atenció personalitzada</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:#fff;line-height:1;">Consulta<br><em style="color:#98be95;">Cas a Cas</em></div>
+    </div>
+  </div>
+  <div class="area-card-body" style="background:#e8f5e4;">
+    <div>
+      <div class="area-card-tag">Orientació personalitzada · Gratuïta</div>
+      <div class="area-card-title">No saps quin servei necessites?</div>
+      <p class="area-card-desc">T'ajudem a identificar quin servei s'adapta millor a la teva situació personal o la de la teva entitat. Analitzem el teu cas de manera individualitzada i t'orientem sense compromís.</p>
+      <ul class="area-card-list">
+        <li>Trucada gratuïta, el temps que necessitis</li>
+        <li>T'orientem cap al servei de NexSocial que s'adapti al teu cas</li>
+        <li>Atenció a persones, famílies i entitats</li>
+        <li>Resposta en menys de 24h en dies laborables</li>
+      </ul>
+    </div>
+    <button class="area-btn" href='/'>Sol·licitar consulta →</button>
+  </div>
+</div>
+
+<!-- CTA diagnòstic -->
+
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-col footer-col--brand">
+        <div class="footer-brand">
+          <img src="../images/img_01.png" alt="NexSocial" style="width:38px;height:38px;object-fit:contain;">
+          <span class="footer-brand-name">NexSocial</span>
+        </div>
+        <p class="footer-desc">Cooperativa d'Acompanyament Sociovital a persones i entitats.</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Serveis</div>
+        <ul class="footer-links">
+          <li><a href="/nexacompanya/">NexAcompanya</a></li>
+          <li><a href="/nexgestio/">NexGestió</a></li>
+          <li><a href="/consulta-cas-a-cas/">Cas a Cas</a></li>
+          <li><a href="/entitats/">Servei a Entitats</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Teràpia Gestalt</div>
+        <ul class="footer-links">
+          <li><a href="/nexacompanya/sessions-gestalt/">Teràpia Gestalt</a></li>
+          <li><a href="/nexacompanya/sessions-gestalt/#gs-cal">Demana cita</a></li>
+          <li><a href="/nexacompanya/sessions-gestalt/#preus">Consulta preus</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Empresa</div>
+        <ul class="footer-links">
+          <li><a href="/qui-som/">Qui som</a></li>
+          <li><a href="/contacte/">Contacte</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Segueix-nos</div>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/nexsocial-cooperativa-acompa%C3%B1amiento-sociovital-218a213b9/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn
+          </a>
+          <a href="https://www.instagram.com/nexsocialcoop/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 NexSocial Cooperativa d'Acompanyament Sociovital</span>
+      <span>Registre de Cooperatives de Catalunya</span>
+    </div>
+  </div>
+</footer>
+</main>
+<script src="../js/nexsocial.js"></script>
+<script>
+function toggleSidebar(){
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('overlay').classList.toggle('active');
+}
+</script>
+</body>
+</html>
