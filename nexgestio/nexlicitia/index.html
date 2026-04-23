@@ -1,1 +1,308 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexlicitIA — Detecció d'Ajudes Vigents · NexSocial</title>
+<meta name="description" content="Eina pròpia de detecció d'ajudes i subvencions vigents. NexlicitIA · NexGestió · NexSocial.">
+<link rel="canonical" href="https://nexsocial.org/nexgestio/nexlicitia/">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/nexsocial.css">
+</head>
+<body>
+<div class="topbar" id="topbar">
+  <div class="topbar-left">
+    <img src="../../images/img_01.png" id="topbar-logo-img" alt="NexSocial" style="height:24px;width:24px;object-fit:contain;border-radius:50%;">
+    <span class="topbar-tagline">Nexe de Suport i Acompanyament Sociovital</span>
+  </div>
+  <div class="topbar-right">
+    <a href="/contacte/" class="topbar-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <span>Contacte</span>
+    </a>
+  </div>
+</div>
+<button class="mobile-toggle" onclick="toggleSidebar()"><span></span><span></span><span></span></button>
+<div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <img src="../../images/img_01.png" alt="NexSocial">
+    <div><div class="logo-name">NexSocial</div><div class="logo-sub">Cooperativa d'Acompanyament<br>Sociovital</div></div>
+  </div>
+  <nav>
+    <a href="/">Inici</a>
+    <a href="/qui-som/">Qui som</a>
+    <a href="/">Servei a Persones</a>
+    <div style="max-height:260px; overflow:hidden; background:rgba(255,255,255,0.18);">
+      <a href="/nexacompanya/" style="padding:9px 20px 9px 36px; font-size:13px; border-left:2px solid #3d8a62;" >NexAcompanya</a>
+      <a href="/nexacompanya/sessions-gestalt/" style="padding:9px 20px 9px 48px; font-size:12px; border-left:2px solid rgba(61,138,98,0.5); color:#4a6858;" >Sessions Gestalt</a>
+      <a href="/nexgestio/" style="padding:9px 20px 9px 36px; font-size:13px; color:#1e3028; border-left:2px solid #3d8a62;" >NexGestió</a>
+      <a href="/nexgestio/nexlicitia/" style="padding:9px 20px 9px 48px; font-size:12px; border-left:2px solid rgba(61,138,98,0.5); color:#4a6858;" class="active">NexlicitIA</a>
+      <a href="/consulta-cas-a-cas/" style="padding:9px 20px 9px 36px; font-size:13px; color:#1e3028; border-left:2px solid #3d8a62;">Consulta Cas a Cas</a>
+    </div>
+    <a href="/entitats/">Servei a Entitats</a>
+    <a href="/collaboracions/">Col·laboracions</a>
+    <a href="/contacte/">Contacte</a>
+  </nav>
+  <div class="sidebar-footer">
+    <a href="mailto:infonex@nexsocial.org">infonex@nexsocial.org</a><br>
+    <a href="https://nexsocial.org">www.nexsocial.org</a>
+  </div>
+</aside>
+<main class="main">
 
+<div class="page-header">
+<div class="page-header-bg" style="background-image:url('../../images/img_23.png')"></div>
+<span class="page-header-tag">Serveis Entitats · Eina membres</span>
+<h1>Nex<em>licitIA</em></h1>
+<p>Intel·ligència competitiva per a licitacions públiques del sector social.</p>
+</div>
+<button href='/' style="background:transparent;border:none;color:#4a6858;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;margin:24px 0 0 64px;padding:0;display:block;">← Tornar a Serveis Entitats</button>
+
+<!-- Previsualització NexlicitIA -->
+<div style="padding:32px 48px 48px;">
+  <div style="font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--green-mid);margin-bottom:16px;">Eina exclusiva · Membres NexSocial</div>
+  <p style="font-size:14.5px;color:#4a5e46;line-height:1.9;margin-bottom:32px;">NexlicitIA és una eina pròpia de NexSocial orientada a la detecció i organització automàtica d'ajudes, subvencions i licitacions públiques del sector social. Mitjançant el seguiment diari de fonts oficials, permet identificar convocatòries rellevants, classificar-les i integrar-les en una base de dades pròpia, amb l'objectiu de facilitar l'accés a oportunitats i reforçar la capacitat de resposta de persones, entitats i projectes socials.</p>
+
+
+  <!-- Mostra de l'eina · Screenshots -->
+  <div style="margin-bottom:40px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-bottom:14px;">
+      <div style="position:relative;overflow:hidden;background:#0a1a10;">
+        <img src="../../images/img_36.png" alt="NexlicitIA accés" style="width:100%;height:auto;display:block;transition:opacity .3s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:14px 18px;background:linear-gradient(to top,rgba(5,20,10,0.85),transparent);">
+          <div style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--forest);margin-bottom:3px;">01 · Accés</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:#fff;font-weight:300;">Àrea privada dels socis</div>
+        </div>
+      </div>
+      <div style="position:relative;overflow:hidden;background:#eef5ec;">
+        <img src="../../images/img_37.png" alt="NexlicitIA panell" style="width:100%;height:auto;display:block;transition:opacity .3s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:14px 18px;background:linear-gradient(to top,rgba(15,45,30,0.82),transparent);">
+          <div style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--forest);margin-bottom:3px;">02 · Panell de gestió</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:#fff;font-weight:300;">Ajudes-IA i Licitacions-IA</div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;padding:13px 18px;background:#f0f9ed;border:1px solid rgba(45,107,72,0.12);">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green-mid)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      <span style="font-size:11.5px;color:#4a5e46;line-height:1.6;"><strong style="color:var(--forest);">Roadmap SaaS:</strong> NexlicitIA és una eina d'ús intern de NexSocial, desenvolupada íntegrament per la cooperativa.</span>
+    </div>
+  </div>
+
+  <!-- Features grid actualitzat -->
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:40px;">
+
+    <div style="background:#f0f9ed;border:1px solid rgba(45,107,72,0.1);padding:24px 18px;text-align:center;">
+      <div style="margin-bottom:12px;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--green-mid)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="display:block;margin:0 auto;"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--forest);margin-bottom:6px;">Ajudes Vigents</div>
+      <div style="font-size:11px;color:#4a6858;line-height:1.6;">Cerca i filtra subvencions obertes per àmbit, termini i administració convocant.</div>
+    </div>
+
+    <div style="background:#f0f9ed;border:1px solid rgba(45,107,72,0.15);padding:24px 18px;text-align:center;">
+      <div style="margin-bottom:12px;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--green-mid)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="display:block;margin:0 auto;"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      </div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--forest);margin-bottom:6px;">Licitacions</div>
+      <div style="font-size:11px;color:#4a6858;line-height:1.6;">Concursos públics del sector social: serveis, acompanyament i habitatge.</div>
+    </div>
+
+    <div style="background:#f0f9ed;border:1px solid rgba(45,107,72,0.1);padding:24px 18px;text-align:center;">
+      <div style="margin-bottom:12px;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--green-mid)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="display:block;margin:0 auto;"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+      </div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--forest);margin-bottom:6px;">Catàleg</div>
+      <div style="font-size:11px;color:#4a6858;line-height:1.6;">Ajudes de grans municipis classificades per perfil i accessible al client.</div>
+    </div>
+
+    <div style="background:#98be95;border:1px solid rgba(45,107,72,0.1);padding:24px 18px;text-align:center;">
+      <div style="margin-bottom:12px;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--green-light)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="display:block;margin:0 auto;"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:#0f2d1e;font-weight:600;margin-bottom:6px;">Perfil Client</div>
+      <div style="font-size:11px;color:#4a6858;line-height:1.6;">Assistida per IA per identificar quines ajudes encaixen amb cada persona.</div>
+    </div>
+
+  </div>
+
+  <!-- Com funciona: pipeline -->
+  <div style="margin-bottom:32px;">
+    <div style="font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--green-mid);margin-bottom:20px;">Com funciona · Pipeline automatitzat</div>
+
+    <div style="background:linear-gradient(135deg,rgba(45,107,72,0.12) 0%,rgba(109,191,133,0.08) 50%,rgba(45,107,72,0.1) 100%);border:1px solid rgba(109,191,133,0.2);border-radius:16px;padding:40px 36px;position:relative;overflow:hidden;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);">
+
+      <!-- Cercles de llum de fons -->
+      <div style="position:absolute;top:-60px;right:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(109,191,133,0.12) 0%,transparent 70%);pointer-events:none;"></div>
+      <div style="position:absolute;bottom:-40px;left:20%;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(45,107,72,0.08) 0%,transparent 70%);pointer-events:none;"></div>
+
+      <div style="display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:0;align-items:stretch;position:relative;z-index:1;">
+
+        <!-- Pas 1 -->
+        <div style="background:rgba(255,255,255,0.45);border:1px solid rgba(109,191,133,0.25);border-radius:12px;padding:28px 22px;transition:all .4s cubic-bezier(.4,0,.2,1);cursor:default;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);" onmouseover="this.style.background='rgba(255,255,255,0.65)';this.style.borderColor='rgba(45,107,72,0.5)';this.style.boxShadow='0 8px 32px rgba(45,107,72,0.12),inset 0 1px 0 rgba(255,255,255,0.8)';this.style.transform='translateY(-3px)'" onmouseout="this.style.background='rgba(255,255,255,0.45)';this.style.borderColor='rgba(109,191,133,0.25)';this.style.boxShadow='none';this.style.transform='translateY(0)'">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(45,107,72,0.12);border:1px solid rgba(45,107,72,0.3);display:flex;align-items:center;justify-content:center;font-size:11px;color:#2d6b48;font-family:'League Spartan',sans-serif;font-weight:600;">1</div>
+            <div style="font-size:8.5px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(45,107,72,0.7);">Lectura diària</div>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:#0f2d1e;margin-bottom:12px;line-height:1.2;">3 fonts,<br><em style="color:#2d6b48;">cada dia</em></div>
+          <div style="width:24px;height:1px;background:rgba(45,107,72,0.35);margin-bottom:12px;"></div>
+          <div style="font-size:12px;color:#4a6858;line-height:1.75;">Gmail llegeix automàticament els correus de la Generalitat, BDNS i CIDO/DIBA i n'extreu les convocatòries.</div>
+        </div>
+
+        <!-- Connector -->
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 14px;">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:3px;">
+            <div style="width:1px;height:16px;background:linear-gradient(to bottom,transparent,rgba(45,107,72,0.3));"></div>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(45,107,72,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <div style="width:1px;height:16px;background:linear-gradient(to bottom,rgba(45,107,72,0.3),transparent);"></div>
+          </div>
+        </div>
+
+        <!-- Pas 2 -->
+        <div style="background:rgba(255,255,255,0.45);border:1px solid rgba(109,191,133,0.25);border-radius:12px;padding:28px 22px;transition:all .4s cubic-bezier(.4,0,.2,1);cursor:default;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);" onmouseover="this.style.background='rgba(255,255,255,0.65)';this.style.borderColor='rgba(45,107,72,0.5)';this.style.boxShadow='0 8px 32px rgba(45,107,72,0.12),inset 0 1px 0 rgba(255,255,255,0.8)';this.style.transform='translateY(-3px)'" onmouseout="this.style.background='rgba(255,255,255,0.45)';this.style.borderColor='rgba(109,191,133,0.25)';this.style.boxShadow='none';this.style.transform='translateY(0)'">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(45,107,72,0.12);border:1px solid rgba(45,107,72,0.3);display:flex;align-items:center;justify-content:center;font-size:11px;color:#2d6b48;font-family:'League Spartan',sans-serif;font-weight:600;">2</div>
+            <div style="font-size:8.5px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(45,107,72,0.7);">Processament</div>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:#0f2d1e;margin-bottom:12px;line-height:1.2;">Classificació<br><em style="color:#2d6b48;">automàtica</em></div>
+          <div style="width:24px;height:1px;background:rgba(45,107,72,0.35);margin-bottom:12px;"></div>
+          <div style="font-size:12px;color:#4a6858;line-height:1.75;">Les ajudes de grans municipis van al Catàleg. Les de municipis petits, a Pendents per revisió manual del tècnic.</div>
+        </div>
+
+        <!-- Connector -->
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 14px;">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:3px;">
+            <div style="width:1px;height:16px;background:linear-gradient(to bottom,transparent,rgba(45,107,72,0.3));"></div>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(45,107,72,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <div style="width:1px;height:16px;background:linear-gradient(to bottom,rgba(45,107,72,0.3),transparent);"></div>
+          </div>
+        </div>
+
+        <!-- Pas 3 — destacat -->
+        <div style="background:rgba(45,107,72,0.15);border:1px solid rgba(45,107,72,0.35);border-radius:12px;padding:28px 22px;transition:all .4s cubic-bezier(.4,0,.2,1);cursor:default;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);position:relative;overflow:hidden;" onmouseover="this.style.background='rgba(45,107,72,0.25)';this.style.borderColor='rgba(45,107,72,0.6)';this.style.boxShadow='0 8px 40px rgba(45,107,72,0.18),inset 0 1px 0 rgba(255,255,255,0.5)';this.style.transform='translateY(-3px)'" onmouseout="this.style.background='rgba(45,107,72,0.15)';this.style.borderColor='rgba(45,107,72,0.35)';this.style.boxShadow='none';this.style.transform='translateY(0)'">
+          <div style="position:absolute;top:-30px;right:-30px;width:100px;height:100px;border-radius:50%;background:radial-gradient(circle,rgba(109,191,133,0.15) 0%,transparent 70%);pointer-events:none;"></div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px;position:relative;z-index:1;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(45,107,72,0.2);border:1px solid rgba(45,107,72,0.5);display:flex;align-items:center;justify-content:center;font-size:11px;color:#2d6b48;font-family:'League Spartan',sans-serif;font-weight:600;">3</div>
+            <div style="font-size:8.5px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(45,107,72,0.85);">Base de dades</div>
+          </div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:#0f2d1e;margin-bottom:12px;line-height:1.2;position:relative;z-index:1;">Base de dades<br><em style="color:#2d6b48;">· Temps real</em></div>
+          <div style="width:24px;height:1px;background:rgba(45,107,72,0.5);margin-bottom:12px;position:relative;z-index:1;"></div>
+          <div style="font-size:12px;color:#4a6858;line-height:1.75;position:relative;z-index:1;">Tot queda registrat automàticament, amb traçabilitat de canvis i alertes de termini pròxim.</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Fonts de dades -->
+  <div style="background:linear-gradient(135deg,rgba(45,107,72,0.1) 0%,rgba(109,191,133,0.07) 100%);border:1px solid rgba(109,191,133,0.2);border-radius:16px;padding:28px 32px;margin-bottom:40px;backdrop-filter:blur(8px);">
+    <div style="font-size:8.5px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(45,107,72,0.6);margin-bottom:18px;">Fonts de dades</div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.5);border:1px solid rgba(45,107,72,0.2);padding:8px 16px;border-radius:24px;transition:all .3s;cursor:default;backdrop-filter:blur(8px);" onmouseover="this.style.background='rgba(255,255,255,0.8)';this.style.borderColor='rgba(45,107,72,0.45)';this.style.transform='translateY(-1px)'" onmouseout="this.style.background='rgba(255,255,255,0.5)';this.style.borderColor='rgba(45,107,72,0.2)';this.style.transform='translateY(0)'">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2d6b48" stroke-width="1.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        <span style="font-size:11px;color:#2a3d28;letter-spacing:0.04em;">Generalitat de Catalunya</span>
+      </div>
+
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.5);border:1px solid rgba(45,107,72,0.2);padding:8px 16px;border-radius:24px;transition:all .3s;cursor:default;backdrop-filter:blur(8px);" onmouseover="this.style.background='rgba(255,255,255,0.8)';this.style.borderColor='rgba(45,107,72,0.45)';this.style.transform='translateY(-1px)'" onmouseout="this.style.background='rgba(255,255,255,0.5)';this.style.borderColor='rgba(45,107,72,0.2)';this.style.transform='translateY(0)'">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2d6b48" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        <span style="font-size:11px;color:#2a3d28;letter-spacing:0.04em;">BDNS · Ministeri d'Hisenda</span>
+      </div>
+
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.5);border:1px solid rgba(45,107,72,0.2);padding:8px 16px;border-radius:24px;transition:all .3s;cursor:default;backdrop-filter:blur(8px);" onmouseover="this.style.background='rgba(255,255,255,0.8)';this.style.borderColor='rgba(45,107,72,0.45)';this.style.transform='translateY(-1px)'" onmouseout="this.style.background='rgba(255,255,255,0.5)';this.style.borderColor='rgba(45,107,72,0.2)';this.style.transform='translateY(0)'">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2d6b48" stroke-width="1.5" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        <span style="font-size:11px;color:#2a3d28;letter-spacing:0.04em;">CIDO · DIBA</span>
+      </div>
+
+      <div style="display:inline-flex;align-items:center;gap:7px;background:rgba(45,107,72,0.1);border:1px solid rgba(45,107,72,0.3);padding:8px 16px;border-radius:24px;">
+        <div style="width:7px;height:7px;border-radius:50%;background:#2d6b48;box-shadow:0 0 8px rgba(45,107,72,0.7);animation:pulse-dot 2s ease-in-out infinite;"></div>
+        <span style="font-size:10px;color:#2d6b48;letter-spacing:0.1em;text-transform:uppercase;">Actualització diària automàtica</span>
+      </div>
+
+    </div>
+  </div>
+
+  <style>
+  @keyframes pulse-dot {
+    0%,100%{box-shadow:0 0 6px rgba(45,107,72,0.6);}
+    50%{box-shadow:0 0 14px rgba(45,107,72,0.9),0 0 24px rgba(109,191,133,0.3);}
+  }
+  </style>
+
+  <!-- Accés -->
+  <div style="background:#f0f9ed;border:1px solid rgba(45,107,72,0.1);padding:28px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:48px;">
+    <div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--forest);margin-bottom:6px;">Ets membre de NexSocial?</div>
+      <div style="font-size:12px;color:#4a6858;">Introdueix la contrasenya per accedir a l'eina completa.</div>
+    </div>
+    <button onclick="var pw=prompt('Contrasenya NexlicitIA:');if(pw==='Nexsocial2026!')window.location.href='https://nexlicitia.nexsocial.org?k=nex2026';else if(pw!==null)alert('Contrasenya incorrecta');" class="area-btn" style="white-space:nowrap;">
+      🔒 Accedir a NexlicitIA →
+    </button>
+  </div>
+
+</div>
+</div>
+
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-col footer-col--brand">
+        <div class="footer-brand">
+          <img src="../../images/img_01.png" alt="NexSocial" style="width:38px;height:38px;object-fit:contain;">
+          <span class="footer-brand-name">NexSocial</span>
+        </div>
+        <p class="footer-desc">Cooperativa d'Acompanyament Sociovital a persones i entitats.</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Serveis</div>
+        <ul class="footer-links">
+          <li><a href="/nexacompanya/">NexAcompanya</a></li>
+          <li><a href="/nexgestio/">NexGestió</a></li>
+          <li><a href="/consulta-cas-a-cas/">Cas a Cas</a></li>
+          <li><a href="/entitats/">Servei a Entitats</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Teràpia Gestalt</div>
+        <ul class="footer-links">
+          <li><a href="/nexacompanya/sessions-gestalt/">Teràpia Gestalt</a></li>
+          <li><a href="/nexacompanya/sessions-gestalt/#gs-cal">Demana cita</a></li>
+          <li><a href="/nexacompanya/sessions-gestalt/#preus">Consulta preus</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Empresa</div>
+        <ul class="footer-links">
+          <li><a href="/qui-som/">Qui som</a></li>
+          <li><a href="/contacte/">Contacte</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Segueix-nos</div>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/nexsocial-cooperativa-acompa%C3%B1amiento-sociovital-218a213b9/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn
+          </a>
+          <a href="https://www.instagram.com/nexsocialcoop/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 NexSocial Cooperativa d'Acompanyament Sociovital</span>
+      <span>Registre de Cooperatives de Catalunya</span>
+    </div>
+  </div>
+</footer>
+</main>
+<script src="../../js/nexsocial.js"></script>
+<script>
+function toggleSidebar(){
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('overlay').classList.toggle('active');
+}
+</script>
+</body>
+</html>
