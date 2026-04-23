@@ -1,4 +1,5 @@
-
+function toggleSubnav(id){
+  var el = document.getElementById(id);
   var arrow = document.getElementById(id+'-arrow');
   if(!el) return;
   var open = el.style.maxHeight && el.style.maxHeight !== '0px';
