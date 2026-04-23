@@ -1,1 +1,334 @@
 
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexAcompanya — Acompanyament Sociovital · NexSocial</title>
+<meta name="description" content="Acompanyament sociovital, emocional i terapèutic per a persones i famílies. NexSocial Cooperativa d'Acompanyament Sociovital a Badalona.">
+<link rel="canonical" href="https://nexsocial.org/nexacompanya/">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/nexsocial.css">
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar" id="topbar">
+  <div class="topbar-left">
+    <img src="../images/img_01.png" id="topbar-logo-img" alt="NexSocial" style="height:24px;width:24px;object-fit:contain;border-radius:50%;">
+    <span class="topbar-tagline">Nexe de Suport i Acompanyament Sociovital</span>
+  </div>
+  <div class="topbar-right">
+    <a href="/contacte/" class="topbar-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <span>Contacte</span>
+    </a>
+  </div>
+</div>
+
+<!-- MOBILE TOGGLE -->
+<button class="mobile-toggle" onclick="toggleSidebar()"><span></span><span></span><span></span></button>
+<div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <img src="../images/img_01.png" alt="NexSocial">
+    <div>
+      <div class="logo-name">NexSocial</div>
+      <div class="logo-sub">Cooperativa d'Acompanyament<br>Sociovital</div>
+    </div>
+  </div>
+  <nav>
+    <a href="/">Inici</a>
+    <a href="/qui-som/">Qui som</a>
+    <a href="/">Servei a Persones</a>
+    <div style="max-height:260px; overflow:hidden; background:rgba(255,255,255,0.18);">
+      <a href="/nexacompanya/" class="active" style="padding:9px 20px 9px 36px; font-size:13px; border-left:2px solid #3d8a62;">NexAcompanya</a>
+      <a href="/nexacompanya/sessions-gestalt/" style="padding:9px 20px 9px 48px; font-size:12px; border-left:2px solid rgba(61,138,98,0.5); color:#4a6858;">Sessions Gestalt</a>
+      <a href="/nexgestio/" style="padding:9px 20px 9px 36px; font-size:13px; color:#1e3028; border-left:2px solid #3d8a62;">NexGestió</a>
+      <a href="/nexgestio/nexlicitia/" style="padding:9px 20px 9px 48px; font-size:12px; border-left:2px solid rgba(61,138,98,0.5); color:#4a6858;">NexlicitIA</a>
+      <a href="/consulta-cas-a-cas/" style="padding:9px 20px 9px 36px; font-size:13px; color:#1e3028; border-left:2px solid #3d8a62;">Consulta Cas a Cas</a>
+    </div>
+    <a href="/entitats/">Servei a Entitats</a>
+    <a href="/collaboracions/">Col·laboracions</a>
+    <a href="/contacte/">Contacte</a>
+  </nav>
+  <div class="sidebar-footer">
+    <a href="mailto:infonex@nexsocial.org">infonex@nexsocial.org</a><br>
+    <a href="https://nexsocial.org">www.nexsocial.org</a>
+  </div>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+
+<div class="page-header">
+  <div class="page-header-bg" style="background-image:url('../images/img_12.jpg')"></div>
+  <span class="page-header-tag">Àrea Social</span>
+  <h1>Nex<em>Acompanya</em></h1>
+  <p>Acompanyament Sociovital en els moments que més ho necessiten.</p>
+</div>
+
+<div class="content" style="padding:40px 48px 60px; max-width:none;">
+
+<style>
+.srv-detail-grid { display:grid; grid-template-columns:280px 1fr; gap:32px; margin-bottom:48px; }
+.srv-detail-nav { position:sticky; top:24px; }
+.srv-detail-nav-item { display:block; padding:12px 16px; font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:#4a6858; border-left:2px solid rgba(45,107,72,0.2); cursor:pointer; transition:all .2s; margin-bottom:4px; text-decoration:none; }
+.srv-detail-nav-item:hover, .srv-detail-nav-item.active { color:var(--forest); border-left-color:var(--green-mid); background:#f0f9ed; }
+.srv-block { margin-bottom:56px; padding-bottom:56px; border-bottom:1px solid rgba(45,107,72,0.12); }
+.srv-block:last-child { border-bottom:none; }
+.srv-block-tag { font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:var(--green-mid); margin-bottom:10px; }
+.srv-block-title { font-family:"Cormorant Garamond",serif; font-size:30px; color:#0f2d1e; margin-bottom:14px; font-weight:500; }
+.srv-block-desc { font-size:13px; color:#4a5e46; line-height:1.85; margin-bottom:24px; max-width:100%; }
+.srv-cols { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
+.srv-col-box { background:#f5f0e8; border:1px solid rgba(45,107,72,0.15); padding:20px; }
+.srv-col-box-title { font-size:12px; font-weight:600; color:#0f2d1e; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:10px; }
+.srv-col-box ul { list-style:none; padding:0; margin:0; }
+.srv-col-box li { font-size:12px; color:#4a6858; padding:4px 0; border-bottom:1px solid rgba(45,107,72,0.08); display:flex; gap:8px; align-items:flex-start; }
+.srv-col-box li::before { content:"–"; color:var(--green-mid); flex-shrink:0; }
+.srv-col-box.col-dark { background:#98be95 !important; }
+.srv-col-box.col-dark .srv-col-box-title { color:#0f2d1e !important; }
+.srv-col-box.col-dark li { color:#4a6858 !important; border-bottom-color:rgba(45,107,72,0.15) !important; }
+.srv-col-box.col-dark li::before { color:#2d6b48 !important; }
+@media(max-width:768px){ .srv-detail-grid { grid-template-columns:1fr; } .srv-detail-nav { display:none; } }
+</style>
+
+<a href="/" style="background:transparent;border:none;color:#4a6858;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;margin-bottom:32px;padding:0;display:inline-block;text-decoration:none;">← Tornar a Serveis</a>
+
+<!-- Bloc 1: Acompanyament Social -->
+<div class="srv-block" id="acomp-social">
+  <div class="srv-block-tag"><span style="font-family:'Cormorant Garamond',serif;font-size:1.15em;">Nex<em style="color:var(--green-mid);">Acompanya</em></span> · Col·lectiu Senior</div>
+  <div class="srv-block-title">Acompanyament a <em style="font-style:italic;color:var(--green-mid);">Grans Persones</em></div>
+  <div style="height:280px;background-size:cover;background-position:center 30%;background-image:url('../images/img_34.jpg');margin-bottom:24px;"></div>
+  <p class="srv-block-desc">A Catalunya, gairebé 342.000 persones majors de 65 anys viuen soles. La soledat no volguda no és un estat d'ànim: és un risc real per a la salut física i mental. El nostre model s'orienta a crear vincle, fer barri i acompanyar la persona gran de manera continuada —des de la proximitat i el respecte a la seva autonomia— combinant intervenció individual, grupal i comunitària. Quan la situació ho requereix, connectem directament amb <span style="font-family:'Cormorant Garamond',serif;font-size:1.15em;">Nex<em style="color:var(--green-mid);">Gestió</em></span> per gestionar dependència, ajuts socials o qualsevol tràmit administratiu.</p>
+
+  <div style="font-size:13px;color:#4a6858;font-style:italic;border-left:3px solid var(--green-mid);padding-left:16px;line-height:1.75;margin-bottom:28px;max-width:680px;">&ldquo;La soledat pot ser desitjada o no desitjada. Quan no és triada, és una situació que requereix intervenció, no indiferència.&rdquo;</div>
+
+  <div class="srv-cols">
+    <div class="srv-col-box">
+      <div class="srv-col-box-title">Suport individual i quotidià</div>
+      <ul>
+        <li>Visites de proximitat i trucades de seguiment periòdic</li>
+        <li>Acompanyament a cites mèdiques i gestions presencials</li>
+        <li>Comprensió de documents oficials, cartes i notificacions</li>
+        <li>Suport a la bretxa digital: gestions en línia i app de salut</li>
+        <li>Escolta activa i detecció de necessitats emergents</li>
+      </ul>
+    </div>
+    <div class="srv-col-box">
+      <div class="srv-col-box-title">Activitats grupals i de barri</div>
+      <ul>
+        <li>Club de lectura i tertúlies intergeneracionals</li>
+        <li>Tallers emocionals i de connexió amb el present</li>
+        <li>Grups de relació i construcció de vincles veïnals</li>
+        <li>Activitats comunitàries per fer barri i reduir l'aïllament</li>
+        <li>Connexió amb el servei d'acompanyament emocional grupal</li>
+      </ul>
+    </div>
+    <div class="srv-col-box col-dark">
+      <div class="srv-col-box-title">Connexió amb NexGestió</div>
+      <ul>
+        <li>Gestió de la dependència i la prestació per cuidador</li>
+        <li>Ajuts socials per a persones en situació de vulnerabilitat</li>
+        <li>Bons socials de llum, gas i internet</li>
+        <li>Pensió no contributiva i complements a mínims</li>
+        <li>Coordinació amb serveis socials i entitats del territori</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="margin-top:2px;display:grid;grid-template-columns:1fr 1fr;gap:2px;">
+    <div style="border:1px solid rgba(45,107,72,0.2);padding:18px 24px;display:flex;align-items:center;gap:14px;">
+      <div style="width:32px;height:32px;border-radius:50%;background:#98be95;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.8"><path d="M9 12h6M9 16h6M17 21H7a2 2 0 01-2-2V5a2 2 0 012-2h7l5 5v11a2 2 0 01-2 2z"/></svg>
+      </div>
+      <div style="flex:1;">
+        <div style="font-size:10px;font-weight:600;color:var(--forest);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:2px;">Necessites ajuda amb tràmits?</div>
+        <div style="font-size:11.5px;color:#4a6858;">NexGestió gestiona dependència, ajuts i prestacions.</div>
+      </div>
+      <a href="/nexgestio/" style="background:var(--forest);color:var(--green-light);font-size:10px;letter-spacing:0.06em;text-transform:uppercase;padding:8px 16px;border-radius:40px;text-decoration:none;white-space:nowrap;">Veure →</a>
+    </div>
+    <div style="border:1px solid rgba(45,107,72,0.2);padding:18px 24px;display:flex;align-items:center;gap:14px;">
+      <div style="width:32px;height:32px;border-radius:50%;background:#98be95;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </div>
+      <div style="flex:1;">
+        <div style="font-size:10px;font-weight:600;color:var(--forest);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:2px;">Vols aprofundir en l'àrea emocional?</div>
+        <div style="font-size:11.5px;color:#4a6858;">Tallers grupals i acompanyament terapèutic amb Gestalt.</div>
+      </div>
+      <a href="#acomp-emocional" style="background:var(--forest);color:var(--green-light);font-size:10px;letter-spacing:0.06em;text-transform:uppercase;padding:8px 16px;border-radius:40px;text-decoration:none;white-space:nowrap;">Veure →</a>
+    </div>
+  </div>
+</div>
+
+<!-- Bloc 2: Acompanyament Emocional -->
+<div class="srv-block" id="acomp-emocional">
+  <div class="srv-block-tag"><span style="font-family:'Cormorant Garamond',serif;font-size:1.15em;">Nex<em style="color:var(--green-mid);">Acompanya</em></span> · Espai de Suport Emocional i Terapèutic</div>
+  <div class="srv-block-title">Acompanyament <em style="font-style:italic;color:var(--green-mid);">Emocional i Terapèutic</em></div>
+  <div style="height:260px;background-size:cover;background-position:center;background-image:url('../images/img_14.jpg');margin-bottom:24px;"></div>
+  <p class="srv-block-desc">Quan la vida ens posa davant de moments que no sabem com gestionar sols, l'acompanyament emocional i terapèutic obre un espai de suport, escolta i creixement. Des de NexAcompanya, oferim teràpies individualitzades i de grup amb mètodes avalats per més de 10 anys d'experiència clínica i vivencial, sempre en un entorn segur, lliure de judicis i orientat al teu benestar real.</p>
+
+  <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--green-mid);margin-bottom:20px;">Cartera de Serveis</div>
+  <div class="srv-cols" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-bottom:32px;">
+    <div class="srv-col-box">
+      <div class="srv-col-box-title">Acompanyament gestàltic integratiu</div>
+      <ul>
+        <li>Espai segur i empàtic per expressar i comprendre emocions</li>
+        <li>Acompanyament personalitzat adaptat a cada persona i moment vital</li>
+        <li>Metodologies integratives per a un treball profund i significatiu</li>
+        <li>Reforcem la resiliència personal</li>
+        <li>Orientació cap a objectius vitals</li>
+      </ul>
+    </div>
+    <div class="srv-col-box">
+      <div class="srv-col-box-title">Terapèutica Psicològica</div>
+      <ul>
+        <li>Psicòlegs i terapeutes col·legiats</li>
+        <li>Teràpia cognitivo-conductual</li>
+        <li>Teràpia Gestalt i enfocament humanista</li>
+        <li>Diagnòstic i pla de tractament individualitzat</li>
+        <li>Intervenció en salut mental lleu i moderada</li>
+      </ul>
+    </div>
+    <div class="srv-col-box">
+      <div class="srv-col-box-title">Format i Accés</div>
+      <ul>
+        <li>Sessions individuals presencials</li>
+        <li>Disponibilitat sessions online</li>
+        <li>Freqüència adaptable: puntual / setmanal / quinzenal</li>
+        <li>Primera trucada de presentació gratuïta</li>
+        <li>Grups de creixement personal</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:32px;">
+    <div style="border:1px solid rgba(45,107,72,0.2);overflow:hidden;">
+      <div style="height:220px;background-size:cover;background-position:center top;background-image:url('../images/img_15.jpg');"></div>
+      <div style="padding:28px;">
+        <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--green-mid);margin-bottom:10px;">Individual</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--forest);margin-bottom:14px;">Acompanyament Individual</div>
+        <ul style="list-style:none;padding:0;margin:0;">
+          <li style="font-size:12px;color:#4a6858;padding:6px 0;border-bottom:1px solid rgba(45,107,72,0.08);display:flex;gap:8px;"><span style="color:var(--green-mid);">&ndash;</span> Acompanyament emocional: suport pròxim i empàtic</li>
+          <li style="font-size:12px;color:#4a6858;padding:6px 0;border-bottom:1px solid rgba(45,107,72,0.08);display:flex;gap:8px;"><span style="color:var(--green-mid);">&ndash;</span> Acompanyament psicològic orientat a la salut mental</li>
+          <li style="font-size:12px;color:#4a6858;padding:6px 0;display:flex;gap:8px;"><span style="color:var(--green-mid);">&ndash;</span> Basat en diagnòstic professional col·legiat</li>
+        </ul>
+      </div>
+    </div>
+    <div style="background:#e8f5e4;border:1px solid rgba(45,107,72,0.2);overflow:hidden;">
+      <div style="height:220px;background-size:cover;background-position:center;background-image:url('../images/img_16.jpg');"></div>
+      <div style="padding:28px;">
+        <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--green-mid);margin-bottom:10px;">Grupal</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--forest);margin-bottom:14px;">Acompanyament Grupal</div>
+        <ul style="list-style:none;padding:0;margin:0;">
+          <li style="font-size:12px;color:#4a6858;padding:6px 0;border-bottom:1px solid rgba(45,107,72,0.08);display:flex;gap:8px;"><span style="color:var(--green-mid);">&ndash;</span> Tallers únics: relacions autèntiques i mecanismes de defensa</li>
+          <li style="font-size:12px;color:#4a6858;padding:6px 0;border-bottom:1px solid rgba(45,107,72,0.08);display:flex;gap:8px;"><span style="color:var(--green-mid);">&ndash;</span> Grups periòdics: dones, homes, addiccions i dol</li>
+          <li style="font-size:12px;color:#4a6858;padding:6px 0;display:flex;gap:8px;"><span style="color:var(--green-mid);">&ndash;</span> Retirs de 2-3 dies: creixement personal i connexió</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#98be95;padding:28px 44px;margin-bottom:32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+    <div>
+      <div style="font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:#2d6b48;margin-bottom:8px;">Una experiència diferent</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:#0f2d1e;line-height:1.2;">Desconnecta del soroll. <em style="font-style:italic;color:#2d6b48;">Reconnecta amb tu.</em></div>
+    </div>
+    <div style="font-size:12px;color:#4a6858;letter-spacing:0.05em;text-align:right;line-height:1.8;">2-3 dies · Natura · Presència</div>
+  </div>
+</div>
+
+<!-- CTA final -->
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;">
+  <div style="background:#dff0db;border:1px solid rgba(45,107,72,0.15);padding:32px 36px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;">
+    <div>
+      <div style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--green-mid);margin-bottom:10px;">Sessions de teràpia · NexAcompanya</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#0f2d1e;margin-bottom:10px;line-height:1.2;">Comença el teu procés terapèutic amb una <em style="font-style:italic;color:var(--green-mid);">primera trucada gratuïta</em></div>
+      <div style="font-size:13px;color:#4a5e46;line-height:1.75;margin-bottom:8px;">Sessions individuals i grups terapèutics. Des de 33€/sessió o acompanyament trimestral des de 45€/sessió.</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <span style="font-size:11px;background:rgba(255,255,255,0.7);border:1px solid rgba(45,107,72,0.2);color:#2d6b48;padding:3px 10px;border-radius:20px;">Individual 55€</span>
+        <span style="font-size:11px;background:rgba(255,255,255,0.7);border:1px solid rgba(45,107,72,0.2);color:#2d6b48;padding:3px 10px;border-radius:20px;">Grup 33€</span>
+        <span style="font-size:11px;background:rgba(255,255,255,0.7);border:1px solid rgba(45,107,72,0.2);color:#2d6b48;padding:3px 10px;border-radius:20px;">Trimestral des de 45€/sessió</span>
+      </div>
+    </div>
+    <a href="/nexacompanya/sessions-gestalt/" style="align-self:flex-start;background:#2d6b48;color:#fff;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;padding:12px 28px;border-radius:40px;text-decoration:none;display:inline-block;">Veure sessions i agenda cita →</a>
+  </div>
+  <div style="background:#f0f9ed;border:1px solid rgba(45,107,72,0.12);padding:32px 36px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;">
+    <div>
+      <div style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--green-mid);margin-bottom:10px;">Altres consultes · NexAcompanya</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#0f2d1e;margin-bottom:10px;line-height:1.2;">Tens dubtes sobre quin <em style="font-style:italic;color:var(--green-mid);">servei s'adapta</em> millor al teu cas?</div>
+      <div style="font-size:13px;color:#4a5e46;line-height:1.75;">Explica'ns la teva situació i t'orientem sense compromís. Primera conversa gratuïta.</div>
+    </div>
+    <a href="/contacte/" style="align-self:flex-start;background:transparent;border:1.5px solid rgba(45,107,72,0.4);color:#2d6b48;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;padding:12px 28px;border-radius:40px;text-decoration:none;display:inline-block;">Contactar →</a>
+  </div>
+</div>
+
+</div><!-- /content -->
+
+<!-- FOOTER -->
+<footer class="site-footer" id="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-col footer-col--brand">
+        <div class="footer-brand">
+          <img src="../images/img_01.png" id="footer-logo-img" alt="NexSocial" style="width:38px;height:38px;object-fit:contain;">
+          <span class="footer-brand-name">NexSocial</span>
+        </div>
+        <p class="footer-desc">Cooperativa d'Acompanyament Sociovital a persones i entitats.</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Serveis</div>
+        <ul class="footer-links">
+          <li><a href="/nexacompanya/">NexAcompanya</a></li>
+          <li><a href="/nexgestio/">NexGestió</a></li>
+          <li><a href="/consulta-cas-a-cas/">Cas a Cas</a></li>
+          <li><a href="/entitats/">Servei a Entitats</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Teràpia Gestalt</div>
+        <ul class="footer-links">
+          <li><a href="/nexacompanya/sessions-gestalt/">Teràpia Gestalt</a></li>
+          <li><a href="/nexacompanya/sessions-gestalt/#cita">Demana cita</a></li>
+          <li><a href="/nexacompanya/sessions-gestalt/#preus">Consulta preus</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Empresa</div>
+        <ul class="footer-links">
+          <li><a href="/qui-som/">Qui som</a></li>
+          <li><a href="/contacte/">Contacte</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Segueix-nos</div>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/nexsocial-cooperativa-acompa%C3%B1amiento-sociovital-218a213b9/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn
+          </a>
+          <a href="https://www.instagram.com/nexsocialcoop/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 NexSocial Cooperativa d'Acompanyament Sociovital</span>
+      <span>Registre de Cooperatives de Catalunya</span>
+    </div>
+  </div>
+</footer>
+
+</main>
+
+<script src="../js/nexsocial.js"></script>
+<script>
+function toggleSidebar(){
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('overlay').classList.toggle('active');
+}
+</script>
+</body>
+</html>
