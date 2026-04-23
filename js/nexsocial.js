@@ -1,3 +1,51 @@
+
+function handleContactForm(e){
+  e.preventDefault();
+  const btn = document.getElementById('form-submit-btn');
+  const success = document.getElementById('form-success');
+  const form = document.getElementById('contact-form');
+  if(!form.action || form.action.includes('XXXXXXXX')){
+    const nom = form.querySelector('[name="nom"]') ? form.querySelector('[name="nom"]').value : '';
+    const email = form.querySelector('[name="email"]') ? form.querySelector('[name="email"]').value : '';
+    const telefon = form.querySelector('[name="telefon"]') ? form.querySelector('[name="telefon"]').value : '';
+    const motiu = form.querySelector('[name="motiu"]') ? form.querySelector('[name="motiu"]').value : '';
+    const missatge = form.querySelector('[name="missatge"]') ? form.querySelector('[name="missatge"]').value : '';
+    const body = encodeURIComponent('Nom: '+nom+'\nEmail: '+email+'\nTelèfon: '+telefon+'\nMotiu: '+motiu+'\n\n'+missatge);
+    window.location.href = 'mailto:infonex@nexsocial.org?subject=Contacte web NexSocial&body='+body;
+    success.style.display='block';
+    form.reset();
+    return;
+  }
+  btn.textContent = 'Enviant...';
+  btn.disabled = true;
+  fetch(form.action, {method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}})
+    .then(function(res){
+      if(res.ok){ success.style.display='block'; form.reset(); btn.textContent='Enviat ✓'; }
+      else { btn.textContent='Error — torna-ho a intentar'; btn.disabled=false; }
+    }).catch(function(){ btn.textContent='Error — torna-ho a intentar'; btn.disabled=false; });
+}
+
+function handleTreballarForm(e){
+  e.preventDefault();
+  const form = e.target;
+  const ok = document.getElementById('treballar-ok');
+  if(!form.action || form.action.includes('XXXXXXXX')){
+    const nom = form.querySelector('[name="nom"]') ? form.querySelector('[name="nom"]').value : '';
+    const email = form.querySelector('[name="email"]') ? form.querySelector('[name="email"]').value : '';
+    const telefon = form.querySelector('[name="telefon"]') ? form.querySelector('[name="telefon"]').value : '';
+    const area = form.querySelector('[name="area"]') ? form.querySelector('[name="area"]').value : '';
+    const motivacio = form.querySelector('[name="motivacio"]') ? form.querySelector('[name="motivacio"]').value : '';
+    const body = encodeURIComponent('Candidatura NexSocial\n\nNom: '+nom+'\nEmail: '+email+'\nTelèfon: '+telefon+'\nÀrea: '+area+'\n\nMotivació:\n'+motivacio);
+    window.location.href = 'mailto:infonex@nexsocial.org?subject=Candidatura NexSocial&body='+body;
+    ok.style.display='block';
+    form.reset();
+    return;
+  }
+  fetch(form.action, {method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}})
+    .then(function(res){
+      if(res.ok){ ok.style.display='block'; form.reset(); }
+    });
+}
 function toggleSubnav(id){
   var el = document.getElementById(id);
   var arrow = document.getElementById(id+'-arrow');
@@ -11,60 +59,6 @@ function scrollToServei(area){
     ? document.getElementById('servei-acomp-title')
     : document.getElementById('servei-gestio-title');
   if(target) setTimeout(function(){ target.scrollIntoView({behavior:'smooth', block:'center'}); }, 100);
-}
-async function publishToGitHub(){
-  var token = localStorage.getItem('gh_token') || '';
-  if(!token){
-    token = prompt('Enganxa el teu GitHub Token (ghp_...):\n\nEl pots crear a: GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic)\n\nEs guardarà al navegador per no haver-lo de tornar a posar.');
-    if(!token) return;
-    localStorage.setItem('gh_token', token.trim());
-  }
-  var btn = document.querySelector('[onclick="publishToGitHub()"]');
-  var orig = btn.textContent;
-  btn.textContent = '⏳ Publicant...';
-  btn.disabled = true;
-  try {
-    var html = document.documentElement.outerHTML;
-    var content = btoa(unescape(encodeURIComponent(html)));
-    var owner = 'cfaibella-Nex';
-    var repo = 'WEB';
-    var file = 'index.html';
-    var branch = 'main';
-    // Obtenir SHA actual
-    var shaRes = await fetch('https://api.github.com/repos/'+owner+'/'+repo+'/contents/'+file+'?ref='+branch, {
-      headers:{'Authorization':'token '+token.trim(), 'Accept':'application/vnd.github.v3+json'}
-    });
-    var shaData = await shaRes.json();
-    var sha = shaData.sha || '';
-    // Pujar fitxer
-    var putRes = await fetch('https://api.github.com/repos/'+owner+'/'+repo+'/contents/'+file, {
-      method:'PUT',
-      headers:{'Authorization':'token '+token.trim(), 'Accept':'application/vnd.github.v3+json', 'Content-Type':'application/json'},
-      body: JSON.stringify({
-        message: 'Actualització web des del panell admin — ' + new Date().toLocaleString('ca'),
-        content: content,
-        sha: sha,
-        branch: branch
-      })
-    });
-    if(putRes.ok){
-      btn.textContent = '✅ Publicat!';
-      btn.style.background = '#0d7040';
-      setTimeout(()=>{ btn.textContent=orig; btn.style.background='#6dbf85'; btn.disabled=false; }, 4000);
-    } else {
-      var err = await putRes.json();
-      if(err.message && err.message.includes('Bad credentials')){
-        localStorage.removeItem('gh_token');
-        alert('Token incorrecte o caducat. Torna-ho a provar amb un token nou.');
-      } else {
-        alert('Error: ' + (err.message || putRes.status));
-      }
-      btn.textContent = orig; btn.disabled = false;
-    }
-  } catch(e){
-    alert('Error de connexió: ' + e.message);
-    btn.textContent = orig; btn.disabled = false;
-  }
 }
 function showProjPanel(id, btn){
   document.querySelectorAll('.proj-panel').forEach(function(p){ p.classList.remove('active'); });
@@ -171,4 +165,144 @@ function resetDiag(){
   nextBtn.disabled = true;
   nextBtn.style.opacity = '0.4';
   nextBtn.textContent = 'Següent →';
+}
+function showSection(id,el){
+  document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('nav a').forEach(a=>a.classList.remove('active'));
+  var sec = document.getElementById(id);
+  if(sec) sec.classList.add('active');
+  if(el) el.classList.add('active');
+  if(window.innerWidth<=768){
+    document.getElementById('sidebar').classList.remove('open');
+    document.getElementById('overlay').classList.remove('show');
+  }
+  window.scrollTo(0,0);
+}
+
+function toggleSidebar(){
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('overlay').classList.toggle('show');
+}
+
+
+function switchTab(name, btn){
+  document.querySelectorAll('.atab-content').forEach(t=>t.style.display='none');
+  document.querySelectorAll('.atab').forEach(b=>{
+    b.style.background='transparent';
+    b.style.color='rgba(253,252,249,0.5)';
+  });
+  var tab = document.getElementById('tab-'+name);
+  if(tab) tab.style.display='block';
+  if(btn){
+    btn.style.background='rgba(109,191,133,0.12)';
+    btn.style.color='#fdfcf9';
+  }
+}
+
+function updateById(id, val){
+  var el = document.getElementById(id);
+  if(el){ el.textContent = val; showDownloadBar(); }
+}
+
+function updateText(input, selector){
+  var el = document.querySelector(selector);
+  if(el){ el.textContent = input.value; showDownloadBar(); }
+}
+
+function updateNthTeamField(input, idx, fieldSelector){
+  var cards = document.querySelectorAll('.team-card');
+  if(cards[idx]){
+    var el = cards[idx].querySelector(fieldSelector);
+    if(el){ el.textContent = input.value; showDownloadBar(); }
+  }
+}
+
+function updateNthText(input, selector, n){
+  var els = document.querySelectorAll(selector);
+  if(els[n]){ els[n].textContent = input.value; showDownloadBar(); }
+}
+
+function updateContact(field, val){
+  showDownloadBar();
+  if(field==='email'){
+    document.querySelectorAll('a[href^="mailto"]').forEach(a=>a.href='mailto:'+val);
+    document.querySelectorAll('.contact-email-text').forEach(el=>el.textContent=val);
+  } else if(field==='phone'){
+    document.querySelectorAll('a[href^="tel"]').forEach(a=>a.href='tel:'+val.replace(/\s/g,''));
+    document.querySelectorAll('.contact-phone-text').forEach(el=>el.textContent=val);
+  } else if(field==='web'){
+    document.querySelectorAll('.contact-web-text').forEach(el=>el.textContent=val);
+  } else if(field==='address'){
+    document.querySelectorAll('.contact-address-text').forEach(el=>el.textContent=val);
+  }
+}
+
+function showDownloadBar(){
+  var bar = document.getElementById('download-bar');
+  if(bar) bar.style.display='flex';
+}
+
+function downloadWeb(){
+  var html = document.documentElement.outerHTML;
+  var fn = 'nexsocial.html';
+  try {
+    if(window.location.protocol === 'file:'){
+      var encoded = 'data:text/html;charset=utf-8,' + encodeURIComponent(html);
+      var a = document.createElement('a');
+      a.href = encoded; a.download = fn;
+      document.body.appendChild(a); a.click();
+      setTimeout(function(){ document.body.removeChild(a); }, 500);
+    } else {
+      var blob = new Blob([html], {type:'text/html;charset=utf-8'});
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url; a.download = fn;
+      document.body.appendChild(a); a.click();
+      setTimeout(function(){ document.body.removeChild(a); URL.revokeObjectURL(url); }, 500);
+    }
+  } catch(e){
+    alert('Error en descarregar. Prova Ctrl+U per copiar el codi font.');
+  }
+}
+
+function showHelp(){
+  document.getElementById('help-modal').style.display='flex';
+}
+function hideHelp(){
+  document.getElementById('help-modal').style.display='none';
+}
+
+function changePhoto(idx){
+  var input = document.createElement('input');
+  input.type = 'file'; input.accept = 'image/*';
+  input.onchange = function(e){
+    var file = e.target.files[0]; if(!file) return;
+    var reader = new FileReader();
+    reader.onload = function(ev){
+      var url = ev.target.result;
+      var photos = document.querySelectorAll('.photo-target');
+      if(photos[idx]) photos[idx].src = url;
+      var bgs = document.querySelectorAll('.bg-photo-target');
+      if(bgs[idx]) bgs[idx].style.backgroundImage = 'url('+url+')';
+      showDownloadBar();
+    };
+    reader.readAsDataURL(file);
+  };
+  input.click();
+}
+
+function changeLogo(){
+  var input = document.createElement('input');
+  input.type = 'file'; input.accept = 'image/*';
+  input.onchange = function(e){
+    var file = e.target.files[0]; if(!file) return;
+    var reader = new FileReader();
+    reader.onload = function(ev){
+      var url = ev.target.result;
+      document.querySelectorAll('.sidebar-logo img, #topbar-logo-img, #footer-logo-img').forEach(img=>img.src=url);
+      showDownloadBar();
+    };
+    reader.readAsDataURL(file);
+  };
+  input.click();
 }
