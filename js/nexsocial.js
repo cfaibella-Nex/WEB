@@ -1,4 +1,3 @@
-
 function handleContactForm(e){
   e.preventDefault();
   const btn = document.getElementById('form-submit-btn');
