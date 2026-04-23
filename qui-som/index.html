@@ -1,1 +1,259 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qui som — NexSocial Cooperativa d'Acompanyament Sociovital</title>
+<meta name="description" content="Coneix l'equip i la missió de NexSocial. Cooperativa d'acompanyament sociovital fundada per Cristian Faibella i Nidhi Nagdev.">
+<link rel="canonical" href="https://nexsocial.org/qui-som/">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/nexsocial.css">
+</head>
+<body>
+<div class="topbar" id="topbar">
+  <div class="topbar-left">
+    <img src="../images/img_01.png" id="topbar-logo-img" alt="NexSocial" style="height:24px;width:24px;object-fit:contain;border-radius:50%;">
+    <span class="topbar-tagline">Nexe de Suport i Acompanyament Sociovital</span>
+  </div>
+  <div class="topbar-right">
+    <a href="/contacte/" class="topbar-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <span>Contacte</span>
+    </a>
+  </div>
+</div>
+<button class="mobile-toggle" onclick="toggleSidebar()"><span></span><span></span><span></span></button>
+<div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <img src="../images/img_01.png" alt="NexSocial">
+    <div><div class="logo-name">NexSocial</div><div class="logo-sub">Cooperativa d'Acompanyament<br>Sociovital</div></div>
+  </div>
+  <nav>
+    <a href="/">Inici</a>
+    <a href="/qui-som/" class="active">Qui som</a>
+    <a href="/">Servei a Persones</a>
+    <div style="max-height:260px; overflow:hidden; background:rgba(255,255,255,0.18);">
+      <a href="/nexacompanya/" style="padding:9px 20px 9px 36px; font-size:13px; border-left:2px solid #3d8a62;">NexAcompanya</a>
+      <a href="/nexacompanya/sessions-gestalt/" style="padding:9px 20px 9px 48px; font-size:12px; border-left:2px solid rgba(61,138,98,0.5); color:#4a6858;">Sessions Gestalt</a>
+      <a href="/nexgestio/" style="padding:9px 20px 9px 36px; font-size:13px; color:#1e3028; border-left:2px solid #3d8a62;">NexGestió</a>
+      <a href="/nexgestio/nexlicitia/" style="padding:9px 20px 9px 48px; font-size:12px; border-left:2px solid rgba(61,138,98,0.5); color:#4a6858;">NexlicitIA</a>
+      <a href="/consulta-cas-a-cas/" style="padding:9px 20px 9px 36px; font-size:13px; color:#1e3028; border-left:2px solid #3d8a62;" >Consulta Cas a Cas</a>
+    </div>
+    <a href="/entitats/" >Servei a Entitats</a>
+    <a href="/collaboracions/" >Col·laboracions</a>
+    <a href="/contacte/" >Contacte</a>
+  </nav>
+  <div class="sidebar-footer">
+    <a href="mailto:infonex@nexsocial.org">infonex@nexsocial.org</a><br>
+    <a href="https://nexsocial.org">www.nexsocial.org</a>
+  </div>
+</aside>
+<main class="main">
 
+<div class="page-header">
+<div class="page-header-bg" style="background-image:url('../images/img_04.jpg')"></div>
+<span class="page-header-tag">La nostra identitat</span>
+<h1>Qui <em>som</em></h1>
+<p>Una cooperativa nascuda amb la voluntat de ser un nexe real d'acompanyament sociovital per a persones, famílies i entitats.</p>
+</div>
+<div class="content" style="padding:40px 48px 60px; max-width:none;">
+
+  <!-- Missió / Visió / Valors / Història — grid 2x2 -->
+  <style>
+  .mv-card { transition: transform .25s ease, box-shadow .25s ease, background .25s ease; cursor:default; }
+  .mv-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(18,32,41,0.12); background: var(--green-pale) !important; z-index:1; position:relative; }
+  .mv-card:hover .mv-title { color: var(--green-mid) !important; }
+  </style>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:1px; background:rgba(45,107,72,0.15); margin-bottom:32px;">
+
+    <div class="mv-card" style="background:#f0f9ed; padding:48px 44px;">
+      <div style="font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:var(--green-mid); margin-bottom:14px;">Per què existim</div>
+      <div id="mv-missio-title" class="mv-title" style="font-family:'Cormorant Garamond',serif; font-size:32px; font-weight:400; color:var(--forest); margin-bottom:16px;">Missió</div>
+      <p id="mv-missio-text" style="font-size:15.5px; color:#4a5e46; line-height:1.85;"><span style="font-family:'Cormorant Garamond',serif;font-size:1.15em;">Nex<em style="color:var(--green-mid);">Social</em></span> és una cooperativa d'acompanyament sociovital. Acompanyem processos de vida coordinant diferents àrees d'intervenció per aconseguir una millora significativa en les persones, famílies i entitats que acompanyem.</p>
+    </div>
+
+    <div class="mv-card" style="background:#e8f5e4; padding:48px 44px;">
+      <div style="font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:var(--green-mid); margin-bottom:14px;">On volem arribar</div>
+      <div id="mv-visio-title" class="mv-title" style="font-family:'Cormorant Garamond',serif; font-size:32px; font-weight:400; color:var(--forest); margin-bottom:16px;">Visió</div>
+      <p id="mv-visio-text" style="font-size:15.5px; color:#4a5e46; line-height:1.85;">Contribuir a una comunitat més humana, cohesionada i sostenible, esdevenint un nexe d'acompanyament sociovital per a persones i entitats, i un referent en el desenvolupament personal, social i organitzacional.</p>
+    </div>
+
+    <div class="mv-card" style="background:#f0f9ed; padding:48px 44px;">
+      <div style="font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:var(--green-mid); margin-bottom:14px;">Com actuem</div>
+      <div id="mv-valors-title" class="mv-title" style="font-family:'Cormorant Garamond',serif; font-size:32px; font-weight:400; color:var(--forest); margin-bottom:16px;">Valors</div>
+      <p id="mv-valors-text" style="font-size:15.5px; color:#4a5e46; line-height:1.85;">Flexibilitat, compromís, col·laboració, respecte, adaptabilitat i professionalitat. Creiem en els principis d'economia sostenible i solidària i respectem els criteris cooperativistes tradicionals.</p>
+    </div>
+
+    <div class="mv-card" style="background:#e8f5e4; padding:48px 44px;">
+      <div style="font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:var(--green-mid); margin-bottom:14px;">D'on venim</div>
+      <div id="mv-historia-title" class="mv-title" style="font-family:'Cormorant Garamond',serif; font-size:32px; font-weight:400; color:var(--forest); margin-bottom:16px;">Història</div>
+      <p id="mv-historia-text" style="font-size:15.5px; color:#4a5e46; line-height:1.85;">Diferents professionals multidisciplinars vam coincidir i, sota la mateixa premissa, vam crear un projecte en comú on es valorés a les persones, en un entorn modern, actual i col·laboratiu.</p>
+    </div>
+
+  </div>
+
+  <!-- Franja editorial de fotos -->
+  <div style="display:grid;grid-template-columns:1.2fr 1fr 0.9fr;gap:3px;margin-bottom:48px;height:300px;">
+
+    <div style="position:relative;overflow:hidden;cursor:default;" onmouseover="this.querySelector('.photo-overlay').style.background='rgba(15,45,30,0.55)';this.querySelector('.photo-label').style.opacity='1';this.querySelector('.photo-label').style.transform='translateY(0)';this.querySelector('img-bg').style.transform='scale(1.05)'" onmouseout="this.querySelector('.photo-overlay').style.background='rgba(15,45,30,0.3)';this.querySelector('.photo-label').style.opacity='0';this.querySelector('.photo-label').style.transform='translateY(8px)'">
+      <div style="position:absolute;inset:0;background-image:url('../images/img_05.jpg');background-size:cover;background-position:center;transition:transform .5s ease;"></div>
+      <div class="photo-overlay" style="position:absolute;inset:0;background:rgba(15,45,30,0.3);transition:background .4s;"></div>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:0 0 2px;border-bottom:2px solid rgba(109,191,133,0.5);"></div>
+      <div class="photo-label" style="position:absolute;bottom:24px;left:24px;opacity:0;transform:translateY(8px);transition:all .4s ease;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:#fff;line-height:1.3;font-style:italic;">Persones i famílies</div>
+        <div style="width:32px;height:1px;background:#98be95;margin-top:8px;"></div>
+      </div>
+    </div>
+
+    <div style="position:relative;overflow:hidden;cursor:default;" onmouseover="this.querySelector('.photo-overlay').style.background='rgba(15,45,30,0.55)';this.querySelector('.photo-label').style.opacity='1';this.querySelector('.photo-label').style.transform='translateY(0)'" onmouseout="this.querySelector('.photo-overlay').style.background='rgba(15,45,30,0.3)';this.querySelector('.photo-label').style.opacity='0';this.querySelector('.photo-label').style.transform='translateY(8px)'">
+      <div style="position:absolute;inset:0;background-image:url('../images/img_06.jpg');background-size:cover;background-position:center top;transition:transform .5s ease;"></div>
+      <div class="photo-overlay" style="position:absolute;inset:0;background:rgba(15,45,30,0.3);transition:background .4s;"></div>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:0 0 2px;border-bottom:2px solid rgba(109,191,133,0.5);"></div>
+      <div class="photo-label" style="position:absolute;bottom:24px;left:24px;opacity:0;transform:translateY(8px);transition:all .4s ease;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:#fff;line-height:1.3;font-style:italic;">Comunitat i entorn</div>
+        <div style="width:32px;height:1px;background:#98be95;margin-top:8px;"></div>
+      </div>
+    </div>
+
+    <div style="position:relative;overflow:hidden;cursor:default;" onmouseover="this.querySelector('.photo-overlay').style.background='rgba(15,45,30,0.55)';this.querySelector('.photo-label').style.opacity='1';this.querySelector('.photo-label').style.transform='translateY(0)'" onmouseout="this.querySelector('.photo-overlay').style.background='rgba(15,45,30,0.3)';this.querySelector('.photo-label').style.opacity='0';this.querySelector('.photo-label').style.transform='translateY(8px)'">
+      <div style="position:absolute;inset:0;background-image:url('../images/img_07.jpg');background-size:cover;background-position:center;transition:transform .5s ease;"></div>
+      <div class="photo-overlay" style="position:absolute;inset:0;background:rgba(15,45,30,0.3);transition:background .4s;"></div>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:0 0 2px;border-bottom:2px solid rgba(109,191,133,0.5);"></div>
+      <div class="photo-label" style="position:absolute;bottom:24px;left:24px;opacity:0;transform:translateY(8px);transition:all .4s ease;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:#fff;line-height:1.3;font-style:italic;">Creixement vital</div>
+        <div style="width:32px;height:1px;background:#98be95;margin-top:8px;"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Context i Justificació -->
+  <div style="margin-bottom:32px;">
+
+  <!-- Banner 1 -->
+  <div style="background:#e8f5e4;padding:40px;margin-bottom:24px;border-radius:6px;box-shadow:0 4px 18px rgba(45,107,72,0.08);">
+    <div style="font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--green-mid);opacity:1;margin-bottom:14px;">Per què neix NexSocial · Benestar Emocional i Acompanyament</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:#0f2d1e;margin-bottom:12px;line-height:1.35;">Per què és necessària Nex<em style="font-style:italic;color:var(--green-mid);">Social</em>, la cooperativa creada per acompanyar-te en el <em style="font-style:italic;color:#2d6b48;">camí de sanar</em></div>
+    <p style="font-size:13px;color:#4a6858;line-height:1.8;margin:0;">L'accés a un acompanyament emocional de qualitat continua sent un privilegi. NexSocial neix per apropar aquest acompanyament a les persones que més ho necessiten, des de la proximitat, l'accessibilitat i el treball cooperatiu.</p>
+  </div>
+
+    <!-- 3 cards xifres bloc 1 -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:2px;">
+
+      <div style="background:#f5f0e8;padding:32px 28px;text-align:center;border-radius:6px;box-shadow:0 4px 16px rgba(45,107,72,0.08);transition:all .3s;cursor:default;border-top:3px solid transparent;position:relative;overflow:hidden;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 10px 28px rgba(45,107,72,0.18)';this.style.borderTopColor='var(--green-mid)';this.style.background='#edf7e8';this.querySelector('.stat-num').style.color='#1a5c3a'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(45,107,72,0.08)';this.style.borderTopColor='transparent';this.style.background='#f5f0e8';this.querySelector('.stat-num').style.color='#2d6b48'">
+        <div class="stat-num" style="font-family:'League Spartan',sans-serif;font-size:52px;font-weight:300;color:#2d6b48;line-height:1;margin-bottom:12px;transition:color .3s;">1 de cada 4</div>
+        <div style="font-size:12px;color:#4a6858;line-height:1.65;">persones viurà en algun moment una crisi emocional significativa al llarg de la seva vida <span style="color:#4a6858;opacity:.6">(OMS)</span></div>
+      </div>
+
+      <div style="background:#f5f0e8;padding:32px 28px;text-align:center;border-radius:6px;box-shadow:0 4px 16px rgba(45,107,72,0.08);transition:all .3s;cursor:default;border-top:3px solid transparent;position:relative;overflow:hidden;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 10px 28px rgba(45,107,72,0.18)';this.style.borderTopColor='var(--green-mid)';this.style.background='#edf7e8';this.querySelector('.stat-num').style.color='#1a5c3a'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(45,107,72,0.08)';this.style.borderTopColor='transparent';this.style.background='#f5f0e8';this.querySelector('.stat-num').style.color='#2d6b48'">
+        <div class="stat-num" style="font-family:'League Spartan',sans-serif;font-size:80px;font-weight:300;color:#2d6b48;line-height:1;margin-bottom:12px;transition:color .3s;">70%</div>
+        <div style="font-size:12px;color:#4a6858;line-height:1.65;">de les persones que necessiten acompanyament emocional no arriben mai a demanar ajuda professional</div>
+      </div>
+
+      <div style="background:#f5f0e8;padding:32px 28px;text-align:center;border-radius:6px;box-shadow:0 4px 16px rgba(45,107,72,0.08);transition:all .3s;cursor:default;border-top:3px solid transparent;position:relative;overflow:hidden;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 10px 28px rgba(45,107,72,0.18)';this.style.borderTopColor='var(--green-mid)';this.style.background='#edf7e8';this.querySelector('.stat-num').style.color='#1a5c3a'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(45,107,72,0.08)';this.style.borderTopColor='transparent';this.style.background='#f5f0e8';this.querySelector('.stat-num').style.color='#2d6b48'">
+        <div class="stat-num" style="font-family:'League Spartan',sans-serif;font-size:80px;font-weight:300;color:#2d6b48;line-height:1;margin-bottom:12px;transition:color .3s;">40%</div>
+        <div style="font-size:12px;color:#4a6858;line-height:1.65;">de les baixes laborals a Catalunya s'associen a causes emocionals o de benestar personal</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Banner 2 Col·lectiu Senior -->
+  <div style="background:#e8f5e4;padding:40px;margin-top:2px;margin-bottom:24px;border-radius:6px;box-shadow:0 4px 18px rgba(45,107,72,0.08);">
+    <div style="font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--green-mid);opacity:1;margin-bottom:14px;">Per què neix NexSocial · Col·lectiu Senior</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:#0f2d1e;margin-bottom:12px;line-height:1.35;">La soledat no volguda és un risc real per al benestar. <em style="font-style:italic;color:#2d6b48;">A Catalunya, és una emergència silenciosa.</em></div>
+    <p style="font-size:13px;color:#4a6858;line-height:1.8;margin:0;">L'envelliment accelerat, la feminització de la vellesa i el creixement dels llars unipersonals de persones majors de 65 anys configuren un escenari en el qual la cohesió social i el benestar comunitari requereixen respostes concretes i de proximitat. NexSocial neix, en part, per donar aquesta resposta.</p>
+  </div>
+
+  <!-- Bloc dades: Col·lectiu Senior -->
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:2px;">
+
+    <div style="background:#f5f0e8;padding:32px 28px;text-align:center;border-radius:6px;box-shadow:0 4px 16px rgba(45,107,72,0.08);transition:all .3s;cursor:default;border-top:3px solid transparent;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 10px 28px rgba(45,107,72,0.18)';this.style.borderTopColor='var(--green-mid)';this.style.background='#edf7e8';this.querySelector('.stat-num').style.color='#1a5c3a'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(45,107,72,0.08)';this.style.borderTopColor='transparent';this.style.background='#f5f0e8';this.querySelector('.stat-num').style.color='#2d6b48'">
+      <div class="stat-num" style="font-family:'League Spartan',sans-serif;font-size:80px;font-weight:300;color:#2d6b48;line-height:1;margin-bottom:12px;transition:color .3s;">~20%</div>
+      <div style="font-size:12px;color:#4a6858;line-height:1.65;">de la població catalana té 65 anys o més — un envelliment en acceleració constant <span style="color:#4a6858;opacity:.6">· Idescat 2025</span></div>
+    </div>
+
+    <div style="background:#f5f0e8;padding:32px 28px;text-align:center;border-radius:6px;box-shadow:0 4px 16px rgba(45,107,72,0.08);transition:all .3s;cursor:default;border-top:3px solid transparent;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 10px 28px rgba(45,107,72,0.18)';this.style.borderTopColor='var(--green-mid)';this.style.background='#edf7e8';this.querySelector('.stat-num').style.color='#1a5c3a'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(45,107,72,0.08)';this.style.borderTopColor='transparent';this.style.background='#f5f0e8';this.querySelector('.stat-num').style.color='#2d6b48'">
+      <div class="stat-num" style="font-family:'League Spartan',sans-serif;font-size:80px;font-weight:300;color:#2d6b48;line-height:1;margin-bottom:12px;transition:color .3s;">17,3%</div>
+      <div style="font-size:12px;color:#4a6858;line-height:1.65;">de les persones majors de 65 anys estan en risc de pobresa o exclusió social <span style="color:#4a6858;opacity:.6">· AROPE / Idescat 2025</span></div>
+    </div>
+
+    <div style="background:#f5f0e8;padding:32px 28px;text-align:center;border-radius:6px;box-shadow:0 4px 16px rgba(45,107,72,0.08);transition:all .3s;cursor:default;border-top:3px solid transparent;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 10px 28px rgba(45,107,72,0.18)';this.style.borderTopColor='var(--green-mid)';this.style.background='#edf7e8';this.querySelector('.stat-num').style.color='#1a5c3a'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(45,107,72,0.08)';this.style.borderTopColor='transparent';this.style.background='#f5f0e8';this.querySelector('.stat-num').style.color='#2d6b48'">
+      <div class="stat-num" style="font-family:'League Spartan',sans-serif;font-size:80px;font-weight:300;color:#2d6b48;line-height:1;margin-bottom:12px;transition:color .3s;">18,4%</div>
+      <div style="font-size:12px;color:#4a6858;line-height:1.65;">dels adults a Catalunya se senten sols — xifra que s'eleva al ~20% en majors de 75 anys <span style="color:#4a6858;opacity:.6">· ECV 2025</span></div>
+    </div>
+
+  </div>
+
+
+
+  <!-- Cita final -->
+  <div style="margin-top:32px; padding:32px 40px; background:#e8f5e4; display:flex; align-items:center; gap:32px; flex-wrap:wrap;">
+    <div style="font-family:'Cormorant Garamond',serif; font-size:22px; font-style:italic; font-weight:300; color:#2a3d28; flex:1; min-width:260px; line-height:1.5;">"Treballem per a la comunitat i per a les persones que necessiten suport en algun moment del seu cicle vital."</div>
+    <button onclick="showSection('serveis', document.querySelectorAll('nav a')[2])" style="background:#2d6b48; color:#fff; border:none; padding:14px 28px; font-family:'DM Sans',sans-serif; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; cursor:pointer; white-space:nowrap; flex-shrink:0; border-radius:40px; box-shadow:0 4px 16px rgba(109,191,133,0.3); transition:all .3s;">Descobreix els nostres serveis →</button>
+  </div>
+
+</div>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-col footer-col--brand">
+        <div class="footer-brand">
+          <img src="../images/img_01.png" alt="NexSocial" style="width:38px;height:38px;object-fit:contain;">
+          <span class="footer-brand-name">NexSocial</span>
+        </div>
+        <p class="footer-desc">Cooperativa d'Acompanyament Sociovital a persones i entitats.</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Serveis</div>
+        <ul class="footer-links">
+          <li><a href="/nexacompanya/">NexAcompanya</a></li>
+          <li><a href="/nexgestio/">NexGestió</a></li>
+          <li><a href="/consulta-cas-a-cas/">Cas a Cas</a></li>
+          <li><a href="/entitats/">Servei a Entitats</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Teràpia Gestalt</div>
+        <ul class="footer-links">
+          <li><a href="/nexacompanya/sessions-gestalt/">Teràpia Gestalt</a></li>
+          <li><a href="/nexacompanya/sessions-gestalt/#gs-cal">Demana cita</a></li>
+          <li><a href="/nexacompanya/sessions-gestalt/#preus">Consulta preus</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Empresa</div>
+        <ul class="footer-links">
+          <li><a href="/qui-som/">Qui som</a></li>
+          <li><a href="/contacte/">Contacte</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Segueix-nos</div>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/nexsocial-cooperativa-acompa%C3%B1amiento-sociovital-218a213b9/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn
+          </a>
+          <a href="https://www.instagram.com/nexsocialcoop/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 NexSocial Cooperativa d'Acompanyament Sociovital</span>
+      <span>Registre de Cooperatives de Catalunya</span>
+    </div>
+  </div>
+</footer>
+</main>
+<script src="../js/nexsocial.js"></script>
+<script>
+function toggleSidebar(){
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('overlay').classList.toggle('active');
+}
+</script>
+</body>
+</html>
