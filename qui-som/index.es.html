@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<script>(function(){try{localStorage.setItem('nexsocial_lang','es');}catch(e){}})();</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Quiénes somos — NexSocial Cooperativa d'Acompanyament Sociovital</title>
@@ -17,17 +18,24 @@
     <span class="topbar-tagline"><span data-i18n="topbar.tagline">Nexo de Apoyo y Acompañamiento Sociovital</span></span>
   </div>
   <div class="topbar-right">
-    <a href="/persones/" class="topbar-btn"><span data-i18n="topbar.soc_persona">Soy una persona</span></a>
-    <a href="/entitats/" class="topbar-btn"><span data-i18n="topbar.soc_entitat">Soy una entidad</span></a>
-    <a href="/contacte/" class="topbar-btn">
+    <a href="/persones/index.es.html" class="topbar-btn"><span data-i18n="topbar.soc_persona">Soy una persona</span></a>
+    <a href="/entitats/index.es.html" class="topbar-btn"><span data-i18n="topbar.soc_entitat">Soy una entidad</span></a>
+    <a href="/contacte/index.es.html" class="topbar-btn">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       <span data-i18n="topbar.contacte">Contacte</span>
     </a>
-    <div style="display:flex;align-items:center;gap:4px;">
-      <a href="/qui-som/index.html" style="padding:4px 8px;font-size:11px;font-family:'DM Sans',sans-serif;color:#4a6858;text-decoration:none;letter-spacing:0.05em;border:1px solid transparent;transition:all .2s;" onmouseover="this.style.borderColor='rgba(45,107,72,.25)'" onmouseout="this.style.borderColor='transparent'">CA</a>
-      <span style="color:rgba(45,107,72,.3);font-size:10px;">|</span>
-      <a href="/qui-som/index.es.html" style="padding:4px 8px;font-size:11px;font-family:'DM Sans',sans-serif;color:#2d6b48;font-weight:600;text-decoration:none;letter-spacing:0.05em;border:1px solid rgba(45,107,72,.25);background:rgba(45,107,72,.06);">ES</a>
+    <div style="position:relative;display:inline-flex;align-items:center;">
+      <button onclick="(function(){var m=document.getElementById('nxlm');m.style.display=m.style.display==='block'?'none':'block';})()" style="display:flex;align-items:center;gap:6px;padding:5px 11px;border:1px solid rgba(45,107,72,.28);color:#2d6b48;font-size:11px;letter-spacing:0.05em;background:transparent;cursor:pointer;font-family:'DM Sans',sans-serif;white-space:nowrap;line-height:1;">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        Idioma&nbsp;<strong>ES</strong>
+        <svg width="8" height="5" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+      </button>
+      <div id="nxlm" style="display:none;position:absolute;top:calc(100% + 5px);right:0;background:#f5f0e8;border:1px solid rgba(45,107,72,.22);min-width:140px;z-index:9999;box-shadow:0 6px 20px rgba(0,0,0,.10);">
+        <button onclick="localStorage.setItem('nexsocial_lang','ca'); window.location.href='/qui-som/index.html';" style="display:block;width:100%;padding:9px 16px;text-align:left;background:none;border:none;border-bottom:1px solid rgba(45,107,72,.1);font-family:'DM Sans',sans-serif;font-size:11px;cursor:pointer;letter-spacing:0.05em;color:#4a6858;" onmouseover="this.style.background='rgba(45,107,72,.07)'" onmouseout="this.style.background='none'">Català &nbsp;·&nbsp; CA</button>
+        <button onclick="return false;" style="display:block;width:100%;padding:9px 16px;text-align:left;background:none;border:none;font-family:'DM Sans',sans-serif;font-size:11px;cursor:pointer;letter-spacing:0.05em;font-weight:700;color:#2d6b48;background:rgba(45,107,72,.09);" onmouseover="this.style.background='rgba(45,107,72,.07)'" onmouseout="this.style.background='none'">Castellano · ES</button>
+      </div>
     </div>
+    <script>document.addEventListener('click',function(e){var m=document.getElementById('nxlm');if(m&&!m.previousElementSibling.contains(e.target))m.style.display='none';});</script>
   </div>
 </div>
 <button class="mobile-toggle" onclick="toggleSidebar()"><span></span><span></span><span></span></button>
@@ -38,19 +46,19 @@
     <div><div class="logo-name">NexSocial</div><div class="logo-sub">Cooperativa de Acompañamiento<br>Sociovital</div></div>
   </div>
   <nav>
-    <a href="/"><span data-i18n="nav.inici">Inicio</span></a>
-    <a href="/qui-som/" class="active"><span data-i18n="nav.qui_som">Quiénes somos</span></a>
-    <a href="/persones/"><span data-i18n="nav.servei_persones">Servicio a Personas</span></a>
+    <a href="/index.es.html"><span data-i18n="nav.inici">Inicio</span></a>
+    <a href="/qui-som/index.es.html" class="active"><span data-i18n="nav.qui_som">Quiénes somos</span></a>
+    <a href="/persones/index.es.html"><span data-i18n="nav.servei_persones">Servicio a Personas</span></a>
     <div style="max-height:260px; overflow:hidden; background:rgba(255,255,255,0.18);">
-      <a href="/nexacompanya/" style="padding:9px 20px 9px 32px; font-size:13px; color:#0f2d1e; border-left:2px solid #2d6b48; display:block;"><span data-i18n="nav.nexacompanya">NexAcompanya</span></a>
-      <a href="/nexacompanya/sessions-gestalt/" style="padding:5px 20px 5px 44px; font-size:11.5px; color:#6a9070; border-left:1px solid rgba(61,138,98,0.25); display:block; "><span data-i18n="nav.sessions_gestalt">Sesiones Gestalt</span></a>
-      <a href="/nexgestio/" style="padding:9px 20px 9px 32px; font-size:13px; color:#0f2d1e; border-left:2px solid #2d6b48; display:block;"><span data-i18n="nav.nexgestio">NexGestió</span></a>
-      <a href="/nexgestio/nexlicitia/" style="padding:5px 20px 5px 44px; font-size:11.5px; color:#6a9070; border-left:1px solid rgba(61,138,98,0.25); display:block; "><span data-i18n="nav.nexlicitia">NexlicitIA</span></a>
-      <a href="/consulta-cas-a-cas/" style="padding:9px 20px 9px 32px; font-size:13px; color:#0f2d1e; border-left:2px solid #2d6b48; display:block;"><span data-i18n="nav.cas_a_cas">Consulta Caso a Caso</span></a>
+      <a href="/nexacompanya/index.es.html" style="padding:9px 20px 9px 32px; font-size:13px; color:#0f2d1e; border-left:2px solid #2d6b48; display:block;"><span data-i18n="nav.nexacompanya">NexAcompanya</span></a>
+      <a href="/nexacompanya/sessions-gestalt/index.es.html" style="padding:5px 20px 5px 44px; font-size:11.5px; color:#6a9070; border-left:1px solid rgba(61,138,98,0.25); display:block; "><span data-i18n="nav.sessions_gestalt">Sesiones Gestalt</span></a>
+      <a href="/nexgestio/index.es.html" style="padding:9px 20px 9px 32px; font-size:13px; color:#0f2d1e; border-left:2px solid #2d6b48; display:block;"><span data-i18n="nav.nexgestio">NexGestió</span></a>
+      <a href="/nexgestio/nexlicitia/index.es.html" style="padding:5px 20px 5px 44px; font-size:11.5px; color:#6a9070; border-left:1px solid rgba(61,138,98,0.25); display:block; "><span data-i18n="nav.nexlicitia">NexlicitIA</span></a>
+      <a href="/consulta-cas-a-cas/index.es.html" style="padding:9px 20px 9px 32px; font-size:13px; color:#0f2d1e; border-left:2px solid #2d6b48; display:block;"><span data-i18n="nav.cas_a_cas">Consulta Caso a Caso</span></a>
     </div>
-    <a href="/entitats/" ><span data-i18n="nav.servei_entitats">Servicio a Entidades</span></a>
-    <a href="/collaboracions/" ><span data-i18n="nav.collaboracions">Colaboraciones</span></a>
-    <a href="/contacte/" ><span data-i18n="nav.contacte">Contacte</span></a>
+    <a href="/entitats/index.es.html" ><span data-i18n="nav.servei_entitats">Servicio a Entidades</span></a>
+    <a href="/collaboracions/index.es.html" ><span data-i18n="nav.collaboracions">Colaboraciones</span></a>
+    <a href="/contacte/index.es.html" ><span data-i18n="nav.contacte">Contacte</span></a>
   </nav>
 
 </aside>
@@ -196,7 +204,7 @@
   <!-- Cita final -->
   <div style="margin-top:32px; padding:32px 40px; background:#e8f5e4; display:flex; align-items:center; gap:32px; flex-wrap:wrap;">
     <div style="font-family:'Cormorant Garamond',serif; font-size:22px; font-style:italic; font-weight:300; color:#2a3d28; flex:1; min-width:260px; line-height:1.5;">"Trabajamos para la comunidad y para las personas que necesitan apoyo en algún momento de su ciclo vital."</div>
-    <a href="/persones/" style="background:#2d6b48; color:#fff; padding:14px 28px; font-family:'DM Sans',sans-serif; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; cursor:pointer; white-space:nowrap; flex-shrink:0; border-radius:40px; box-shadow:0 4px 16px rgba(109,191,133,0.3); transition:all .3s; text-decoration:none; display:inline-block;">Descubre nuestros servicios →</a>
+    <a href="/persones/index.es.html" style="background:#2d6b48; color:#fff; padding:14px 28px; font-family:'DM Sans',sans-serif; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; cursor:pointer; white-space:nowrap; flex-shrink:0; border-radius:40px; box-shadow:0 4px 16px rgba(109,191,133,0.3); transition:all .3s; text-decoration:none; display:inline-block;">Descubre nuestros servicios →</a>
   </div>
 
 </div>
@@ -213,16 +221,16 @@
       <div class="footer-col">
         <div class="footer-col-title"><span data-i18n="footer.col_serveis">Servicios</span></div>
         <ul class="footer-links">
-          <li><a href="/nexacompanya/"><span data-i18n="nav.nexacompanya">NexAcompanya</span></a></li>
-          <li><a href="/nexgestio/"><span data-i18n="nav.nexgestio">NexGestió</span></a></li>
-          <li><a href="/consulta-cas-a-cas/">Caso a Caso</a></li>
-          <li><a href="/entitats/"><span data-i18n="nav.servei_entitats">Servicio a Entidades</span></a></li>
+          <li><a href="/nexacompanya/index.es.html"><span data-i18n="nav.nexacompanya">NexAcompanya</span></a></li>
+          <li><a href="/nexgestio/index.es.html"><span data-i18n="nav.nexgestio">NexGestió</span></a></li>
+          <li><a href="/consulta-cas-a-cas/index.es.html">Caso a Caso</a></li>
+          <li><a href="/entitats/index.es.html"><span data-i18n="nav.servei_entitats">Servicio a Entidades</span></a></li>
         </ul>
       </div>
       <div class="footer-col">
         <div class="footer-col-title"><span data-i18n="footer.col_gestalt">Acompañamiento Gestalt</span></div>
         <ul class="footer-links">
-          <li><a href="/nexacompanya/sessions-gestalt/"><span data-i18n="footer.metode_gestalt">Método Gestalt</span></a></li>
+          <li><a href="/nexacompanya/sessions-gestalt/index.es.html"><span data-i18n="footer.metode_gestalt">Método Gestalt</span></a></li>
           <li><a href="/nexacompanya/sessions-gestalt/#gs-cal"><span data-i18n="footer.demana_cita">Solicita cita</span></a></li>
           <li><a href="/nexacompanya/sessions-gestalt/#gs-preus"><span data-i18n="footer.consulta_preus">Consulta precios</span></a></li>
         </ul>
@@ -230,8 +238,8 @@
       <div class="footer-col">
         <div class="footer-col-title">Empresa</div>
         <ul class="footer-links">
-          <li><a href="/qui-som/"><span data-i18n="nav.qui_som">Quiénes somos</span></a></li>
-          <li><a href="/contacte/"><span data-i18n="nav.contacte">Contacte</span></a></li>
+          <li><a href="/qui-som/index.es.html"><span data-i18n="nav.qui_som">Quiénes somos</span></a></li>
+          <li><a href="/contacte/index.es.html"><span data-i18n="nav.contacte">Contacte</span></a></li>
         </ul>
       </div>
       <div class="footer-col">

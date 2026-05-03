@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<script>(function(){try{localStorage.setItem('nexsocial_lang','es');}catch(e){}})();</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NexSocial — Cooperativa de Acompañamiento Sociovital</title>
@@ -907,21 +908,28 @@ function changeLogo(){
     <span class="topbar-tagline" id="topbar-tagline"><span data-i18n="topbar.tagline">Nexo de Apoyo y Acompañamiento Sociovital</span></span>
   </div>
   <div class="topbar-right" id="topbar-links">
-    <a href="/persones/" class="topbar-btn" id="topbar-btn-persones">
+    <a href="/persones/index.es.html" class="topbar-btn" id="topbar-btn-persones">
       <span data-i18n="topbar.soc_persona">Soy una persona</span>
     </a>
-    <a href="/entitats/" class="topbar-btn" id="topbar-btn-entitats">
+    <a href="/entitats/index.es.html" class="topbar-btn" id="topbar-btn-entitats">
       <span data-i18n="topbar.soc_entitat">Soy una entidad</span>
     </a>
-    <a href="/contacte/" class="topbar-btn" id="topbar-btn-contacte">
+    <a href="/contacte/index.es.html" class="topbar-btn" id="topbar-btn-contacte">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       <span id="topbar-contacte-label">Contacte</span>
     </a>
-    <div style="display:flex;align-items:center;gap:4px;">
-      <a href="/index.html" style="padding:4px 8px;font-size:11px;font-family:'DM Sans',sans-serif;color:#4a6858;text-decoration:none;letter-spacing:0.05em;border:1px solid transparent;transition:all .2s;" onmouseover="this.style.borderColor='rgba(45,107,72,.25)'" onmouseout="this.style.borderColor='transparent'">CA</a>
-      <span style="color:rgba(45,107,72,.3);font-size:10px;">|</span>
-      <a href="/index.es.html" style="padding:4px 8px;font-size:11px;font-family:'DM Sans',sans-serif;color:#2d6b48;font-weight:600;text-decoration:none;letter-spacing:0.05em;border:1px solid rgba(45,107,72,.25);background:rgba(45,107,72,.06);">ES</a>
+    <div style="position:relative;display:inline-flex;align-items:center;">
+      <button onclick="(function(){var m=document.getElementById('nxlm');m.style.display=m.style.display==='block'?'none':'block';})()" style="display:flex;align-items:center;gap:6px;padding:5px 11px;border:1px solid rgba(45,107,72,.28);color:#2d6b48;font-size:11px;letter-spacing:0.05em;background:transparent;cursor:pointer;font-family:'DM Sans',sans-serif;white-space:nowrap;line-height:1;">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        Idioma&nbsp;<strong>ES</strong>
+        <svg width="8" height="5" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+      </button>
+      <div id="nxlm" style="display:none;position:absolute;top:calc(100% + 5px);right:0;background:#f5f0e8;border:1px solid rgba(45,107,72,.22);min-width:140px;z-index:9999;box-shadow:0 6px 20px rgba(0,0,0,.10);">
+        <button onclick="localStorage.setItem('nexsocial_lang','ca'); window.location.href='/index.html';" style="display:block;width:100%;padding:9px 16px;text-align:left;background:none;border:none;border-bottom:1px solid rgba(45,107,72,.1);font-family:'DM Sans',sans-serif;font-size:11px;cursor:pointer;letter-spacing:0.05em;color:#4a6858;" onmouseover="this.style.background='rgba(45,107,72,.07)'" onmouseout="this.style.background='none'">Català &nbsp;·&nbsp; CA</button>
+        <button onclick="return false;" style="display:block;width:100%;padding:9px 16px;text-align:left;background:none;border:none;font-family:'DM Sans',sans-serif;font-size:11px;cursor:pointer;letter-spacing:0.05em;font-weight:700;color:#2d6b48;background:rgba(45,107,72,.09);" onmouseover="this.style.background='rgba(45,107,72,.07)'" onmouseout="this.style.background='none'">Castellano · ES</button>
+      </div>
     </div>
+    <script>document.addEventListener('click',function(e){var m=document.getElementById('nxlm');if(m&&!m.previousElementSibling.contains(e.target))m.style.display='none';});</script>
   </div>
 </div>
 <button class="mobile-toggle" onclick="toggleSidebar()"><span></span><span></span><span></span></button>
