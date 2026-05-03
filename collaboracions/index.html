@@ -8,21 +8,6 @@
 <link rel="canonical" href="https://nexsocial.org/collaboracions/">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/nexsocial.css">
-<script src="../js/translations.js"></script>
-<script>
-function nexSetLang(lang){
-  document.getElementById('nex-lang-menu').style.display='none';
-  var lbl=document.getElementById('nex-lang-lbl');
-  if(lbl) lbl.textContent=lang.toUpperCase();
-  if(typeof applyLang==='function'){ applyLang(lang); }
-  else { try{localStorage.setItem('nexsocial_lang',lang);}catch(e){} location.reload(); }
-}
-document.addEventListener('click',function(e){
-  var w=document.getElementById('nex-lang');
-  var m=document.getElementById('nex-lang-menu');
-  if(m && w && !w.contains(e.target)) m.style.display='none';
-});
-</script>
 </head>
 <body>
 <div class="topbar" id="topbar">
@@ -38,16 +23,10 @@ document.addEventListener('click',function(e){
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       <span data-i18n="topbar.contacte">Contacte</span>
     </a>
-    <div id="nex-lang" style="position:relative;display:inline-flex;align-items:center;">
-      <button id="nex-lang-btn" style="display:flex;align-items:center;gap:6px;padding:5px 12px;border:1px solid rgba(45,107,72,.28);color:#2d6b48;font-size:11px;letter-spacing:0.05em;background:transparent;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;white-space:nowrap;line-height:1;" title="Canviar idioma" onclick="(function(){var m=document.getElementById('nex-lang-menu');m.style.display=m.style.display==='block'?'none':'block';})()">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        Idioma&nbsp;<span id="nex-lang-lbl">CA</span>
-        <svg width="8" height="5" viewBox="0 0 10 6" style="opacity:.6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
-      </button>
-      <div id="nex-lang-menu" style="display:none;position:absolute;top:calc(100% + 5px);right:0;background:#f5f0e8;border:1px solid rgba(45,107,72,.22);min-width:130px;z-index:9999;box-shadow:0 6px 20px rgba(0,0,0,0.10);">
-        <button onclick="nexSetLang('ca')" style="display:block;width:100%;padding:9px 16px;text-align:left;background:none;border:none;border-bottom:1px solid rgba(45,107,72,.1);font-family:'DM Sans',sans-serif;font-size:11px;color:#2d6b48;cursor:pointer;letter-spacing:0.05em;" onmouseover="this.style.background='rgba(45,107,72,.07)'" onmouseout="this.style.background='none'">🇪🇸 Català &nbsp;·&nbsp; CA</button>
-        <button onclick="nexSetLang('es')" style="display:block;width:100%;padding:9px 16px;text-align:left;background:none;border:none;font-family:'DM Sans',sans-serif;font-size:11px;color:#2d6b48;cursor:pointer;letter-spacing:0.05em;" onmouseover="this.style.background='rgba(45,107,72,.07)'" onmouseout="this.style.background='none'">🇪🇸 Castellano · ES</button>
-      </div>
+    <div style="display:flex;align-items:center;gap:4px;">
+      <a href="#" onclick="return false;" style="padding:4px 8px;font-size:11px;font-family:'DM Sans',sans-serif;color:#2d6b48;font-weight:600;text-decoration:none;letter-spacing:0.05em;border:1px solid rgba(45,107,72,.25);background:rgba(45,107,72,.06);">CA</a>
+      <span style="color:rgba(45,107,72,.3);font-size:10px;">|</span>
+      <a href="/collaboracions/index.es.html" style="padding:4px 8px;font-size:11px;font-family:'DM Sans',sans-serif;color:#4a6858;text-decoration:none;letter-spacing:0.05em;border:1px solid transparent;transition:all .2s;" onmouseover="this.style.borderColor='rgba(45,107,72,.25)'" onmouseout="this.style.borderColor='transparent'">ES</a>
     </div>
   </div>
 </div>
@@ -79,15 +58,15 @@ document.addEventListener('click',function(e){
 
 <div class="page-header">
 <div class="page-header-bg" style="background-image:url('../images/img_24.jpg')"></div>
-<span class="page-header-tag"><span data-i18n="collab.tag">Col·labora amb nosaltres</span></span>
+<span class="page-header-tag">Col·labora amb nosaltres</span>
 <h1>Col·laboracions amb <span style="font-family:'Cormorant Garamond',serif;font-size:1.15em;">Nex<em style="color:#3d8a62;">Social</em></span></h1>
 <p>Si comparteixes els nostres valors i vols col·laborar amb el projecte, ens encantarà conèixer-te.</p>
 </div>
 <div class="values-strip">
-<div class="value-item"><h4><span data-i18n="collab.val1_h">Creixement</span></h4><p><span data-i18n="collab.val1_d">Formació contínua i espai per créixer</span></p></div>
-<div class="value-item"><h4><span data-i18n="collab.val2_h">Cooperació</span></h4><p><span data-i18n="collab.val2_d">Model cooperatiu real, amb veu i vot</span></p></div>
-<div class="value-item"><h4><span data-i18n="collab.val3_h">Equilibri</span></h4><p><span data-i18n="collab.val3_d">Flexibilitat i conciliació de veritat</span></p></div>
-<div class="value-item"><h4><span data-i18n="collab.val4_h">Impacte</span></h4><p><span data-i18n="collab.val4_d">Feina que transforma vides cada dia</span></p></div>
+<div class="value-item"><h4>Creixement</h4><p>Formació contínua i espai per créixer</p></div>
+<div class="value-item"><h4>Cooperació</h4><p>Model cooperatiu real, amb veu i vot</p></div>
+<div class="value-item"><h4>Equilibri</h4><p>Flexibilitat i conciliació de veritat</p></div>
+<div class="value-item"><h4>Impacte</h4><p>Feina que transforma vides cada dia</p></div>
 </div>
 <div class="content" style="padding:40px 48px 60px; max-width:none;">
   <div style="font-family:'Cormorant Garamond',serif; font-size:28px; color:#2d6b48; margin-bottom:8px;">Forma part de <em>NexSocial</em></div>
@@ -107,12 +86,12 @@ document.addEventListener('click',function(e){
       </select>
     </div>
     <div class="form-group" style="margin-top:16px;"><label style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#4a6858;display:block;margin-bottom:6px;">Motivació *</label><textarea name="motivacio" required placeholder="Per què vols formar part de NexSocial?" rows="4" style="width:100%;padding:11px 14px;border:1px solid rgba(45,107,72,0.3);background:#f5f0e8;font-family:'DM Sans',sans-serif;font-size:13px;color:#2d6b48;box-sizing:border-box;resize:vertical;"></textarea></div>
-    <div id="treballar-ok" style="display:none;background:#f0f9ed;border:1px solid rgba(45,107,72,0.3);padding:14px 18px;margin-bottom:16px;font-size:13px;color:#2d6b48;"><span data-i18n="form.success_collab">✓ Candidatura enviada! Et contactarem aviat.</span></div>
+    <div id="treballar-ok" style="display:none;background:#f0f9ed;border:1px solid rgba(45,107,72,0.3);padding:14px 18px;margin-bottom:16px;font-size:13px;color:#2d6b48;">✓ Candidatura enviada! Et contactarem aviat.</div>
     <div style="display:flex;align-items:flex-start;gap:10px;margin-top:16px;margin-bottom:4px;">
       <input type="checkbox" id="rgpd-treballar" name="rgpd" required style="margin-top:3px;accent-color:#2d6b48;flex-shrink:0;cursor:pointer;">
-      <label for="rgpd-treballar" style="font-size:12px;color:#4a6858;line-height:1.6;cursor:pointer;"><span data-i18n="form.rgpd_collab">He llegit i accepto la </span><button type="button" onclick="event.preventDefault();openModal('modal-privacitat')" style="background:none;border:none;padding:0;color:#2d6b48;font-size:12px;font-family:'DM Sans',sans-serif;cursor:pointer;border-bottom:1px solid rgba(45,107,72,0.3);"><span data-i18n="form.rgpd_link">política de privacitat</span></button><span data-i18n="form.rgpd_collab2"> i autoritzo el tractament de les meves dades.</span></label>
+      <label for="rgpd-treballar" style="font-size:12px;color:#4a6858;line-height:1.6;cursor:pointer;">He llegit i accepto la <button type="button" onclick="event.preventDefault();openModal('modal-privacitat')" style="background:none;border:none;padding:0;color:#2d6b48;font-size:12px;font-family:'DM Sans',sans-serif;cursor:pointer;border-bottom:1px solid rgba(45,107,72,0.3);">política de privacitat</button> i autoritzo el tractament de les meves dades.</label>
     </div>
-    <button type="submit" style="margin-top:20px;background:#2d6b48;color:#d4e8d0;border:none;padding:13px 32px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border-radius:40px;box-shadow:0 4px 16px rgba(45,107,72,0.25);transition:all .3s;"><span data-i18n="collab.btn">Enviar candidatura / proposta →</span></button>
+    <button type="submit" style="margin-top:20px;background:#2d6b48;color:#d4e8d0;border:none;padding:13px 32px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border-radius:40px;box-shadow:0 4px 16px rgba(45,107,72,0.25);transition:all .3s;">Enviar candidatura / proposta →</button>
   </form>
 </div>
 <footer class="site-footer">
@@ -178,13 +157,6 @@ function toggleSidebar(){
   document.getElementById('overlay').classList.toggle('active');
 }
 </script>
-<script>
-document.addEventListener('DOMContentLoaded',function(){
-  var lbl=document.getElementById('nex-lang-lbl');
-  if(!lbl) return;
-  var saved; try{saved=localStorage.getItem('nexsocial_lang');}catch(e){}
-  lbl.textContent=(saved||'ca').toUpperCase();
-});
-</script>
+
 </body>
 </html>

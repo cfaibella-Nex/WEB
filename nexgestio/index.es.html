@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexGestió — Acompañamiento en la Gestión de Trámites Sociales · NexSocial</title>
+<meta name="description" content="Acompañamiento en la gestión de trámites sociales: ayudas, dependencia, vivienda, extranjería, mediación y orientación jurídica social. NexSocial, Badalona.">
+<link rel="canonical" href="https://nexsocial.org/nexgestio/">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/nexsocial.css">
+</head>
+<body>
+<div class="topbar" id="topbar">
+  <div class="topbar-left">
+    <img src="../images/img_01.png" id="topbar-logo-img" alt="NexSocial" style="height:24px;width:24px;object-fit:contain;border-radius:50%;">
+    <span class="topbar-brand">NexSocial</span>
+    <span class="topbar-tagline"><span data-i18n="topbar.tagline">Nexo de Apoyo y Acompañamiento Sociovital</span></span>
+  </div>
+  <div class="topbar-right">
+    <a href="/persones/" class="topbar-btn"><span data-i18n="topbar.soc_persona">Soy una persona</span></a>
+    <a href="/entitats/" class="topbar-btn"><span data-i18n="topbar.soc_entitat">Soy una entidad</span></a>
+    <a href="/contacte/" class="topbar-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <span data-i18n="topbar.contacte">Contacte</span>
+    </a>
+    <div style="display:flex;align-items:center;gap:4px;">
+      <a href="/nexgestio/index.html" style="padding:4px 8px;font-size:11px;font-family:'DM Sans',sans-serif;color:#4a6858;text-decoration:none;letter-spacing:0.05em;border:1px solid transparent;transition:all .2s;" onmouseover="this.style.borderColor='rgba(45,107,72,.25)'" onmouseout="this.style.borderColor='transparent'">CA</a>
+      <span style="color:rgba(45,107,72,.3);font-size:10px;">|</span>
+      <a href="/nexgestio/index.es.html" style="padding:4px 8px;font-size:11px;font-family:'DM Sans',sans-serif;color:#2d6b48;font-weight:600;text-decoration:none;letter-spacing:0.05em;border:1px solid rgba(45,107,72,.25);background:rgba(45,107,72,.06);">ES</a>
+    </div>
+  </div>
+</div>
+<button class="mobile-toggle" onclick="toggleSidebar()"><span></span><span></span><span></span></button>
+<div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <img src="../images/img_01.png" alt="NexSocial">
+    <div><div class="logo-name">NexSocial</div><div class="logo-sub">Cooperativa de Acompañamiento<br>Sociovital</div></div>
+  </div>
+  <nav>
+    <a href="/"><span data-i18n="nav.inici">Inicio</span></a>
+    <a href="/qui-som/"><span data-i18n="nav.qui_som">Quiénes somos</span></a>
+    <a href="/persones/"><span data-i18n="nav.servei_persones">Servicio a Personas</span></a>
+    <div style="max-height:260px; overflow:hidden; background:rgba(255,255,255,0.18);">
+      <a href="/nexacompanya/" style="padding:9px 20px 9px 32px; font-size:13px; color:#0f2d1e; border-left:2px solid #2d6b48; display:block;"><span data-i18n="nav.nexacompanya">NexAcompanya</span></a>
+      <a href="/nexacompanya/sessions-gestalt/" style="padding:5px 20px 5px 44px; font-size:11.5px; color:#6a9070; border-left:1px solid rgba(61,138,98,0.25); display:block; "><span data-i18n="nav.sessions_gestalt">Sesiones Gestalt</span></a>
+      <a href="/nexgestio/" class="active" style="padding:9px 20px 9px 32px; font-size:13px; color:#0f2d1e; border-left:2px solid #2d6b48; display:block;"><span data-i18n="nav.nexgestio">NexGestió</span></a>
+      <a href="/nexgestio/nexlicitia/" style="padding:5px 20px 5px 44px; font-size:11.5px; color:#6a9070; border-left:1px solid rgba(61,138,98,0.25); display:block; "><span data-i18n="nav.nexlicitia">NexlicitIA</span></a>
+      <a href="/consulta-cas-a-cas/" style="padding:9px 20px 9px 32px; font-size:13px; color:#0f2d1e; border-left:2px solid #2d6b48; display:block;"><span data-i18n="nav.cas_a_cas">Consulta Caso a Caso</span></a>
+    </div>
+    <a href="/entitats/"><span data-i18n="nav.servei_entitats">Servicio a Entidades</span></a>
+    <a href="/collaboracions/"><span data-i18n="nav.collaboracions">Colaboraciones</span></a>
+    <a href="/contacte/"><span data-i18n="nav.contacte">Contacte</span></a>
+  </nav>
+
+</aside>
+<main class="main">
+
+<div class="page-header">
+<div class="page-header-bg" style="background-image:url('../images/img_18.jpg')"></div>
+<span class="page-header-tag">Área de Gestión</span>
+<h1>Nex<em>Gestió</em></h1>
+<p>Acompañamiento en la gestión de trámites sociales, accesible para todos. Gestionamos, Mediamos y Ofrecemos Orientación Jurídica Social con una visión centrada en la persona y sus derechos.</p>
+</div>
+<div class="content" style="padding:40px 48px 60px; max-width:none;">
+
+<a href="/persones/" style="background:transparent;border:none;color:#4a6858;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;margin-bottom:32px;padding:0;display:inline-block;text-decoration:none;">← Volver a Servicios</a>
+
+<!-- Bloc 1: Acompanyament Tràmits Socials -->
+<div class="srv-block" id="gestio-gestoria">
+  <div class="srv-block-title">Acompañamiento en la Gestión de <em style="font-style:italic;color:#3d8a62;">Trámites Sociales</em></div>
+  <div style="height:260px;background-size:cover;background-position:center top;background-image:url('../images/img_19.jpg');background-size:cover;background-position:center top;margin-bottom:24px;"></div>
+  <p class="srv-block-desc">Acompañamos a personas y familias en la gestión de trámites sociales de carácter social y administrativo. Conocemos de primera mano la realidad de las personas que acompañamos: gestionamos conjuntamente en su nombre, con trazabilidad total y transparencia en los costes, desde la solicitud hasta la resolución.</p>
+  <!-- Cards tarifes orientatives -->
+  <div style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#3d8a62;margin-bottom:16px;">Tarifas orientativas</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:0;">
+    <div style="background:#f5f0e8;border:0.5px solid rgba(61,138,98,0.25);border-top:3px solid #98be95;padding:24px 24px 20px;">
+      <div style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:#3d8a62;margin-bottom:8px;">Trámites sociales habituales</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;color:#0f2d1e;line-height:1;margin-bottom:4px;">50€</div>
+      <div style="font-size:11px;color:#4a6858;margin-bottom:18px;">a partir de · precio orientativo</div>
+      <div style="border-top:0.5px solid rgba(45,107,72,0.15);padding-top:14px;margin-bottom:16px;">
+        <div style="font-size:11.5px;color:#4a6858;padding:6px 0;border-bottom:0.5px solid rgba(45,107,72,0.1);display:flex;gap:8px;"><span style="color:#98be95;flex-shrink:0;">—</span>IMV · RGC · Subsidios SEPE</div>
+        <div style="font-size:11.5px;color:#4a6858;padding:6px 0;border-bottom:0.5px solid rgba(45,107,72,0.1);display:flex;gap:8px;"><span style="color:#98be95;flex-shrink:0;">—</span>Ayudas de alquiler y vivienda social</div>
+        <div style="font-size:11.5px;color:#4a6858;padding:6px 0;border-bottom:0.5px solid rgba(45,107,72,0.1);display:flex;gap:8px;"><span style="color:#98be95;flex-shrink:0;">—</span>Bonos sociales luz, gas, internet</div>
+        <div style="font-size:11.5px;color:#4a6858;padding:6px 0;border-bottom:0.5px solid rgba(45,107,72,0.1);display:flex;gap:8px;"><span style="color:#98be95;flex-shrink:0;">—</span>Familias monoparentales · numerosas</div>
+        <div style="font-size:11.5px;color:#4a6858;padding:6px 0;display:flex;gap:8px;"><span style="color:#98be95;flex-shrink:0;">—</span>Pensión no contributiva · complementos</div>
+      </div>
+      <div style="background:rgba(45,107,72,0.07);padding:10px 14px;font-size:11px;color:#2d6b48;line-height:1.55;">Gestión completa del trámite, seguimiento y notificación de resolución incluidos.</div>
+    </div>
+    <div style="background:#e8f5e4;border:0.5px solid rgba(45,107,72,0.2);border-top:3px solid #3d8a62;padding:24px 24px 20px;">
+      <div style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:#2d6b48;margin-bottom:8px;">Trámites complejos y dependencia</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;color:#0f2d1e;line-height:1;margin-bottom:4px;">150€</div>
+      <div style="font-size:11px;color:#4a6858;margin-bottom:18px;">a partir de · precio orientativo</div>
+      <div style="border-top:0.5px solid rgba(45,107,72,0.15);padding-top:14px;margin-bottom:16px;">
+        <div style="font-size:11.5px;color:#4a6858;padding:6px 0;border-bottom:0.5px solid rgba(45,107,72,0.1);display:flex;gap:8px;"><span style="color:#3d8a62;flex-shrink:0;">—</span>Dependencia · PIA · expediente completo</div>
+        <div style="font-size:11.5px;color:#4a6858;padding:6px 0;border-bottom:0.5px solid rgba(45,107,72,0.1);display:flex;gap:8px;"><span style="color:#3d8a62;flex-shrink:0;">—</span>Arraigo social, laboral y familiar</div>
+        <div style="font-size:11.5px;color:#4a6858;padding:6px 0;border-bottom:0.5px solid rgba(45,107,72,0.1);display:flex;gap:8px;"><span style="color:#3d8a62;flex-shrink:0;">—</span>Reagrupación familiar</div>
+        <div style="font-size:11.5px;color:#4a6858;padding:6px 0;border-bottom:0.5px solid rgba(45,107,72,0.1);display:flex;gap:8px;"><span style="color:#3d8a62;flex-shrink:0;">—</span>Recursos vivienda social · VPO</div>
+        <div style="font-size:11.5px;color:#4a6858;padding:6px 0;display:flex;gap:8px;"><span style="color:#3d8a62;flex-shrink:0;">—</span>Seguimiento prolongado · coordinación</div>
+      </div>
+      <div style="background:rgba(45,107,72,0.1);padding:10px 14px;font-size:11px;color:#2d6b48;line-height:1.55;">Valoramos el caso conjuntamente. Primera orientación gratuita y sin compromiso.</div>
+    </div>
+  </div>
+  <!-- Strip diferencial -->
+  <div style="background:#dff0db;border:0.5px solid rgba(45,107,72,0.2);border-top:none;padding:16px 26px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+    <div>
+      <div style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#3d8a62;margin-bottom:5px;">Cooperativa de Acompañamiento Sociovital</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;color:#2a3d28;line-height:1.5;">Gestión social con mirada cooperativa: rigor en el trámite, proximidad en el acompañamiento.</div>
+    </div>
+    <a href="/contacte/" style="background:#2d6b48;color:#fff;font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;padding:9px 20px;border-radius:40px;text-decoration:none;display:inline-block;white-space:nowrap;font-weight:600;flex-shrink:0;">Consulta tu caso →</a>
+  </div>
+</div>
+
+<!-- Bloc 1b: Banner Detecció, Informació i Gestió d'Ajudes Vigents -->
+<div class="srv-block" id="gestio-ajudes">
+  <div class="srv-block-tag"><span style="font-family:'Cormorant Garamond',serif;font-size:1.15em;">Nex<em style="color:#3d8a62;">Gestió</em></span> · Servicio Estrella</div>
+  <div class="srv-block-title">Detección, Información y <em style="font-style:italic;color:#3d8a62;">Gestión de Ayudas Vigentes</em></div>
+
+  <!-- Banner fosc principal -->
+  <div style="background:#98be95;padding:clamp(20px,4vw,36px) clamp(16px,4vw,40px);margin-bottom:16px;">
+    <div style="display:flex;align-items:flex-start;gap:16px;margin-bottom:20px;">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#d4e8d0" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:4px;"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <div>
+        <p style="font-size:clamp(12px,1.5vw,13px);color:#4a6858;line-height:1.8;max-width:100%;margin:0;">Estamos al día de todas las convocatorias abiertas. Detectamos si puedes acogerte a alguna ayuda, te informamos de las condiciones y, si es tu caso, lo gestionamos íntegramente en tu nombre hasta la resolución. Un servicio clave para personas que no saben que existen ayudas o no tienen tiempo ni herramientas para tramitarlas.</p>
+      </div>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;">
+      <span style="background:rgba(109,191,133,0.12);border:1px solid rgba(45,107,72,0.25);color:#2d6b48;font-size:11px;padding:4px 12px;border-radius:20px;">Bono Alquiler Joven</span>
+      <span style="background:rgba(109,191,133,0.12);border:1px solid rgba(45,107,72,0.25);color:#2d6b48;font-size:11px;padding:4px 12px;border-radius:20px;">Ayudas alquiler +65 años</span>
+      <span style="background:rgba(109,191,133,0.12);border:1px solid rgba(45,107,72,0.25);color:#2d6b48;font-size:11px;padding:4px 12px;border-radius:20px;">Familias monoparentales</span>
+      <span style="background:rgba(109,191,133,0.12);border:1px solid rgba(45,107,72,0.25);color:#2d6b48;font-size:11px;padding:4px 12px;border-radius:20px;">IMV · RGC · PNC</span>
+      <span style="background:rgba(109,191,133,0.12);border:1px solid rgba(45,107,72,0.25);color:#2d6b48;font-size:11px;padding:4px 12px;border-radius:20px;">Dependència</span>
+      <span style="background:rgba(109,191,133,0.12);border:1px solid rgba(45,107,72,0.25);color:#2d6b48;font-size:11px;padding:4px 12px;border-radius:20px;">Bons socials</span>
+    </div>
+  </div>
+
+  <!-- 4 àmbits -->
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-bottom:0;">
+    <div style="background:#f0f9ed;border:1px solid rgba(45,107,72,0.1);padding:28px 22px;text-align:center;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 8px 24px rgba(18,32,41,0.1)'" onmouseout="this.style.boxShadow='none'">
+      <div style="margin-bottom:14px;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#3d8a62" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="display:block;margin:0 auto;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>
+      </div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:#0f2d1e;margin-bottom:8px;line-height:1.3;">Ayudas de carácter social</div>
+      <div style="font-size:11px;color:#2a3d28;line-height:1.65;">Prestaciones, dependencia, IMV, RGC y trámites de bienestar social.</div>
+    </div>
+    <div style="background:#f0f9ed;border:1px solid rgba(45,107,72,0.15);padding:28px 22px;text-align:center;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 8px 24px rgba(18,32,41,0.1)'" onmouseout="this.style.boxShadow='none'">
+      <div style="margin-bottom:14px;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#3d8a62" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="display:block;margin:0 auto;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:#0f2d1e;margin-bottom:8px;line-height:1.3;">Ayudas de vivienda</div>
+      <div style="font-size:11px;color:#2a3d28;line-height:1.65;">Alquiler, bolsa social, convocatorias abiertas y acceso a vivienda protegida.</div>
+    </div>
+    <div style="background:#f0f9ed;border:1px solid rgba(45,107,72,0.1);padding:28px 22px;text-align:center;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 8px 24px rgba(18,32,41,0.1)'" onmouseout="this.style.boxShadow='none'">
+      <div style="margin-bottom:14px;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#3d8a62" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="display:block;margin:0 auto;"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      </div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:#2d6b48;margin-bottom:8px;line-height:1.3;">Trámites migratorios</div>
+      <div style="font-size:11px;color:#2a3d28;line-height:1.65;">Arraigo, residencia, reagrupación familiar y renovaciones.</div>
+    </div>
+    <div style="background:#98be95;border:1px solid rgba(45,107,72,0.1);padding:28px 22px;text-align:center;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 8px 24px rgba(18,32,41,0.1)'" onmouseout="this.style.boxShadow='none'">
+      <div style="margin-bottom:14px;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#d4e8d0" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="display:block;margin:0 auto;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:#0f2d1e;margin-bottom:8px;line-height:1.3;">Apoyo en gestiones del día a día</div>
+      <div style="font-size:11px;color:#2a3d28;line-height:1.65;">Cuidadores, personas con cargas familiares, o cualquiera que necesite ayuda para hacer trámites básicos.</div>
+    </div>
+  </div>
+
+
+  <!-- Screenshots NexlicitIA integrats -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:2px;margin-bottom:0;">
+
+    <a href="/nexgestio/nexlicitia/" style="position:relative;overflow:hidden;background:#0a1a10;display:block;text-decoration:none;">
+      <div style="font-size:8px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(109,191,133,0.7);padding:8px 12px 6px;background:rgba(5,20,10,0.6);position:absolute;top:0;left:0;right:0;z-index:1;">NexlicitIA · Accés</div>
+      <img src="../images/img_36.png" alt="NexlicitIA login" style="width:100%;height:160px;object-fit:cover;object-position:center top;display:block;opacity:0.88;transition:opacity .3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.88'">
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:8px 12px;background:linear-gradient(to top,rgba(5,20,10,0.82),transparent);">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:13px;color:#fff;font-weight:300;">Área privada de los socios</div>
+      </div>
+    </a>
+
+    <a href="/nexgestio/nexlicitia/" style="position:relative;overflow:hidden;background:#eef5ec;display:block;text-decoration:none;">
+      <div style="font-size:8px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(45,107,72,0.8);padding:8px 12px 6px;background:rgba(212,232,208,0.7);position:absolute;top:0;left:0;right:0;z-index:1;">NexlicitIA · Panell</div>
+      <img src="../images/img_37.png" alt="NexlicitIA panell" style="width:100%;height:160px;object-fit:cover;object-position:center top;display:block;opacity:0.88;transition:opacity .3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.88'">
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:8px 12px;background:linear-gradient(to top,rgba(15,45,30,0.78),transparent);">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:13px;color:#fff;font-weight:300;">Ajudes-IA i Licitacions-IA</div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- CTA NexlicitIA -->
+  <div style="margin-top:2px;background:rgba(30,125,79,0.06);border:1px solid rgba(45,107,72,0.18);padding:20px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+    <div style="display:flex;align-items:center;gap:14px;">
+      <div style="width:34px;height:34px;border-radius:50%;background:#98be95;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d4e8d0" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:600;color:#2d6b48;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:2px;">Alimentado por NexlicitIA</div>
+        <div style="font-size:12px;color:#4a6858;">Nuestra herramienta propia detecta automáticamente convocatorias abiertas de la Generalitat, BDNS y DIBA cada día.</div>
+      </div>
+    </div>
+    <a href="/nexgestio/nexlicitia/" style="background:#2d6b48;color:#d4e8d0;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;padding:10px 24px;white-space:nowrap;border-radius:40px;box-shadow:0 4px 16px rgba(45,107,72,0.25);text-decoration:none;display:inline-block;">Ver NexlicitIA →</a>
+  </div>
+</div>
+
+<!-- Bloc 2: Mediació i Orientación Jurídica Social -->
+<div class="srv-block" id="gestio-mediacio">
+  <div class="srv-block-title"><em style="font-style:italic;color:#3d8a62;">Mediación</em> y Orientación <em style="font-style:italic;color:#3d8a62;">Jurídica Social</em></div>
+  <div style="height:260px;background-size:cover;background-position:center center;background-image:url('../images/img_20.jpg');background-size:cover;background-position:center;margin-bottom:24px;"></div>
+  <p class="srv-block-desc">Cuando surgen conflictos o situaciones complejas, la mediación y la orientación jurídica social abren vías de resolución consensuada, evitando procesos largos y desgastantes. Desde NexSocial acompañamos a personas y familias para que conozcan sus derechos y encuentren la mejor salida posible a su situación.</p>
+  <div class="srv-cols">
+    <div class="srv-col-box">
+      <div class="srv-col-box-title">Mediació</div>
+      <ul>
+        <li>Mediación familiar e interpersonal</li>
+        <li>Mediación comunitaria y entre vecinos</li>
+        <li>Procesos de negociación facilitada</li>
+        <li>Acuerdos y seguimiento de los compromisos</li>
+      </ul>
+    </div>
+    <div class="srv-col-box">
+      <div class="srv-col-box-title">Orientación Jurídica Social</div>
+      <ul>
+        <li>Orientación sobre derechos y recursos sociales</li>
+        <li>Situaciones de deuda y vulnerabilidad económica</li>
+        <li>Acompañamiento en procesos administrativos</li>
+        <li>Derivación a servicios especializados</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Com funciona NexGestió -->
+<div class="srv-block" style="border-bottom:none;padding-bottom:0;">
+
+  <div style="margin-bottom:32px;">
+    <div style="font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:#3d8a62;margin-bottom:14px;">Cómo trabajamos</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#2d6b48;margin-bottom:12px;line-height:1.35;">Transparencia en el coste del servicio, trazabilidad total y acompañamiento real hasta la resolución.</div>
+    <p style="font-size:13px;color:#4a5e46;line-height:1.8;margin-bottom:16px;max-width:560px;">Nos explicas tu caso. Valoramos conjuntamente las acciones a realizar, el coste estimado y el tiempo previsto. Tú decides, nosotros gestionamos.</p>
+    <div style="font-size:12px;color:#4a6858;font-style:italic;border-left:3px solid #3d8a62;padding-left:14px;line-height:1.7;">&ldquo;Primero te escuchamos. Después te acompañamos.&rdquo;</div>
+  </div>
+
+</div>
+
+<!-- CTA -->
+<div style="background:#98be95;padding:32px 36px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+  <div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:#0f2d1e;margin-bottom:6px;">Cuéntanos tu caso y veamos qué acciones podemos realizar para apoyarte o gestionarlo íntegramente, con trazabilidad y confianza.</div>
+    <div style="font-size:12px;color:#4a6858;">Primera orientación sin compromiso.</div>
+  </div>
+  <a href="/contacte/" style="background:#2d6b48;color:#fff;white-space:nowrap;display:inline-block;text-decoration:none;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;padding:10px 24px;border-radius:40px;box-shadow:0 4px 16px rgba(45,107,72,0.25);">Contactar →</a>
+</div>
+
+</div>
+
+
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-col footer-col--brand">
+        <div class="footer-brand">
+          <img src="../images/img_01.png" alt="NexSocial" style="width:38px;height:38px;object-fit:contain;">
+          <span class="footer-brand-name">NexSocial</span>
+        </div>
+        <p class="footer-desc"><span data-i18n="footer.desc">Cooperativa de Acompañamiento Sociovital a personas y entidades.</span></p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title"><span data-i18n="footer.col_serveis">Servicios</span></div>
+        <ul class="footer-links">
+          <li><a href="/nexacompanya/"><span data-i18n="nav.nexacompanya">NexAcompanya</span></a></li>
+          <li><a href="/nexgestio/"><span data-i18n="nav.nexgestio">NexGestió</span></a></li>
+          <li><a href="/consulta-cas-a-cas/">Caso a Caso</a></li>
+          <li><a href="/entitats/"><span data-i18n="nav.servei_entitats">Servicio a Entidades</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title"><span data-i18n="footer.col_gestalt">Acompañamiento Gestalt</span></div>
+        <ul class="footer-links">
+          <li><a href="/nexacompanya/sessions-gestalt/"><span data-i18n="footer.metode_gestalt">Método Gestalt</span></a></li>
+          <li><a href="/nexacompanya/sessions-gestalt/#gs-cal"><span data-i18n="footer.demana_cita">Solicita cita</span></a></li>
+          <li><a href="/nexacompanya/sessions-gestalt/#gs-preus"><span data-i18n="footer.consulta_preus">Consulta precios</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Empresa</div>
+        <ul class="footer-links">
+          <li><a href="/qui-som/"><span data-i18n="nav.qui_som">Quiénes somos</span></a></li>
+          <li><a href="/contacte/"><span data-i18n="nav.contacte">Contacte</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title"><span data-i18n="footer.col_segueix">Síguenos</span></div>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/nexsocial-cooperativa-acompanyament-sociovital-218a213b9/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn
+          </a>
+          <a href="https://www.instagram.com/nexsocialcoop/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>Instagram
+          </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>Facebook
+          </a>
+          </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 NexSocial Cooperativa de Acompañamiento Sociovital — <a href="#" onclick="event.preventDefault();openModal('modal-legal')"><span data-i18n="footer.avis_legal">Aviso legal</span></a> · <a href="#" onclick="event.preventDefault();openModal('modal-privacitat')"><span data-i18n="footer.privacitat">Política de privacidad</span></a> · <a href="#" onclick="event.preventDefault();openModal('modal-cookies')"><span data-i18n="footer.cookies">Cookies</span></a></span>
+      <span><span data-i18n="footer.registre">Registro de Cooperativas de Cataluña</span></span>
+    </div>
+  </div>
+</footer>
+</main>
+<script src="../js/nexsocial.js"></script>
+<script>
+function toggleSidebar(){
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('overlay').classList.toggle('active');
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colaboraciones — NexSocial</title>
+<meta name="description" content="Treballa amb NexSocial. Col·laboracions, partenariats i oportunitats per a professionals i entitats.">
+<link rel="canonical" href="https://nexsocial.org/collaboracions/">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/nexsocial.css">
+</head>
+<body>
+<div class="topbar" id="topbar">
+  <div class="topbar-left">
+    <img src="../images/img_01.png" id="topbar-logo-img" alt="NexSocial" style="height:24px;width:24px;object-fit:contain;border-radius:50%;">
+    <span class="topbar-brand">NexSocial</span>
+    <span class="topbar-tagline"><span data-i18n="topbar.tagline">Nexo de Apoyo y Acompañamiento Sociovital</span></span>
+  </div>
+  <div class="topbar-right">
+    <a href="/persones/" class="topbar-btn"><span data-i18n="topbar.soc_persona">Soy una persona</span></a>
+    <a href="/entitats/" class="topbar-btn"><span data-i18n="topbar.soc_entitat">Soy una entidad</span></a>
+    <a href="/contacte/" class="topbar-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <span data-i18n="topbar.contacte">Contacte</span>
+    </a>
+    <div style="display:flex;align-items:center;gap:4px;">
+      <a href="/collaboracions/index.html" style="padding:4px 8px;font-size:11px;font-family:'DM Sans',sans-serif;color:#4a6858;text-decoration:none;letter-spacing:0.05em;border:1px solid transparent;transition:all .2s;" onmouseover="this.style.borderColor='rgba(45,107,72,.25)'" onmouseout="this.style.borderColor='transparent'">CA</a>
+      <span style="color:rgba(45,107,72,.3);font-size:10px;">|</span>
+      <a href="/collaboracions/index.es.html" style="padding:4px 8px;font-size:11px;font-family:'DM Sans',sans-serif;color:#2d6b48;font-weight:600;text-decoration:none;letter-spacing:0.05em;border:1px solid rgba(45,107,72,.25);background:rgba(45,107,72,.06);">ES</a>
+    </div>
+  </div>
+</div>
+<button class="mobile-toggle" onclick="toggleSidebar()"><span></span><span></span><span></span></button>
+<div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <img src="../images/img_01.png" alt="NexSocial">
+    <div><div class="logo-name">NexSocial</div><div class="logo-sub">Cooperativa de Acompañamiento<br>Sociovital</div></div>
+  </div>
+  <nav>
+    <a href="/"><span data-i18n="nav.inici">Inicio</span></a>
+    <a href="/qui-som/" ><span data-i18n="nav.qui_som">Quiénes somos</span></a>
+    <a href="/persones/"><span data-i18n="nav.servei_persones">Servicio a Personas</span></a>
+    <div style="max-height:260px; overflow:hidden; background:rgba(255,255,255,0.18);">
+      <a href="/nexacompanya/" style="padding:9px 20px 9px 32px; font-size:13px; color:#0f2d1e; border-left:2px solid #2d6b48; display:block;"><span data-i18n="nav.nexacompanya">NexAcompanya</span></a>
+      <a href="/nexacompanya/sessions-gestalt/" style="padding:5px 20px 5px 44px; font-size:11.5px; color:#6a9070; border-left:1px solid rgba(61,138,98,0.25); display:block; "><span data-i18n="nav.sessions_gestalt">Sesiones Gestalt</span></a>
+      <a href="/nexgestio/" style="padding:9px 20px 9px 32px; font-size:13px; color:#0f2d1e; border-left:2px solid #2d6b48; display:block;"><span data-i18n="nav.nexgestio">NexGestió</span></a>
+      <a href="/nexgestio/nexlicitia/" style="padding:5px 20px 5px 44px; font-size:11.5px; color:#6a9070; border-left:1px solid rgba(61,138,98,0.25); display:block; "><span data-i18n="nav.nexlicitia">NexlicitIA</span></a>
+      <a href="/consulta-cas-a-cas/" style="padding:9px 20px 9px 32px; font-size:13px; color:#0f2d1e; border-left:2px solid #2d6b48; display:block;"><span data-i18n="nav.cas_a_cas">Consulta Caso a Caso</span></a>
+    </div>
+    <a href="/entitats/" ><span data-i18n="nav.servei_entitats">Servicio a Entidades</span></a>
+    <a href="/collaboracions/" class="active"><span data-i18n="nav.collaboracions">Colaboraciones</span></a>
+    <a href="/contacte/" ><span data-i18n="nav.contacte">Contacte</span></a>
+  </nav>
+
+</aside>
+<main class="main">
+
+<div class="page-header">
+<div class="page-header-bg" style="background-image:url('../images/img_24.jpg')"></div>
+<span class="page-header-tag">Colabora con nosotros</span>
+<h1>Colaboraciones con <span style="font-family:'Cormorant Garamond',serif;font-size:1.15em;">Nex<em style="color:#3d8a62;">Social</em></span></h1>
+<p>Si compartes nuestros valores y quieres colaborar con el proyecto, nos encantará conocerte.</p>
+</div>
+<div class="values-strip">
+<div class="value-item"><h4>Crecimiento</h4><p>Formación continua y espacio para crecer</p></div>
+<div class="value-item"><h4>Cooperación</h4><p>Modelo cooperativo real, con voz y voto</p></div>
+<div class="value-item"><h4>Equilibrio</h4><p>Flexibilidad y conciliación de verdad</p></div>
+<div class="value-item"><h4>Impacto</h4><p>Trabajo que transforma vidas cada día</p></div>
+</div>
+<div class="content" style="padding:40px 48px 60px; max-width:none;">
+  <div style="font-family:'Cormorant Garamond',serif; font-size:28px; color:#2d6b48; margin-bottom:8px;">Forma parte de <em>NexSocial</em></div>
+  <p style="font-size:13px; color:#4a6858; margin-bottom:28px; line-height:1.7;">Si compartes nuestros valores y crees que puedes aportar valor al proyecto, nos encantará conocerte. Envíanos tu candidatura espontánea o propuesta de colaboración.</p>
+  <form action="https://formspree.io/f/mojkleew" method="POST" onsubmit="handleTreballarForm(event)" style="max-width:560px;">
+    <div class="form-group"><label style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#4a6858;display:block;margin-bottom:6px;">Nombre completo *</label><input type="text" name="nom" required placeholder="Tu nombre" style="width:100%;padding:11px 14px;border:1px solid rgba(45,107,72,0.3);background:#f5f0e8;font-family:'DM Sans',sans-serif;font-size:13px;color:#2d6b48;box-sizing:border-box;"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;">
+      <div class="form-group"><label style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#4a6858;display:block;margin-bottom:6px;">Email *</label><input type="email" name="email" required placeholder="correu@exemple.com" style="width:100%;padding:11px 14px;border:1px solid rgba(45,107,72,0.3);background:#f5f0e8;font-family:'DM Sans',sans-serif;font-size:13px;color:#2d6b48;box-sizing:border-box;"></div>
+      <div class="form-group"><label style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#4a6858;display:block;margin-bottom:6px;">Teléfono</label><input type="tel" name="telefon" placeholder="6XX XXX XXX" style="width:100%;padding:11px 14px;border:1px solid rgba(45,107,72,0.3);background:#f5f0e8;font-family:'DM Sans',sans-serif;font-size:13px;color:#2d6b48;box-sizing:border-box;"></div>
+    </div>
+    <div class="form-group" style="margin-top:16px;"><label style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#4a6858;display:block;margin-bottom:6px;">Área de interés *</label>
+      <select name="area" required style="width:100%;padding:11px 14px;border:1px solid rgba(45,107,72,0.3);background:#f5f0e8;font-family:'DM Sans',sans-serif;font-size:13px;color:#2d6b48;box-sizing:border-box;">
+        <option value="">Selecciona un área</option>
+        <option>NexAcompanya</option>
+        <option>NexGestio</option>
+        <option>Cualquier área</option>
+      </select>
+    </div>
+    <div class="form-group" style="margin-top:16px;"><label style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#4a6858;display:block;margin-bottom:6px;">Motivación *</label><textarea name="motivacio" required placeholder="¿Por qué quieres formar parte de NexSocial?" rows="4" style="width:100%;padding:11px 14px;border:1px solid rgba(45,107,72,0.3);background:#f5f0e8;font-family:'DM Sans',sans-serif;font-size:13px;color:#2d6b48;box-sizing:border-box;resize:vertical;"></textarea></div>
+    <div id="treballar-ok" style="display:none;background:#f0f9ed;border:1px solid rgba(45,107,72,0.3);padding:14px 18px;margin-bottom:16px;font-size:13px;color:#2d6b48;">✓ ¡Candidatura enviada! Te contactaremos pronto.</div>
+    <div style="display:flex;align-items:flex-start;gap:10px;margin-top:16px;margin-bottom:4px;">
+      <input type="checkbox" id="rgpd-treballar" name="rgpd" required style="margin-top:3px;accent-color:#2d6b48;flex-shrink:0;cursor:pointer;">
+      <label for="rgpd-treballar" style="font-size:12px;color:#4a6858;line-height:1.6;cursor:pointer;">He leído y acepto la <button type="button" onclick="event.preventDefault();openModal('modal-privacitat')" style="background:none;border:none;padding:0;color:#2d6b48;font-size:12px;font-family:'DM Sans',sans-serif;cursor:pointer;border-bottom:1px solid rgba(45,107,72,0.3);">política de privacidad</button> y autorizo el tratamiento de mis datos.</label>
+    </div>
+    <button type="submit" style="margin-top:20px;background:#2d6b48;color:#d4e8d0;border:none;padding:13px 32px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border-radius:40px;box-shadow:0 4px 16px rgba(45,107,72,0.25);transition:all .3s;">Enviar candidatura / propuesta →</button>
+  </form>
+</div>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-col footer-col--brand">
+        <div class="footer-brand">
+          <img src="../images/img_01.png" alt="NexSocial" style="width:38px;height:38px;object-fit:contain;">
+          <span class="footer-brand-name">NexSocial</span>
+        </div>
+        <p class="footer-desc"><span data-i18n="footer.desc">Cooperativa de Acompañamiento Sociovital a personas y entidades.</span></p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title"><span data-i18n="footer.col_serveis">Servicios</span></div>
+        <ul class="footer-links">
+          <li><a href="/nexacompanya/"><span data-i18n="nav.nexacompanya">NexAcompanya</span></a></li>
+          <li><a href="/nexgestio/"><span data-i18n="nav.nexgestio">NexGestió</span></a></li>
+          <li><a href="/consulta-cas-a-cas/">Caso a Caso</a></li>
+          <li><a href="/entitats/"><span data-i18n="nav.servei_entitats">Servicio a Entidades</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title"><span data-i18n="footer.col_gestalt">Acompañamiento Gestalt</span></div>
+        <ul class="footer-links">
+          <li><a href="/nexacompanya/sessions-gestalt/"><span data-i18n="footer.metode_gestalt">Método Gestalt</span></a></li>
+          <li><a href="/nexacompanya/sessions-gestalt/#gs-cal"><span data-i18n="footer.demana_cita">Solicita cita</span></a></li>
+          <li><a href="/nexacompanya/sessions-gestalt/#gs-preus"><span data-i18n="footer.consulta_preus">Consulta precios</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Empresa</div>
+        <ul class="footer-links">
+          <li><a href="/qui-som/"><span data-i18n="nav.qui_som">Quiénes somos</span></a></li>
+          <li><a href="/contacte/"><span data-i18n="nav.contacte">Contacte</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title"><span data-i18n="footer.col_segueix">Síguenos</span></div>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/nexsocial-cooperativa-acompanyament-sociovital-218a213b9/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn
+          </a>
+          <a href="https://www.instagram.com/nexsocialcoop/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>Instagram
+          </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>Facebook
+          </a>
+          </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 NexSocial Cooperativa de Acompañamiento Sociovital — <a href="#" onclick="event.preventDefault();openModal('modal-legal')"><span data-i18n="footer.avis_legal">Aviso legal</span></a> · <a href="#" onclick="event.preventDefault();openModal('modal-privacitat')"><span data-i18n="footer.privacitat">Política de privacidad</span></a> · <a href="#" onclick="event.preventDefault();openModal('modal-cookies')"><span data-i18n="footer.cookies">Cookies</span></a></span>
+      <span><span data-i18n="footer.registre">Registro de Cooperativas de Cataluña</span></span>
+    </div>
+  </div>
+</footer>
+</main>
+<script src="../js/nexsocial.js"></script>
+<script>
+function toggleSidebar(){
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('overlay').classList.toggle('active');
+}
+</script>
+
+</body>
+</html>
