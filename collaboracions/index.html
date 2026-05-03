@@ -79,15 +79,15 @@ document.addEventListener('click',function(e){
 
 <div class="page-header">
 <div class="page-header-bg" style="background-image:url('../images/img_24.jpg')"></div>
-<span class="page-header-tag">Col·labora amb nosaltres</span>
+<span class="page-header-tag"><span data-i18n="collab.tag">Col·labora amb nosaltres</span></span>
 <h1>Col·laboracions amb <span style="font-family:'Cormorant Garamond',serif;font-size:1.15em;">Nex<em style="color:#3d8a62;">Social</em></span></h1>
 <p>Si comparteixes els nostres valors i vols col·laborar amb el projecte, ens encantarà conèixer-te.</p>
 </div>
 <div class="values-strip">
-<div class="value-item"><h4>Creixement</h4><p>Formació contínua i espai per créixer</p></div>
-<div class="value-item"><h4>Cooperació</h4><p>Model cooperatiu real, amb veu i vot</p></div>
-<div class="value-item"><h4>Equilibri</h4><p>Flexibilitat i conciliació de veritat</p></div>
-<div class="value-item"><h4>Impacte</h4><p>Feina que transforma vides cada dia</p></div>
+<div class="value-item"><h4><span data-i18n="collab.val1_h">Creixement</span></h4><p><span data-i18n="collab.val1_d">Formació contínua i espai per créixer</span></p></div>
+<div class="value-item"><h4><span data-i18n="collab.val2_h">Cooperació</span></h4><p><span data-i18n="collab.val2_d">Model cooperatiu real, amb veu i vot</span></p></div>
+<div class="value-item"><h4><span data-i18n="collab.val3_h">Equilibri</span></h4><p><span data-i18n="collab.val3_d">Flexibilitat i conciliació de veritat</span></p></div>
+<div class="value-item"><h4><span data-i18n="collab.val4_h">Impacte</span></h4><p><span data-i18n="collab.val4_d">Feina que transforma vides cada dia</span></p></div>
 </div>
 <div class="content" style="padding:40px 48px 60px; max-width:none;">
   <div style="font-family:'Cormorant Garamond',serif; font-size:28px; color:#2d6b48; margin-bottom:8px;">Forma part de <em>NexSocial</em></div>
@@ -107,12 +107,12 @@ document.addEventListener('click',function(e){
       </select>
     </div>
     <div class="form-group" style="margin-top:16px;"><label style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#4a6858;display:block;margin-bottom:6px;">Motivació *</label><textarea name="motivacio" required placeholder="Per què vols formar part de NexSocial?" rows="4" style="width:100%;padding:11px 14px;border:1px solid rgba(45,107,72,0.3);background:#f5f0e8;font-family:'DM Sans',sans-serif;font-size:13px;color:#2d6b48;box-sizing:border-box;resize:vertical;"></textarea></div>
-    <div id="treballar-ok" style="display:none;background:#f0f9ed;border:1px solid rgba(45,107,72,0.3);padding:14px 18px;margin-bottom:16px;font-size:13px;color:#2d6b48;">✓ Candidatura enviada! Et contactarem aviat.</div>
+    <div id="treballar-ok" style="display:none;background:#f0f9ed;border:1px solid rgba(45,107,72,0.3);padding:14px 18px;margin-bottom:16px;font-size:13px;color:#2d6b48;"><span data-i18n="form.success_collab">✓ Candidatura enviada! Et contactarem aviat.</span></div>
     <div style="display:flex;align-items:flex-start;gap:10px;margin-top:16px;margin-bottom:4px;">
       <input type="checkbox" id="rgpd-treballar" name="rgpd" required style="margin-top:3px;accent-color:#2d6b48;flex-shrink:0;cursor:pointer;">
-      <label for="rgpd-treballar" style="font-size:12px;color:#4a6858;line-height:1.6;cursor:pointer;">He llegit i accepto la <button type="button" onclick="event.preventDefault();openModal('modal-privacitat')" style="background:none;border:none;padding:0;color:#2d6b48;font-size:12px;font-family:'DM Sans',sans-serif;cursor:pointer;border-bottom:1px solid rgba(45,107,72,0.3);">política de privacitat</button> i autoritzo el tractament de les meves dades.</label>
+      <label for="rgpd-treballar" style="font-size:12px;color:#4a6858;line-height:1.6;cursor:pointer;"><span data-i18n="form.rgpd_collab">He llegit i accepto la </span><button type="button" onclick="event.preventDefault();openModal('modal-privacitat')" style="background:none;border:none;padding:0;color:#2d6b48;font-size:12px;font-family:'DM Sans',sans-serif;cursor:pointer;border-bottom:1px solid rgba(45,107,72,0.3);"><span data-i18n="form.rgpd_link">política de privacitat</span></button><span data-i18n="form.rgpd_collab2"> i autoritzo el tractament de les meves dades.</span></label>
     </div>
-    <button type="submit" style="margin-top:20px;background:#2d6b48;color:#d4e8d0;border:none;padding:13px 32px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border-radius:40px;box-shadow:0 4px 16px rgba(45,107,72,0.25);transition:all .3s;">Enviar candidatura / proposta →</button>
+    <button type="submit" style="margin-top:20px;background:#2d6b48;color:#d4e8d0;border:none;padding:13px 32px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border-radius:40px;box-shadow:0 4px 16px rgba(45,107,72,0.25);transition:all .3s;"><span data-i18n="collab.btn">Enviar candidatura / proposta →</span></button>
   </form>
 </div>
 <footer class="site-footer">

@@ -22,7 +22,7 @@ const translations = {
   "nav.servei_persones":   { ca: "Servei a Persones",                             es: "Servicio a Personas" },
   "nav.nexacompanya":      { ca: "NexAcompanya",                                  es: "NexAcompanya" },
   "nav.sessions_gestalt":  { ca: "Sessions Gestalt",                              es: "Sesiones Gestalt" },
-  "nav.nexgestio":         { ca: "NexGestió",                                     es: "NexGestión" },
+  "nav.nexgestio":         { ca: "NexGestió",                                     es: "NexGestió" },
   "nav.nexlicitia":        { ca: "NexlicitIA",                                    es: "NexlicitIA" },
   "nav.cas_a_cas":         { ca: "Consulta Cas a Cas",                            es: "Consulta Caso a Caso" },
   "nav.servei_entitats":   { ca: "Servei a Entitats",                             es: "Servicio a Entidades" },
@@ -414,6 +414,41 @@ const translations = {
   "cas.feat4_h":           { ca: "Confidencialitat",                                es: "Confidencialidad" },
   "cas.feat4_d":           { ca: "Tota la informació és tractada amb total discreció", es: "Toda la información es tratada con total discreción" },
   "cas.btn":               { ca: "Sol·licitar trucada gratuïta →",                  es: "Solicitar llamada gratuita →" },
+
+  // ─── MODALS LEGALS ────────────────────────────────────────────────────────
+  "modal.legal_tag":       { ca: "Informació legal",                            es: "Información legal" },
+  "modal.legal_h2":        { ca: "Avís Legal",                                  es: "Aviso Legal" },
+  "modal.legal_titular_h": { ca: "Titular del lloc web",                        es: "Titular del sitio web" },
+  "modal.legal_objecte_h": { ca: "Objecte i activitat",                         es: "Objeto y actividad" },
+  "modal.legal_propietat_h":{ ca: "Propietat intel·lectual",                    es: "Propiedad intelectual" },
+  "modal.legal_resp_h":    { ca: "Responsabilitat",                             es: "Responsabilidad" },
+  "modal.legal_legis_h":   { ca: "Legislació aplicable",                        es: "Legislación aplicable" },
+
+  "modal.priv_tag":        { ca: "Protecció de dades",                          es: "Protección de datos" },
+  "modal.priv_h2":         { ca: "Política de Privacitat",                      es: "Política de Privacidad" },
+  "modal.priv_resp_h":     { ca: "Responsable del tractament",                  es: "Responsable del tratamiento" },
+  "modal.priv_dades_h":    { ca: "Dades que tractem",                           es: "Datos que tratamos" },
+  "modal.priv_finalitat_h":{ ca: "Finalitat i base legal",                      es: "Finalidad y base legal" },
+  "modal.priv_conserv_h":  { ca: "Conservació de les dades",                    es: "Conservación de los datos" },
+  "modal.priv_dest_h":     { ca: "Destinataris",                                es: "Destinatarios" },
+  "modal.priv_drets_h":    { ca: "Els seus drets",                              es: "Sus derechos" },
+
+  "modal.cook_h2":         { ca: "Política de Cookies",                         es: "Política de Cookies" },
+  "modal.cook_que_h":      { ca: "Què és una cookie?",                          es: "¿Qué es una cookie?" },
+  "modal.cook_list_h":     { ca: "Cookies que utilitzem",                       es: "Cookies que utilizamos" },
+  "modal.cook_exemp_h":    { ca: "Exemció de consentiment",                     es: "Exención de consentimiento" },
+  "modal.cook_gestio_h":   { ca: "Com gestionar les cookies",                   es: "Cómo gestionar las cookies" },
+  "modal.cook_update_h":   { ca: "Actualitzacions",                             es: "Actualizaciones" },
+
+  // ─── FORMULARIS ───────────────────────────────────────────────────────────
+  "form.rgpd_contacte":    { ca: "He llegit i accepto la ",                     es: "He leído y acepto la " },
+  "form.rgpd_link":        { ca: "política de privacitat",                      es: "política de privacidad" },
+  "form.rgpd_contacte2":   { ca: " i autoritzo el tractament de les meves dades per atendre la meva consulta.", es: " y autorizo el tratamiento de mis datos para atender mi consulta." },
+  "form.rgpd_collab":      { ca: "He llegit i accepto la ",                     es: "He leído y acepto la " },
+  "form.rgpd_collab2":     { ca: " i autoritzo el tractament de les meves dades.", es: " y autorizo el tratamiento de mis datos." },
+  "form.success_contacte": { ca: "✓ Missatge enviat! Et respondrem en menys de 24h.", es: "✓ ¡Mensaje enviado! Te responderemos en menos de 24h." },
+  "form.success_collab":   { ca: "✓ Candidatura enviada! Et contactarem aviat.", es: "✓ ¡Candidatura enviada! Te contactaremos pronto." },
+
 
 };
 

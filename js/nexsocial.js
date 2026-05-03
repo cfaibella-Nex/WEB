@@ -416,6 +416,12 @@ document.addEventListener('keydown',function(e){ if(e.key==='Escape') document.q
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>`;
   document.body.appendChild(div);
+  // Aplicar idioma als modals acabats d'injectar
+  if (typeof applyLang === 'function') {
+    var lang;
+    try { lang = localStorage.getItem('nexsocial_lang'); } catch(e) {}
+    applyLang(lang || 'ca');
+  }
 })();
 
 
