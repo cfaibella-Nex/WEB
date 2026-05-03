@@ -9,6 +9,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/nexsocial.css">
 <script src="../js/translations.js"></script>
+<script>
+function nexSetLang(lang){
+  document.getElementById('nex-lang-menu').style.display='none';
+  var lbl=document.getElementById('nex-lang-lbl');
+  if(lbl) lbl.textContent=lang.toUpperCase();
+  if(typeof applyLang==='function'){ applyLang(lang); }
+  else { try{localStorage.setItem('nexsocial_lang',lang);}catch(e){} location.reload(); }
+}
+document.addEventListener('click',function(e){
+  var w=document.getElementById('nex-lang');
+  var m=document.getElementById('nex-lang-menu');
+  if(m && w && !w.contains(e.target)) m.style.display='none';
+});
+</script>
 </head>
 <body>
 <div class="topbar" id="topbar">
@@ -24,15 +38,15 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       <span data-i18n="topbar.contacte">Contacte</span>
     </a>
-    <div class="lang-switcher" id="lang-switcher" style="position:relative;display:inline-flex;align-items:center;">
-      <button class="lang-btn" id="lang-btn-toggle" onclick="toggleLangMenu()" style="display:flex;align-items:center;gap:5px;padding:5px 11px;border:1px solid rgba(45,107,72,.25);color:#2d6b48;font-size:11px;letter-spacing:0.05em;background:transparent;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;white-space:nowrap;" title="Idioma / Language">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        <span id="lang-current-label">CA</span>
-        <svg width="9" height="9" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="rgba(45,107,72,0.7)" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+    <div id="nex-lang" style="position:relative;display:inline-flex;align-items:center;">
+      <button id="nex-lang-btn" style="display:flex;align-items:center;gap:6px;padding:5px 12px;border:1px solid rgba(45,107,72,.28);color:#2d6b48;font-size:11px;letter-spacing:0.05em;background:transparent;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;white-space:nowrap;line-height:1;" title="Canviar idioma" onclick="(function(){var m=document.getElementById('nex-lang-menu');m.style.display=m.style.display==='block'?'none':'block';})()">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        Idioma&nbsp;<span id="nex-lang-lbl">CA</span>
+        <svg width="8" height="5" viewBox="0 0 10 6" style="opacity:.6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
       </button>
-      <div id="lang-menu" style="display:none;position:absolute;top:calc(100% + 4px);right:0;background:#f5f0e8;border:1px solid rgba(45,107,72,.2);min-width:100px;z-index:999;box-shadow:0 4px 16px rgba(0,0,0,0.08);">
-        <button onclick="selectLang('ca')" style="display:block;width:100%;padding:8px 14px;text-align:left;background:none;border:none;font-family:'DM Sans',sans-serif;font-size:11px;color:#2d6b48;cursor:pointer;letter-spacing:0.05em;" onmouseover="this.style.background='rgba(45,107,72,0.06)'" onmouseout="this.style.background='none'">Català (CA)</button>
-        <button onclick="selectLang('es')" style="display:block;width:100%;padding:8px 14px;text-align:left;background:none;border:none;font-family:'DM Sans',sans-serif;font-size:11px;color:#2d6b48;cursor:pointer;letter-spacing:0.05em;border-top:1px solid rgba(45,107,72,.1);" onmouseover="this.style.background='rgba(45,107,72,0.06)'" onmouseout="this.style.background='none'">Castellano (ES)</button>
+      <div id="nex-lang-menu" style="display:none;position:absolute;top:calc(100% + 5px);right:0;background:#f5f0e8;border:1px solid rgba(45,107,72,.22);min-width:130px;z-index:9999;box-shadow:0 6px 20px rgba(0,0,0,0.10);">
+        <button onclick="nexSetLang('ca')" style="display:block;width:100%;padding:9px 16px;text-align:left;background:none;border:none;border-bottom:1px solid rgba(45,107,72,.1);font-family:'DM Sans',sans-serif;font-size:11px;color:#2d6b48;cursor:pointer;letter-spacing:0.05em;" onmouseover="this.style.background='rgba(45,107,72,.07)'" onmouseout="this.style.background='none'">🇪🇸 Català &nbsp;·&nbsp; CA</button>
+        <button onclick="nexSetLang('es')" style="display:block;width:100%;padding:9px 16px;text-align:left;background:none;border:none;font-family:'DM Sans',sans-serif;font-size:11px;color:#2d6b48;cursor:pointer;letter-spacing:0.05em;" onmouseover="this.style.background='rgba(45,107,72,.07)'" onmouseout="this.style.background='none'">🇪🇸 Castellano · ES</button>
       </div>
     </div>
   </div>
@@ -242,6 +256,14 @@ function toggleSidebar(){
   document.getElementById('sidebar').classList.toggle('open');
   document.getElementById('overlay').classList.toggle('active');
 }
+</script>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var lbl=document.getElementById('nex-lang-lbl');
+  if(!lbl) return;
+  var saved; try{saved=localStorage.getItem('nexsocial_lang');}catch(e){}
+  lbl.textContent=(saved||'ca').toUpperCase();
+});
 </script>
 </body>
 </html>
