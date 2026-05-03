@@ -433,3 +433,18 @@ document.addEventListener('DOMContentLoaded', function(){
 
   }
 });
+// ── INTEGRACIÓ SISTEMA DE TRADUCCIONS ─────────────────────────────────────
+// Quan nexsocial.js es carrega, si translations.js ja és present, inicialitzem.
+// El selector d'idioma de cada pàgina crida applyLang(this.value) directament.
+document.addEventListener('DOMContentLoaded', function() {
+  // Re-enganxar selector per si translations.js ja és carregat
+  var langSel = document.querySelector('.lang-select');
+  if (langSel) {
+    langSel.removeAttribute('onchange');
+    langSel.addEventListener('change', function() {
+      if (typeof applyLang === 'function') {
+        applyLang(this.value);
+      }
+    });
+  }
+});
