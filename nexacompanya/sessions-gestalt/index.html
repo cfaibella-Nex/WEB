@@ -8,6 +8,7 @@
 <link rel="canonical" href="https://nexsocial.org/nexacompanya/sessions-gestalt/">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../css/nexsocial.css">
+<script src="../../js/translations.js"></script>
 </head>
 <body>
 
@@ -25,10 +26,17 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       <span data-i18n="topbar.contacte">Contacte</span>
     </a>
-    <select class="lang-select" title="Idioma" onchange="if(typeof applyLang==='function'){applyLang(this.value)}">
-      <option value="ca" selected>CA</option>
-      <option value="es">ES</option>
-    </select>
+    <div class="lang-switcher" id="lang-switcher" style="position:relative;display:inline-flex;align-items:center;">
+      <button class="lang-btn" id="lang-btn-toggle" onclick="toggleLangMenu()" style="display:flex;align-items:center;gap:5px;padding:5px 11px;border:1px solid rgba(45,107,72,.25);color:#2d6b48;font-size:11px;letter-spacing:0.05em;background:transparent;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;white-space:nowrap;" title="Idioma / Language">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span id="lang-current-label">CA</span>
+        <svg width="9" height="9" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="rgba(45,107,72,0.7)" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+      </button>
+      <div id="lang-menu" style="display:none;position:absolute;top:calc(100% + 4px);right:0;background:#f5f0e8;border:1px solid rgba(45,107,72,.2);min-width:100px;z-index:999;box-shadow:0 4px 16px rgba(0,0,0,0.08);">
+        <button onclick="selectLang('ca')" style="display:block;width:100%;padding:8px 14px;text-align:left;background:none;border:none;font-family:'DM Sans',sans-serif;font-size:11px;color:#2d6b48;cursor:pointer;letter-spacing:0.05em;" onmouseover="this.style.background='rgba(45,107,72,0.06)'" onmouseout="this.style.background='none'">Català (CA)</button>
+        <button onclick="selectLang('es')" style="display:block;width:100%;padding:8px 14px;text-align:left;background:none;border:none;font-family:'DM Sans',sans-serif;font-size:11px;color:#2d6b48;cursor:pointer;letter-spacing:0.05em;border-top:1px solid rgba(45,107,72,.1);" onmouseover="this.style.background='rgba(45,107,72,0.06)'" onmouseout="this.style.background='none'">Castellano (ES)</button>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -563,7 +571,6 @@ function gsFormSubmit(e){
 </footer>
 
 </main>
-<script src="../../js/translations.js"></script>
 <script src="../../js/nexsocial.js"></script>
 <script>
 function toggleSidebar(){

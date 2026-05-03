@@ -474,7 +474,11 @@ function applyLang(lang) {
 function initLang() {
   var saved;
   try { saved = localStorage.getItem('nexsocial_lang'); } catch(e) {}
-  applyLang(saved === 'es' ? 'es' : 'ca');
+  var lang = saved === 'es' ? 'es' : 'ca';
+  applyLang(lang);
+  // Actualitzar label del botó dropdown
+  var lbl = document.getElementById('lang-current-label');
+  if (lbl) lbl.textContent = lang.toUpperCase();
 }
 
 // Auto-init quan el DOM estigui llest
