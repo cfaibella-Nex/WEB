@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-<script>(function(){try{if(localStorage.getItem('nexsocial_lang')==='es'){var p=window.location.pathname;var es=p.replace(/index\.html$/,'index.es.html').replace(/\/$/,'/index.es.html');if(p!==es)window.location.replace(es);}}catch(e){}})();</script>
+<script>
+(function(){
+  try {
+    if(localStorage.getItem('nexsocial_lang')==='es'){
+      var p=window.location.pathname;
+      if(!p.endsWith('.es.html')){
+        var es=p.endsWith('/')?p+'index.es.html':p.replace(/index\.html$/,'index.es.html');
+        window.location.replace(es);
+      }
+    }
+  } catch(e){}
+})();
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Qui som — NexSocial Cooperativa d'Acompanyament Sociovital</title>
