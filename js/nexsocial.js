@@ -315,11 +315,86 @@ function closeModal(id){ document.getElementById(id).classList.remove('open'); d
 function closeModalOutside(e,id){ if(e.target===document.getElementById(id)) closeModal(id); }
 document.addEventListener('keydown',function(e){ if(e.key==='Escape') document.querySelectorAll('.modal-overlay.open').forEach(function(m){ m.classList.remove('open'); document.body.style.overflow=''; }); });
 
-// Injectar modals al DOM si no hi són
+// Injectar modals al DOM si no hi són (CA/ES)
 (function(){
   if(document.getElementById('modal-legal')) return;
+  var isES = (function(){
+    try{ return localStorage.getItem('nexsocial_lang')==='es'; }catch(e){}
+    return window.location.pathname.indexOf('.es.html') > -1;
+  })();
   var div = document.createElement('div');
-  div.innerHTML = `<div class="modal-overlay" id="modal-legal" onclick="closeModalOutside(event,'modal-legal')">
+  if(isES){
+    div.innerHTML = `<div class="modal-overlay" id="modal-legal" onclick="closeModalOutside(event,'modal-legal')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('modal-legal')">×</button>
+    <span class="modal-tag">Información legal</span>
+    <h2>Aviso Legal</h2>
+    <p>En cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa de los siguientes aspectos:</p>
+    <h3>Titular del sitio web</h3>
+    <p><strong>Denominación social:</strong> NexSocial, Cooperativa de Acompañamiento Sociovital<br>
+    <strong>Forma jurídica:</strong> Cooperativa de trabajo asociado<br>
+    <strong>Registro:</strong> Registre de Cooperatives de Catalunya (número pendent de registre)<br>
+    <strong>Domicilio social:</strong> Catalunya, Espanya<br>
+    <strong>Correo electrónico:</strong> infonex@nexsocial.org<br>
+    <strong>Web:</strong> www.nexsocial.org</p>
+    <h3>Objeto y actividad</h3>
+    <p>NexSocial es una cooperativa dedicada al acompañamiento sociovital de personas, familias y entidades, ofreciendo servicios de acompañamiento social, emocional, terapéutico y de gestión administrativa.</p>
+    <h3>Propiedad intelectual</h3>
+    <p>Todos los contenidos de este sitio web —textos, imágenes, logotipos, diseños y cualquier otro elemento— son propiedad de NexSocial o disponen de las licencias correspondientes. Queda prohibida su reproducción, distribución o comunicación pública sin autorización expresa.</p>
+    <h3>Responsabilidad</h3>
+    <p>NexSocial no se hace responsable de los daños o perjuicios que puedan derivarse del uso de la información contenida en este sitio web ni de los errores u omisiones que pueda contener. Los contenidos de este web tienen carácter informativo y no sustituyen el asesoramiento profesional personalizado.</p>
+    <h3>Legislación aplicable</h3>
+    <p>Las presentes condiciones se rigen por la legislación española y catalana vigente. Para la resolución de cualquier controversia, las partes se someten a los juzgados y tribunales competentes.</p>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-privacitat" onclick="closeModalOutside(event,'modal-privacitat')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('modal-privacitat')">×</button>
+    <span class="modal-tag">Protección de datos</span>
+    <h2>Política de Privacidad</h2>
+    <p>En cumplimiento del Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD), le informamos sobre el tratamiento de sus datos personales.</p>
+    <h3>Responsable del tratamiento</h3>
+    <p><strong>NexSocial, Cooperativa de Acompañamiento Sociovital</strong><br>
+    Correo de contacto: infonex@nexsocial.org</p>
+    <h3>Datos que tratamos</h3>
+    <p>Únicamente tratamos los datos que usted nos facilita voluntariamente a través de los formularios de contacto del web: nombre, correo electrónico, teléfono y el contenido del mensaje.</p>
+    <h3>Finalidad y base legal</h3>
+    <ul>
+      <li><strong>Atender su consulta o solicitud</strong> — base legal: consentimiento del interesado (art. 6.1.a RGPD).</li>
+      <li><strong>Gestionar la relación de servicio</strong> — base legal: ejecución de un contrato o medidas precontractuales (art. 6.1.b RGPD).</li>
+    </ul>
+    <h3>Conservación de los datos</h3>
+    <p>Los datos se conservan durante el tiempo necesario para atender su solicitud y, posteriormente, durante los plazos legalmente exigidos.</p>
+    <h3>Destinatarios</h3>
+    <p>No cedemos sus datos a terceros, excepto por obligación legal.</p>
+    <h3>Sus derechos</h3>
+    <p>Puede ejercer los derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad enviando un correo a infonex@nexsocial.org. Si considera que sus derechos no han sido atendidos, puede presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es).</p>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-cookies" onclick="closeModalOutside(event,'modal-cookies')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('modal-cookies')">×</button>
+    <h2>Política de Cookies</h2>
+    <p>Este sitio web utiliza únicamente cookies técnicas estrictamente necesarias para su funcionamiento. No se utilizan cookies de analítica, publicidad ni de terceros.</p>
+    <h3>¿Qué es una cookie?</h3>
+    <p>Una cookie es un pequeño archivo de texto que un sitio web almacena en el navegador del usuario cuando lo visita.</p>
+    <h3>Cookies que utilizamos</h3>
+    <ul>
+      <li><strong>Cookies de sesión técnicas:</strong> necesarias para mantener la sesión activa mientras se navega por el web. Se eliminan al cerrar el navegador.</li>
+      <li><strong>Preferencias locales:</strong> almacenamiento local en el navegador (localStorage) para guardar preferencias de navegación. No se envían a ningún servidor externo.</li>
+    </ul>
+    <h3>Exención de consentimiento</h3>
+    <p>Las cookies técnicas están exentas del requisito de consentimiento previo, de acuerdo con el artículo 22.2 de la Ley 34/2002 (LSSI-CE).</p>
+    <h3>Cómo gestionar las cookies</h3>
+    <p>Puede configurar o desactivar las cookies desde la configuración de su navegador.</p>
+    <h3>Actualizaciones</h3>
+    <p>NexSocial se reserva el derecho de actualizar esta política si incorpora nuevas funcionalidades.</p>
+  </div>
+</div>`;
+  } else {
+    div.innerHTML = `<div class="modal-overlay" id="modal-legal" onclick="closeModalOutside(event,'modal-legal')">
   <div class="modal-box">
     <button class="modal-close" onclick="closeModal('modal-legal')">×</button>
     <span class="modal-tag">Informació legal</span>
@@ -415,8 +490,15 @@ document.addEventListener('keydown',function(e){ if(e.key==='Escape') document.q
 </div>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>`;
+  
+  }
   document.body.appendChild(div);
-})();
+  // Re-aplicar idioma als modals si cal
+  if(typeof applyLang === 'function'){
+    var lang; try{lang=localStorage.getItem('nexsocial_lang');}catch(e){}
+    if(lang) applyLang(lang);
+  }
+})();;
 
 
 // ── Senefa fulles sidebar ─────────────────────────────────────
