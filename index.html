@@ -131,15 +131,6 @@
     window.addEventListener(ev, autoStart, { once:true, capture:true })
   );
 })();
-// Botó reinici
-document.getElementById('restart-btn').addEventListener('click', () => {
-  try {
-    // Reinicia el Stage via sessionStorage key
-    sessionStorage.removeItem('nexsocial-v7');
-    // Força reload de l'iframe si estem dins un
-    window.location.reload();
-  } catch(e) {}
-});
 </script>
 
 <script type="text/babel" data-presets="react" src="animations.jsx"></script>
@@ -156,6 +147,13 @@ document.getElementById('restart-btn').addEventListener('click', () => {
       <NexSocialVideo />
     </Stage>
   );
+
+  // Botó reinici — usa RestartBridge exposat des de scenes.jsx
+  document.getElementById('restart-btn').addEventListener('click', () => {
+    if (typeof window.__nexRestart === 'function') {
+      window.__nexRestart();
+    }
+  });
 </script>
 </body>
 </html>
