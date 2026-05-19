@@ -305,6 +305,11 @@ div[style*="font-size:32px"]{font-size:22px !important;}
 /* ── INICI: desactivar sticky stack al mòbil ── */
 .stack-item{position:static !important;top:auto !important;z-index:auto !important;border-radius:0 !important;}
 
+/* ── VÍDEO CORPORATIU ── */
+section#inici { overflow: visible !important; }
+.corporate-video-wrap { width:100%; line-height:0; background:#0f2d1e; overflow:hidden; display:block !important; }
+.corporate-video-wrap iframe { width:100%; height:56.25vw; max-height:680px; min-height:280px; border:none; display:block; }
+
 #inici div[style*="height:600px;overflow:hidden"]{height:auto !important;min-height:380px !important;overflow:hidden !important;}
 .hero-content{padding:32px 18px 28px !important;}
 .hero-title{font-size:48px !important;}
@@ -1041,10 +1046,9 @@ function changeLogo(){
 </div>
 
 <!-- VÍDEO CORPORATIU — entre hero i stats -->
-<div style="width:100%;line-height:0;background:#0f2d1e;overflow:hidden;">
+<div class="corporate-video-wrap">
   <iframe
     src="corporate_video/index.html"
-    style="width:100%;height:56.25vw;max-height:680px;min-height:280px;border:none;display:block;"
     allow="autoplay"
     loading="lazy"
     title="NexSocial — Vídeo Corporatiu">
