@@ -477,8 +477,19 @@ const SigMark = () => {
 // ── Root ───────────────────────────────────────────────────────────────────
 const VIDEO_DURATION = S11_T + S11_D;
 
+// Exposa setTime al window per al botó de reinici extern
+const RestartBridge = () => {
+  const { setTime } = useTimeline();
+  React.useEffect(() => {
+    window.__nexRestart = () => setTime(0);
+    return () => { delete window.__nexRestart; };
+  }, [setTime]);
+  return null;
+};
+
 const NexSocialVideo = () => (
   <div style={{ position:'absolute', inset:0, background:NX.ink, overflow:'hidden' }}>
+    <RestartBridge/>
     <Scene1/><Scene2/><Scene3/><Scene4/><Scene5/><Scene6/>
     <Scene7/><Scene8/><Scene9/><Scene10/><Scene11/>
     <SigMark/>
