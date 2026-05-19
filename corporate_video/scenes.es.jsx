@@ -224,7 +224,7 @@ const S1Inner = () => {
         <Line inAt={0.25} sceneDur={sd} width={220}/>
         <Rise inAt={0.45} sceneDur={sd}>
           <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:111, lineHeight:1.06, color:'#fff', maxWidth:1000, letterSpacing:'-0.01em', fontWeight:300 }}>
-            Cooperativa<br/>d'<em style={{ color:NX.pale, fontStyle:'italic', textShadow:'0 2px 20px rgba(25,65,40,.85), 0 0 35px rgba(25,65,40,.60)' }}>Acompañamiento<br/>Sociovital</em>
+            Cooperativa<br/>de <em style={{ color:NX.pale, fontStyle:'italic', textShadow:'0 2px 20px rgba(25,65,40,.85), 0 0 35px rgba(25,65,40,.60)' }}>Acompañamiento<br/>Sociovital</em>
           </div>
         </Rise>
       </div>
