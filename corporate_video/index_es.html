@@ -133,12 +133,9 @@
 })();
 // Botó reinici
 document.getElementById('restart-btn').addEventListener('click', () => {
-  try {
-    // Reinicia el Stage via sessionStorage key
-    sessionStorage.removeItem('nexsocial-v7');
-    // Força reload de l'iframe si estem dins un
-    window.location.reload();
-  } catch(e) {}
+  if (typeof window.__nexRestart === 'function') {
+    window.__nexRestart();
+  }
 });
 </script>
 
