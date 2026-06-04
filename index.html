@@ -1456,6 +1456,44 @@ function initStickyStack() {
   // El body/html fa scroll normal, el sticky funciona automàticament
 }
 
+// ── Vídeo corporatiu: play/pause per scroll (IntersectionObserver) ──────────
+(function() {
+  var iframe = null;
+  var videoPlaying = false;
+
+  function getIframe() {
+    if (!iframe) iframe = document.querySelector('#video-corporatiu iframe');
+    return iframe;
+  }
+
+  function sendMsg(action) {
+    var f = getIframe();
+    if (!f || !f.contentWindow) return;
+    try { f.contentWindow.postMessage({ action: action }, '*'); } catch(e) {}
+  }
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+        if (!videoPlaying) {
+          videoPlaying = true;
+          sendMsg('play');
+        }
+      } else {
+        if (videoPlaying) {
+          videoPlaying = false;
+          sendMsg('pause');
+        }
+      }
+    });
+  }, { threshold: [0, 0.3] });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var bloc = document.getElementById('video-corporatiu');
+    if (bloc) observer.observe(bloc);
+  });
+})();
+
 document.addEventListener('DOMContentLoaded', initStickyStack);
 // Credencials dels socis (per producció, moure a Supabase/backend)
 var INTEL_USERS = {
