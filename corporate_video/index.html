@@ -120,16 +120,19 @@
 
   btn.addEventListener('click', () => { playing ? stopMusic() : startMusic(); });
 
-  // Arrenca al primer gest
-  let autoStarted = false;
-  function autoStart() {
-    if (autoStarted) return;
-    autoStarted = true;
-    startMusic();
-  }
-  ['pointerdown','keydown','touchstart'].forEach(ev =>
-    window.addEventListener(ev, autoStart, { once:true, capture:true })
-  );
+  // Escolta ordres del pare via postMessage
+  window.addEventListener('message', function(e) {
+    if (!e.data || !e.data.action) return;
+    if (e.data.action === 'play') {
+      if (!playing) startMusic();
+      if (typeof window.__nexRestart === 'function' && e.data.restart) window.__nexRestart();
+    } else if (e.data.action === 'pause') {
+      if (playing) stopMusic();
+    } else if (e.data.action === 'reset') {
+      if (playing) stopMusic();
+      if (typeof window.__nexRestart === 'function') window.__nexRestart();
+    }
+  });
 })();
 </script>
 
@@ -141,7 +144,7 @@
       width={1920} height={1080}
       duration={window.VIDEO_DURATION || 35}
       background="#0f2d1e"
-      loop={true} autoplay={true}
+      loop={false} autoplay={false}
       persistKey="nexsocial-v7"
     >
       <NexSocialVideo />
