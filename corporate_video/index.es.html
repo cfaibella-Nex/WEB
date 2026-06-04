@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NexSocial — Vídeo Corporatiu</title>
+<title>NexSocial — Vídeo Corporativo</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   html,body{margin:0;padding:0;background:#0a0a0a;height:100%;overflow:hidden;}
@@ -42,14 +42,14 @@
   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.5"/>
   </svg>
-  <span>Reinicia</span>
+  <span>Reiniciar</span>
 </button>
 
 <button id="music-btn" class="ctrl-btn">
   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
   </svg>
-  <span id="music-lbl">Activa música</span>
+  <span id="music-lbl">Activar música</span>
 </button>
 
 <script src="music.js"></script>
@@ -134,10 +134,16 @@
     }
   });
 })();
+// Botó reinici
+document.getElementById('restart-btn').addEventListener('click', () => {
+  if (typeof window.__nexRestart === 'function') {
+    window.__nexRestart();
+  }
+});
 </script>
 
 <script type="text/babel" data-presets="react" src="animations.jsx"></script>
-<script type="text/babel" data-presets="react" src="scenes.jsx"></script>
+<script type="text/babel" data-presets="react" src="scenes.es.jsx"></script>
 <script type="text/babel" data-presets="react">
   ReactDOM.createRoot(document.getElementById('root')).render(
     <Stage
@@ -145,18 +151,11 @@
       duration={window.VIDEO_DURATION || 35}
       background="#0f2d1e"
       loop={false} autoplay={false}
-      persistKey="nexsocial-v7"
+      persistKey="nexsocial-v7-es"
     >
       <NexSocialVideo />
     </Stage>
   );
-
-  // Botó reinici — usa RestartBridge exposat des de scenes.jsx
-  document.getElementById('restart-btn').addEventListener('click', () => {
-    if (typeof window.__nexRestart === 'function') {
-      window.__nexRestart();
-    }
-  });
 </script>
 </body>
 </html>

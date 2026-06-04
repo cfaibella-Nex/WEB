@@ -293,6 +293,14 @@ div[style*="font-size:32px"]{font-size:22px !important;}
 /* ── INICI: desactivar sticky stack al mòbil ── */
 .stack-item{position:static !important;top:auto !important;z-index:auto !important;border-radius:0 !important;}
 
+/* ── VÍDEO CORPORATIU — bloc pantalla completa ── */
+#video-corporatiu { overflow:hidden !important; }
+#video-corporatiu iframe { width:100% !important; display:block !important; }
+
+@media(max-width:768px){
+  #video-corporatiu iframe { height:56.25vw !important; min-height:200px !important; max-height:60vw !important; }
+}
+
 #inici div[style*="height:600px;overflow:hidden"]{height:auto !important;min-height:380px !important;overflow:hidden !important;}
 .hero-content{padding:32px 18px 28px !important;}
 .hero-title{font-size:48px !important;}
@@ -1006,6 +1014,7 @@ function changeLogo(){
 .stack-item:nth-child(2){ position:sticky; top:46px; z-index:20; border-radius:12px 12px 0 0; margin-top:-2px; }
 .stack-item:nth-child(3){ position:sticky; top:50px; z-index:30; border-radius:12px 12px 0 0; }
 .stack-item:nth-child(4){ position:sticky; top:54px; z-index:40; border-radius:12px 12px 0 0; }
+.stack-item:nth-child(5){ position:sticky; top:58px; z-index:50; border-radius:12px 12px 0 0; }
 </style>
 
 <div class="stack-wrap">
@@ -1034,6 +1043,18 @@ function changeLogo(){
 <div class="stat"><div class="stat-num">∞</div><div class="stat-label">Atención personalizada</div></div>
 </div>
 </div><!-- /stack-item 1 -->
+
+<!-- BLOC VÍDEO CORPORATIU — pantalla completa -->
+<div class="stack-item" id="video-corporatiu" style="padding:0;margin:0;background:#0f2d1e;line-height:0;">
+  <iframe
+    src="corporate_video/index.es.html"
+    style="width:100%;height:56.25vw;max-height:100vh;min-height:400px;border:none;display:block;"
+    allow="autoplay"
+    loading="lazy"
+    title="NexSocial — Vídeo Corporativo">
+  </iframe>
+</div>
+<!-- /BLOC VÍDEO CORPORATIU -->
 
 <!-- BLOC 2: SERVEIS - NexAcompanya i NexGestió -->
 <div class="stack-item">
@@ -1074,13 +1095,13 @@ function changeLogo(){
       <div style="height:240px;background-image:url('images/img_10.jpg');background-size:cover;background-position:center;position:relative;flex-shrink:0;">
         <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(45,107,72,0.1),rgba(15,45,30,0.72));"></div>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:20px 24px;border-top:2px solid rgba(109,191,133,0.4);">
-          <div style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-bottom:8px;">Gestión Social · Ayudas · Mediación</div>
+          <div style="font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-bottom:8px;">Acompañamiento en Trámites · Ayudas · Mediación</div>
           <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:white;line-height:1;">Nex<em style="color:#98be95;">Gestión</em></div>
         </div>
       </div>
       <div style="padding:28px 28px 0;display:flex;flex-direction:column;justify-content:space-between;flex:1;">
         <div>
-          <p style="font-size:13.5px;color:#4a6858;line-height:1.85;margin-bottom:24px;">Gestión social cooperativa: gestionamos íntegramente en tu nombre, detectamos ayudas vigentes con nuestra herramienta propia NexlicitIA, y mediamos cuando es necesario.</p>
+          <p style="font-size:13.5px;color:#4a6858;line-height:1.85;margin-bottom:24px;">Acompañamos a personas y familias en la gestión de trámites de carácter social y administrativo. Detectamos ayudas vigentes con nuestra herramienta NexlicitIA y mediamos cuando es necesario.</p>
           <ul style="list-style:none;padding:0;margin-bottom:0;flex:1;">
             <li style="font-size:12.5px;color:#4a6858;padding:8px 0;border-bottom:1px solid rgba(45,107,72,0.1);display:flex;gap:10px;align-items:flex-start;"><span style="color:#3d8a62;font-size:14px;flex-shrink:0;">—</span>Detección e información de ayudas vigentes</li>
             <li style="font-size:12.5px;color:#4a6858;padding:8px 0;border-bottom:1px solid rgba(45,107,72,0.1);display:flex;gap:10px;align-items:flex-start;"><span style="color:#3d8a62;font-size:14px;flex-shrink:0;">—</span>Gestión y tramitación de ayudas y prestaciones sociales</li>
@@ -1421,6 +1442,44 @@ function initStickyStack() {
   // Només cal assegurar que el scroll container és correcte
   // El body/html fa scroll normal, el sticky funciona automàticament
 }
+
+// ── Vídeo corporatiu: play/pause per scroll (IntersectionObserver) ──────────
+(function() {
+  var iframe = null;
+  var videoPlaying = false;
+
+  function getIframe() {
+    if (!iframe) iframe = document.querySelector('#video-corporatiu iframe');
+    return iframe;
+  }
+
+  function sendMsg(action) {
+    var f = getIframe();
+    if (!f || !f.contentWindow) return;
+    try { f.contentWindow.postMessage({ action: action }, '*'); } catch(e) {}
+  }
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+        if (!videoPlaying) {
+          videoPlaying = true;
+          sendMsg('play');
+        }
+      } else {
+        if (videoPlaying) {
+          videoPlaying = false;
+          sendMsg('pause');
+        }
+      }
+    });
+  }, { threshold: [0, 0.3] });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var bloc = document.getElementById('video-corporatiu');
+    if (bloc) observer.observe(bloc);
+  });
+})();
 
 document.addEventListener('DOMContentLoaded', initStickyStack);
 // Credencials dels socis (per producció, moure a Supabase/backend)

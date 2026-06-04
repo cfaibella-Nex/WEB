@@ -224,7 +224,7 @@ const S1Inner = () => {
         <Line inAt={0.25} sceneDur={sd} width={220}/>
         <Rise inAt={0.45} sceneDur={sd}>
           <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:111, lineHeight:1.06, color:'#fff', maxWidth:1000, letterSpacing:'-0.01em', fontWeight:300 }}>
-            Cooperativa<br/>d'<em style={{ color:NX.pale, fontStyle:'italic', textShadow:'0 2px 20px rgba(25,65,40,.85), 0 0 35px rgba(25,65,40,.60)' }}>Acompanyament<br/>Sociovital</em>
+            Cooperativa<br/>de <em style={{ color:NX.pale, fontStyle:'italic', textShadow:'0 2px 20px rgba(25,65,40,.85), 0 0 35px rgba(25,65,40,.60)' }}>Acompañamiento<br/>Sociovital</em>
           </div>
         </Rise>
       </div>
@@ -239,7 +239,7 @@ const S1Inner = () => {
 const S2_D=8.0; const S2_T=S1_T+S1_D;
 const Scene2 = () => (
   <Sprite start={S2_T} end={S2_T+S2_D}>
-    <BreathScene src={PHOTOS.bosc} dur={S2_D} position="center 45%" caption="Acompanyem cada moment vital"/>
+    <BreathScene src={PHOTOS.bosc} dur={S2_D} position="center 45%" caption="Acompañamos cada momento vital"/>
   </Sprite>
 );
 
@@ -255,16 +255,17 @@ const S3Inner = () => {
     <>
       <PhotoBackdrop src={PHOTOS.comunitat} dur={sd} position="center 28%" side="left" dimL={0.82} dimR={0.18}/>
       <div style={{ position:'absolute', inset:0, padding:'0 110px', display:'flex', flexDirection:'column', justifyContent:'center', zIndex:2 }}>
-        <Rise inAt={0.1} sceneDur={sd}><Eye>Qui som</Eye></Rise>
+        <Rise inAt={0.1} sceneDur={sd}><Eye>Quiénes somos</Eye></Rise>
         <Line inAt={0.2} sceneDur={sd} width={44}/>
         <Rise inAt={0.35} sceneDur={sd}>
           <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:73, lineHeight:1.12, color:'#fff', maxWidth:860, fontWeight:300, marginBottom:22 }}>
-            Som un nexe de suport<br/>i <em style={{ color:NX.pale, fontStyle:'italic', textShadow:'0 2px 20px rgba(25,65,40,.85), 0 0 35px rgba(25,65,40,.60)' }}>acompanyament sociovital</em>
+            Somos un nexo de apoyo<br/>
+            y <em style={{ color:NX.pale, fontStyle:'italic', textShadow:'0 2px 20px rgba(25,65,40,.85), 0 0 35px rgba(25,65,40,.60)' }}>acompañamiento sociovital</em>
           </div>
         </Rise>
         <Rise inAt={1.2} sceneDur={sd}>
           <div style={{ fontFamily:"'Cormorant Garamond',serif", fontStyle:'italic', fontSize:41, lineHeight:1.65, color:'rgba(255,255,255,.78)', maxWidth:860 }}>
-            Persones reals, en moments vitals complexos<br/>Un referent proper, professional i multidisciplinar
+            Personas reales, en momentos vitales complejos<br/>Un referente cercano, profesional y multidisciplinar
           </div>
         </Rise>
       </div>
@@ -279,7 +280,7 @@ const S3Inner = () => {
 const S4_D=8.0; const S4_T=S3_T+S3_D;
 const Scene4 = () => (
   <Sprite start={S4_T} end={S4_T+S4_D}>
-    <BreathScene src={PHOTOS.plantes} dur={S4_D} position="center" caption="Contacta amb nosaltres i gaudeix del teu temps"/>
+    <BreathScene src={PHOTOS.plantes} dur={S4_D} position="center" caption="Contáctanos y disfruta de tu tiempo"/>
   </Sprite>
 );
 
@@ -295,10 +296,10 @@ const S5Inner = () => {
     <TextScene
       photo={PHOTOS.senior} sd={sd}
       position="center 30%" side="left" dimL={0.84} dimR={0.16}
-      eyebrow="Servei"
-      title={<>Acompanyament<br/><em style={{ color:NX.pale, fontStyle:'italic', textShadow:'0 2px 24px rgba(25,65,40,.90), 0 0 40px rgba(25,65,40,.70)' }}>Sociovital</em></>}
+      eyebrow="Servicio"
+      title={<>Acompañamiento<br/><em style={{ color:NX.pale, fontStyle:'italic', textShadow:'0 2px 24px rgba(25,65,40,.90), 0 0 40px rgba(25,65,40,.70)' }}>Sociovital</em></>}
       titleSize={83}
-      subtitle="Quan necessitem un cop de mà en el dia a dia estem amb tu — Volem ser el teu referent de confiança"
+      subtitle="Cuando necesitamos una mano en el día a día estamos contigo — Queremos ser tu referente de confianza"
     />
   );
 };
@@ -310,7 +311,7 @@ const S5Inner = () => {
 const S6_D=8.0; const S6_T=S5_T+S5_D;
 const Scene6 = () => (
   <Sprite start={S6_T} end={S6_T+S6_D}>
-    <BreathScene src={PHOTOS.mans} dur={S6_D} position="center 40%" caption="Dona't un respir i reconnecta amb tu"/>
+    <BreathScene src={PHOTOS.mans} dur={S6_D} position="center 40%" caption="Date un respiro y reconecta contigo"/>
   </Sprite>
 );
 
@@ -326,10 +327,10 @@ const S7Inner = () => {
     <TextScene
       photo={PHOTOS.natura} sd={sd}
       position="center 42%" side="left" dimL={0.80} dimR={0.16}
-      eyebrow="Servei"
-      title={<>Acompanyament<br/><em style={{ color:NX.pale, fontStyle:'italic', textShadow:'0 2px 20px rgba(25,65,40,.85), 0 0 35px rgba(25,65,40,.60)' }}>Emocional i Gestàltic</em></>}
+      eyebrow="Servicio"
+      title={<>Acompañamiento<br/><em style={{ color:NX.pale, fontStyle:'italic', textShadow:'0 2px 20px rgba(25,65,40,.85), 0 0 35px rgba(25,65,40,.60)' }}>Emocional y Gestáltico</em></>}
       titleSize={77}
-      subtitle="Acompanyament amb perspectiva Gestalt — Individual/grupal — Ideal per a moments de canvi vital"
+      subtitle="Acompañamiento con perspectiva Gestalt — Individual/grupal — Ideal para momentos de cambio vital"
     />
   );
 };
@@ -341,7 +342,7 @@ const S7Inner = () => {
 const S8_D=8.0; const S8_T=S7_T+S7_D;
 const Scene8 = () => (
   <Sprite start={S8_T} end={S8_T+S8_D}>
-    <BreathScene src={PHOTOS.grup} dur={S8_D} position="center 35%" caption="T'acompanyem i creem connexions"/>
+    <BreathScene src={PHOTOS.grup} dur={S8_D} position="center 35%" caption="Te acompañamos y creamos conexiones"/>
   </Sprite>
 );
 
@@ -357,10 +358,10 @@ const S9Inner = () => {
     <TextScene
       photo={PHOTOS.gestio} sd={sd}
       position="center 40%" side="left" dimL={0.80} dimR={0.16}
-      eyebrow="Servei"
-      title={<>T'acompanyem en la<br/><em style={{ color:NX.pale, fontStyle:'italic', textShadow:'0 2px 20px rgba(25,65,40,.85), 0 0 35px rgba(25,65,40,.60)' }}>Gestió de Tràmits Socials</em></>}
+      eyebrow="Servicio"
+      title={<>Te acompañamos en la<br/><em style={{ color:NX.pale, fontStyle:'italic', textShadow:'0 2px 20px rgba(25,65,40,.85), 0 0 35px rgba(25,65,40,.60)' }}>Gestión de Trámites Sociales</em></>}
       titleSize={70}
-      subtitle="Acompanyem persones i famílies en la gestió de tràmits de caire social i administratiu"
+      subtitle="Acompañamos a personas y familias en la gestión de trámites de carácter social y administrativo"
     />
   );
 };
@@ -372,7 +373,7 @@ const S9Inner = () => {
 const S10_D=8.0; const S10_T=S9_T+S9_D;
 const Scene10 = () => (
   <Sprite start={S10_T} end={S10_T+S10_D}>
-    <BreathScene src={PHOTOS.platja} dur={S10_D} position="center 40%" caption="Primer t'escoltem — Després t'acompanyem"/>
+    <BreathScene src={PHOTOS.platja} dur={S10_D} position="center 40%" caption="Primero te escuchamos — Después te acompañamos"/>
   </Sprite>
 );
 
@@ -410,18 +411,18 @@ const S11Inner = () => {
         </Rise>
         <Rise inAt={0.7} sceneDur={sd}>
           <div style={{ fontFamily:"'Cormorant Garamond',serif", fontStyle:'italic', fontSize:43, color:NX.muted, marginBottom:44, textAlign:'right', maxWidth:640 }}>
-            Primera orientació sense compromís
+            Primera orientación sin compromiso
           </div>
         </Rise>
         <Rise inAt={1.1} sceneDur={sd}>
           <div style={{ display:'flex', flexDirection:'column', alignItems:'flex-end', gap:14 }}>
-            <a href="/contacte/" target="_parent" style={{ background:NX.forest, color:'#fff', fontFamily:"'DM Sans',sans-serif", fontSize:14, fontWeight:600, letterSpacing:'.10em', textTransform:'uppercase', padding:'16px 44px', borderRadius:40, boxShadow:`0 8px 26px rgba(45,107,72,.32)`, marginBottom:6, textDecoration:'none', display:'block', cursor:'pointer' }}>
-              Sol·licita una trucada
+            <a href="/contacte/index.es.html" target="_parent" style={{ background:NX.forest, color:'#fff', fontFamily:"'DM Sans',sans-serif", fontSize:14, fontWeight:600, letterSpacing:'.10em', textTransform:'uppercase', padding:'16px 44px', borderRadius:40, boxShadow:`0 8px 26px rgba(45,107,72,.32)`, marginBottom:6, textDecoration:'none', display:'block', cursor:'pointer' }}>
+              Solicita una llamada
             </a>
             <a href="https://www.nexsocial.org" target="_parent" style={{ fontFamily:"'DM Sans',sans-serif", fontSize:22, fontWeight:500, letterSpacing:'.04em', color:'#2a3d28', textDecoration:'none' }}>www.nexsocial.org</a>
             <a href="mailto:infonex@nexsocial.org" style={{ fontFamily:"'DM Sans',sans-serif", fontSize:19, color:'#4a6858', letterSpacing:'.02em', textDecoration:'none' }}>infonex@nexsocial.org</a>
             <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:13, color:'#6a8870', letterSpacing:'.12em', textTransform:'uppercase', marginTop:6 }}>
-              Cooperativa d'Acompanyament Sociovital
+              Cooperativa de Acompañamiento Sociovital
             </div>
           </div>
         </Rise>
@@ -477,7 +478,6 @@ const SigMark = () => {
 // ── Root ───────────────────────────────────────────────────────────────────
 const VIDEO_DURATION = S11_T + S11_D;
 
-// Exposa setTime al window per al botó de reinici extern
 const RestartBridge = () => {
   const { setTime } = useTimeline();
   React.useEffect(() => {
