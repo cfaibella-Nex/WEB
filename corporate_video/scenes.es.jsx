@@ -416,11 +416,11 @@ const S11Inner = () => {
         </Rise>
         <Rise inAt={1.1} sceneDur={sd}>
           <div style={{ display:'flex', flexDirection:'column', alignItems:'flex-end', gap:14 }}>
-            <div style={{ background:NX.forest, color:'#fff', fontFamily:"'DM Sans',sans-serif", fontSize:14, fontWeight:600, letterSpacing:'.10em', textTransform:'uppercase', padding:'16px 44px', borderRadius:40, boxShadow:`0 8px 26px rgba(45,107,72,.32)`, marginBottom:6 }}>
+            <a href="/contacte/index.es.html" target="_parent" style={{ background:NX.forest, color:'#fff', fontFamily:"'DM Sans',sans-serif", fontSize:14, fontWeight:600, letterSpacing:'.10em', textTransform:'uppercase', padding:'16px 44px', borderRadius:40, boxShadow:`0 8px 26px rgba(45,107,72,.32)`, marginBottom:6, textDecoration:'none', display:'block', cursor:'pointer' }}>
               Solicita una llamada
-            </div>
-            <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:22, fontWeight:500, letterSpacing:'.04em', color:'#2a3d28' }}>www.nexsocial.org</div>
-            <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:19, color:'#4a6858', letterSpacing:'.02em' }}>infonex@nexsocial.org</div>
+            </a>
+            <a href="https://www.nexsocial.org" target="_parent" style={{ fontFamily:"'DM Sans',sans-serif", fontSize:22, fontWeight:500, letterSpacing:'.04em', color:'#2a3d28', textDecoration:'none' }}>www.nexsocial.org</a>
+            <a href="mailto:infonex@nexsocial.org" style={{ fontFamily:"'DM Sans',sans-serif", fontSize:19, color:'#4a6858', letterSpacing:'.02em', textDecoration:'none' }}>infonex@nexsocial.org</a>
             <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:13, color:'#6a8870', letterSpacing:'.12em', textTransform:'uppercase', marginTop:6 }}>
               Cooperativa de Acompañamiento Sociovital
             </div>
