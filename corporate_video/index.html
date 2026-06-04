@@ -124,9 +124,13 @@
   window.addEventListener('message', function(e) {
     if (!e.data || !e.data.action) return;
     if (e.data.action === 'play') {
-      if (!playing) startMusic();
-      if (typeof window.__nexRestart === 'function' && e.data.restart) window.__nexRestart();
+      // Arrenca animació
+      if (typeof window.__nexPlay === 'function') window.__nexPlay();
+      // Intenta arrencar música (pot fallar si no hi ha hagut gest previ)
+      if (!playing) try { startMusic(); } catch(ex) {}
     } else if (e.data.action === 'pause') {
+      // Pausa animació
+      if (typeof window.__nexPause === 'function') window.__nexPause();
       if (playing) stopMusic();
     } else if (e.data.action === 'reset') {
       if (playing) stopMusic();

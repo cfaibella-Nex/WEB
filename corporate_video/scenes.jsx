@@ -479,11 +479,13 @@ const VIDEO_DURATION = S11_T + S11_D;
 
 // Exposa setTime al window per al botó de reinici extern
 const RestartBridge = () => {
-  const { setTime } = useTimeline();
+  const { setTime, setPlaying } = useTimeline();
   React.useEffect(() => {
-    window.__nexRestart = () => setTime(0);
-    return () => { delete window.__nexRestart; };
-  }, [setTime]);
+    window.__nexRestart = () => { setTime(0); setPlaying(true); };
+    window.__nexPlay = () => setPlaying(true);
+    window.__nexPause = () => setPlaying(false);
+    return () => { delete window.__nexRestart; delete window.__nexPlay; delete window.__nexPause; };
+  }, [setTime, setPlaying]);
   return null;
 };
 
