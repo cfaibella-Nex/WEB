@@ -403,18 +403,18 @@ const S11Inner = () => {
       <div style={{ position:'absolute', inset:0, background:`linear-gradient(to left, rgba(245,240,232,0.55) 22%, rgba(245,240,232,0.32) 50%, rgba(245,240,232,0) 100%)` }}/>
 
       <div style={{ position:'absolute', inset:0, display:'flex', flexDirection:'column', alignItems:'flex-end', justifyContent:'center', paddingRight:120, zIndex:2 }}>
-        <Rise inAt={0.3} sceneDur={sd} style={{ textAlign:'right' }}>
+        <Rise inAt={0.3} sceneDur={9999} style={{ textAlign:'right' }}>
           <div style={{ fontFamily:"'League Spartan',sans-serif", fontSize:14, fontWeight:700, letterSpacing:'.20em', color:NX.muted, marginBottom:20, textTransform:'uppercase' }}>NexSocial</div>
         </Rise>
-        <Rise inAt={0.5} sceneDur={sd} style={{ textAlign:'right' }}>
+        <Rise inAt={0.5} sceneDur={9999} style={{ textAlign:'right' }}>
           <div style={{ width:60, height:1.5, background:NX.mid, marginBottom:28, marginLeft:'auto' }}/>
         </Rise>
-        <Rise inAt={0.7} sceneDur={sd}>
+        <Rise inAt={0.7} sceneDur={9999}>
           <div style={{ fontFamily:"'Cormorant Garamond',serif", fontStyle:'italic', fontSize:43, color:NX.muted, marginBottom:44, textAlign:'right', maxWidth:640 }}>
             Primera orientación sin compromiso
           </div>
         </Rise>
-        <Rise inAt={1.1} sceneDur={sd}>
+        <Rise inAt={1.1} sceneDur={9999}>
           <div style={{ display:'flex', flexDirection:'column', alignItems:'flex-end', gap:14 }}>
             <a href="/contacte/index.es.html" target="_parent" style={{ background:NX.forest, color:'#fff', fontFamily:"'DM Sans',sans-serif", fontSize:14, fontWeight:600, letterSpacing:'.10em', textTransform:'uppercase', padding:'16px 44px', borderRadius:40, boxShadow:`0 8px 26px rgba(45,107,72,.32)`, marginBottom:6, textDecoration:'none', display:'block', cursor:'pointer' }}>
               Solicita una llamada
@@ -479,13 +479,19 @@ const SigMark = () => {
 const VIDEO_DURATION = S11_T + S11_D;
 
 const RestartBridge = () => {
-  const { setTime, setPlaying } = useTimeline();
+  const { setTime, setPlaying, playing } = useTimeline();
   React.useEffect(() => {
     window.__nexRestart = () => { setTime(0); setPlaying(true); };
     window.__nexPlay = () => setPlaying(true);
     window.__nexPause = () => setPlaying(false);
     return () => { delete window.__nexRestart; delete window.__nexPlay; delete window.__nexPause; };
   }, [setTime, setPlaying]);
+  // Quan l'animació acaba (playing: true→false), atura la música
+  const hasPlayed = React.useRef(false);
+  React.useEffect(() => {
+    if (playing) hasPlayed.current = true;
+    if (!playing && hasPlayed.current && typeof window.__nexOnEnd === 'function') window.__nexOnEnd();
+  }, [playing]);
   return null;
 };
 

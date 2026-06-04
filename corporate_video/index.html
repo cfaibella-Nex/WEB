@@ -36,7 +36,7 @@
 
   Si no hi ha musica.mp3 → sona el piano generatiu Web Audio de fallback.
 -->
-<audio id="bg-audio" loop preload="none" style="display:none"></audio>
+<audio id="bg-audio" preload="none" style="display:none"></audio>
 
 <button id="restart-btn" class="ctrl-btn">
   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -119,6 +119,9 @@
   }
 
   btn.addEventListener('click', () => { playing ? stopMusic() : startMusic(); });
+
+  // Quan l'animació acaba, atura la música automàticament
+  window.__nexOnEnd = function() { if (playing) stopMusic(); };
 
   // Escolta ordres del pare via postMessage
   window.addEventListener('message', function(e) {
