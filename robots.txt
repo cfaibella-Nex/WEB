@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /nexgestio/nexlicitia/
+
+Sitemap: https://nexsocial.org/sitemap.xml
