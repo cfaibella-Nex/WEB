@@ -78,14 +78,14 @@ section.active{display:block}
 .btn-outline{background:rgba(152,190,149,0.88);color:#2d6b48;padding:14px 32px;border:1.5px solid rgba(45,107,72,0.4);font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;text-decoration:none;display:inline-block;transition:all .3s;border-radius:40px}
 .btn-outline:hover{background:rgba(45,107,72,0.08);backdrop-filter:blur(6px);border-color:rgba(45,107,72,0.35);color:#2d6b48;transform:translateY(-2px);box-shadow:0 6px 18px rgba(45,107,72,0.08)}
 .hero-stats{position:relative;z-index:1;display:flex;border-top:1px solid rgba(255,255,255,.1);background:rgba(194,221,191,.92);margin-bottom:0;border-bottom:3px solid #3d8a62;}
-.stat{flex:1;padding:26px 44px;border-right:1px solid rgba(45,107,72,.15);cursor:default;transition:all .3s;position:relative;}
+.stat{flex:1;padding:16px 44px;border-right:1px solid rgba(45,107,72,.15);cursor:default;transition:all .3s;position:relative;}
 .stat:last-child{border-right:none}
 .stat::after{content:'';position:absolute;bottom:0;left:0;width:0;height:3px;background:#3d8a62;transition:width .35s ease;}
 .stat:hover::after{width:100%;}
 .stat:hover{background:rgba(45,107,72,.08);}
 .stat:hover .stat-num{color:#2d6b48;}
 .stat:hover .stat-label{color:#2d6b48;}
-.stat-num{font-family:'League Spartan',sans-serif;font-size:40px;font-weight:400;color:#2d6b48;line-height:1;margin-bottom:5px;transition:color .25s;letter-spacing:-0.01em;}
+.stat-num{font-family:'League Spartan',sans-serif;font-size:36px;font-weight:400;color:#2d6b48;line-height:1;margin-bottom:4px;transition:color .25s;letter-spacing:-0.01em;}
 .stat-label{font-size:11px;color:#4a6858;letter-spacing:.08em;text-transform:uppercase;transition:color .25s;}
 .page-header{background:var(--forest-hero);padding:52px 64px 40px;position:relative;overflow:hidden}
 .page-header-bg{position:absolute;right:0;top:0;bottom:0;width:45%;background-size:cover;background-position:center;opacity:.55}
@@ -1060,11 +1060,11 @@ function changeLogo(){
 <div class="stack-wrap">
 <div class="stack-item">
 <style id="nx-hero-css">
-.nx-hero{position:relative;min-height:min(80vh,720px);display:flex;align-items:center;overflow:hidden;background:#0c2216;isolation:isolate}
+.nx-hero{position:relative;min-height:calc(100vh - 42px);display:flex;flex-direction:column;overflow:hidden;background:#0c2216;isolation:isolate}
 .nx-hero-bg{position:absolute;inset:0;background:url('images/hero-cami.jpg') center/cover no-repeat;z-index:0}
-.nx-hero-ov{position:absolute;inset:0;z-index:1;background:linear-gradient(95deg,rgba(12,34,22,.88) 0%,rgba(12,34,22,.66) 32%,rgba(12,34,22,.22) 62%,rgba(12,34,22,.32) 100%)}
+.nx-hero-ov{position:absolute;inset:0;z-index:1;background:linear-gradient(95deg,rgba(12,34,22,.80) 0%,rgba(12,34,22,.54) 34%,rgba(12,34,22,.15) 64%,rgba(12,34,22,.25) 100%)}
 .nx-hero-ov2{position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(8,22,14,.55),rgba(8,22,14,0) 46%)}
-.nx-grid{position:relative;z-index:2;width:100%;max-width:1500px;margin:0 auto;padding:56px 48px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px;align-items:center}
+.nx-grid{position:relative;z-index:2;flex:1;width:100%;max-width:1640px;margin:0;padding:44px 40px;display:grid;grid-template-columns:minmax(0,560px) minmax(0,1fr);gap:clamp(48px,6vw,120px);align-items:center;align-content:center}
 .nx-text{max-width:560px;color:#f5f0e8}
 .nx-tag{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#bcd8be;margin-bottom:18px;display:flex;align-items:center;gap:10px}
 .nx-tag::before{content:"";width:26px;height:1px;background:#8fbf90;flex:none}
@@ -1081,7 +1081,7 @@ function changeLogo(){
 .nx-btn-o{background:rgba(245,240,232,.12);color:#f5f0e8;border:1.5px solid rgba(245,240,232,.5);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
 .nx-btn-o:hover{transform:translateY(-2px);background:rgba(245,240,232,.2);border-color:rgba(245,240,232,.85)}
 .nx-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:#bcd1ba;margin:0}
-.nx-rail-col{position:relative;height:min(74vh,620px);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.nx-rail-col{position:relative;height:min(70vh,560px);display:flex;flex-direction:column;align-items:center;justify-content:center}
 .nx-rail{position:relative;width:100%;height:430px;perspective:1500px;transform-style:preserve-3d}
 .nx-card{position:absolute;top:50%;left:50%;width:238px;height:392px;margin:-196px 0 0 -119px;border-radius:14px;overflow:hidden;cursor:grab;will-change:transform,opacity;box-shadow:0 20px 50px rgba(0,0,0,.45);background:#1a2e20;text-decoration:none;color:inherit;-webkit-user-select:none;user-select:none;transition:box-shadow .3s}
 .nx-card.is-front{box-shadow:0 28px 70px rgba(0,0,0,.6)}
@@ -1094,17 +1094,27 @@ function changeLogo(){
 .nx-card.is-front .nx-card-go{opacity:1;transform:none}
 .nx-hint{font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#a9c4a7;margin-top:18px;display:flex;align-items:center;gap:8px;opacity:.85}
 .nx-hint svg{width:30px;height:8px}
+.nx-hero .hero-stats{position:relative;z-index:3;flex:none;display:flex;background:rgba(10,26,16,.34);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,.18);border-bottom:none;margin:0}
+.nx-hero .stat{flex:1;padding:15px 40px;border-right:1px solid rgba(255,255,255,.14);text-align:left;cursor:default}
+.nx-hero .stat:last-child{border-right:none}
+.nx-hero .stat-num{color:#fdfaf3}
+.nx-hero .stat-label{color:#cfe0cc}
+.nx-hero .stat:hover .stat-num,.nx-hero .stat:hover .stat-label{color:#fff}
 @media(max-width:1000px){
   .nx-hero{min-height:0}
-  .nx-grid{grid-template-columns:1fr;gap:26px;padding:44px 30px 40px;text-align:center}
+  .nx-grid{grid-template-columns:1fr;gap:26px;padding:44px 30px 36px;text-align:center}
   .nx-text{max-width:640px;margin:0 auto}
   .nx-tag{justify-content:center}
   .nx-desc{margin-left:auto;margin-right:auto}
   .nx-cta{justify-content:center}
   .nx-rail-col{height:430px}
 }
+@media(max-width:768px){
+  .nx-hero .hero-stats{flex-wrap:wrap}
+  .nx-hero .stat{flex:1 1 45%;border-right:none;border-bottom:1px solid rgba(255,255,255,.12);padding:12px 16px}
+}
 @media(max-width:560px){
-  .nx-grid{padding:34px 18px 32px}
+  .nx-grid{padding:34px 18px 28px}
   .nx-card{width:196px;height:322px;margin:-161px 0 0 -98px}
   .nx-rail{height:350px}
   .nx-rail-col{height:362px}
@@ -1137,6 +1147,12 @@ function changeLogo(){
 <a class="nx-card" href="/entitats/"><div class="nx-card-img" style="background-image:url('images/img_28.png');background-position:50% 50%"></div><div class="nx-card-grad"></div><div class="nx-card-cap"><div class="nx-card-num">06</div><div class="nx-card-lbl">Servei a Entitats</div><div class="nx-card-go">Descobrir →</div></div></a>
 <a class="nx-card" href="/consulta-cas-a-cas/"><div class="nx-card-img" style="background-image:url('images/img_11.jpg');background-position:50% 50%"></div><div class="nx-card-grad"></div><div class="nx-card-cap"><div class="nx-card-num">07</div><div class="nx-card-lbl">Consulta cas a cas</div><div class="nx-card-go">Descobrir →</div></div></a>
 </div><div class="nx-hint"><svg viewBox="0 0 30 8"><path d="M1 4h24M22 1l4 3-4 3" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg> Arrossega els serveis</div></div>
+</div>
+<div class="hero-stats">
+<div class="stat"><div class="stat-num">+10</div><div class="stat-label">Anys d'Experiència</div></div>
+<div class="stat"><div class="stat-num">100%</div><div class="stat-label">Valors Cooperatius</div></div>
+<div class="stat"><div class="stat-num">100%</div><div class="stat-label">Adaptabilitat Serveis</div></div>
+<div class="stat"><div class="stat-num">∞</div><div class="stat-label">Atenció personalitzada</div></div>
 </div>
 </section>
 
@@ -1187,12 +1203,7 @@ function changeLogo(){
 })();
 </script>
 
-<div class="hero-stats">
-<div class="stat"><div class="stat-num">+10</div><div class="stat-label">Anys d'Experiència</div></div>
-<div class="stat"><div class="stat-num">100%</div><div class="stat-label">Valors Cooperatius</div></div>
-<div class="stat"><div class="stat-num">100%</div><div class="stat-label">Adaptabilitat Serveis</div></div>
-<div class="stat"><div class="stat-num">∞</div><div class="stat-label">Atenció personalitzada</div></div>
-</div>
+
 </div><!-- /stack-item 1 -->
 
 <!-- BLOC VÍDEO CORPORATIU — pantalla completa -->
