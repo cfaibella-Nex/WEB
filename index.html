@@ -1059,20 +1059,133 @@ function changeLogo(){
 <!-- BLOC 1: HERO -->
 <div class="stack-wrap">
 <div class="stack-item">
-<div style="position:relative;height:600px;overflow:hidden;">
-  <img src="images/img_02.jpg" alt="NexSocial hero" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;">
-  <div class="hero-overlay"></div>
-  <div class="hero-content" style="position:relative;z-index:2;padding:80px 64px 60px;max-width:740px;">
-    <div class="hero-tag" style="display:none"><img src="images/img_03.png" alt="">Cooperativa d'Acompanyament Sociovital</div>
-    <h1 class="hero-title" style="font-family:'Cormorant Garamond',serif;font-weight:300;letter-spacing:0.02em;">Al servei de<br><em style="font-style:italic;">les persones</em></h1>
-    <p class="hero-sub" id="hero-sub">Acompanyament · Gestió · Transformació</p>
-    <p class="hero-desc" id="hero-desc"><span style="font-family:'Cormorant Garamond',serif;font-size:1.15em;">Nex<em style="color:#3d8a62;">Social</em></span> és una cooperativa d'acompanyament sociovital. Acompanyem persones, famílies i entitats amb suport social, emocional i en la gestió de tràmits, des d'un model cooperatiu i de proximitat.</p>
-    <div class="hero-cta">
-      <a class="btn-primary" href='/persones/'>Els nostres serveis</a>
-      <a class="btn-outline" href='/nexacompanya/sessions-gestalt/'>Comencem l'acompanyament →</a>
-    </div>
-  </div>
+<style id="nx-hero-css">
+.nx-hero{position:relative;min-height:min(88vh,820px);display:flex;align-items:center;overflow:hidden;background:#0c2216;isolation:isolate}
+.nx-hero-bg{position:absolute;inset:0;background:url('images/hero-cami.jpg') center/cover no-repeat;z-index:0}
+.nx-hero-ov{position:absolute;inset:0;z-index:1;background:linear-gradient(95deg,rgba(12,34,22,.88) 0%,rgba(12,34,22,.66) 32%,rgba(12,34,22,.22) 62%,rgba(12,34,22,.32) 100%)}
+.nx-hero-ov2{position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(8,22,14,.55),rgba(8,22,14,0) 46%)}
+.nx-grid{position:relative;z-index:2;width:100%;max-width:1320px;margin:0 auto;padding:56px 48px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px;align-items:center}
+.nx-text{max-width:560px;color:#f5f0e8}
+.nx-tag{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#bcd8be;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.nx-tag::before{content:"";width:26px;height:1px;background:#8fbf90;flex:none}
+.nx-text h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(46px,5.4vw,82px);line-height:1.02;letter-spacing:.01em;margin:0 0 14px;color:#fdfaf3;text-shadow:0 2px 24px rgba(0,0,0,.4)}
+.nx-text h1 em{font-style:italic;color:#9ed3a3}
+.nx-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(19px,2vw,25px);color:#cfe3cc;margin:0 0 22px;letter-spacing:.03em}
+.nx-desc{font-family:'Cormorant Garamond',serif;font-size:clamp(16px,1.25vw,19px);line-height:1.75;color:#ece6da;max-width:500px;margin:0 0 30px;font-style:italic}
+.nx-desc .nx-brand{font-size:1.12em}
+.nx-desc .nx-brand em{font-style:italic;color:#9ed3a3}
+.nx-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+.nx-btn{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:14px 26px;border-radius:40px;text-decoration:none;display:inline-block;transition:transform .25s,box-shadow .25s,background .25s;cursor:pointer}
+.nx-btn-p{background:#2d6b48;color:#fff;box-shadow:0 8px 28px rgba(13,112,64,.4)}
+.nx-btn-p:hover{transform:translateY(-2px);background:#33784f;box-shadow:0 12px 32px rgba(13,112,64,.5)}
+.nx-btn-o{background:rgba(245,240,232,.12);color:#f5f0e8;border:1.5px solid rgba(245,240,232,.5);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.nx-btn-o:hover{transform:translateY(-2px);background:rgba(245,240,232,.2);border-color:rgba(245,240,232,.85)}
+.nx-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:#bcd1ba;margin:0}
+.nx-rail-col{position:relative;height:min(74vh,620px);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.nx-rail{position:relative;width:100%;height:430px;perspective:1500px;transform-style:preserve-3d}
+.nx-card{position:absolute;top:50%;left:50%;width:238px;height:392px;margin:-196px 0 0 -119px;border-radius:14px;overflow:hidden;cursor:grab;will-change:transform,opacity;box-shadow:0 20px 50px rgba(0,0,0,.45);background:#1a2e20;text-decoration:none;color:inherit;-webkit-user-select:none;user-select:none;transition:box-shadow .3s}
+.nx-card.is-front{box-shadow:0 28px 70px rgba(0,0,0,.6)}
+.nx-card-img{position:absolute;inset:0;background-size:cover;background-position:center;pointer-events:none}
+.nx-card-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,20,12,.92) 0%,rgba(8,20,12,.5) 38%,rgba(8,20,12,.08) 70%);pointer-events:none}
+.nx-card-cap{position:absolute;left:0;right:0;bottom:0;padding:18px 18px 20px;z-index:2;pointer-events:none}
+.nx-card-num{font-family:'League Spartan',sans-serif;font-size:12px;font-weight:600;letter-spacing:.18em;color:#9ed3a3;margin-bottom:6px}
+.nx-card-lbl{font-family:'Cormorant Garamond',serif;font-size:23px;line-height:1.12;color:#fdfaf3;font-weight:500}
+.nx-card-go{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#cbe4cd;margin-top:10px;opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s}
+.nx-card.is-front .nx-card-go{opacity:1;transform:none}
+.nx-hint{font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#a9c4a7;margin-top:18px;display:flex;align-items:center;gap:8px;opacity:.85}
+.nx-hint svg{width:30px;height:8px}
+@media(max-width:1000px){
+  .nx-hero{min-height:0}
+  .nx-grid{grid-template-columns:1fr;gap:26px;padding:44px 30px 40px;text-align:center}
+  .nx-text{max-width:640px;margin:0 auto}
+  .nx-tag{justify-content:center}
+  .nx-desc{margin-left:auto;margin-right:auto}
+  .nx-cta{justify-content:center}
+  .nx-rail-col{height:430px}
+}
+@media(max-width:560px){
+  .nx-grid{padding:34px 18px 32px}
+  .nx-card{width:196px;height:322px;margin:-161px 0 0 -98px}
+  .nx-rail{height:350px}
+  .nx-rail-col{height:362px}
+  .nx-card-lbl{font-size:20px}
+}
+@media(max-width:380px){
+  .nx-card{width:172px;height:284px;margin:-142px 0 0 -86px}
+  .nx-rail{height:312px}
+  .nx-rail-col{height:322px}
+}
+</style>
+
+<section class="nx-hero">
+<div class="nx-hero-bg"></div><div class="nx-hero-ov"></div><div class="nx-hero-ov2"></div>
+<div class="nx-grid">
+<div class="nx-text">
+<div class="nx-tag">Cooperativa d'Acompanyament Sociovital</div>
+<h1>T'acompanyem <em>en el teu camí</em></h1>
+<p class="nx-sub">Acompanyament · Gestió · Transformació</p>
+<p class="nx-desc"><span class="nx-brand">Nex<em>Social</em></span> és una cooperativa d'acompanyament sociovital. Acompanyem persones, famílies i entitats amb suport social, emocional i en la gestió de tràmits, des d'un model cooperatiu i de proximitat.</p>
+<div class="nx-cta"><a class="nx-btn nx-btn-p" href="/nexacompanya/sessions-gestalt/">Acompanyament emocional</a><a class="nx-btn nx-btn-o" href="/nexgestio/">Acompanyament administratiu</a></div>
+<p class="nx-note">Dos àmbits d'un mateix acompanyament sociovital multidisciplinar</p>
 </div>
+<div class="nx-rail-col"><div class="nx-rail" id="nx-rail">
+<a class="nx-card" href="/nexacompanya/"><div class="nx-card-img" style="background-image:url('images/talking-sofa.jpg');background-position:32% 46%"></div><div class="nx-card-grad"></div><div class="nx-card-cap"><div class="nx-card-num">01</div><div class="nx-card-lbl">Acompanyament emocional</div><div class="nx-card-go">Descobrir →</div></div></a>
+<a class="nx-card" href="/nexacompanya/sessions-gestalt/"><div class="nx-card-img" style="background-image:url('images/img_14.jpg');background-position:50% 45%"></div><div class="nx-card-grad"></div><div class="nx-card-cap"><div class="nx-card-num">02</div><div class="nx-card-lbl">Sessions Gestalt</div><div class="nx-card-go">Descobrir →</div></div></a>
+<a class="nx-card" href="/nexacompanya/"><div class="nx-card-img" style="background-image:url('corporate_video/senior-women-giving-each-other-high-five.jpg');background-position:50% 42%"></div><div class="nx-card-grad"></div><div class="nx-card-cap"><div class="nx-card-num">03</div><div class="nx-card-lbl">Acompanyament sènior</div><div class="nx-card-go">Descobrir →</div></div></a>
+<a class="nx-card" href="/nexgestio/"><div class="nx-card-img" style="background-image:url('images/img_10.jpg');background-position:50% 50%"></div><div class="nx-card-grad"></div><div class="nx-card-cap"><div class="nx-card-num">04</div><div class="nx-card-lbl">Acompanyament administratiu</div><div class="nx-card-go">Descobrir →</div></div></a>
+<a class="nx-card" href="/nexgestio/"><div class="nx-card-img" style="background-image:url('images/img_20.jpg');background-position:52% 42%"></div><div class="nx-card-grad"></div><div class="nx-card-cap"><div class="nx-card-num">05</div><div class="nx-card-lbl">Orientació jurídica social</div><div class="nx-card-go">Descobrir →</div></div></a>
+<a class="nx-card" href="/entitats/"><div class="nx-card-img" style="background-image:url('images/img_28.png');background-position:50% 50%"></div><div class="nx-card-grad"></div><div class="nx-card-cap"><div class="nx-card-num">06</div><div class="nx-card-lbl">Servei a Entitats</div><div class="nx-card-go">Descobrir →</div></div></a>
+<a class="nx-card" href="/consulta-cas-a-cas/"><div class="nx-card-img" style="background-image:url('images/img_11.jpg');background-position:50% 50%"></div><div class="nx-card-grad"></div><div class="nx-card-cap"><div class="nx-card-num">07</div><div class="nx-card-lbl">Consulta cas a cas</div><div class="nx-card-go">Descobrir →</div></div></a>
+</div><div class="nx-hint"><svg viewBox="0 0 30 8"><path d="M1 4h24M22 1l4 3-4 3" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg> Arrossega els serveis</div></div>
+</div>
+</section>
+
+<script>
+(function(){
+  var rail=document.getElementById('nx-rail');
+  if(!rail)return;
+  var cards=[].slice.call(rail.querySelectorAll('.nx-card'));
+  var N=cards.length; if(!N)return;
+  function P(){var w=window.innerWidth;
+    if(w<=380)return {SP:124,TZ:120,RY:18,SC:.13,OP:.34};
+    if(w<=560)return {SP:140,TZ:130,RY:18,SC:.13,OP:.34};
+    if(w<=1000)return {SP:172,TZ:150,RY:17,SC:.12,OP:.32};
+    return {SP:196,TZ:170,RY:16,SC:.13,OP:.32};}
+  var pos=0,target=0,dragging=false,startX=0,startPos=0,moved=false,auto=null,interacted=false,raf=null;
+  function wrap(i){i%=N;if(i<0)i+=N;return i;}
+  function offset(k){var o=k-pos;if(o>N/2)o-=N;else if(o<-N/2)o+=N;return o;}
+  function render(){var p=P();for(var k=0;k<N;k++){var o=offset(k),a=Math.abs(o);
+    var c=cards[k];
+    c.style.transform='translateX('+(o*p.SP)+'px) translateZ('+(-a*p.TZ)+'px) rotateY('+(o*-p.RY)+'deg) scale('+Math.max(.6,1-a*p.SC)+')';
+    c.style.opacity=Math.max(0,1-a*p.OP);
+    c.style.zIndex=String(100-Math.round(a*10));
+    if(a<.5){c.classList.add('is-front');}else{c.classList.remove('is-front');}
+  }}
+  function tick(){
+    if(!dragging){var d=target-pos;if(d>N/2)target-=N;else if(d<-N/2)target+=N;d=target-pos;
+      pos+=d*0.12;if(Math.abs(d)<0.001)pos=target;pos=((pos%N)+N)%N;}
+    render();raf=requestAnimationFrame(tick);
+  }
+  function stopAuto(){if(auto){clearInterval(auto);auto=null;}}
+  function startAuto(){stopAuto();auto=setInterval(function(){if(!interacted){target=wrap(Math.round(pos)+1);}},3800);}
+  function go(n){interacted=true;stopAuto();target=n;}
+  function down(x){dragging=true;moved=false;startX=x;startPos=pos;rail.style.cursor='grabbing';interacted=true;stopAuto();}
+  function move(x){if(!dragging)return;var dx=x-startX;if(Math.abs(dx)>4)moved=true;pos=startPos-dx/P().SP;}
+  function up(){if(!dragging)return;dragging=false;rail.style.cursor='grab';target=Math.round(pos);}
+  rail.addEventListener('mousedown',function(e){down(e.clientX);e.preventDefault();});
+  window.addEventListener('mousemove',function(e){move(e.clientX);});
+  window.addEventListener('mouseup',up);
+  rail.addEventListener('touchstart',function(e){down(e.touches[0].clientX);},{passive:true});
+  rail.addEventListener('touchmove',function(e){move(e.touches[0].clientX);},{passive:true});
+  rail.addEventListener('touchend',up);
+  cards.forEach(function(c,idx){c.addEventListener('click',function(e){
+    if(moved){e.preventDefault();return;}
+    if(Math.abs(offset(idx))>=0.5){e.preventDefault();go(idx);}
+  });});
+  window.addEventListener('resize',render);
+  render();tick();startAuto();
+})();
+</script>
 
 <div class="hero-stats">
 <div class="stat"><div class="stat-num">+10</div><div class="stat-label">Anys d'Experiència</div></div>
