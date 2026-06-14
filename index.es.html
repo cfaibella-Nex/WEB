@@ -1050,8 +1050,8 @@ function changeLogo(){
 <style id="nx-hero-css">
 .nx-hero{position:relative;min-height:calc(100vh - 42px);display:flex;flex-direction:column;overflow:hidden;background:#0c2216;isolation:isolate}
 .nx-hero-bg{position:absolute;inset:0;background:url('images/hero-cami.jpg') center/cover no-repeat;z-index:0}
-.nx-hero-ov{position:absolute;inset:0;z-index:1;background:linear-gradient(95deg,rgba(12,34,22,.80) 0%,rgba(12,34,22,.54) 34%,rgba(12,34,22,.15) 64%,rgba(12,34,22,.25) 100%)}
-.nx-hero-ov2{position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(8,22,14,.55),rgba(8,22,14,0) 46%)}
+.nx-hero-ov{position:absolute;inset:0;z-index:1;background:linear-gradient(95deg,rgba(12,34,22,.46) 0%,rgba(12,34,22,.32) 34%,rgba(12,34,22,.05) 64%,rgba(12,34,22,.12) 100%)}
+.nx-hero-ov2{position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(8,22,14,.26),rgba(8,22,14,0) 46%)}
 .nx-grid{position:relative;z-index:2;flex:1;width:100%;max-width:1640px;margin:0;padding:44px 40px;display:grid;grid-template-columns:minmax(0,560px) minmax(0,1fr);gap:clamp(48px,6vw,120px);align-items:center;align-content:center}
 .nx-text{max-width:560px;color:#f5f0e8}
 .nx-tag{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#bcd8be;margin-bottom:18px;display:flex;align-items:center;gap:10px}
@@ -1068,7 +1068,7 @@ function changeLogo(){
 .nx-btn-p:hover{transform:translateY(-2px);background:#33784f;box-shadow:0 12px 32px rgba(13,112,64,.5)}
 .nx-btn-o{background:rgba(245,240,232,.12);color:#f5f0e8;border:1.5px solid rgba(245,240,232,.5);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
 .nx-btn-o:hover{transform:translateY(-2px);background:rgba(245,240,232,.2);border-color:rgba(245,240,232,.85)}
-.nx-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:#bcd1ba;margin:10px 0 0;text-align:center}
+.nx-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:#bcd1ba;margin:10px 0 0;text-align:left}
 .nx-rail-col{position:relative;height:min(70vh,560px);display:flex;flex-direction:column;align-items:center;justify-content:center}
 .nx-rail{position:relative;width:100%;height:430px;perspective:1500px;transform-style:preserve-3d}
 .nx-card{position:absolute;top:50%;left:50%;width:238px;height:392px;margin:-196px 0 0 -119px;border-radius:14px;overflow:hidden;cursor:grab;will-change:transform,opacity;box-shadow:0 20px 50px rgba(0,0,0,.45);background:#1a2e20;text-decoration:none;color:inherit;-webkit-user-select:none;user-select:none;transition:box-shadow .3s}
@@ -1094,7 +1094,7 @@ function changeLogo(){
   .nx-text{max-width:640px;margin:0 auto}
   .nx-tag{justify-content:center}
   .nx-desc{margin-left:auto;margin-right:auto}
-  .nx-cta{justify-content:center}
+  .nx-cta{justify-content:center}.nx-note{text-align:center}
   .nx-rail-col{height:430px}
 }
 @media(max-width:768px){
