@@ -668,7 +668,7 @@ nav a, .footer-links a, .topbar-btn, .sidebar-footer a {
 /* Parent headers (NexAcompanya, NexGestió, Servei a Entitats, etc): 
    add breathing room above so they don't visually touch the previous active subitem */
 .sidebar nav > a[style*="padding:9px 20px 9px 32px"] {
-  margin-top: 6px !important;
+  margin-top: 12px !important;
 }
 /* First nav link doesn't need extra top margin */
 .sidebar nav > a:first-child {

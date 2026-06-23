@@ -27,7 +27,7 @@ const translations = {
   "nav.aav":               { ca: "Acompanyament Administratiu Vital",             es: "Acompañamiento Administrativo Vital" },
   "nav.mos":               { ca: "Mediació i Orientació Jurídica Social",         es: "Mediación y Orientación Jurídica Social" },
   "nav.consultoria_entitats": { ca: "Consultoria per Entitats Socials",            es: "Consultoría para Entidades Sociales" },
-  "nav.acompanyament_gestio": { ca: "Acompanyament en la Gestió Operativa Entitats", es: "Acompañamiento en la Gestión Operativa de Entidades" },
+  "nav.acompanyament_gestio": { ca: "Acompanyament en la Gestió Operativa",          es: "Acompañamiento en la Gestión Operativa" },
   "nav.nexlicitia":        { ca: "NexlicitIA",                                    es: "NexlicitIA" },
   "nav.cas_a_cas":         { ca: "Consulta Cas a Cas",                            es: "Consulta Caso a Caso" },
   "nav.servei_entitats":   { ca: "Servei a Entitats",                             es: "Servicio a Entidades" },

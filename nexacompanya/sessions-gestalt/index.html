@@ -179,7 +179,7 @@
       <a href="/consulta-cas-a-cas/" style="padding:9px 20px 9px 32px; font-size:13px; color:#0f2d1e; border-left:2px solid #2d6b48; display:block;"><span data-i18n="nav.cas_a_cas">Consulta Cas a Cas</span></a>
     </div>
     <a href="/entitats/"><span data-i18n="nav.servei_entitats">Servei a Entitats</span></a>
-    <a href="/entitats/acompanyament-gestio-entitats/" style="padding:8px 20px 8px 44px; line-height:1.4; font-size:11.5px; color:#6a9070; border-left:1px solid rgba(61,138,98,0.25); display:block;"><span data-i18n="nav.acompanyament_gestio">Acompanyament en la Gestió Operativa Entitats</span></a>
+    <a href="/entitats/acompanyament-gestio-entitats/" style="padding:8px 20px 8px 44px; line-height:1.4; font-size:11.5px; color:#6a9070; border-left:1px solid rgba(61,138,98,0.25); display:block;"><span data-i18n="nav.acompanyament_gestio">Acompanyament en la Gestió Operativa</span></a>
     <a href="/entitats/consultoria-social/" style="padding:8px 20px 8px 44px; line-height:1.4; font-size:11.5px; color:#6a9070; border-left:1px solid rgba(61,138,98,0.25); display:block;"><span data-i18n="nav.consultoria_entitats">Consultoria per Entitats Socials</span></a>
     <a href="/collaboracions/"><span data-i18n="nav.collaboracions">Col·laboracions</span></a>
     <a href="/contacte/"><span data-i18n="nav.contacte">Contacte</span></a>
@@ -438,62 +438,11 @@
       </div>
 
       <!-- Dreta: formulari Formspree reutilitzant xlgpljjd -->
-      <div style="background:#f0f9ed;border:1px solid rgba(45,107,72,0.12);padding:32px 28px;">
-        <div style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#3d8a62;margin-bottom:18px;">Les teves dades</div>
-
-        <form id="gs-form" action="https://formspree.io/f/xlgpljjd" method="POST" onsubmit="gsFormSubmit(event)" style="display:flex;flex-direction:column;gap:12px;">
-          <input type="hidden" name="_subject" value="Primera trucada Gestalt — NexSocial">
-          <input type="hidden" name="origen" value="Formulari primera trucada Gestalt">
-
-          <div>
-            <label style="font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:#4a6858;display:block;margin-bottom:5px;">Nom i cognoms *</label>
-            <input name="nom" type="text" required placeholder="El teu nom complet" style="width:100%;padding:10px 13px;border:1px solid rgba(45,107,72,0.2);background:#fff;font-family:'DM Sans',sans-serif;font-size:13px;color:#2a3d28;outline:none;border-radius:2px;box-sizing:border-box;transition:border-color .2s;" onfocus="this.style.borderColor='#3d8a62'" onblur="this.style.borderColor='rgba(45,107,72,0.2)'">
-          </div>
-
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-            <div>
-              <label style="font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:#4a6858;display:block;margin-bottom:5px;">Telèfon *</label>
-              <input name="telefon" type="tel" required placeholder="6XX XXX XXX" style="width:100%;padding:10px 13px;border:1px solid rgba(45,107,72,0.2);background:#fff;font-family:'DM Sans',sans-serif;font-size:13px;color:#2a3d28;outline:none;border-radius:2px;box-sizing:border-box;" onfocus="this.style.borderColor='#3d8a62'" onblur="this.style.borderColor='rgba(45,107,72,0.2)'">
-            </div>
-            <div>
-              <label style="font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:#4a6858;display:block;margin-bottom:5px;">Correu *</label>
-              <input name="email" type="email" required placeholder="correu@exemple.com" style="width:100%;padding:10px 13px;border:1px solid rgba(45,107,72,0.2);background:#fff;font-family:'DM Sans',sans-serif;font-size:13px;color:#2a3d28;outline:none;border-radius:2px;box-sizing:border-box;" onfocus="this.style.borderColor='#3d8a62'" onblur="this.style.borderColor='rgba(45,107,72,0.2)'">
-            </div>
-          </div>
-
-          <div>
-            <label style="font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:#4a6858;display:block;margin-bottom:5px;">Modalitat que t'interessa</label>
-            <select name="modalitat" style="width:100%;padding:10px 13px;border:1px solid rgba(45,107,72,0.2);background:#fff;font-family:'DM Sans',sans-serif;font-size:13px;color:#2a3d28;outline:none;border-radius:2px;cursor:pointer;box-sizing:border-box;">
-              <option value="no-se">Encara no ho sé</option>
-              <option value="individual">Sessió individual (55€)</option>
-              <option value="trimestral-essencial">Trimestral Essencial — 2 sessions/mes (50€/sessió)</option>
-              <option value="trimestral-plus">Trimestral Plus — 4 sessions/mes (45€/sessió)</option>
-              <option value="grup">Grup terapèutic (33€)</option>
-              <option value="retir">Retir intensiu</option>
-            </select>
-          </div>
-
-          <div>
-            <label style="font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:#4a6858;display:block;margin-bottom:5px;">Explica'ns en poques paraules</label>
-            <textarea name="motiu" rows="3" placeholder="Què t'ha portat fins aquí? Com et pots estar sentint? No cal que sigui llarg." style="width:100%;padding:10px 13px;border:1px solid rgba(45,107,72,0.2);background:#fff;font-family:'DM Sans',sans-serif;font-size:13px;color:#2a3d28;outline:none;border-radius:2px;resize:vertical;box-sizing:border-box;" onfocus="this.style.borderColor='#3d8a62'" onblur="this.style.borderColor='rgba(45,107,72,0.2)'"></textarea>
-          </div>
-
-          <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:4px;">
-            <input type="checkbox" id="rgpd-gestalt" name="rgpd" required style="margin-top:3px;accent-color:#2d6b48;flex-shrink:0;cursor:pointer;">
-            <label for="rgpd-gestalt" style="font-size:12px;color:#4a6858;line-height:1.6;cursor:pointer;">He llegit i accepto la <button type="button" onclick="event.preventDefault();openModal('modal-privacitat')" style="background:none;border:none;padding:0;color:#2d6b48;font-size:12px;font-family:'DM Sans',sans-serif;cursor:pointer;border-bottom:1px solid rgba(45,107,72,0.3);">política de privacitat</button> i autoritzo el tractament de les meves dades.</label>
-          </div>
-
-          <button type="submit" id="gs-submit-btn" style="padding:13px 24px;background:#2d6b48;color:#fff;border:none;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border-radius:40px;transition:all .25s;box-shadow:0 4px 16px rgba(45,107,72,0.2);" onmouseover="this.style.background='rgba(30,90,56,0.85)';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#2d6b48';this.style.transform='translateY(0)'">Sol·licitar primera trucada gratuïta →</button>
-
-          <div id="gs-ok" style="display:none;text-align:center;padding:18px 16px;background:#fff;border:1px solid rgba(45,107,72,0.2);border-radius:4px;">
-            <div style="font-size:22px;margin-bottom:8px;">🌿</div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:20px;color:#0f2d1e;margin-bottom:5px;">Sol·licitud enviada!</div>
-            <div style="font-size:12.5px;color:#4a6858;line-height:1.65;">Et trucarem en 24–48 h hàbils. Fins aviat!</div>
-          </div>
-          <div id="gs-err" style="display:none;font-size:12px;color:#a32d2d;background:#fcebeb;padding:10px 14px;border-radius:2px;"></div>
-
-          <p style="font-size:10.5px;color:#4a6858;line-height:1.6;margin:0;">Dades tractades de forma confidencial. <button onclick="openModal('modal-privacitat')" style="background:none;border:none;padding:0;color:#2d6b48;font-family:'DM Sans',sans-serif;font-size:10.5px;cursor:pointer;border-bottom:1px solid rgba(45,107,72,0.3);"><span data-i18n="footer.privacitat">Política de privacitat</span></button>.</p>
-        </form>
+      <div style="background:#f0f9ed;border:1px solid rgba(45,107,72,0.12);padding:40px 32px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:18px;">
+        <div style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#3d8a62;">Reserva la teva primera trucada</div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300;color:#0f2d1e;line-height:1.2;margin:0;">Comencem amb una <em style="font-style:italic;color:#3d8a62;">trucada gratuïta</em> de 20 minuts</h3>
+        <p style="font-size:13px;color:#4a6858;line-height:1.7;margin:0;">Sense compromís i en estricta confidencialitat. Et truquem en 24-48 h hàbils per parlar de què et porta i veure si la modalitat encaixa amb el que necessites.</p>
+        <a href="/contacte/" style="background:#2d6b48;color:#d4e8d0;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;padding:14px 26px;border-radius:40px;text-decoration:none;font-weight:600;display:inline-block;margin-top:6px;">Anar a contacte →</a>
       </div>
     </div>
   </div>
