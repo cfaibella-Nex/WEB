@@ -200,53 +200,39 @@
 <div class="content" style="padding:40px 48px 60px; max-width:none;">
 
 <style>
-.srv-detail-grid { display:grid; grid-template-columns:280px 1fr; gap:32px; margin-bottom:48px; }
-.srv-detail-nav { position:sticky; top:24px; }
-.srv-detail-nav-item { display:block; padding:12px 16px; font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:#4a6858; border-left:2px solid rgba(45,107,72,0.2); cursor:pointer; transition:all .2s; margin-bottom:4px; text-decoration:none; }
-.srv-detail-nav-item:hover, .srv-detail-nav-item.active { color:#2d6b48; border-left-color:#3d8a62; background:#f0f9ed; }
-.srv-block { margin-bottom:56px; padding-bottom:56px; border-bottom:1px solid rgba(45,107,72,0.12); }
-.srv-block:last-child { border-bottom:none; }
-.srv-block-tag { font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:#3d8a62; margin-bottom:10px; }
-.srv-block-title { font-family:"Cormorant Garamond",serif; font-size:30px; color:#0f2d1e; margin-bottom:14px; font-weight:500; }
-.srv-block-desc { font-size:13px; color:#4a5e46; line-height:1.85; margin-bottom:24px; max-width:100%; }
-.srv-cols { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
-.srv-col-box { background:#f5f0e8; border:1px solid rgba(45,107,72,0.15); padding:20px; }
-.srv-col-box-title { font-size:12px; font-weight:600; color:#0f2d1e; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:10px; }
+.srv-block { padding-bottom:48px; margin-bottom:48px; border-bottom:1px solid rgba(45,107,72,0.15); }
+.srv-block:last-of-type { border-bottom:none; margin-bottom:0; padding-bottom:0; }
+.srv-block-tag { font-size:11px; font-weight:600; color:#3d8a62; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:14px; }
+.srv-block-title { font-family:"Cormorant Garamond",serif; font-size:32px; color:#0f2d1e; margin-bottom:18px; font-weight:500; line-height:1.15; }
+.srv-block-banner { height:300px; background-size:cover; background-position:center; margin:0 0 24px; border-radius:2px; background-color:#e8f0e3; }
+.srv-block-desc { font-size:13px; color:#4a6858; line-height:1.78; margin-bottom:28px; max-width:740px; }
+.srv-cols { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:2px; margin-top:8px; }
+.srv-col-box { background:#f5f0e8; padding:24px 26px; }
+.srv-col-box-title { font-size:12px; font-weight:600; color:#0f2d1e; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:12px; }
 .srv-col-box ul { list-style:none; padding:0; margin:0; }
-.srv-col-box li { font-size:12px; color:#4a6858; padding:4px 0; border-bottom:1px solid rgba(45,107,72,0.08); display:flex; gap:8px; align-items:flex-start; }
+.srv-col-box li { font-size:12.5px; color:#4a6858; padding:5px 0; border-bottom:1px solid rgba(45,107,72,0.08); display:flex; gap:8px; align-items:flex-start; line-height:1.55; }
+.srv-col-box li:last-child { border-bottom:none; }
 .srv-col-box li::before { content:"–"; color:#3d8a62; flex-shrink:0; }
-.srv-col-box.col-dark { background:#98be95 !important; }
-.srv-col-box.col-dark .srv-col-box-title { color:#0f2d1e !important; }
-.srv-col-box.col-dark li { color:#4a6858 !important; border-bottom-color:rgba(45,107,72,0.15) !important; }
-.srv-col-box.col-dark li::before { color:#2d6b48 !important; }
-@media(max-width:768px){ .srv-detail-grid { grid-template-columns:1fr; } .srv-detail-nav { display:none; } }
-</style>
-<style>
-.apq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:4px;}
-.apq-box{background:#f5f0e8;border:1px solid rgba(45,107,72,0.15);padding:24px;}
-.apq-box h4{font-family:'Cormorant Garamond',serif;font-size:22px;color:#0f2d1e;font-weight:500;margin:0 0 8px;}
-.apq-box p{font-size:12.5px;color:#4a6858;line-height:1.78;margin:0;}
-.com-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;}
-.com-box{padding:20px 22px;border:1px solid rgba(45,107,72,0.15);}
-.com-num{font-family:'Cormorant Garamond',serif;font-size:26px;color:#3d8a62;line-height:1;}
-.com-box h5{font-size:11px;font-weight:600;color:#0f2d1e;letter-spacing:0.06em;text-transform:uppercase;margin:8px 0 6px;}
-.com-box p{font-size:12px;color:#4a6858;line-height:1.7;margin:0;}
-.ap-form-wrap{max-width:640px;}
-.ap-form-wrap .contact-form{padding:32px 28px;}
-@media(max-width:768px){ .apq-grid{grid-template-columns:1fr;} }
+.srv-col-box.col-dark { background:#98be95; }
+.cta-inline { background:#f5f0e8; padding:24px 28px; display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap; border-left:3px solid #3d8a62; margin-top:8px; }
+.cta-inline-text { flex:1; min-width:240px; }
+.cta-inline-text-kicker { font-size:10px; font-weight:600; color:#2d6b48; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:4px; }
+.cta-inline-text-main { font-size:14px; color:#0f2d1e; }
+.cta-inline a { background:#2d6b48; color:#d4e8d0; font-family:"DM Sans",sans-serif; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; padding:11px 22px; border-radius:40px; text-decoration:none; font-weight:600; white-space:nowrap; }
+@media(max-width:768px){ .srv-block-banner { height:200px; } .srv-block-title { font-size:26px; } }
 </style>
 
 <a href="/nexacompanya/" style="background:transparent;border:none;color:#4a6858;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;margin-bottom:32px;padding:0;display:inline-block;text-decoration:none;">← Tornar a NexAcompanya</a>
 
-<!-- Bloc 1: Què oferim -->
-<div class="srv-block" id="acomp-personal">
-  <div class="srv-block-tag"><span style="font-family:'Cormorant Garamond',serif;font-size:1.15em;">Nex<em style="color:#3d8a62;">Acompanya</em></span> · Col·lectiu Senior</div>
-  <div class="srv-block-title">Què <em style="font-style:italic;color:#3d8a62;">oferim</em></div>
-  <p class="srv-block-desc">Creem vincle, fem barri i acompanyem la persona gran de manera continuada —des de la proximitat i el respecte a la seva autonomia— combinant intervenció individual, grupal i comunitària. Quan la situació ho requereix, connectem directament amb <span style="font-family:'Cormorant Garamond',serif;font-size:1.15em;">Nex<em style="color:#3d8a62;">Gestió</em></span> per gestionar dependència, ajuts socials o qualsevol tràmit administratiu.</p>
-
+<!-- Subservei 1: Suport individual i quotidià -->
+<div class="srv-block">
+  <div class="srv-block-tag">Subservei · Suport individual</div>
+  <div class="srv-block-title">Acompanyament <em style="font-style:italic;color:#3d8a62;">individual i quotidià</em></div>
+  <div class="srv-block-banner" style="background-image:url('../../images/img_34.jpg');"></div>
+  <p class="srv-block-desc">Visitem la persona gran amb regularitat, l'acompanyem a cites i gestions i li donem suport en tot allò que pot ser difícil de gestionar sol/a. Una presència de confiança a prop, sense substituir l'autonomia.</p>
   <div class="srv-cols">
     <div class="srv-col-box">
-      <div class="srv-col-box-title">Suport individual i quotidià</div>
+      <div class="srv-col-box-title">Què oferim</div>
       <ul>
         <li>Visites de proximitat i trucades de seguiment periòdic</li>
         <li>Acompanyament a cites mèdiques i gestions presencials</li>
@@ -255,84 +241,55 @@
         <li>Escolta activa i detecció de necessitats emergents</li>
       </ul>
     </div>
-    <div class="srv-col-box">
-      <div class="srv-col-box-title">Activitats grupals i de barri</div>
-      <ul>
-        <li>Club de lectura i tertúlies intergeneracionals</li>
-        <li>Tallers emocionals i de connexió amb el present</li>
-        <li>Grups de relació i construcció de vincles veïnals</li>
-        <li>Activitats comunitàries per fer barri i reduir l'aïllament</li>
-        <li>Connexió amb el servei d'acompanyament emocional grupal</li>
-      </ul>
-    </div>
     <div class="srv-col-box col-dark">
       <div class="srv-col-box-title">Connexió amb NexGestió</div>
       <ul>
         <li>Gestió de la dependència i la prestació per cuidador</li>
-        <li>Ajuts socials per a persones en situació de vulnerabilitat</li>
-        <li>Bons socials de llum, gas i internet</li>
+        <li>Ajuts socials i bons de llum, gas i internet</li>
         <li>Pensió no contributiva i complements a mínims</li>
-        <li>Coordinació amb serveis socials i entitats del territori</li>
+        <li>Coordinació amb serveis socials del territori</li>
       </ul>
     </div>
   </div>
 </div>
 
-<!-- Bloc 2: Per a qui -->
+<!-- Subservei 2: Activitats grupals i de barri -->
 <div class="srv-block">
-  <div class="srv-block-tag">A qui acompanyem</div>
-  <div class="srv-block-title">Per a <em style="font-style:italic;color:#3d8a62;">qui</em></div>
-  <div class="apq-grid">
-    <div class="apq-box">
-      <h4>Persones grans i famílies</h4>
-      <p>Per a la persona gran que vol mantenir autonomia i companyia, i per a les famílies que necessiten una presència de confiança a prop quan no poden ser-hi cada dia. Un acompanyament continuat, proper i a la seva mida.</p>
+  <div class="srv-block-tag">Subservei · Comunitat</div>
+  <div class="srv-block-title">Activitats <em style="font-style:italic;color:#3d8a62;">grupals i de barri</em></div>
+  <div class="srv-block-banner" style="background-image:url('../../images/img_15.jpg');"></div>
+  <p class="srv-block-desc">Fem barri. Connectem la persona gran amb activitats, veïns i espais de relació per reduir l'aïllament i obrir noves vies de vincle. Treballem amb casals, centres cívics i ajuntaments per articular la presència comunitària.</p>
+  <div class="srv-cols">
+    <div class="srv-col-box">
+      <div class="srv-col-box-title">Espais de relació</div>
+      <ul>
+        <li>Club de lectura i tertúlies intergeneracionals</li>
+        <li>Tallers emocionals i de connexió amb el present</li>
+        <li>Grups de relació i construcció de vincles veïnals</li>
+        <li>Activitats comunitàries per fer barri</li>
+      </ul>
     </div>
-    <div class="apq-box">
-      <h4>Casals, centres cívics i ajuntaments</h4>
-      <p>Per a entitats i administracions que volen reforçar l'atenció a la gent gran del territori: activitats de barri, acompanyaments individuals i un servei de proximitat que complementa els recursos públics existents.</p>
-    </div>
-  </div>
-</div>
-
-<!-- Bloc 3: Com ho fem -->
-<div class="srv-block">
-  <div class="srv-block-tag">El nostre mètode</div>
-  <div class="srv-block-title">Com ho <em style="font-style:italic;color:#3d8a62;">fem</em></div>
-  <div class="com-grid">
-    <div class="com-box"><div class="com-num">01</div><h5>Proximitat</h5><p>Coneixem la persona, el seu entorn i el seu ritme. Acompanyem des de la confiança, no des del tràmit.</p></div>
-    <div class="com-box"><div class="com-num">02</div><h5>Continuïtat</h5><p>No és una visita puntual: és un vincle estable i un seguiment regular al llarg del temps.</p></div>
-    <div class="com-box"><div class="com-num">03</div><h5>Comunitat</h5><p>Fem barri. Connectem la persona gran amb activitats, veïns i espais de relació per reduir l'aïllament.</p></div>
-    <div class="com-box"><div class="com-num">04</div><h5>Coordinació</h5><p>Treballem amb serveis socials, entitats i NexGestió per resoldre dependència, ajuts i tràmits.</p></div>
-  </div>
-</div>
-
-<!-- Bloc 4: Formulari -->
-<div class="srv-block" style="border-bottom:none;padding-bottom:8px;margin-bottom:0;">
-  <div class="srv-block-tag">Contacte</div>
-  <div class="srv-block-title">Comencem a <em style="font-style:italic;color:#3d8a62;">acompanyar</em></div>
-  <p class="srv-block-desc">Explica'ns la situació —si ets una persona gran, una família o una entitat (casal, centre cívic, ajuntament)— i t'orientem sense cap compromís.</p>
-  <div class="ap-form-wrap">
-    <div class="contact-form">
-      <form id="contact-form" action="https://formspree.io/f/xlgpljjd" method="POST" onsubmit="handleContactForm(event)">
-        <input type="hidden" name="origen" value="Acompanyament Personal · Senior">
-        <input type="hidden" name="_subject" value="Nou lead · Acompanyament Personal (Senior)">
-        <div class="form-group"><label>Nom *</label><input type="text" name="nom" placeholder="El teu nom i cognoms" required></div>
-        <div class="form-row"><div class="form-group"><label>Email *</label><input type="email" name="email" placeholder="correu@exemple.com" required></div><div class="form-group"><label>Telèfon</label><input type="tel" name="telefon" placeholder="6XX XXX XXX"></div></div>
-        <div class="form-group"><label>Sóc... </label><select name="perfil"><option value="">Selecciona...</option><option value="Persona gran">Persona gran</option><option value="Familiar">Familiar / cuidador/a</option><option value="Entitat o administracio">Casal / centre cívic / ajuntament</option><option value="Altres">Altres</option></select></div>
-        <div class="form-group"><label>Missatge *</label><textarea name="missatge" placeholder="Explica'ns la situació i com et podem ajudar..." style="min-height:120px" required></textarea></div>
-        <div style="margin-bottom:16px;display:flex;align-items:flex-start;gap:10px;">
-          <input type="checkbox" id="rgpd-ap" name="rgpd" required style="margin-top:3px;accent-color:#2d6b48;flex-shrink:0;cursor:pointer;">
-          <label for="rgpd-ap" style="font-size:12px;color:#4a6858;line-height:1.6;cursor:pointer;">He llegit i accepto la <button type="button" onclick="event.preventDefault();openModal('modal-privacitat')" style="background:none;border:none;padding:0;color:#2d6b48;font-size:12px;font-family:'DM Sans',sans-serif;cursor:pointer;border-bottom:1px solid rgba(45,107,72,0.3);">política de privacitat</button> i autoritzo el tractament de les meves dades per atendre la meva consulta.</label>
-        </div>
-        <div id="form-success" style="display:none;background:rgba(109,191,133,.15);border:1px solid #6dbf85;color:#6dbf85;padding:14px 18px;border-radius:6px;margin-bottom:12px;font-size:14px;">✓ Missatge enviat! Et respondrem en menys de 24h.</div>
-        <button type="submit" class="btn-primary" id="form-submit-btn">Enviar missatge</button>
-      </form>
+    <div class="srv-col-box col-dark">
+      <div class="srv-col-box-title">Treball amb entitats</div>
+      <ul>
+        <li>Programes per a casals i centres cívics</li>
+        <li>Col·laboració amb ajuntaments del territori</li>
+        <li>Dinamització d'activitats per a gent gran</li>
+        <li>Coordinació amb el servei d'acompanyament emocional</li>
+      </ul>
     </div>
   </div>
 </div>
 
+<div class="cta-inline">
+  <div class="cta-inline-text">
+    <div class="cta-inline-text-kicker">Vols més informació?</div>
+    <div class="cta-inline-text-main">Contacta amb nosaltres i t'orientem sense compromís.</div>
+  </div>
+  <a href="/contacte/">Contacta'ns →</a>
 </div>
 
+</div>
 
 <!-- FOOTER -->
 <footer class="site-footer">

@@ -663,3 +663,22 @@ a.btn-outline:hover {
 nav a, .footer-links a, .topbar-btn, .sidebar-footer a {
   text-decoration: none !important;
 }
+
+/* ====== Sidebar nav spacing fix (subitems no-collision) ====== */
+/* Parent headers (NexAcompanya, NexGestió, Servei a Entitats, etc): 
+   add breathing room above so they don't visually touch the previous active subitem */
+.sidebar nav > a[style*="padding:9px 20px 9px 32px"] {
+  margin-top: 6px !important;
+}
+/* First nav link doesn't need extra top margin */
+.sidebar nav > a:first-child {
+  margin-top: 0 !important;
+}
+/* Active subitem gets a tiny bottom margin so its background panel doesn't kiss the next header */
+.sidebar nav > a.active[style*="padding:8px 20px 8px 44px"] {
+  margin-bottom: 4px !important;
+}
+/* Subitem with active class but legacy inline padding (5px): also covered */
+.sidebar nav > a.active[style*="padding:5px 20px 5px 44px"] {
+  margin-bottom: 4px !important;
+}
