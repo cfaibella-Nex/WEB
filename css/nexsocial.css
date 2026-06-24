@@ -42,7 +42,7 @@ section.active{display:block}
 .stat:hover .stat-label{color:var(--forest);}
 .stat-num{font-family:'League Spartan',sans-serif;font-size:40px;font-weight:400;color:#2d6b48;line-height:1;margin-bottom:5px;transition:color .25s;letter-spacing:-0.01em;}
 .stat-label{font-size:11px;color:#4a6858;letter-spacing:.08em;text-transform:uppercase;transition:color .25s;}
-.page-header{background:var(--forest-hero);padding:52px 64px 40px;position:relative;overflow:hidden;height:360px;display:flex;flex-direction:column;justify-content:center;box-sizing:border-box}
+.page-header{background:var(--forest-hero);padding:52px 64px 40px;position:relative;overflow:hidden;height:300px;display:flex;flex-direction:column;justify-content:center;box-sizing:border-box}
 .page-header-bg{position:absolute;right:0;top:0;bottom:0;width:45%;background-size:cover;background-position:center;opacity:.55}
 .page-header::after{content:'';position:absolute;right:0;top:0;bottom:0;width:45%;background:linear-gradient(to right,var(--forest-hero) 0%,transparent 40%)}
 .page-header-tag{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#0d7040;font-weight:600;margin-bottom:12px;display:block;position:relative;z-index:1}
@@ -143,7 +143,7 @@ section.active{display:block}
   
   /* Padding de contingut reduït */
   .content,.content-alt,.form-container{padding-left:32px;padding-right:32px}
-  .page-header{padding:40px 32px 32px;height:280px;box-sizing:border-box}
+  .page-header{padding:40px 32px 32px;height:220px;box-sizing:border-box}
   
   /* Hero title més petit */
   
@@ -187,7 +187,7 @@ section.active{display:block}
   
   /* Padding reduït */
   .content,.content-alt{padding-left:24px;padding-right:24px}
-  .page-header{padding:32px 24px 28px !important;height:240px !important;box-sizing:border-box}
+  .page-header{padding:32px 24px 28px !important;height:180px !important;box-sizing:border-box}
   
     .hero-content{padding:48px 32px 40px !important}
   
