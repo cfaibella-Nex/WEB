@@ -674,3 +674,32 @@ nav a, .footer-links a, .topbar-btn, .sidebar-footer a {
 .sidebar::-webkit-scrollbar-thumb { background: rgba(45,107,72,0.2); border-radius: 4px; }
 .sidebar::-webkit-scrollbar-thumb:hover { background: rgba(45,107,72,0.4); }
 .sidebar { scrollbar-width: thin; scrollbar-color: rgba(45,107,72,0.2) transparent; }
+
+/* ====== Mobile fixes for subpages ====== */
+@media(max-width:768px){
+  /* Content padding override for inline styles */
+  .content[style*="padding:40px 48px"] { padding: 24px 18px 32px !important; }
+  /* srv-cols single column */
+  .srv-cols { grid-template-columns: 1fr !important; }
+  /* apq-grid single column */
+  .apq-grid { grid-template-columns: 1fr !important; }
+  /* com-grid single column */
+  .com-grid { grid-template-columns: 1fr !important; }
+  /* CTA inline stack */
+  .cta-inline { flex-direction: column !important; align-items: flex-start !important; }
+  /* Banner height */
+  .srv-block-banner { height: 200px !important; }
+  /* Block title smaller */
+  .srv-block-title { font-size: 24px !important; }
+  /* Page header text overflow */
+  .page-header h1 { font-size: 28px !important; }
+  .page-header p { font-size: 13px !important; }
+  /* Footer: 1 column on very small */
+}
+@media(max-width:480px){
+  .content[style*="padding:40px 48px"] { padding: 20px 14px 24px !important; }
+  .page-header { height: 180px !important; }
+  .page-header h1 { font-size: 24px !important; }
+  .srv-block-banner { height: 160px !important; }
+  .footer-top { grid-template-columns: 1fr !important; }
+}
