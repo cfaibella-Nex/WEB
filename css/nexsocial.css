@@ -703,3 +703,22 @@ nav a, .footer-links a, .topbar-btn, .sidebar-footer a {
   .srv-block-banner { height: 160px !important; }
   .footer-top { grid-template-columns: 1fr !important; }
 }
+
+/* === Footer: contingut a l'esquerra, distintius a la dreta === */
+.footer-inner{max-width:1280px}
+.footer-main{display:flex;align-items:flex-start;gap:40px;padding-bottom:20px;border-bottom:1px solid rgba(109,191,133,.08)}
+.footer-main>.footer-top{flex:1 1 auto;min-width:0;padding-bottom:0;border-bottom:0}
+.footer-brands{flex:0 0 170px;display:flex;flex-direction:column;gap:12px}
+.footer-brands a{display:block;line-height:0;opacity:.92;transition:opacity .2s ease}
+.footer-brands a:hover{opacity:1}
+.footer-brands a:focus-visible{outline:2px solid #2d6b48;outline-offset:3px;opacity:1}
+.footer-brands img{display:block;width:100%;height:auto}
+.footer-brands img.is-plate{border-radius:2px}
+.footer-brands-label{font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;color:#2d6b48;font-weight:600;margin-bottom:-4px}
+@media(max-width:900px){
+  .footer-main{flex-wrap:wrap;gap:0}
+  .footer-main>.footer-top{flex:1 1 100%;padding-bottom:20px}
+  .footer-brands{flex:1 1 100%;flex-direction:row;align-items:center;flex-wrap:wrap;gap:18px;padding-top:18px}
+  .footer-brands a{flex:0 1 170px}
+  .footer-brands-label{margin:0;flex:0 0 auto}
+}
