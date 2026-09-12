@@ -331,10 +331,11 @@ document.addEventListener('keydown',function(e){ if(e.key==='Escape') document.q
     <h2>Aviso Legal</h2>
     <p>En cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa de los siguientes aspectos:</p>
     <h3>Titular del sitio web</h3>
-    <p><strong>Denominación social:</strong> NexSocial, Cooperativa de Acompañamiento Sociovital<br>
-    <strong>Forma jurídica:</strong> Cooperativa de trabajo asociado<br>
-    <strong>Registro:</strong> Registre de Cooperatives de Catalunya (número pendent de registre)<br>
-    <strong>Domicilio social:</strong> Catalunya, Espanya<br>
+    <p><strong>Denominación social:</strong> NexSocial SCCL<br>
+    <strong>Forma jurídica:</strong> Cooperativa de trabajo asociado sin ánimo de lucro<br>
+<strong>NIF:</strong> F-27641133<br>
+    <strong>Registro:</strong> Inscrita en el Registro de Cooperativas de Cataluña<br>
+    <strong>Domicilio social:</strong> Badalona (Barcelonès Nord), Cataluña<br>
     <strong>Correo electrónico:</strong> infonex@nexsocial.org<br>
     <strong>Web:</strong> www.nexsocial.org</p>
     <h3>Objeto y actividad</h3>
@@ -402,11 +403,12 @@ document.addEventListener('keydown',function(e){ if(e.key==='Escape') document.q
     <p>En compliment de la Llei 34/2002, d'11 de juliol, de Serveis de la Societat de la Informació i de Comerç Electrònic (LSSI-CE), s'informa dels següents aspectes:</p>
 
     <h3>Titular del lloc web</h3>
-    <p><strong>Denominació social:</strong> NexSocial, Cooperativa d'Acompanyament Sociovital<br>
-    <strong>Forma jurídica:</strong> Cooperativa de treball associat<br>
-    <strong>Registre:</strong> Registre de Cooperatives de Catalunya (número pendent de registre)<br>
-    <strong>Domicili social:</strong> Catalunya, Espanya<br>
-    <strong>Correu electrònic:</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="563f38303938332e1638332e2539353f373a78392431">[email&#160;protected]</a><br>
+    <p><strong>Denominació social:</strong> NexSocial SCCL<br>
+    <strong>Forma jurídica:</strong> Cooperativa de treball associat sense ànim de lucre<br>
+<strong>NIF:</strong> F-27641133<br>
+    <strong>Registre:</strong> Inscrita al Registre de Cooperatives de Catalunya<br>
+    <strong>Domicili social:</strong> Badalona (Barcelonès Nord), Catalunya<br>
+    <strong>Correu electrònic:</strong> <a href="mailto:infonex@nexsocial.org">infonex@nexsocial.org</a><br>
     <strong>Web:</strong> www.nexsocial.org</p>
 
     <h3>Objecte i activitat</h3>
@@ -433,7 +435,7 @@ document.addEventListener('keydown',function(e){ if(e.key==='Escape') document.q
 
     <h3>Responsable del tractament</h3>
     <p><strong>NexSocial, Cooperativa d'Acompanyament Sociovital</strong><br>
-    Correu de contacte: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="82ebece4edece7fac2ece7faf1ede1ebe3eeacedf0e5">[email&#160;protected]</a></p>
+    Correu de contacte: <a href="mailto:infonex@nexsocial.org">infonex@nexsocial.org</a></p>
 
     <h3>Dades que tractem</h3>
     <p>Únicament tractem les dades que vostè ens facilita voluntàriament a través dels formularis de contacte del web: nom, correu electrònic, telèfon i el contingut del missatge. No recollim dades de manera automàtica més enllà de les estrictament necessàries per al funcionament tècnic del lloc web.</p>
@@ -451,7 +453,7 @@ document.addEventListener('keydown',function(e){ if(e.key==='Escape') document.q
     <p>No cedim les seves dades a tercers, excepte per obligació legal. El servei de correu electrònic pot estar allotjat en proveïdors externs amb les garanties adequades.</p>
 
     <h3>Els seus drets</h3>
-    <p>Pot exercir els drets d'accés, rectificació, supressió, oposició, limitació del tractament i portabilitat enviant un correu a <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5831363e37363d2018363d202b373b31393476372a3f">[email&#160;protected]</a>. Si considera que els seus drets no han estat atesos, pot presentar una reclamació davant l'Agència Española de Protección de Datos (www.aepd.es).</p>
+    <p>Pot exercir els drets d'accés, rectificació, supressió, oposició, limitació del tractament i portabilitat enviant un correu a <a href="mailto:infonex@nexsocial.org">infonex@nexsocial.org</a>. Si considera que els seus drets no han estat atesos, pot presentar una reclamació davant l'Agència Española de Protección de Datos (www.aepd.es).</p>
   </div>
 </div>
 
@@ -489,7 +491,7 @@ document.addEventListener('keydown',function(e){ if(e.key==='Escape') document.q
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>`;
+<script>`;
   
   }
   document.body.appendChild(div);
@@ -530,3 +532,85 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+// ── Rastre de fulles del punter ───────────────────────────────────────────
+// Nomes a escriptori amb ratoli. No s'activa a tauleta ni a mobil, ni si el
+// sistema demana reduir el moviment. Per apagar-ho del tot: posar false aqui.
+var NEXSOCIAL_LEAF_TRAIL = true;
+
+(function(){
+  if(!NEXSOCIAL_LEAF_TRAIL) return;
+  if(!window.matchMedia) return;
+  if(!matchMedia('(pointer:fine)').matches) return;
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+
+  var CAPA, viues = [], MAX = 14, DIST = 46, ultimX = null, ultimY = null;
+  var TONS = ['#6dbf85','#3d8a62','#98be95','#2d6b48'];
+  var FULLA = 'M12 2C7 5 4 9 4 13a8 8 0 0016 0c0-4-3-8-8-11z M12 4v16';
+
+  function crear(x, y){
+    if(viues.length >= MAX) esborrar(viues[0]);
+    var mida = 11 + Math.random()*9;
+    var gir  = Math.random()*360;
+    var desv = (Math.random()-0.5)*34;      // deriva lateral
+    var to   = TONS[(Math.random()*TONS.length)|0];
+
+    var svg = document.createElementNS('http://www.w3.org/2000/svg','svg');
+    svg.setAttribute('viewBox','0 0 24 24');
+    svg.setAttribute('width', mida);
+    svg.setAttribute('height', mida);
+    svg.setAttribute('aria-hidden','true');
+    svg.innerHTML = '<path d="'+FULLA+'" fill="'+to+'" fill-opacity=".55" stroke="'+to+
+                    '" stroke-width="1.1" stroke-linecap="round" stroke-opacity=".7"/>';
+    svg.style.left = (x - mida/2) + 'px';
+    svg.style.top  = (y - mida/2) + 'px';
+    svg.style.transform = 'rotate('+gir+'deg) scale(.6)';
+    svg.style.opacity = '0';
+    CAPA.appendChild(svg);
+
+    // caiguda suau: baixa, es desvia i s'apaga
+    var anim = svg.animate([
+      { transform:'rotate('+gir+'deg) scale(.65)', opacity:0 },
+      { transform:'rotate('+(gir+22)+'deg) scale(1)', opacity:.85, offset:.18 },
+      { transform:'translate('+desv+'px,58px) rotate('+(gir+150)+'deg) scale(.9)', opacity:0 }
+    ], { duration: 1500 + Math.random()*600, easing:'cubic-bezier(.25,.6,.35,1)', fill:'forwards' });
+
+    var reg = { el:svg, anim:anim };
+    viues.push(reg);
+    anim.onfinish = function(){ esborrar(reg); };
+  }
+
+  function esborrar(reg){
+    var i = viues.indexOf(reg);
+    if(i > -1) viues.splice(i,1);
+    if(reg.el && reg.el.parentNode) reg.el.parentNode.removeChild(reg.el);
+  }
+
+  function moviment(e){
+    if(ultimX === null){ ultimX = e.clientX; ultimY = e.clientY; return; }
+    var dx = e.clientX - ultimX, dy = e.clientY - ultimY;
+    if(dx*dx + dy*dy < DIST*DIST) return;    // nomes en moure's prou
+    ultimX = e.clientX; ultimY = e.clientY;
+    crear(e.clientX, e.clientY);
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    CAPA = document.createElement('div');
+    CAPA.id = 'leaf-trail';
+    CAPA.setAttribute('aria-hidden','true');
+    document.body.appendChild(CAPA);
+    document.addEventListener('mousemove', moviment, { passive:true });
+    // en canviar de pestanya, netegem el que hi hagi a mig camí
+    document.addEventListener('visibilitychange', function(){
+      if(document.hidden) viues.slice().forEach(esborrar);
+    });
+  });
+})();
+
+// ── Menú lateral plegable ─────────────────────────────────────────────────
+function toggleSidebarCollapse(){
+  var plegat = document.body.classList.toggle('sidebar-collapsed');
+  try{ localStorage.setItem('nexsocial_sidebar', plegat ? 'collapsed' : 'open'); }catch(e){}
+  var b = document.querySelector('.sidebar-collapse');
+  if(b) b.setAttribute('aria-expanded', plegat ? 'false' : 'true');
+}

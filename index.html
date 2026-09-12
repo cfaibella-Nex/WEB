@@ -1044,25 +1044,31 @@ function changeLogo(){
 <g class="lf7" style="transform-origin:134.3px 824.0px"><path d="M 0,-2.4 C 1.1,-1.2 1.3,-0.2 0.7,1.1 C 0.3,2.1 0,2.4 0,2.4 C 0,2.4 -0.2,1.7 -0.7,0.7 C -1.2,-0.2 -0.6,-1.6 0,-2.4 Z" fill="#a0c878" opacity="0.39" transform="translate(134.3,824.0) rotate(2)"/></g>
 <g class="lf8" style="transform-origin:130.0px 840.0px"><path d="M 0,-2.7 C 1.2,-1.4 1.5,-0.2 0.8,1.2 C 0.3,2.3 0,2.7 0,2.7 C 0,2.7 -0.3,1.9 -0.8,0.8 C -1.3,-0.3 -0.7,-1.7 0,-2.7 Z" fill="#648c3c" opacity="0.44" transform="translate(130.0,840.0) rotate(7)"/></g>
 
-</g></svg></div><style>.sidebar-leaves{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0;}.sidebar>*:not(.sidebar-leaves){position:relative;z-index:1;}</style><div class="sidebar-logo"><img src="images/img_01.png" alt="NexSocial"><div><div class="logo-name">NexSocial</div><div class="logo-sub">Cooperativa d'Acompanyament<br>Sociovital</div></div></div><nav>
-<a class="active" href='/'><span data-i18n="nav.inici">Inici</span></a>
-<a href='/qui-som/'><span data-i18n="nav.qui_som">Qui som</span></a>
-<a href='/persones/'><span data-i18n="nav.servei_persones">Servei a Persones</span></a>
-<div id="subnav-serveis" style="max-height:260px; overflow:hidden; background:rgba(255,255,255,0.18);">
-  <a href='/nexacompanya/'>NexAcompanya</a>
-  <a href='/nexacompanya/acompanyament-personal/' style="padding:5px 8px 5px 20px; font-size:12.5px; color:#6a9070; display:block; ">A. Personal</a>
-  <a href='/nexacompanya/sessions-gestalt/' style="padding:5px 8px 5px 20px; font-size:12.5px; color:#6a9070; display:block; ">A. Emocional i Terapèutic</a>
-  <a href='/nexgestio/'>NexGestió</a>
-  <a href='/nexgestio/acompanyament-administratiu-vital/' style="padding:5px 8px 5px 20px; font-size:12.5px; color:#6a9070; display:block;">A. Administratiu Vital</a>
-  <a href='/nexgestio/mediacio-orientacio-social/' style="padding:5px 8px 5px 20px; font-size:12.5px; color:#6a9070; display:block;">Mediació i Or. Jurídica Social</a>
-  <a href='/consulta-cas-a-cas/'><span data-i18n="nav.cas_a_cas">Consulta Cas a Cas</span></a>
-</div>
-<a href='/entitats/'><span data-i18n="nav.servei_entitats">Servei a Entitats</span></a>
-<a href='/entitats/acompanyament-gestio-entitats/' style="padding:5px 8px 5px 20px; font-size:12.5px; color:#6a9070; display:block;">A. Gestió Operativa</a>
-  <a href='/entitats/consultoria-social/' style="padding:5px 8px 5px 20px; font-size:12.5px; color:#6a9070; display:block;">Consultoria Entitats Socials</a>
-<a href='/collaboracions/'><span data-i18n="nav.collaboracions">Col·laboracions</span></a>
-<a href='/contacte/'>Contacte</a>
+</g></svg></div><style>.sidebar-leaves{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0;}.sidebar>*:not(.sidebar-leaves){position:relative;z-index:1;}</style><div class="sidebar-logo"><img src="images/img_01.png" alt="NexSocial"><div><div class="logo-name">NexSocial</div><div class="logo-sub">Cooperativa d'Acompanyament<br>Sociovital</div></div></div><!--#nav-->
+<script>(function(){try{if(localStorage.getItem("nexsocial_sidebar")==="collapsed"){var b=document.body;b.classList.add("sb-noanim","sidebar-collapsed");requestAnimationFrame(function(){requestAnimationFrame(function(){b.classList.remove("sb-noanim");var t=document.querySelector(".sidebar-collapse");if(t)t.setAttribute("aria-expanded","false");});});}}catch(e){}})();</script>
+<button class="sidebar-collapse" type="button" onclick="toggleSidebarCollapse()"
+        aria-controls="sidebar" aria-expanded="true" title="Plega el menú">
+  <span class="sc-txt">Menú</span>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+</button>
+<nav>
+  <a class="active" href="/"><span data-i18n="nav.inici">Inici</span></a>
+  <a href="/qui-som/"><span data-i18n="nav.qui_som">Qui som</span></a>
+  <a href="/persones/"><span data-i18n="nav.servei_persones">Servei a Persones</span></a>
+  <a href="/nexacompanya/"><span data-i18n="nav.nexacompanya">NexAcompanya</span></a>
+  <a href="/nexacompanya/acompanyament-personal/" style="padding:5px 8px 5px 20px; font-size:12.5px; color:#6a9070; display:block; "><span data-i18n="nav.acompanyament_personal">A. Personal</span></a>
+  <a href="/nexacompanya/sessions-gestalt/" style="padding:5px 8px 5px 20px; font-size:12.5px; color:#6a9070; display:block; "><span data-i18n="nav.sessions_gestalt">A. Emocional i Terapèutic</span></a>
+  <a href="/nexgestio/"><span data-i18n="nav.nexgestio">NexGestió</span></a>
+  <a href="/nexgestio/acompanyament-administratiu-vital/" style="padding:5px 8px 5px 20px; font-size:12.5px; color:#6a9070; display:block;"><span data-i18n="nav.aav">A. Administratiu Vital</span></a>
+  <a href="/nexgestio/mediacio-orientacio-social/" style="padding:5px 8px 5px 20px; font-size:12.5px; color:#6a9070; display:block;"><span data-i18n="nav.mos">Mediació i Or. Jurídica Social</span></a>
+  <a href="/consulta-cas-a-cas/"><span data-i18n="nav.cas_a_cas">Consulta Cas a Cas</span></a>
+  <a href="/entitats/" ><span data-i18n="nav.servei_entitats">Servei a Entitats</span></a>
+  <a href="/entitats/acompanyament-gestio-entitats/" style="padding:5px 8px 5px 20px; font-size:12.5px; color:#6a9070; display:block;"><span data-i18n="nav.acompanyament_gestio">A. Gestió Operativa</span></a>
+  <a href="/entitats/consultoria-social/" style="padding:5px 8px 5px 20px; font-size:12.5px; color:#6a9070; display:block;"><span data-i18n="nav.consultoria_entitats">Consultoria Entitats Socials</span></a>
+  <a href="/collaboracions/" ><span data-i18n="nav.collaboracions">Col·laboracions</span></a>
+  <a href="/contacte/" ><span data-i18n="nav.contacte">Contacte</span></a>
 </nav>
+<!--/#nav-->
 </aside>
 <main class="main">
 <section id="inici" class="active">
@@ -1153,7 +1159,6 @@ function changeLogo(){
 <div class="nx-hero-bg"></div><div class="nx-hero-ov"></div><div class="nx-hero-ov2"></div>
 <div class="nx-grid">
 <div class="nx-text">
-<div class="nx-tag">Cooperativa d'Acompanyament Sociovital</div>
 <h1>T'acompanyem <em>en el teu camí</em></h1>
 <p class="nx-sub">Acompanyament · Gestió · Transformació</p>
 <p class="nx-desc"><span class="nx-brand">Nex<em>Social</em></span> és una cooperativa d'acompanyament sociovital <span style="color:#9ed3a3;font-weight:600">sense ànim de lucre</span>. Acompanyem persones, famílies i entitats donant un suport multidisciplinar, des d'un model cooperatiu i de proximitat.</p>
@@ -1429,6 +1434,7 @@ function changeLogo(){
 
 </section>
 
+<!--#footer-->
 <footer class="site-footer" id="site-footer">
   <div class="footer-inner">
     <div class="footer-main">
@@ -1437,7 +1443,7 @@ function changeLogo(){
         <!-- Brand -->
         <div class="footer-col footer-col--brand">
           <div class="footer-brand">
-            <img src="images/img_01.png" id="footer-logo-img" alt="NexSocial" style="width:38px;height:38px;object-fit:contain;">
+            <img src="/images/img_01.png" id="footer-logo-img" alt="NexSocial" style="width:38px;height:38px;object-fit:contain;">
             <span class="footer-brand-name" id="footer-brand-name">NexSocial</span>
           </div>
           <p class="footer-desc" id="footer-desc"><span data-i18n="footer.desc">Cooperativa d'Acompanyament Sociovital a persones i entitats.</span></p>
@@ -1484,7 +1490,7 @@ function changeLogo(){
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
               Instagram
             </a>
-            <a href="https://facebook.com" id="footer-facebook" target="_blank" rel="noopener">
+            <a href="https://www.facebook.com/profile.php?id=61589508473461" id="footer-facebook" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
               Facebook
             </a>
@@ -1508,11 +1514,12 @@ function changeLogo(){
     </div>
 
     <div class="footer-bottom">
-      <span id="footer-copy">© 2026 NexSocial Cooperativa d'Acompanyament Sociovital — <a href="#" id="footer-legal-link" onclick="event.preventDefault();openModal('modal-legal')"><span data-i18n="footer.avis_legal">Avís legal</span></a> · <a href="#" id="footer-privacy-link" onclick="event.preventDefault();openModal('modal-privacitat')"><span data-i18n="footer.privacitat">Política de privacitat</span></a> · <a href="#" id="footer-cookies-link" onclick="event.preventDefault();openModal('modal-cookies')"><span data-i18n="footer.cookies">Cookies</span></a></span>
-      <span id="footer-reg"><span data-i18n="footer.registre">Registre de Cooperatives de Catalunya</span></span>
+      <span id="footer-copy">© 2026 NexSocial SCCL · NIF F-27641133 — <a href="#" id="footer-legal-link" onclick="event.preventDefault();openModal('modal-legal')"><span data-i18n="footer.avis_legal">Avís legal</span></a> · <a href="#" id="footer-privacy-link" onclick="event.preventDefault();openModal('modal-privacitat')"><span data-i18n="footer.privacitat">Política de privacitat</span></a> · <a href="#" id="footer-cookies-link" onclick="event.preventDefault();openModal('modal-cookies')"><span data-i18n="footer.cookies">Cookies</span></a></span>
+      <span id="footer-reg"><span data-i18n="footer.registre">Inscrita al Registre de Cooperatives de Catalunya · Badalona</span></span>
     </div>
   </div>
 </footer>
+<!--/#footer-->
 </main>
 
 
@@ -1538,10 +1545,11 @@ function changeLogo(){
     <p>En compliment de la Llei 34/2002, d'11 de juliol, de Serveis de la Societat de la Informació i de Comerç Electrònic (LSSI-CE), s'informa dels següents aspectes:</p>
 
     <h3>Titular del lloc web</h3>
-    <p><strong>Denominació social:</strong> NexSocial, Cooperativa d'Acompanyament Sociovital<br>
-    <strong>Forma jurídica:</strong> Cooperativa de treball associat<br>
-    <strong>Registre:</strong> Registre de Cooperatives de Catalunya (número pendent de registre)<br>
-    <strong>Domicili social:</strong> Catalunya, Espanya<br>
+    <p><strong>Denominació social:</strong> NexSocial SCCL<br>
+    <strong>Forma jurídica:</strong> Cooperativa de treball associat sense ànim de lucre<br>
+<strong>NIF:</strong> F-27641133<br>
+    <strong>Registre:</strong> Inscrita al Registre de Cooperatives de Catalunya<br>
+    <strong>Domicili social:</strong> Badalona (Barcelonès Nord), Catalunya<br>
     <strong>Correu electrònic:</strong> <a href="mailto:infonex@nexsocial.org">infonex@nexsocial.org</a><br>
     <strong>Web:</strong> www.nexsocial.org</p>
 

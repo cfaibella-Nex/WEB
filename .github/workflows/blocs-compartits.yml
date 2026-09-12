@@ -1,0 +1,51 @@
+name: Blocs compartits
+
+# Quan es toca un partial (menu o footer), aquesta accio el torna a injectar
+# dins de totes les pagines i fa commit del resultat. GitHub Pages publica
+# l'HTML ja muntat: sense JavaScript, indexable i sense parpelleig.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'partials/**'
+      - 'tools/render.py'
+      - '.github/workflows/blocs-compartits.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: blocs-compartits
+  cancel-in-progress: false
+
+jobs:
+  injectar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Injectar menu i footer a totes les pagines
+        run: python3 tools/render.py
+
+      - name: Comprovar que el resultat es estable
+        run: |
+          python3 tools/render.py --check
+          test -z "$(python3 tools/render.py --check | grep AVIS || true)"
+
+      - name: Publicar els canvis
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Cap canvi: les pagines ja estaven al dia."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Regenera menu i footer des de partials/"
+          git push
