@@ -1,107 +1,64 @@
-NEXSOCIAL v6.4 — Per que el menu es veia trencat a la portada
-=============================================================
+NEXSOCIAL v6.5 — Franja de capcalera mes baixa
+===============================================
 
-Descomprimeix damunt del repositori i fes push. Porta dos fitxers NOUS:
+Descomprimeix damunt del repositori i fes push. Nomes toca un fitxer de debo:
 
-  css/nexsocial-extres.css
-  js/nexsocial-extres.js
+  css/nexsocial.css     l'unic canvi real
+  31 pagines HTML       nomes els canvia el segell ?v= del CSS, res mes
 
-Assegura't que pugen tots dos: sense ells el menu plegable no funciona enlloc.
-
-
-1 · LA CAUSA DEL FARO GEGANT
-----------------------------
-La portada NO carrega css/nexsocial.css ni js/nexsocial.js.
-
-index.html i index.es.html porten el seu propi full d'estils i el seu propi
-JavaScript escrits a dins, en set blocs <style> i sis de <script>. No enllacen
-els fitxers compartits. Nomes hi enllacen les altres 31 pagines.
-
-Per tant, a la portada:
-  - La regla .sidebar-collapse svg{width:14px;height:14px} no existia. Sense
-    ella, un SVG sense mida pren la mida per defecte del navegador: 300x150 px.
-    D'aqui la fletxa enorme dins d'un requadre blanc, que es el boto sense cap
-    estil aplicat.
-  - La funcio toggleSidebarCollapse() tampoc existia, o sigui que clicar el
-    boto no feia res.
-  - El rastre de fulles tampoc s'hi executava.
-
-Aixo no ho podia veure des d'aqui llegint el codi: els fitxers hi eren i eren
-correctes. El que fallava era que la portada no els demanava.
+El segell l'ha de canviar si o si: si no, el teu navegador i el dels visitants
+continuarien servint el CSS antic i no veuries la diferencia.
 
 
-2 · COM HO HE RESOLT
---------------------
-He tret el menu plegable i el rastre de fulles dels fitxers compartits i els he
-posat en dos fitxers propis, petits:
+QUE CANVIA
+----------
+                        abans          ara
+  escriptori            300 px         240 px    (-20%)
+  pantalles < 1100 px   220 px         190 px
+  pantalles < 900 px    180 px         160 px
+  mobil                 sense fixar    farciment reduit
 
-    css/nexsocial-extres.css    3 KB
-    js/nexsocial-extres.js      4 KB
-
-I el render.py ara comprova que TOTES les pagines els enllacin, tinguin o no
-els compartits. Si a una pagina hi falten, els hi posa sol a cada push.
-
-No he tocat els estils inline de la portada. Enganxar-hi el full compartit
-hauria pogut canviar-li l'aspecte per efectes laterals, i aixo no toca fer-ho
-avui.
+El farciment de dalt tambe baixa de 52 a 40 px, que es el que feia que amb el
+rotol fora quedes tant d'aire per sobre del titol.
 
 
-3 · CONTROL DE VERSIONS PER TRENCAR LA CACHE
---------------------------------------------
-Tots els enllacos al CSS i al JS compartits porten ara una empremta del
-contingut:
+UNA COSA QUE HE CANVIAT I QUE VULL QUE SAPIGUES
+-----------------------------------------------
+La franja tenia height fix i overflow:hidden. Vol dir que si el text no hi
+cabia, es retallava en silenci. I ja estava passant: la pagina de Consultoria
+per Entitats Socials en castella necessita 306 px de contingut i la franja
+n'hi donava 300. S'estava menjant l'ultima linia del subtitol.
 
-    <link rel="stylesheet" href="../css/nexsocial.css?v=017fd964">
+Ara es min-height. La franja no baixa mai de l'alcada minima, pero creix si el
+text ho demana. Aixi no es pot tornar a retallar res.
 
-Quan canvies el CSS, l'empremta canvia sola i el navegador se'l torna a baixar.
-Sense aixo, qui ja havia visitat el web es queda amb la versio antiga guardada i
-veu la pagina a mitges. Es calcula al render.py, no l'has de mantenir a ma.
+Efecte practic a escriptori:
 
-L'accio de GitHub ara tambe s'activa quan toques css/ o js/, no nomes partials/.
+    240 px   23 pagines
+    242 px    2 pagines
+    266 px    5 pagines
+    290 px    1 pagina   (Consultoria Entitats Socials en castella)
 
-
-4 · LA FLETXA JA NO DEPEN DEL CSS
----------------------------------
-A mes, li he posat width="14" height="14" a l'SVG mateix. Encara que un dia el
-full d'estils no carregui o arribi caducat del navegador, la fletxa sortira
-petita. Un error de mida no s'ha de poder repetir.
-
-
-5 · ELS MISSATGES DE LA CONSOLA
--------------------------------
-Cap dels quatre es un error del teu web:
-
-  "[Intervention] Images loaded lazily..."   Avis informatiu d'Edge sobre la
-                                            carrega mandrosa d'imatges. Normal.
-  "content.js ... webExtCommNode"           Una extensio del teu navegador.
-  "webExt background script disconnected"   La mateixa extensio.
-  "in-browser Babel transformer"            NO ve de nexsocial.org. He
-                                            comprovat que index.html no carrega
-                                            Babel ni cap script d'unpkg. Ve
-                                            d'una extensio o d'una altra
-                                            pestanya. Si el tornes a veure,
-                                            mira a la pestanya Network de quin
-                                            domini surt.
-
-Prova-ho amb Ctrl+F5 la primera vegada, per si el navegador encara et serveix
-el CSS antic.
+O sigui que 25 de 31 queden exactament iguals, i les 6 restants son les que
+tenen el subtitol de tres o quatre linies. Si les vols totes clavades a 240,
+la manera bona no es retallar la caixa sino escurcar aquells sis subtitols, que
+son llargs de debo. Passa'm els textos nous i te'ls poso.
 
 
-PENDENT, I NO HO HE TOCAT
--------------------------
-Set pagines amb un <div> descompensat, ja presents al repositori original:
+VERIFICAT
+---------
+31 pagines fan servir .page-header, totes amb la mateixa estructura i cap amb
+estils propis que se'n surti. El canvi, per tant, les afecta totes per igual: no
+hi ha cap menu ni submenu que vagi per lliure.
 
-    persones/index.html                           falta tancar el div, linia 97
-    persones/index.es.html                        falta tancar el div, linia 85
-    entitats/diagnostic-impacte/index.html        </div> de mes, linia 193
-    nexacompanya/sessions-gestalt/index.html      </div> de mes, linia 535
-    nexacompanya/sessions-gestalt/index.es.html   </div> de mes, linia 574
-    nexgestio/nexlicitia/index.html               </div> de mes, linia 273
-    nexgestio/nexlicitia/index.es.html            </div> de mes, linia 261
+Les dues portades no tenen .page-header (tenen hero) i no les toca res.
+Aixo si: com que porten el full d'estils escrit a dins, tenen una copia de la
+regla .page-header que ara ja no coincideix amb la compartida. No l'afecta
+perque no la fan servir, pero queda apuntat per no ensopegar-hi mes endavant.
 
-I segueixen pendents d'esborrar del repositori:
 
-    _backup/
-    nexacompanya/index_standalone.html
-    js/translations.js
-    corporate_video/
+PENDENT
+-------
+Set pagines amb un <div> descompensat (llista a la v6.4), i encara per esborrar
+del repositori: _backup/, nexacompanya/index_standalone.html, js/translations.js
+i corporate_video/.
