@@ -1,164 +1,74 @@
-NEXSOCIAL v6 — Entrega unica
-============================
-Blocs compartits · Dades legals · Menu plegable · Rastre de fulles · Optimitzacio
+NEXSOCIAL v6.2 — Senefa reparada, fulles de marca i accio de GitHub
+===================================================================
 
-Aquest ZIP inclou tot el que haviem parlat. No cal aplicar res per separat.
+Tres fitxers. Descomprimeix damunt del repositori, sobreescriu i fes push.
+Inclou la correccio v6.1 de l'accio, per si encara no l'havies aplicada.
 
-
-COM S'APLICA
-------------
-1. Descomprimeix damunt de la teva copia local del repositori WEB. L'estructura
-   ja coincideix: nomes cal acceptar que sobreescrigui.
-   NO substitueixis mai la carpeta images/ sencera. Aquest ZIP nomes en porta
-   tres fitxers i han de reemplacar els tres que ja hi ha.
-
-2. Esborra del repositori aquests fitxers i carpetes. Ara mateix son publics a
-   nexsocial.org i no haurien de ser-hi:
-
-     _backup/                                  289 KB, indexable per Google
-     nexacompanya/index_standalone.html         pagina orfe
-     js/translations.js                         codi mort, cap pagina el carrega
-     corporate_video/                           6,51 MB de JSX i un MP3
-
-3. GitHub Desktop -> revisa -> commit -> push.
-
-4. Si vols veure-ho abans de pujar, des de la carpeta del repositori:
-       python3 -m http.server 8000
-   i obre http://localhost:8000. Cal servidor: obrint els fitxers amb doble
-   clic les rutes absolutes (/images/, /css/) no funcionen.
+  js/nexsocial.js
+  tools/render.py
+  .github/workflows/blocs-compartits.yml
 
 
-1 · MENU I FOOTER CENTRALITZATS
--------------------------------
-Els blocs viuen ara a partials/ : nav.ca.html, nav.es.html, footer.ca.html,
-footer.es.html. A partir d'ara es toquen NOMES aqui. L'accio de GitHub
-(.github/workflows/blocs-compartits.yml) els injecta dins de les 33 pagines a
-cada push i fa commit del resultat. L'HTML publicat continua sent estatic:
-sense JavaScript, indexable i sense parpelleig.
+1 · LA SENEFA
+-------------
+No l'havia esborrat jo. Estava trencada des de l'origen i nomes funcionava a
+dues pagines.
 
-  Provar en local:   python3 tools/render.py
-  Veure sense tocar: python3 tools/render.py --check
+El codi que injecta la senefa a js/nexsocial.js estava tallat: generava el
+contenidor, l'SVG i el bloc <style> amb les dotze animacions... i s'acabava
+aqui. No hi havia cap fulla a dins. Les animacions lf0 a lf11 no animaven res
+perque no hi havia res.
 
-Abans hi havia 12 versions diferents del footer repartides per 33 pagines. Ara
-n'hi ha una per idioma. La pagina activa del menu es marca sola segons l'URL:
-ja no cal posar class="active" a ma. Les abreviatures del menu es mantenen.
+Les uniques pagines on es veia son index.html i index.es.html, perque alla la
+senefa esta escrita directament a l'HTML i si que esta sencera: 46 fulles en
+sis verds, formant una corba que travessa el menu de dalt a baix.
+
+Que he fet: agafar aquesta senefa sencera de la portada i posar-la al
+js/nexsocial.js. A partir d'ara surt a les 33 pagines, no a dues. Es
+exactament la mateixa, no n'he redibuixat cap fulla ni n'he canviat cap color.
+
+Les dues portades mantenen la seva copia escrita a l'HTML. El codi ja comprova
+si la senefa hi es abans d'injectar-la, aixi que no es duplica. Ho deixo aixi
+perque a la portada apareix a l'instant, sense esperar el JavaScript.
+
+Amb el menu plegat, la senefa es manté: es veu la part central de la corba,
+que es la mes plena de fulles. Si un cop plegat et sembla que queda buit,
+digue-m'ho i la reencaixo.
 
 
-2 · MENU LATERAL PLEGABLE
+2 · LES FULLES DEL PUNTER
 -------------------------
-Boto "Menu <" a dalt del menu. En plegar-lo queda un carril de 56 px i el
-contingut guanya 204 px d'amplada. La preferencia es desa al navegador i es
-respecta a totes les pagines.
+Tenies rao: aquelles no eren fulles. Ara fan servir exactament la mateixa
+forma i els mateixos verds que les fulles de la senefa del menu, amb la faceta
+clara del logotip a sobre. Son cinc parelles fosc + clar, no una silueta
+generica.
 
-  - La senefa de fulles NO es perd: es manté sempre, plegat i desplegat.
-  - El logo tampoc: es manté, mes petit quan esta plegat.
-  - Passant el cursor pel carril, el menu s'obre temporalment per sobre del
-    contingut. Aixi navegar segueix sent un sol gest, no dos.
-  - A mobil no canvia res: continua funcionant com a calaix amb l'hamburguesa.
-  - Per defecte surt obert. Nomes queda plegat per a qui ho hagi triat.
+Tambe les he fet una mica mes grans (13 a 23 px en comptes d'11 a 20) i
+opaques del tot, perque abans anaven a mig gas i es perdien sobre el fons crema.
 
-
-3 · RASTRE DE FULLES DEL PUNTER
--------------------------------
-Les fulles cauen del punter amb deriva lateral, gir i esvaiment, a la paleta
-verda de la casa.
-
-  - Nomes a escriptori amb ratoli. A mobil i tauleta no hi ha punter: no
-    s'activa i no gasta res.
-  - Es desactiva sol si el sistema operatiu demana reduir el moviment
-    (accessibilitat).
-  - Maxim 14 fulles alhora i nomes en moure's prou: no carrega la pagina.
-  - No intercepta cap clic.
-
-  PER APAGAR-HO: a js/nexsocial.js, primera linia del bloc "Rastre de fulles",
-  canviar  var NEXSOCIAL_LEAF_TRAIL = true;  per  false.
-
-  Nota meva: mira-t'ho uns dies abans de decidir. En una web adrecada a gent
-  gran, el moviment que segueix el punter pot distreure mentre llegeixen. Si et
-  convenc a tu pero dubtes, una opcio intermedia es deixar-ho nomes a la
-  portada. M'ho dius i ho acoto.
+Segueix tot igual per la resta: nomes a escriptori amb ratoli, maxim 14 alhora,
+apagades si el sistema demana reduir el moviment, i l'interruptor
+NEXSOCIAL_LEAF_TRAIL a dalt del bloc per apagar-ho del tot.
 
 
-4 · PAGINA EN CASTELLA TRUNCADA  (important)
---------------------------------------------
-index.es.html estava tallada pel mig d'un bloc de JavaScript: li faltaven el
-tancament de la funcio, el </script>, el </body> i el </html>. Tambe li faltava
-el codi de Cloudflare Web Analytics, o sigui que el trafic de la portada en
-castella no s'estava mesurant. Reparat amb el mateix final que la portada
-catalana. Es el mateix problema que ja vam patir a index.html.
+3 · L'ACCIO DE GITHUB (correccio v6.1)
+--------------------------------------
+Si ja havies aplicat la v6.1, aquests dos fitxers son identics i no passa res.
+
+La culpa era meva: havia posat una comprovacio massa estricta que tractava com
+un error qualsevol pagina sense menu o footer. La que ho disparava es
+nexacompanya/index_standalone.html, un fitxer de 0 bytes.
+
+L'avis de "Node.js 20 is deprecated" no hi tenia res a veure, era nomes un
+avis. Tot i aixi ha desaparegut: he tret actions/setup-python, que no
+necessitavem perque Ubuntu ja porta Python.
 
 
-5 · DADES IDENTIFICATIVES (LSSI art. 10)
-----------------------------------------
-Avis legal en catala i castella, i linia inferior del footer:
-    NexSocial SCCL
-    Cooperativa de treball associat sense anim de lucre
-    NIF F-27641133
-    Inscrita al Registre de Cooperatives de Catalunya
-    Domicili: Badalona (Barcelones Nord), Catalunya
-Segons la teva decisio, el domicili queda a nivell de municipi i no hi consta
-el numero d'inscripcio.
+RECORDA
+-------
+Segueixen pendents d'esborrar del repositori (el drag-and-drop no esborra):
 
-
-6 · CORREU ELECTRONIC
----------------------
-Els avisos legals mostraven literalment "[email protected]" a totes les pagines.
-Era codi ofuscat de Cloudflare que GitHub Pages no desxifra mai. Eliminat, i
-tambe l'script mort /cdn-cgi/scripts/.../email-decode.min.js. Ara es un mailto
-normal a infonex@nexsocial.org.
-
-
-7 · DISTINTIUS I ENLLACOS
--------------------------
-El bloc de Comunitat NexSocial i "Aqui si! Actius i salut" sortia a 11 pagines
-de 33 i a CAP pagina en castella. Ara surt a totes dues versions.
-
-Tres enllacos del footer castella anaven a la pagina catalana (Qui som,
-Contacte, Consultoria Entitats Socials) i un al menu castella. Corregits.
-
-Facebook apunta ara al perfil real:
-https://www.facebook.com/profile.php?id=61589508473461
-
-
-8 · ROTOLS REDUNDANTS
----------------------
-Eliminats 12 (6 en cada idioma), tots els que repetien el titular de sota:
-    Cooperativa d'Acompanyament Sociovital   (portada)
-    La nostra identitat                      (Qui som)
-    El que fem                               (Persones)
-    Parla amb nosaltres                      (Contacte)
-    Col.labora amb nosaltres                 (Col.laboracions)
-    Atencio personalitzada                   (Consulta Cas a Cas)
-Es mantenen els 19 que orienten: "NexGestio . Tramits socials",
-"NexAcompanya . Espai Acompanyament Personal", "Area Social", etc.
-
-
-9 · IMATGES
------------
-  images/img_15.jpg   5.072 KB -> 167 KB   (7775 px -> 1600 px d'ample)
-  images/img_01.png     225 KB ->  46 KB   (1920 px -> 256 px, es pinta a 54)
-  images/img_37.png   1.509 KB -> 553 KB   (1909 px -> 1200 px)
-Nomes s'han retallat pixels que la pagina no arriba a mostrar mai. La
-compressio no s'ha tocat. Mira comparativa_img_15.png: identiques al 100%.
-La pagina nexacompanya/ passa de 5,81 MB a menys d'1 MB.
-
-
-10 · SITEMAP I SALTS DE LINIA
------------------------------
-Afegides 8 URL que hi faltaven (4 pagines x 2 idiomes) i actualitzada la data
-de totes. Nexlicitia queda fora expressament: esta bloquejada al robots.txt.
-Hi havia fitxers amb salts de linia Windows i d'altres amb Unix barrejats.
-Normalitzats tots a Unix perque els marcadors no fallin de manera intermitent.
-
-
-QUE QUEDA PENDENT
------------------
-- Homogeneitzacio de tokens de color i escala tipografica: 2.477 hexadecimals
-  escrits a ma i 31 mides de lletra. Entrega seguent, sense tocar cap color.
-- entitats/diagnostic-impacte/ no te versio castellana.
-- "Terapia Gestalt" encara surt en un titol de columna del footer, un rotol de
-  capcalera, un item del menu i al cos del text. El teu README diu
-  "Acompanyament Gestaltic". No ho he tocat sense que ho confirmis. Ara que el
-  footer es un sol fitxer, canviar-ho son trenta segons.
-- images/img_37.png no te transparencia real: passant-lo a JPG baixaria de
-  553 KB a uns 90 KB. Implica canviar 4 referencies a l'HTML. Si vols, ho faig.
+  _backup/
+  nexacompanya/index_standalone.html
+  js/translations.js
+  corporate_video/

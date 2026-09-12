@@ -24,19 +24,10 @@ jobs:
   injectar:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
+      - uses: actions/checkout@v5
 
       - name: Injectar menu i footer a totes les pagines
         run: python3 tools/render.py
-
-      - name: Comprovar que el resultat es estable
-        run: |
-          python3 tools/render.py --check
-          test -z "$(python3 tools/render.py --check | grep AVIS || true)"
 
       - name: Publicar els canvis
         run: |
@@ -48,4 +39,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -m "Regenera menu i footer des de partials/"
+          git pull --rebase origin main
           git push

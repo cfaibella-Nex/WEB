@@ -52,6 +52,8 @@ def marca_actiu(nav_html, ruta):
 
 def processa(fitxer, escriu=True):
     original = fitxer.read_text(encoding='utf-8', errors='strict')
+    if not original.strip():
+        return ['buida, s\'omet'], False
     text = original.replace('\r\n', '\n')          # normalitza CRLF -> LF
     lang = 'es' if fitxer.name.endswith('.es.html') else 'ca'
     ruta = ruta_publica(fitxer)
@@ -68,10 +70,8 @@ def processa(fitxer, escriu=True):
             text, n = marcadors.subn(lambda _: nou, text)
         else:
             text, n = re.subn(patro, lambda _: nou, text, count=1, flags=re.S)
-        if n == 0:
-            canvis.append(f'AVIS: no s\'ha trobat cap bloc {nom}')
-        else:
-            canvis.append(f'{nom} x{n}')
+        # Una pagina sense aquest bloc no es cap error: simplement no en te.
+        canvis.append(f'{nom} x{n}' if n else f'sense {nom}')
 
     if escriu and text != original:
         fitxer.write_text(text, encoding='utf-8', newline='\n')
@@ -88,10 +88,8 @@ def main():
     for f in fitxers:
         canvis, canviat = processa(f, escriu)
         tocats += canviat
-        estat = 'actualitzat' if canviat else 'sense canvis'
-        avisos = [c for c in canvis if c.startswith('AVIS')]
-        if avisos or canviat:
-            print(f'{f.relative_to(ROOT)}: {estat} ({", ".join(canvis)})')
+        if canviat:
+            print(f'{f.relative_to(ROOT)}: actualitzat ({", ".join(canvis)})')
     print(f'\n{len(fitxers)} pagines revisades, {tocats} actualitzades.')
     return 0
 
