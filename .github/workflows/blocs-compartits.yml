@@ -9,6 +9,8 @@ on:
     branches: [main]
     paths:
       - 'partials/**'
+      - 'css/**'
+      - 'js/**'
       - 'tools/render.py'
       - '.github/workflows/blocs-compartits.yml'
   workflow_dispatch:

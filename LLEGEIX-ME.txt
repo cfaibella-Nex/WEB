@@ -1,74 +1,107 @@
-NEXSOCIAL v6.2 — Senefa reparada, fulles de marca i accio de GitHub
-===================================================================
+NEXSOCIAL v6.4 — Per que el menu es veia trencat a la portada
+=============================================================
 
-Tres fitxers. Descomprimeix damunt del repositori, sobreescriu i fes push.
-Inclou la correccio v6.1 de l'accio, per si encara no l'havies aplicada.
+Descomprimeix damunt del repositori i fes push. Porta dos fitxers NOUS:
 
-  js/nexsocial.js
-  tools/render.py
-  .github/workflows/blocs-compartits.yml
+  css/nexsocial-extres.css
+  js/nexsocial-extres.js
 
-
-1 · LA SENEFA
--------------
-No l'havia esborrat jo. Estava trencada des de l'origen i nomes funcionava a
-dues pagines.
-
-El codi que injecta la senefa a js/nexsocial.js estava tallat: generava el
-contenidor, l'SVG i el bloc <style> amb les dotze animacions... i s'acabava
-aqui. No hi havia cap fulla a dins. Les animacions lf0 a lf11 no animaven res
-perque no hi havia res.
-
-Les uniques pagines on es veia son index.html i index.es.html, perque alla la
-senefa esta escrita directament a l'HTML i si que esta sencera: 46 fulles en
-sis verds, formant una corba que travessa el menu de dalt a baix.
-
-Que he fet: agafar aquesta senefa sencera de la portada i posar-la al
-js/nexsocial.js. A partir d'ara surt a les 33 pagines, no a dues. Es
-exactament la mateixa, no n'he redibuixat cap fulla ni n'he canviat cap color.
-
-Les dues portades mantenen la seva copia escrita a l'HTML. El codi ja comprova
-si la senefa hi es abans d'injectar-la, aixi que no es duplica. Ho deixo aixi
-perque a la portada apareix a l'instant, sense esperar el JavaScript.
-
-Amb el menu plegat, la senefa es manté: es veu la part central de la corba,
-que es la mes plena de fulles. Si un cop plegat et sembla que queda buit,
-digue-m'ho i la reencaixo.
+Assegura't que pugen tots dos: sense ells el menu plegable no funciona enlloc.
 
 
-2 · LES FULLES DEL PUNTER
+1 · LA CAUSA DEL FARO GEGANT
+----------------------------
+La portada NO carrega css/nexsocial.css ni js/nexsocial.js.
+
+index.html i index.es.html porten el seu propi full d'estils i el seu propi
+JavaScript escrits a dins, en set blocs <style> i sis de <script>. No enllacen
+els fitxers compartits. Nomes hi enllacen les altres 31 pagines.
+
+Per tant, a la portada:
+  - La regla .sidebar-collapse svg{width:14px;height:14px} no existia. Sense
+    ella, un SVG sense mida pren la mida per defecte del navegador: 300x150 px.
+    D'aqui la fletxa enorme dins d'un requadre blanc, que es el boto sense cap
+    estil aplicat.
+  - La funcio toggleSidebarCollapse() tampoc existia, o sigui que clicar el
+    boto no feia res.
+  - El rastre de fulles tampoc s'hi executava.
+
+Aixo no ho podia veure des d'aqui llegint el codi: els fitxers hi eren i eren
+correctes. El que fallava era que la portada no els demanava.
+
+
+2 · COM HO HE RESOLT
+--------------------
+He tret el menu plegable i el rastre de fulles dels fitxers compartits i els he
+posat en dos fitxers propis, petits:
+
+    css/nexsocial-extres.css    3 KB
+    js/nexsocial-extres.js      4 KB
+
+I el render.py ara comprova que TOTES les pagines els enllacin, tinguin o no
+els compartits. Si a una pagina hi falten, els hi posa sol a cada push.
+
+No he tocat els estils inline de la portada. Enganxar-hi el full compartit
+hauria pogut canviar-li l'aspecte per efectes laterals, i aixo no toca fer-ho
+avui.
+
+
+3 · CONTROL DE VERSIONS PER TRENCAR LA CACHE
+--------------------------------------------
+Tots els enllacos al CSS i al JS compartits porten ara una empremta del
+contingut:
+
+    <link rel="stylesheet" href="../css/nexsocial.css?v=017fd964">
+
+Quan canvies el CSS, l'empremta canvia sola i el navegador se'l torna a baixar.
+Sense aixo, qui ja havia visitat el web es queda amb la versio antiga guardada i
+veu la pagina a mitges. Es calcula al render.py, no l'has de mantenir a ma.
+
+L'accio de GitHub ara tambe s'activa quan toques css/ o js/, no nomes partials/.
+
+
+4 · LA FLETXA JA NO DEPEN DEL CSS
+---------------------------------
+A mes, li he posat width="14" height="14" a l'SVG mateix. Encara que un dia el
+full d'estils no carregui o arribi caducat del navegador, la fletxa sortira
+petita. Un error de mida no s'ha de poder repetir.
+
+
+5 · ELS MISSATGES DE LA CONSOLA
+-------------------------------
+Cap dels quatre es un error del teu web:
+
+  "[Intervention] Images loaded lazily..."   Avis informatiu d'Edge sobre la
+                                            carrega mandrosa d'imatges. Normal.
+  "content.js ... webExtCommNode"           Una extensio del teu navegador.
+  "webExt background script disconnected"   La mateixa extensio.
+  "in-browser Babel transformer"            NO ve de nexsocial.org. He
+                                            comprovat que index.html no carrega
+                                            Babel ni cap script d'unpkg. Ve
+                                            d'una extensio o d'una altra
+                                            pestanya. Si el tornes a veure,
+                                            mira a la pestanya Network de quin
+                                            domini surt.
+
+Prova-ho amb Ctrl+F5 la primera vegada, per si el navegador encara et serveix
+el CSS antic.
+
+
+PENDENT, I NO HO HE TOCAT
 -------------------------
-Tenies rao: aquelles no eren fulles. Ara fan servir exactament la mateixa
-forma i els mateixos verds que les fulles de la senefa del menu, amb la faceta
-clara del logotip a sobre. Son cinc parelles fosc + clar, no una silueta
-generica.
+Set pagines amb un <div> descompensat, ja presents al repositori original:
 
-Tambe les he fet una mica mes grans (13 a 23 px en comptes d'11 a 20) i
-opaques del tot, perque abans anaven a mig gas i es perdien sobre el fons crema.
+    persones/index.html                           falta tancar el div, linia 97
+    persones/index.es.html                        falta tancar el div, linia 85
+    entitats/diagnostic-impacte/index.html        </div> de mes, linia 193
+    nexacompanya/sessions-gestalt/index.html      </div> de mes, linia 535
+    nexacompanya/sessions-gestalt/index.es.html   </div> de mes, linia 574
+    nexgestio/nexlicitia/index.html               </div> de mes, linia 273
+    nexgestio/nexlicitia/index.es.html            </div> de mes, linia 261
 
-Segueix tot igual per la resta: nomes a escriptori amb ratoli, maxim 14 alhora,
-apagades si el sistema demana reduir el moviment, i l'interruptor
-NEXSOCIAL_LEAF_TRAIL a dalt del bloc per apagar-ho del tot.
+I segueixen pendents d'esborrar del repositori:
 
-
-3 · L'ACCIO DE GITHUB (correccio v6.1)
---------------------------------------
-Si ja havies aplicat la v6.1, aquests dos fitxers son identics i no passa res.
-
-La culpa era meva: havia posat una comprovacio massa estricta que tractava com
-un error qualsevol pagina sense menu o footer. La que ho disparava es
-nexacompanya/index_standalone.html, un fitxer de 0 bytes.
-
-L'avis de "Node.js 20 is deprecated" no hi tenia res a veure, era nomes un
-avis. Tot i aixi ha desaparegut: he tret actions/setup-python, que no
-necessitavem perque Ubuntu ja porta Python.
-
-
-RECORDA
--------
-Segueixen pendents d'esborrar del repositori (el drag-and-drop no esborra):
-
-  _backup/
-  nexacompanya/index_standalone.html
-  js/translations.js
-  corporate_video/
+    _backup/
+    nexacompanya/index_standalone.html
+    js/translations.js
+    corporate_video/

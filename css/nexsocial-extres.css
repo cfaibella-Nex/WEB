@@ -1,0 +1,53 @@
+/* Extres compartits: menu lateral plegable i rastre de fulles.
+   Fitxer a part perque la portada no carrega css/nexsocial.css:
+   te el seu propi full d'estils escrit a dins. */
+
+/* ── Menú lateral plegable amb memòria ───────────────────────────────────── */
+/* Plegat: carril de 56 px. La senefa de fulles i el logo es mantenen sempre. */
+.sidebar-collapse{display:flex;align-items:center;justify-content:flex-end;gap:6px;width:100%;
+  padding:8px 18px;margin:0 0 6px;background:none;border:none;cursor:pointer;
+  font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  color:#2d6b48;opacity:.75;transition:opacity var(--T)}
+.sidebar-collapse:hover{opacity:1}
+.sidebar-collapse svg{width:14px;height:14px;flex:none;transition:transform var(--T)}
+.sidebar-collapse .sc-txt{transition:opacity .2s}
+
+body.sidebar-collapsed{--sidebar-w:56px}
+body.sidebar-collapsed .sidebar{overflow:visible}
+body.sidebar-collapsed .sidebar-collapse{justify-content:center;padding:8px 0}
+body.sidebar-collapsed .sidebar-collapse svg{transform:rotate(180deg)}
+body.sidebar-collapsed .sidebar-logo{padding:18px 0 14px;justify-content:center;gap:0}
+body.sidebar-collapsed .sidebar-logo img{width:34px;height:34px}
+
+/* Plegat i sense el cursor a sobre: s'amaga el text, no la senefa */
+body.sidebar-collapsed .sidebar:not(:hover) .logo-name,
+body.sidebar-collapsed .sidebar:not(:hover) .logo-sub,
+body.sidebar-collapsed .sidebar:not(:hover) .sidebar-footer,
+body.sidebar-collapsed .sidebar:not(:hover) nav,
+body.sidebar-collapsed .sidebar:not(:hover) .sc-txt{opacity:0;visibility:hidden;transition:opacity .18s}
+
+/* Passar-hi el cursor l'obre temporalment per sobre del contingut */
+body.sidebar-collapsed .sidebar:hover{width:260px;box-shadow:2px 0 24px rgba(15,45,30,.14)}
+body.sidebar-collapsed .sidebar:hover .sidebar-logo{padding:32px 22px 22px;justify-content:flex-start;gap:12px}
+body.sidebar-collapsed .sidebar:hover .sidebar-logo img{width:54px;height:54px}
+body.sidebar-collapsed .sidebar:hover .sidebar-collapse{justify-content:flex-end;padding:8px 18px}
+
+/* A mòbil el menú ja funciona com a calaix: el plegat no s'hi aplica */
+@media(max-width:768px){
+  body.sidebar-collapsed{--sidebar-w:260px}
+  body.sidebar-collapsed .sidebar-collapse{display:none}
+  body.sidebar-collapsed .sidebar:not(:hover) .logo-name,
+  body.sidebar-collapsed .sidebar:not(:hover) .logo-sub,
+  body.sidebar-collapsed .sidebar:not(:hover) .sidebar-footer,
+  body.sidebar-collapsed .sidebar:not(:hover) nav,
+  body.sidebar-collapsed .sidebar:not(:hover) .sc-txt{opacity:1;visibility:visible}
+  body.sidebar-collapsed .sidebar-logo{padding:32px 22px 22px;justify-content:flex-start;gap:12px}
+  body.sidebar-collapsed .sidebar-logo img{width:54px;height:54px}
+}
+
+/* ── Rastre de fulles del punter ─────────────────────────────────────────── */
+#leaf-trail{position:fixed;inset:0;pointer-events:none;z-index:90;overflow:hidden;contain:strict}
+#leaf-trail svg{position:absolute;will-change:transform,opacity}
+@media(prefers-reduced-motion:reduce){#leaf-trail{display:none}}
+.sidebar,.main,.topbar{transition:width var(--T),margin-left var(--T),padding-left var(--T),transform var(--T)}
+body.sb-noanim .sidebar,body.sb-noanim .main,body.sb-noanim .topbar{transition:none !important}

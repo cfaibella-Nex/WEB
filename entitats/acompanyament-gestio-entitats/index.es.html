@@ -33,7 +33,7 @@
 <meta name="description" content="Apoyo técnico a entidades del tercer sector y pequeñas organizaciones: gestión diaria operativa y presentación de subvenciones y ayudas a AAPP.">
 <link rel="canonical" href="https://nexsocial.org/entitats/acompanyament-gestio-entitats/">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../css/nexsocial.css">
+<link rel="stylesheet" href="../../css/nexsocial.css?v=7d7f9d14">
 
 <!-- MOBILE RESPONSIVE -->
 <style>
@@ -109,6 +109,7 @@
   }
 }
 </style>
+<link rel="stylesheet" href="/css/nexsocial-extres.css?v=a98ad8cd">
 </head>
 <body>
 
@@ -158,7 +159,7 @@
 <button class="sidebar-collapse" type="button" onclick="toggleSidebarCollapse()"
         aria-controls="sidebar" aria-expanded="true" title="Pliega el menú">
   <span class="sc-txt">Menú</span>
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
 </button>
 <nav>
   <a href="/index.es.html"><span data-i18n="nav.inici">Inicio</span></a>
@@ -186,7 +187,6 @@
 
 <div class="page-header">
   <div class="page-header-bg" style="background-image:url('../../images/img_40.jpg')"></div>
-  <span class="page-header-tag">Servicio a Entidades · Gestión Operativa</span>
   <h1>Acompañamiento en la <em>Gestión Operativa</em></h1>
   <p>Damos apoyo técnico a entidades del tercer sector y pequeñas organizaciones en dos ejes clave: la gestión diaria operativa de la entidad según sus necesidades, y el apoyo en la presentación de subvenciones y ayudas a las administraciones públicas.</p>
 </div>
@@ -270,7 +270,8 @@
 <!--#footer-->
 <footer class="site-footer" id="site-footer">
   <div class="footer-inner">
-    <div class="footer-top">
+    <div class="footer-main">
+<div class="footer-top">
 
       <!-- Brand -->
       <div class="footer-col footer-col--brand">
@@ -344,6 +345,7 @@
                alt="Aquí sí! Actius i salut — PINSAP, Generalitat de Catalunya">
         </a>
       </aside>
+</div>
 
     <div class="footer-bottom">
       <span id="footer-copy">© 2026 NexSocial SCCL · NIF F-27641133 — <a href="#" id="footer-legal-link" onclick="event.preventDefault();openModal('modal-legal')"><span data-i18n="footer.avis_legal">Aviso legal</span></a> · <a href="#" id="footer-privacy-link" onclick="event.preventDefault();openModal('modal-privacitat')"><span data-i18n="footer.privacitat">Política de privacidad</span></a> · <a href="#" id="footer-cookies-link" onclick="event.preventDefault();openModal('modal-cookies')"><span data-i18n="footer.cookies">Cookies</span></a></span>
@@ -354,7 +356,7 @@
 <!--/#footer-->
 
 </main>
-<script src="../../js/nexsocial.js"></script>
+<script src="../../js/nexsocial.js?v=a7b965f0"></script>
 <script>
 function toggleSidebar(){
   document.getElementById('sidebar').classList.toggle('open');
@@ -362,5 +364,6 @@ function toggleSidebar(){
 }
 </script>
 
+<script src="/js/nexsocial-extres.js?v=d22391d7"></script>
 </body>
 </html>
