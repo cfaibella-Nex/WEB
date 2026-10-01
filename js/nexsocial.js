@@ -342,6 +342,13 @@ document.addEventListener('keydown',function(e){ if(e.key==='Escape') document.q
     <p>NexSocial es una cooperativa dedicada al acompañamiento sociovital de personas, familias y entidades, ofreciendo servicios de acompañamiento social, emocional, terapéutico y de gestión administrativa.</p>
     <h3>Propiedad intelectual</h3>
     <p>Todos los contenidos de este sitio web —textos, imágenes, logotipos, diseños y cualquier otro elemento— son propiedad de NexSocial o disponen de las licencias correspondientes. Queda prohibida su reproducción, distribución o comunicación pública sin autorización expresa.</p>
+    <h3>Uso de la inteligencia artificial</h3>
+    <p>NexSocial utiliza herramientas de inteligencia artificial como apoyo en tareas de comunicación y de funcionamiento interno, de acuerdo con el Reglamento (UE) 2024/1689 de inteligencia artificial y la normativa de protección de datos. En concreto:</p>
+    <ul>
+      <li>Las fotografías de este sitio web se han generado con IA con finalidad ilustrativa. No representan a personas reales ni situaciones o servicios concretos.</li>
+      <li>Todo el contenido que publicamos lo revisa una persona del equipo, y NexSocial asume su responsabilidad editorial.</li>
+      <li>No introducimos datos personales de las personas usuarias en herramientas de IA ni tomamos decisiones automatizadas que les afecten.</li>
+    </ul>
     <h3>Responsabilidad</h3>
     <p>NexSocial no se hace responsable de los daños o perjuicios que puedan derivarse del uso de la información contenida en este sitio web ni de los errores u omisiones que pueda contener. Los contenidos de este web tienen carácter informativo y no sustituyen el asesoramiento profesional personalizado.</p>
     <h3>Legislación aplicable</h3>
@@ -417,6 +424,13 @@ document.addEventListener('keydown',function(e){ if(e.key==='Escape') document.q
     <h3>Propietat intel·lectual</h3>
     <p>Tots els continguts d'aquest lloc web —textos, imatges, logotips, dissenys i qualsevol altre element— són propietat de NexSocial o disposen de les llicències corresponents. Queda prohibida la seva reproducció, distribució o comunicació pública sense autorització expressa.</p>
 
+    <h3>Ús de la intel·ligència artificial</h3>
+    <p>NexSocial fa servir eines d'intel·ligència artificial com a suport en tasques de comunicació i de funcionament intern, d'acord amb el Reglament (UE) 2024/1689 d'intel·ligència artificial i la normativa de protecció de dades. En concret:</p>
+    <ul>
+      <li>Les fotografies d'aquest lloc web s'han generat amb IA amb finalitat il·lustrativa. No representen persones reals ni situacions o serveis concrets.</li>
+      <li>Tot el contingut que publiquem el revisa una persona de l'equip, i NexSocial n'assumeix la responsabilitat editorial.</li>
+      <li>No introduïm dades personals de les persones usuàries en eines d'IA ni prenem decisions automatitzades que les afectin.</li>
+    </ul>
     <h3>Responsabilitat</h3>
     <p>NexSocial no es fa responsable dels danys o perjudicis que puguin derivar-se de l'ús de la informació continguda en aquest lloc web ni dels errors o omissions que pugui contenir. Els continguts d'aquest web tenen caràcter informatiu i no substitueixen l'assessorament professional personalitzat.</p>
 
