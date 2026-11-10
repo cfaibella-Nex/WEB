@@ -1,38 +1,32 @@
-NEXSOCIAL v6.6 — Neteja de fletxes i etiquetes repetides
-=========================================================
+NEXSOCIAL v6.7 — Fora etiquetes petites repetides
+==================================================
 
 COM APLICAR-HO
-  Descomprimeix aquest ZIP damunt de la carpeta del repositori WEB
-  (sobreescriu quan t'ho demani), obre GitHub Desktop, commit i push.
-  No cal esborrar res.
+  Descomprimeix damunt de la carpeta del repositori WEB, sobreescriu,
+  i fes commit + push amb GitHub Desktop. No cal esborrar res.
+  Nomes HTML: el CSS no canvia, no cal tocar cap segell ?v=.
 
-QUE CANVIA
-  1. Fletxes "→" fora de tots els botons i enllaços de la web
-     (128 en 31 pàgines CA/ES). Es mantenen les que tenen sentit:
-     "Següent →" / "Veure resultat →" de l'autodiagnòstic i les
-     rutes de menú de la política de cookies.
+QUE ES TREU (CA i ES, 29 etiquetes en 12 pagines)
+  Servei a Entitats
+    - "Servei a Entitats · Gestio Operativa" / "· Consultoria"
+    - "Gestio diaria · Subvencions · AAPP"
+    - "Projectes Cooperatius · Licitacions"
+    - "Treballem amb entitats, cooperatives i administracions"
+    - Diagnostic: "Eina gratuita · Serveis Entitats"
+  NexAcompanya
+    - "NexAcompanya · Col·lectiu Senior"
+    - "NexAcompanya · Espai de Suport Emocional i Terapeutic"
+    - "Sessions de terapia · NexAcompanya"
+    - "NexAcompanya · Retirs"
+    - Sessions Gestalt: "Acompanyament Gestaltic · NexAcompanya"
+  NexGestio
+    - "NexGestio · Servei Estrella"
+    - NexlicitIA: "Eina exclusiva · Desenvolupada per NexSocial"
+  Qui som
+    - "Per que neix NexSocial · Benestar Emocional i Acompanyament"
+    - "Per que neix NexSocial · Col·lectiu Senior"
 
-  2. Home (CA i ES): fora tres etiquetes que repetien el titular
-       - "Els nostres serveis" / "Nuestros servicios"
-       - "✦ Destaquem" / "✦ Destacamos"
-       - "Enfocament Terapèutic" / "Enfoque Terapéutico"
-     El botó "Sessions i preus · Agenda cita" passa a
-     "Veure sessions i preus" / "Ver sesiones y precios".
-     La numeració 01–05 dels beneficis NO es toca.
-
-  3. Contrast del menú lateral (mateix verd de marca, més fosc)
-       - Subapartats: #6a9070 -> #2d6b48   (2,78:1 -> 4,91:1)
-       - Element actiu: -> #245a3c          (2,92:1 -> ~5,7:1)
-     css/nexsocial.css canvia; per això el segell ?v= del CSS
-     s'ha actualitzat a les 31 pàgines.
-
-  4. Imatges
-       - images/img_00.png (logo de la barra superior):
-         1920 px / 225 KB -> 256 px / 31 KB
-       - 16 fotos JPG > 200 KB tenen ara versió .webp
-         (aprox. -50% de pes) i les pàgines ja apunten al .webp.
-     Els .jpg antics es queden al repo; ara no els fa servir cap
-     pàgina i es poden esborrar més endavant si vols.
-
-DESPRÉS DE PUJAR-HO
-  Obre nexsocial.org amb Ctrl+F5 per forçar la recàrrega.
+QUE ES QUEDA (tenen funcio)
+  Tarifes i preus, "Primera trucada gratuita · 15 min", "Pas 01-04",
+  etiquetes de Contacte (Email, Telefon...), NexlicitIA Acces/Panell,
+  "Com funciona". Les fulles (punter i menu) es queden tal com estan.
