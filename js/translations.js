@@ -59,7 +59,7 @@ const translations = {
   "index.hero_sub":        { ca: "Acompanyament · Gestió · Transformació",        es: "Acompañamiento · Gestión · Transformación" },
   "index.hero_desc":       { ca: "NexSocial és una cooperativa que neix amb la voluntat de ser un nexe de suport i acompanyament global. Treballem per a la comunitat i per a les persones que necessiten suport en algun moment del seu cicle vital.", es: "NexSocial es una cooperativa que nace con la voluntad de ser un nexo de apoyo y acompañamiento global. Trabajamos para la comunidad y para las personas que necesitan apoyo en algún momento de su ciclo vital." },
   "index.hero_btn_serveis":{ ca: "Els nostres serveis",                            es: "Nuestros servicios" },
-  "index.hero_btn_cta":    { ca: "Comencem l'acompanyament →",                    es: "Empecemos el acompañamiento →" },
+  "index.hero_btn_cta":    { ca: "Comencem l'acompanyament",                    es: "Empecemos el acompañamiento" },
   "index.stat1_num":       { ca: "+10",                                            es: "+10" },
   "index.stat1_label":     { ca: "Anys d'Experiència",                             es: "Años de Experiencia" },
   "index.stat2_num":       { ca: "100%",                                            es: "100%" },
@@ -79,16 +79,16 @@ const translations = {
   "index.acomp_li2":       { ca: "Acompanyament Emocional i Terapèutic",           es: "Acompañamiento Emocional y Terapéutico" },
   "index.acomp_li3":       { ca: "Coach, Gestalt, Psicologia i altres enfocaments",es: "Coach, Gestalt, Psicología y otros enfoques" },
   "index.acomp_li4":       { ca: "Retirs de desconnexió: 2-3 dies",                es: "Retiros de desconexión: 2-3 días" },
-  "index.acomp_btn":       { ca: "Descobrir més →",                                es: "Descubrir más →" },
+  "index.acomp_btn":       { ca: "Descobrir més",                                es: "Descubrir más" },
   "index.gestio_tag":      { ca: "Gestoria Social · Ajudes · Mediació",            es: "Gestión Social · Ayudas · Mediación" },
   "index.gestio_desc":     { ca: "Gestoria social cooperativa: gestionem íntegrament en el teu nom, detectem ajudes vigents amb la nostra eina pròpia NexlicitIA, i mediem quan cal.", es: "Gestión social cooperativa: gestionamos íntegramente en tu nombre, detectamos ayudas vigentes con nuestra herramienta propia NexlicitIA, y mediamos cuando es necesario." },
   "index.gestio_li1":      { ca: "Detecció i informació d'ajudes vigents",         es: "Detección e información de ayudas vigentes" },
   "index.gestio_li2":      { ca: "Gestió i tramitació d'ajudes i prestacions socials", es: "Gestión y tramitación de ayudas y prestaciones sociales" },
   "index.gestio_li3":      { ca: "Àmbits: ajudes socials i tràmits migratoris",    es: "Ámbitos: ayudas sociales y trámites migratorios" },
   "index.gestio_li4":      { ca: "Mediació i assessorament social",                es: "Mediación y asesoramiento social" },
-  "index.gestio_btn":      { ca: "Descobrir més →",                                es: "Descubrir más →" },
+  "index.gestio_btn":      { ca: "Descobrir més",                                es: "Descubrir más" },
   "index.cta_text":        { ca: "Vols saber quin servei s'adapta millor a la teva situació?", es: "¿Quieres saber qué servicio se adapta mejor a tu situación?" },
-  "index.cta_btn":         { ca: "Consulta gratuïta →",                            es: "Consulta gratuita →" },
+  "index.cta_btn":         { ca: "Consulta gratuïta",                            es: "Consulta gratuita" },
 
   // ─── INDEX: Bloc emocional ────────────────────────────────────────────────
   "index.emocional_tag":   { ca: "✦ Destaquem",                                   es: "✦ Destacamos" },
@@ -104,7 +104,7 @@ const translations = {
   "index.emocional_b3":    { ca: "Millora de l'Autoestima",                        es: "Mejora de la Autoestima" },
   "index.emocional_b4":    { ca: "Desenvolupament personal",                       es: "Desarrollo personal" },
   "index.emocional_b5":    { ca: "Millora social i vital",                         es: "Mejora social y vital" },
-  "index.emocional_btn":   { ca: "Saber-ne més →",                                 es: "Saber más →" },
+  "index.emocional_btn":   { ca: "Saber-ne més",                                 es: "Saber más" },
 
   // ─── NEXACOMPANYA ─────────────────────────────────────────────────────────
   "nacomp.back":           { ca: "← Tornar a Serveis",                             es: "← Volver a Servicios" },
@@ -131,10 +131,10 @@ const translations = {
   "nacomp.gestio_li5":     { ca: "Coordinació amb serveis socials i entitats del territori", es: "Coordinación con servicios sociales y entidades del territorio" },
   "nacomp.cta1_title":     { ca: "Necessites ajuda amb tràmits?",                  es: "¿Necesitas ayuda con trámites?" },
   "nacomp.cta1_desc":      { ca: "NexGestió gestiona dependència, ajuts i prestacions.", es: "NexGestión gestiona dependencia, ayudas y prestaciones." },
-  "nacomp.cta1_btn":       { ca: "Veure →",                                        es: "Ver →" },
+  "nacomp.cta1_btn":       { ca: "Veure",                                        es: "Ver" },
   "nacomp.cta2_title":     { ca: "Vols aprofundir en l'àrea emocional?",           es: "¿Quieres profundizar en el área emocional?" },
   "nacomp.cta2_desc":      { ca: "Tallers grupals i acompanyament terapèutic amb Gestalt.", es: "Talleres grupales y acompañamiento terapéutico con Gestalt." },
-  "nacomp.cta2_btn":       { ca: "Veure →",                                        es: "Ver →" },
+  "nacomp.cta2_btn":       { ca: "Veure",                                        es: "Ver" },
   "nacomp.tag_emocional":  { ca: "· Espai de Suport Emocional i Terapèutic",       es: "· Espacio de Apoyo Emocional y Terapéutico" },
   "nacomp.title_emocional":{ ca: "Acompanyament Emocional i Terapèutic",           es: "Acompañamiento Emocional y Terapéutico" },
   "nacomp.desc_emocional": { ca: "Quan la vida ens posa davant de moments que no sabem com gestionar sols, l'acompanyament emocional i terapèutic obre un espai de suport, escolta i creixement. Des de NexAcompanya, oferim teràpies individualitzades i de grup amb mètodes avalats per més de 10 anys d'experiència clínica i vivencial, sempre en un entorn segur, lliure de judicis i orientat al teu benestar real.", es: "Cuando la vida nos pone ante momentos que no sabemos cómo gestionar solos, el acompañamiento emocional y terapéutico abre un espacio de apoyo, escucha y crecimiento. Desde NexAcompanya, ofrecemos terapias individualizadas y de grupo con métodos avalados por más de 10 años de experiencia clínica y vivencial, siempre en un entorno seguro, libre de juicios y orientado a tu bienestar real." },
@@ -163,7 +163,7 @@ const translations = {
   "nacomp.preus_ind":      { ca: "Individual 55€",                                 es: "Individual 55€" },
   "nacomp.preus_grup":     { ca: "Grup 33€",                                       es: "Grupo 33€" },
   "nacomp.preus_trim":     { ca: "Trimestral des de 45€",                          es: "Trimestral desde 45€" },
-  "nacomp.preus_btn":      { ca: "Veure sessions i preus →",                       es: "Ver sesiones y precios →" },
+  "nacomp.preus_btn":      { ca: "Veure sessions i preus",                       es: "Ver sesiones y precios" },
   "nacomp.estand_h":       { ca: "Estàndards dels nostres serveis",                es: "Estándares de nuestros servicios" },
   "nacomp.estand_conf":    { ca: "Confidencialitat",                               es: "Confidencialidad" },
   "nacomp.estand_conf_d":  { ca: "Espai segur i privat en cada sessió.",           es: "Espacio seguro y privado en cada sesión." },
@@ -201,7 +201,7 @@ const translations = {
   "ngestio.tier2_nota":    { ca: "Valorem el cas conjuntament. Primera orientació gratuïta i sense compromís.", es: "Valoramos el caso conjuntamente. Primera orientación gratuita y sin compromiso." },
   "ngestio.strip_sub":     { ca: "Cooperativa d'Acompanyament Sociovital",         es: "Cooperativa de Acompañamiento Sociovital" },
   "ngestio.strip_desc":    { ca: "Gestió social amb mirada cooperativa: rigor en el tràmit, proximitat en l'acompanyament.", es: "Gestión social con mirada cooperativa: rigor en el trámite, proximidad en el acompañamiento." },
-  "ngestio.strip_btn":     { ca: "Consulta el teu cas →",                          es: "Consulta tu caso →" },
+  "ngestio.strip_btn":     { ca: "Consulta el teu cas",                          es: "Consulta tu caso" },
   "ngestio.b2_tag":        { ca: "Servei Estrella",                                es: "Servicio Estrella" },
   "ngestio.b2_title":      { ca: "Detecció, Informació i Gestió d'Ajudes Vigents", es: "Detección, Información y Gestión de Ayudas Vigentes" },
   "ngestio.b2_desc":       { ca: "Estem al dia de totes les convocatòries obertes. Et detectem si et pots acollir a alguna ajuda, t'informem de les condicions i, si és el teu cas, ho gestionem íntegrament en el teu nom fins a la resolució. Un servei clau per a persones que no saben que existeixen ajudes o no tenen temps ni eines per tramitar-les.", es: "Estamos al día de todas las convocatorias abiertas. Detectamos si puedes acogerte a alguna ayuda, te informamos de las condiciones y, si es tu caso, lo gestionamos íntegramente en tu nombre hasta la resolución. Un servicio clave para personas que no saben que existen ayudas o no tienen tiempo ni herramientas para tramitarlas." },
@@ -217,7 +217,7 @@ const translations = {
   "ngestio.nexlicitia_pan": { ca: "Ajudes-IA i Licitacions-IA",                    es: "Ayudas-IA y Licitaciones-IA" },
   "ngestio.nexlicitia_tag": { ca: "Alimentat per NexlicitIA",                      es: "Alimentado por NexlicitIA" },
   "ngestio.nexlicitia_desc":{ ca: "La nostra eina pròpia detecta automàticament convocatòries obertes de la Generalitat, BDNS i DIBA cada dia.", es: "Nuestra herramienta propia detecta automáticamente convocatorias abiertas de la Generalitat, BDNS y DIBA cada día." },
-  "ngestio.nexlicitia_btn": { ca: "Veure NexlicitIA →",                            es: "Ver NexlicitIA →" },
+  "ngestio.nexlicitia_btn": { ca: "Veure NexlicitIA",                            es: "Ver NexlicitIA" },
   "ngestio.mediacio_title": { ca: "Mediació i Orientació Jurídica Social",         es: "Mediación y Orientación Jurídica Social" },
   "ngestio.mediacio_desc":  { ca: "Quan sorgeixen conflictes o situacions complexes, la mediació i l'orientació jurídica social obren vies de resolució consensuada, evitant processos llargs i desgastants. Des de NexSocial acompanyem persones i famílies perquè coneguin els seus drets i trobin la millor sortida possible a la seva situació.", es: "Cuando surgen conflictos o situaciones complejas, la mediación y la orientación jurídica social abren vías de resolución consensuada, evitando procesos largos y desgastantes. Desde NexSocial acompañamos a personas y familias para que conozcan sus derechos y encuentren la mejor salida posible a su situación." },
   "ngestio.med_col1_h":    { ca: "Mediació",                                       es: "Mediación" },
@@ -236,13 +236,13 @@ const translations = {
   "ngestio.com_cita":      { ca: "\"Primer t'escoltem. Després t'acompanyem.\"",   es: "\"Primero te escuchamos. Después te acompañamos.\"" },
   "ngestio.cta_desc":      { ca: "Explica'ns el teu cas i mirem quines accions podem realitzar per donar-te suport o gestionar-ho íntegrament, amb traçabilitat i confiança.", es: "Cuéntanos tu caso y veamos qué acciones podemos realizar para apoyarte o gestionarlo íntegramente, con trazabilidad y confianza." },
   "ngestio.cta_sub":       { ca: "Primera orientació sense compromís.",             es: "Primera orientación sin compromiso." },
-  "ngestio.cta_btn":       { ca: "Contactar →",                                    es: "Contactar →" },
+  "ngestio.cta_btn":       { ca: "Contactar",                                    es: "Contactar" },
 
   // ─── NEXLICITIA ───────────────────────────────────────────────────────────
   "nlicit.tag":            { ca: "Eina pròpia · NexSocial",                        es: "Herramienta propia · NexSocial" },
   "nlicit.login_title":    { ca: "Ets membre de NexSocial?",                       es: "¿Eres miembro de NexSocial?" },
   "nlicit.login_desc":     { ca: "Introdueix la contrasenya per accedir a l'eina completa.", es: "Introduce la contraseña para acceder a la herramienta completa." },
-  "nlicit.login_btn":      { ca: "🔒 Accedir a NexlicitIA →",                      es: "🔒 Acceder a NexlicitIA →" },
+  "nlicit.login_btn":      { ca: "🔒 Accedir a NexlicitIA",                      es: "🔒 Acceder a NexlicitIA" },
 
   // ─── SESSIONS GESTALT ─────────────────────────────────────────────────────
   "gestalt.tag":           { ca: "Acompanyament Gestalt · NexAcompanya",           es: "Acompañamiento Gestalt · NexAcompanya" },
@@ -251,7 +251,7 @@ const translations = {
   "persones.acomp_tag":    { ca: "Àrea d'Acompanyament",                           es: "Área de Acompañamiento" },
   "persones.acomp_title":  { ca: "Acompanyament Sociovital",                       es: "Acompañamiento Sociovital" },
   "persones.acomp_desc":   { ca: "Acompanyem persones i famílies en moments de dificultat. Suport social, emocional i terapèutic adaptat a cada situació i persona.", es: "Acompañamos a personas y familias en momentos de dificultad. Apoyo social, emocional y terapéutico adaptado a cada situación y persona." },
-  "persones.acomp_btn":    { ca: "Veure tots els serveis →",                       es: "Ver todos los servicios →" },
+  "persones.acomp_btn":    { ca: "Veure tots els serveis",                       es: "Ver todos los servicios" },
   "persones.gestio_tag":   { ca: "Tràmits Socials · Ajudes · Mediació",            es: "Trámites Sociales · Ayudas · Mediación" },
   "persones.gestio_title1":{ ca: "Acompanyament en la gestió de",                  es: "Acompañamiento en la gestión de" },
   "persones.gestio_title2":{ ca: "tràmits socials",                                es: "trámites sociales" },
@@ -260,7 +260,7 @@ const translations = {
   "persones.gestio_li2":   { ca: "Gestió i tramitació d'ajudes i prestacions socials", es: "Gestión y tramitación de ayudas y prestaciones sociales" },
   "persones.gestio_li3":   { ca: "Àmbits: habitatge, dependència, estrangeria i prestacions", es: "Ámbitos: vivienda, dependencia, extranjería y prestaciones" },
   "persones.gestio_li4":   { ca: "Mediació i orientació jurídica social",          es: "Mediación y orientación jurídica social" },
-  "persones.gestio_btn":   { ca: "Veure tots els serveis →",                       es: "Ver todos los servicios →" },
+  "persones.gestio_btn":   { ca: "Veure tots els serveis",                       es: "Ver todos los servicios" },
   "persones.cas_tag":      { ca: "Orientació personalitzada · Gratuïta",           es: "Orientación personalizada · Gratuita" },
   "persones.cas_title":    { ca: "No saps quin servei necessites?",                es: "¿No sabes qué servicio necesitas?" },
   "persones.cas_desc":     { ca: "T'ajudem a identificar quin servei s'adapta millor a la teva situació personal o la de la teva entitat. Analitzem el teu cas de manera individualitzada i t'orientem sense compromís.", es: "Te ayudamos a identificar qué servicio se adapta mejor a tu situación personal o la de tu entidad. Analizamos tu caso de manera individualizada y te orientamos sin compromiso." },
@@ -268,7 +268,7 @@ const translations = {
   "persones.cas_li2":      { ca: "T'orientem cap al servei de NexSocial que s'adapti al teu cas", es: "Te orientamos hacia el servicio de NexSocial que se adapte a tu caso" },
   "persones.cas_li3":      { ca: "Atenció a persones, famílies i entitats",        es: "Atención a personas, familias y entidades" },
   "persones.cas_li4":      { ca: "Resposta en menys de 24h en dies laborables",    es: "Respuesta en menos de 24h en días laborables" },
-  "persones.cas_btn":      { ca: "Sol·licitar consulta →",                         es: "Solicitar consulta →" },
+  "persones.cas_btn":      { ca: "Sol·licitar consulta",                         es: "Solicitar consulta" },
 
   // ─── CONTACTE ─────────────────────────────────────────────────────────────
   "contacte.tag":          { ca: "Parla amb nosaltres",                            es: "Habla con nosotros" },
@@ -328,7 +328,7 @@ const translations = {
   "collab.motiv_ph":       { ca: "Per què vols formar part de NexSocial?",         es: "¿Por qué quieres formar parte de NexSocial?" },
   "collab.rgpd":           { ca: "He llegit i accepto la política de privacitat i autoritzo el tractament de les meves dades.", es: "He leído y acepto la política de privacidad y autorizo el tratamiento de mis datos." },
   "collab.ok":             { ca: "✓ Candidatura enviada! Et contactarem aviat.",   es: "✓ ¡Candidatura enviada! Te contactaremos pronto." },
-  "collab.btn":            { ca: "Enviar candidatura / proposta →",                es: "Enviar candidatura / propuesta →" },
+  "collab.btn":            { ca: "Enviar candidatura / proposta",                es: "Enviar candidatura / propuesta" },
 
   // ─── QUI SOM ──────────────────────────────────────────────────────────────
   "quisom.missio_tag":     { ca: "Per què existim",                                es: "Por qué existimos" },
@@ -361,7 +361,7 @@ const translations = {
   "quisom.stat5_label":    { ca: "de les persones majors de 65 anys estan en risc de pobresa o exclusió social · AROPE / Idescat 2025", es: "de las personas mayores de 65 años están en riesgo de pobreza o exclusión social · AROPE / Idescat 2025" },
   "quisom.stat6_label":    { ca: "dels adults a Catalunya se senten sols — xifra que s'eleva al ~20% en majors de 75 anys · ECV 2025", es: "de los adultos en Cataluña se sienten solos — cifra que se eleva al ~20% en mayores de 75 años · ECV 2025" },
   "quisom.cita":           { ca: "\"Treballem per a la comunitat i per a les persones que necessiten suport en algun moment del seu cicle vital.\"", es: "\"Trabajamos para la comunidad y para las personas que necesitan apoyo en algún momento de su ciclo vital.\"" },
-  "quisom.cta_btn":        { ca: "Descobreix els nostres serveis →",               es: "Descubre nuestros servicios →" },
+  "quisom.cta_btn":        { ca: "Descobreix els nostres serveis",               es: "Descubre nuestros servicios" },
 
   // ─── ENTITATS ─────────────────────────────────────────────────────────────
   "entitats.tag":          { ca: "Servei a Entitats",                              es: "Servicio a Entidades" },
@@ -383,7 +383,7 @@ const translations = {
   "entitats.cta_tag":      { ca: "Treballem amb entitats, cooperatives i administracions", es: "Trabajamos con entidades, cooperativas y administraciones" },
   "entitats.cta_title":    { ca: "Vols que t'expliquem com podem ajudar la teva organització?", es: "¿Quieres que te expliquemos cómo podemos ayudar a tu organización?" },
   "entitats.cta_desc":     { ca: "Explica'ns el vostre projecte o necessitat i us orientem sense compromís. Primera conversa gratuïta.", es: "Cuéntanos vuestro proyecto o necesidad y os orientamos sin compromiso. Primera conversación gratuita." },
-  "entitats.cta_btn":      { ca: "Contacta'ns →",                                  es: "Contáctanos →" },
+  "entitats.cta_btn":      { ca: "Contacta'ns",                                  es: "Contáctanos" },
 
   // ─── CAS A CAS ────────────────────────────────────────────────────────────
   "cas.tag":               { ca: "Consulta Cas a Cas",                             es: "Consulta Caso a Caso" },
@@ -418,7 +418,7 @@ const translations = {
   "cas.feat3_d":           { ca: "T'orientem cap al servei que s'adapti al teu cas",es: "Te orientamos hacia el servicio que se adapte a tu caso" },
   "cas.feat4_h":           { ca: "Confidencialitat",                                es: "Confidencialidad" },
   "cas.feat4_d":           { ca: "Tota la informació és tractada amb total discreció", es: "Toda la información es tratada con total discreción" },
-  "cas.btn":               { ca: "Sol·licitar trucada gratuïta →",                  es: "Solicitar llamada gratuita →" },
+  "cas.btn":               { ca: "Sol·licitar trucada gratuïta",                  es: "Solicitar llamada gratuita" },
 
   // ─── MODALS LEGALS ────────────────────────────────────────────────────────
   "modal.legal_tag":       { ca: "Informació legal",                            es: "Información legal" },
