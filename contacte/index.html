@@ -136,6 +136,53 @@
 </div></div>
 
 
+<!-- TARGETA DIGITAL -->
+<style>
+.tg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px;align-items:center;padding:64px 64px 72px;background:linear-gradient(180deg,#f5f0e8 0%,#e8f5e4 100%);border-top:1px solid rgba(45,107,72,.12)}
+.tg h2{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,3.4vw,42px);font-weight:600;color:#0f2d1e;line-height:1.12;margin:0 0 14px}
+.tg h2 em{font-style:italic;color:#2d6b48}
+.tg p{font-size:16px;line-height:1.65;color:#2a3d28;margin:0 0 26px;max-width:46ch}
+.tg-actions{display:flex;flex-wrap:wrap;gap:12px}
+.tg-actions a{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px}
+.tg-btn2{background:#fff;color:#1e5a38;padding:14px 28px;border:1.5px solid #2d6b48;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border-radius:40px;transition:transform .2s,box-shadow .2s}
+.tg-btn2:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(45,107,72,.14)}
+.tg-actions svg{flex:none}
+.tg-scene{display:flex;flex-direction:column;align-items:center;gap:14px}
+.tg-stage{width:100%;max-width:520px;aspect-ratio:1100/713;perspective:1600px}
+.tg-card{position:relative;display:block;width:100%;height:100%;padding:0;border:0;background:none;cursor:pointer;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.2,.75,.25,1);-webkit-tap-highlight-color:transparent}
+.tg-card.is-flipped{transform:rotateY(180deg)}
+.tg-card:focus-visible{outline:3px solid #2d6b48;outline-offset:6px;border-radius:18px}
+.tg-face{position:absolute;inset:0;border-radius:16px;overflow:hidden;backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:0 22px 50px rgba(15,45,30,.20),0 4px 12px rgba(15,45,30,.10)}
+.tg-face img{display:block;width:100%;height:100%;object-fit:cover}
+.tg-back{transform:rotateY(180deg)}
+.tg-hint{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:#1e5a38;margin:0}
+@media(max-width:900px){.tg{grid-template-columns:1fr;gap:28px;padding:44px 22px 52px}.tg-scene{order:-1}.tg p{max-width:none}}
+@media(prefers-reduced-motion:reduce){.tg-card{transition:none}}
+</style>
+<div class="tg" id="targeta" role="region" aria-labelledby="tg-title">
+<div class="tg-text">
+<h2 id="tg-title">La nostra targeta, <em>sempre a mà</em></h2>
+<p>Guarda-la al mòbil o envia-la a qui la pugui necessitar: la mare, el pare, una veïna. Toca la targeta per veure'n les dues cares.</p>
+<div class="tg-actions">
+<a class="btn-primary" href="https://wa.me/?text=Et%20passo%20la%20targeta%20de%20NexSocial%2C%20acompanyament%20sociovital%20a%20grans%20persones%20de%20Badalona.%20Truca%20o%20escriu%20un%20WhatsApp%20al%20660%20435%20871%3A%20https%3A//nexsocial.org/contacte/%23targeta" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.7-5.1A8.5 8.5 0 1 1 8.1 19.3z"/></svg>Envia-la per WhatsApp</a>
+<a class="tg-btn2" href="../images/targeta-nexsocial.jpg" download="targeta-nexsocial.jpg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Descarrega-la</a>
+</div>
+</div>
+<div class="tg-scene">
+<div class="tg-stage">
+<button class="tg-card" id="tg-card" type="button" aria-label="Targeta de NexSocial. Toca per girar-la i veure l'altra cara.">
+<span class="tg-face"><img src="../images/targeta-cara-a.jpg" width="1100" height="713" loading="lazy" alt="NexSocial. Vols que algú t'acompanyi? Companyia, tràmits i vida de barri. Acompanyament Sociovital a Grans Persones de Badalona."></span>
+<span class="tg-face tg-back"><img src="../images/targeta-cara-b.jpg" width="1100" height="713" loading="lazy" alt="Acompanyament personal, emocional i administratiu vital. Truca'ns o escriu un WhatsApp al 660 435 871."></span>
+</button>
+</div>
+<p class="tg-hint"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg><span id="tg-hint" data-a="Toca la targeta per girar-la" data-b="Toca per tornar a la portada">Toca la targeta per girar-la</span></p>
+</div>
+</div>
+<script>
+(function(){var c=document.getElementById('tg-card'),h=document.getElementById('tg-hint');if(!c)return;
+c.addEventListener('click',function(){var f=c.classList.toggle('is-flipped');h.textContent=f?h.getAttribute('data-b'):h.getAttribute('data-a');});})();
+</script>
+
 <!-- FOOTER -->
 <!--#footer-->
 <footer class="site-footer" id="site-footer">

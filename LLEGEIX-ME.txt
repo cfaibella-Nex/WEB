@@ -1,32 +1,24 @@
-NEXSOCIAL v6.7 — Fora etiquetes petites repetides
-==================================================
+NEXSOCIAL v6.8 — Targeta digital a la pagina de Contacte
+=========================================================
+Substitueix: res (s'aplica damunt de la v6.7).
 
 COM APLICAR-HO
   Descomprimeix damunt de la carpeta del repositori WEB, sobreescriu,
   i fes commit + push amb GitHub Desktop. No cal esborrar res.
-  Nomes HTML: el CSS no canvia, no cal tocar cap segell ?v=.
+  El CSS de la seccio va dins la mateixa pagina: no cal tocar cap segell ?v=.
 
-QUE ES TREU (CA i ES, 29 etiquetes en 12 pagines)
-  Servei a Entitats
-    - "Servei a Entitats · Gestio Operativa" / "· Consultoria"
-    - "Gestio diaria · Subvencions · AAPP"
-    - "Projectes Cooperatius · Licitacions"
-    - "Treballem amb entitats, cooperatives i administracions"
-    - Diagnostic: "Eina gratuita · Serveis Entitats"
-  NexAcompanya
-    - "NexAcompanya · Col·lectiu Senior"
-    - "NexAcompanya · Espai de Suport Emocional i Terapeutic"
-    - "Sessions de terapia · NexAcompanya"
-    - "NexAcompanya · Retirs"
-    - Sessions Gestalt: "Acompanyament Gestaltic · NexAcompanya"
-  NexGestio
-    - "NexGestio · Servei Estrella"
-    - NexlicitIA: "Eina exclusiva · Desenvolupada per NexSocial"
-  Qui som
-    - "Per que neix NexSocial · Benestar Emocional i Acompanyament"
-    - "Per que neix NexSocial · Col·lectiu Senior"
+QUE CANVIA
+  contacte/index.html     Nova seccio "La nostra targeta, sempre a ma"
+  contacte/index.es.html  Nova seccio "Nuestra tarjeta, siempre a mano"
+    - Targeta que es gira en tocar-la (portada / darrere)
+    - Boto "Envia-la per WhatsApp": obre WhatsApp amb un missatge
+      i l'enllac a nexsocial.org/contacte/#targeta
+    - Boto "Descarrega-la": baixa la imatge amb les dues cares
 
-QUE ES QUEDA (tenen funcio)
-  Tarifes i preus, "Primera trucada gratuita · 15 min", "Pas 01-04",
-  etiquetes de Contacte (Email, Telefon...), NexlicitIA Acces/Panell,
-  "Com funciona". Les fulles (punter i menu) es queden tal com estan.
+FITXERS NOUS
+  images/targeta-cara-a.jpg     (118 KB)
+  images/targeta-cara-b.jpg     (126 KB)
+  images/targeta-nexsocial.jpg  (357 KB, la que es descarrega)
+
+ENLLAC DIRECTE A LA TARGETA
+  https://nexsocial.org/contacte/#targeta
