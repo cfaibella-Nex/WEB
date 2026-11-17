@@ -1,6 +1,6 @@
-NEXSOCIAL v6.10 — Targeta digital, WhatsApp i menys espai buit
-================================================================
-Substitueix la v6.8 i la v6.9 (inclou tot el que portaven). S'aplica damunt de la v6.7.
+NEXSOCIAL v6.14 — Targeta digital (darrere mes espaiat)
+========================================================
+Substitueix de la v6.8 a la v6.13 (inclou tot el que portaven). S'aplica damunt de la v6.7.
 
 COM APLICAR-HO
   Descomprimeix damunt de la carpeta del repositori WEB, sobreescriu,
@@ -19,7 +19,7 @@ QUE CANVIA
       a la primera pantalla
     - Enllac "La nostra targeta digital" sota l'horari, que baixa fins a la targeta
 
-FITXERS NOUS
+FITXERS NOUS (a la v6.14 s'actualitzen les imatges de la targeta)
   targeta/index.html          Enllac curt nexsocial.org/targeta (mostra la
   targeta/index.es.html       targeta a WhatsApp i porta a Contacte)
   images/targeta-og.jpg       (94 KB, la imatge de la previsualitzacio)
