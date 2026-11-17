@@ -110,6 +110,7 @@
 <div class="contact-item"><div class="contact-item-label">Web</div><div class="contact-item-val"><a href="https://nexsocial.org" target="_blank">www.nexsocial.org</a></div></div>
 <div class="contact-item"><div class="contact-item-label">Ubicació</div><div class="contact-item-val">Badalona, Catalunya</div></div>
 <div class="contact-item"><div class="contact-item-label">Horari</div><div class="contact-item-val">Dilluns a dijous · 10h–18h · Divendres · 10h–15h</div></div>
+<a class="tg-jump" href="#targeta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="M19 12l-7 7-7-7"/></svg>La nostra targeta digital</a>
 </div>
 <div class="contact-form"><h3>Escriu-nos un missatge</h3>
 <form id="contact-form" action="https://formspree.io/f/xlgpljjd" method="POST" onsubmit="handleContactForm(event)">
@@ -148,7 +149,11 @@
 
 <!-- TARGETA DIGITAL -->
 <style>
-.tg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px;align-items:center;padding:64px 64px 72px;background:linear-gradient(180deg,#f5f0e8 0%,#e8f5e4 100%);border-top:1px solid rgba(45,107,72,.12)}
+.contact-grid{min-height:0}
+.contact-form{padding-bottom:36px}
+.tg-jump{position:relative;z-index:1;display:inline-flex;align-items:center;gap:7px;margin-top:22px;min-height:44px;font-size:13px;font-weight:600;letter-spacing:.04em;color:#1e5a38;text-decoration:none;border-bottom:1px solid rgba(45,107,72,.35)}
+.tg-jump:hover{border-bottom-color:#2d6b48}
+.tg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px;align-items:center;padding:40px 64px 64px;background:linear-gradient(180deg,#f5f0e8 0%,#e8f5e4 100%);border-top:1px solid rgba(45,107,72,.12)}
 .tg h2{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,3.4vw,42px);font-weight:600;color:#0f2d1e;line-height:1.12;margin:0 0 14px}
 .tg h2 em{font-style:italic;color:#2d6b48}
 .tg p{font-size:16px;line-height:1.65;color:#2a3d28;margin:0 0 26px;max-width:46ch}
@@ -166,7 +171,7 @@
 .tg-face img{display:block;width:100%;height:100%;object-fit:cover}
 .tg-back{transform:rotateY(180deg)}
 .tg-hint{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:#1e5a38;margin:0}
-@media(max-width:900px){.tg{grid-template-columns:1fr;gap:28px;padding:44px 22px 52px}.tg-scene{order:-1}.tg p{max-width:none}}
+@media(max-width:900px){.tg{grid-template-columns:1fr;gap:28px;padding:32px 22px 48px}.tg-scene{order:-1}.tg p{max-width:none}}
 @media(prefers-reduced-motion:reduce){.tg-card{transition:none}}
 </style>
 <div class="tg" id="targeta" role="region" aria-labelledby="tg-title">
