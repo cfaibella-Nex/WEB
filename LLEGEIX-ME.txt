@@ -1,6 +1,6 @@
-NEXSOCIAL v6.8 — Targeta digital a la pagina de Contacte
-=========================================================
-Substitueix: res (s'aplica damunt de la v6.7).
+NEXSOCIAL v6.9 — Targeta digital + previsualitzacio a WhatsApp
+===============================================================
+Substitueix la v6.8 (inclou tot el que portava). S'aplica damunt de la v6.7.
 
 COM APLICAR-HO
   Descomprimeix damunt de la carpeta del repositori WEB, sobreescriu,
@@ -12,13 +12,19 @@ QUE CANVIA
   contacte/index.es.html  Nova seccio "Nuestra tarjeta, siempre a mano"
     - Targeta que es gira en tocar-la (portada / darrere)
     - Boto "Envia-la per WhatsApp": obre WhatsApp amb un missatge
-      i l'enllac a nexsocial.org/contacte/#targeta
+      i l'enllac curt nexsocial.org/targeta
+    - Etiquetes Open Graph: en compartir la pagina surt la targeta
     - Boto "Descarrega-la": baixa la imatge amb les dues cares
 
 FITXERS NOUS
+  targeta/index.html          Enllac curt nexsocial.org/targeta (mostra la
+  targeta/index.es.html       targeta a WhatsApp i porta a Contacte)
+  images/targeta-og.jpg       (94 KB, la imatge de la previsualitzacio)
   images/targeta-cara-a.jpg     (118 KB)
   images/targeta-cara-b.jpg     (126 KB)
   images/targeta-nexsocial.jpg  (357 KB, la que es descarrega)
 
-ENLLAC DIRECTE A LA TARGETA
-  https://nexsocial.org/contacte/#targeta
+ENLLAC PER COMPARTIR
+  https://nexsocial.org/targeta
+  (WhatsApp guarda la previsualitzacio dels enllacos ja enviats: l'enllac
+  antic /contacte/#targeta pot seguir sortint sense imatge un temps.)
